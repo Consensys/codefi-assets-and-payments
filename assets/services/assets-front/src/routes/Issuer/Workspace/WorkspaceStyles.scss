@@ -1,0 +1,54 @@
+#_routes_workspace {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .logo-wrapper {
+    width: 50%;
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  > svg {
+    display: block;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  > form {
+    padding: 40px;
+    display: flex;
+    align-items: normal;
+    flex-direction: column;
+    width: 480px;
+
+    > h2 {
+      font-size: var(--typography-size-f5);
+      font-weight: var(--typography-weight-medium);
+      line-height: 150%;
+      color: #000a28;
+    }
+
+    > span {
+      border-bottom: 1px solid #dfe0e6;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+    }
+
+    > span {
+      font-size: var(--typography-size-f1);
+      line-height: 150%;
+      color: #475166;
+    }
+
+    > button {
+      margin-top: 16px;
+    }
+  }
+}

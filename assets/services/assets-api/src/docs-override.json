@@ -1,0 +1,81 @@
+{
+  "info": {
+    "x-logo": {
+      "url": "/Codefi_Logo_White.png",
+      "backgroundColor": "#2C3F9F",
+      "altText": "Codefi Assets API"
+    }
+  },
+  "x-tagGroups": [
+    {
+      "name": "User Endpoints",
+      "tags": ["Users"]
+    },
+    {
+      "name": "Wallet Endpoints",
+      "tags": ["Wallets"]
+    },
+    {
+      "name": "Fungible token Endpoints",
+      "tags": ["Fungible tokens"]
+    },
+    {
+      "name": "Non-fungible token Endpoints",
+      "tags": ["Non-fungible tokens"]
+    },
+    {
+      "name": "Hybrid token Endpoints",
+      "tags": ["Hybrid tokens"]
+    },
+    {
+      "name": "Transaction Endpoints",
+      "tags": ["Transactions"]
+    },
+    {
+      "name": "Network Endpoints",
+      "tags": ["Networks"]
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "description": "This API uses OAuth 2 with or with the Password flow (or the Authorization code flow, when called by a User Interface).\nTo use this API, you will be supplied with an API Key, a Secret, a Username and a Password by a member of the Codefi team. Keys\nand Secrets can be exchanged for Bearer Tokens that identify your requests and authenticate you with the API. \n\n**Always keep your API credentials secure.**\n\nThis documentation should help you get an access token. https://auth0.com/docs/api/authentication#authorization-code-flow45",
+        "flows": {
+          "authorizationCode": {
+            "tokenUrl": "<YOUR_OAUTH_TOKEN_URL>",
+            "scopes": {
+              "read:user": "Read user",
+              "write:user": "Create or update a user",
+              "write:user:notary": "Add a notary for a user",
+              "write:user:verifier": "Add a verifier for a user",
+              "write:user:nav-manager": "Add a nav-manager for a user",
+              "delete:user": "Delete a user",
+              "read:user:wallet": "Read user's wallets",
+              "write:user:wallet": "Create or update a user's wallet",
+              "delete:user:wallet": "Delete user's wallets",
+              "read:token": "Read token",
+              "write:token": "Create or update a token",
+              "delete:token": "Delete a token",
+              "write:transaction:mint": "Mint tokens",
+              "write:transaction:transfer": "Transfer tokens",
+              "write:transaction:burn": "Burn tokens",
+              "write:transaction:force:transfer": "Force token transfer",
+              "write:transaction:force:burn": "Force token burn",
+              "write:transaction:update:state": "Update token state",
+              "write:transaction:update:class": "Update token class",
+              "write:transaction:hold": "Create token hold",
+              "write:transaction:force:hold": "Force creation of token hold",
+              "write:transaction:execute:hold": "Execute token hold",
+              "write:transaction:release:hold": "Release token hold",
+              "read:transaction": "Read transaction",
+              "write:transaction": "Create or update a transaction",
+              "delete:transaction": "Delete a transaction",
+              "read:network": "Read network"
+            }
+          }
+        }
+      }
+    }
+  }
+}

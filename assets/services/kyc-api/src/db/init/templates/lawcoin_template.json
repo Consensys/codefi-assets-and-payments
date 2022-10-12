@@ -1,0 +1,126 @@
+{
+  "issuerId": "Lawcoin",
+  "name": "Lawcoin KYC template",
+  "data": {
+    "welcomeMessage": {
+      "fr": "Bienvenue à Dejure",
+      "en": "Welcome to Dejure"
+    },
+    "welcomeText": {
+      "fr": "Welcome to the world’s first tokenized litigation finance investing platform. To gain access to platform investments, please begin the onboarding process below.",
+      "en": "Welcome to the world’s first tokenized litigation finance investing platform. To gain access to platform investments, please begin the onboarding process below."
+    },
+    "hideSteps": true,
+    "submittedText": {
+      "fr": "Our Compliance Team has sent you an email (if you don’t see it, check your spam folder for an email from support@dejure.io) with some instructions and a few additional forms that will be needed to create an account for you on the platform. We promise, there are only a few more steps to finalize the onboarding process. As always, if you have any questions, please contact us at support@dejure.io. <br>We look forward to having you as part of the Dejure Investor Community!",
+      "en": "Our Compliance Team has sent you an email (if you don’t see it, check your spam folder for an email from support@dejure.io) with some instructions and a few additional forms that will be needed to create an account for you on the platform. We promise, there are only a few more steps to finalize the onboarding process. As always, if you have any questions, please contact us at support@dejure.io. <br>We look forward to having you as part of the Dejure Investor Community!"
+    },
+    "reviewTitle": {
+      "en": "Let’s make sure we got it right...",
+      "fr": "Let’s make sure we got it right..."
+    },
+    "reviewDescription": {
+      "en": "Please take a look at the below information and confirm that it is correct. If it is correct, please to submit the form by clicking on the “Submit” button at the bottom of the page.  If you need to make changes, you can use the “Edit” button.",
+      "fr": "Please take a look at the below information and confirm that it is correct. If it is correct, please to submit the form by clicking on the “Submit” button at the bottom of the page.  If you need to make changes, you can use the “Edit” button."
+    },
+    "welcomePageLogo": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNDQgMTQ0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0IzOEE0ODt9Cgkuc3Qxe2ZpbGw6IzQ4MkM4Qjt9Cjwvc3R5bGU+CjxnPgoJCgkJPHJlY3QgeD0iNzQuNTEiIHk9Ijc0LjM2IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNzEgLTAuNzA3MSAwLjcwNzEgMC43MDcxIC0zMi43NzM5IDc5LjEyMzEpIiBjbGFzcz0ic3QwIiB3aWR0aD0iOS4yMyIgaGVpZ2h0PSI5LjUzIi8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNy40NSw3Mkw3MiwxMzYuNTVMMTM2LjU1LDcyTDcyLDcuNDVMNy40NSw3MnogTTEwOS41Niw3OS4yM2wtNyw3bC00LjkxLDQuOTFsLTYuNTIsNi41MmwtMTEuOSwxMS45CgkJbC0xMS45LTExLjlsLTYuNzQtNi43NGwtNC42OS00LjY5bC03LjIxLTcuMjFsMTguNDMtMTguNDNMNDguNzEsNDIuMThsMTEuOS0xMS45TDEwOS41Niw3OS4yM3oiLz4KPC9nPgo8L3N2Zz4K"
+  },
+  "topSections": [
+    {
+      "key": "naturalPersonSection",
+      "label": {
+        "en": "Natural Person Section",
+        "fr": "Natural Person Section"
+      },
+      "sections": [
+        {
+          "key": "Individual_Identification",
+          "label": {
+            "en": "Identification",
+            "fr": "Identification"
+          },
+          "description": {
+            "en": "Please enter you identification details",
+            "fr": "Please enter you identification details"
+          },
+          "elements": [
+            "individual_individual_identification_gender",
+            "individual_individual_identification_firstname",
+            "individual_individual_identification_middlename",
+            "individual_individual_identification_lastname",
+            "individual_individual_identification_dateofbirth",
+            "individual_individual_identification_domicileaddress",
+            "individual_individual_identification_domicilleaddressline2",
+            "individual_individual_identification_city",
+            "individual_individual_identification_country",
+            "individual_individual_identification_postalcode"
+          ]
+        },
+        {
+          "key": "Individual_DocumentUpload",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "description": {
+            "en": "Regulations require that, before granting access to our investment offerings, we ask potential investors for the following documents. <br>Please securely upload the documents below and our Compliance Team will review them.",
+            "fr": "Regulations require that, before granting access to our investment offerings, we ask potential investors for the following documents. <br>Please securely upload the documents below and our Compliance Team will review them."
+          },
+
+          "elements": [
+            "individual_individual_documentupload_idFront",
+            "individual_individual_documentupload_idBack",
+            "individual_individual_documentupload_proofOfResidence",
+            "individual_individual_documentupload_selfie",
+            "individual_individual_documentupload_letterQuestion",
+            "individual_individual_documentupload_cryptoAccreditedLetter"
+          ]
+        },
+        {
+          "key": "Individual_TermsAndConditions",
+          "label": {
+            "en": "One More Thing...",
+            "fr": "One More Thing..."
+          },
+          "elements": ["termsAndConditionsIndividual_TermsAndConditions_check"]
+        }
+      ]
+    },
+    {
+      "key": "legalPersonSection",
+      "label": {
+        "en": "Legal Person Section",
+        "fr": "Legal Person Section"
+      },
+      "sections": [
+        {
+          "key": "LegalEntity_Identification",
+          "label": {
+            "en": "Identification",
+            "fr": "Identification"
+          },
+          "elements": [
+            "legalentity_legalentity_identification_gender",
+            "legalentity_legalentity_identification_firstname",
+            "legalentity_legalentity_identification_middlename",
+            "legalentity_legalentity_identification_lastname",
+            "legalentity_legalentity_identification_dateofbirth",
+            "legalentity_legalentity_identification_domicileaddress",
+            "legalentity_legalentity_identification_domicilleaddressline2",
+            "legalentity_legalentity_identification_city",
+            "legalentity_legalentity_identification_country",
+            "legalentity_legalentity_identification_postalcode"
+          ]
+        },
+        {
+          "key": "LegalEntity_TermsAndConditions",
+          "label": {
+            "en": "One More Thing...",
+            "fr": "One More Thing..."
+          },
+          "elements": ["termsAndConditionsLegalEntity_TermsAndConditions_check"]
+        }
+      ]
+    }
+  ]
+}

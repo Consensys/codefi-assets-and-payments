@@ -1,0 +1,126 @@
+{
+  "fundName": "ASI Global Index",
+  "assetId": "4567yuhjbgvcfdxres45r67t8yuih",
+  "shareClasses": [
+    {
+      "classId": "09876trfhgjkjli9897654erzdfgh1",
+      "className": "Class A",
+      "code": "US-000402625-0",
+      "nextEvent": {
+        "en": "Cut off in 3 months",
+        "fr": "Cut off in 3 months"
+      },
+      "nav": 83923.98,
+      "sharesInCirculation": 10867,
+      "valuation": {
+        "en": "Cut off + 1 day",
+        "fr": "Cut off + 1 day"
+      },
+      "settlementDate": {
+        "en": "Cut off +2 days",
+        "fr": "Cut off +2 days"
+      },
+      "shareType": {
+        "en": "Capitalisation",
+        "fr": "Capitalisation"
+      },
+      "variation": "up"
+    },
+    {
+      "classId": "09876trfhgjkjli9897654erzdfgh2",
+      "className": "Class B",
+      "code": "US-000402625-1",
+      "nextEvent": {
+        "en": "Cut off in 5 days",
+        "fr": "Cut off in 5 days"
+      },
+      "nav": 72816.27,
+      "sharesInCirculation": 10867,
+      "valuation": {
+        "en": "Cut off + 1 day",
+        "fr": "Cut off + 1 day"
+      },
+      "settlementDate": {
+        "en": "Cut off +2 days",
+        "fr": "Cut off +2 days"
+      },
+      "shareType": {
+        "en": "Capitalisation",
+        "fr": "Capitalisation"
+      },
+      "variation": "down"
+    },
+    {
+      "classId": "09876trfhgjkjli9897654erzdfgh3",
+      "className": "Class C",
+      "code": "US-000402625-2",
+      "nextEvent": {
+        "en": "Cut off in 15 minutes",
+        "fr": "Cut off in 15 minutes"
+      },
+      "nav": 6972.98,
+      "sharesInCirculation": 10867,
+      "valuation": {
+        "en": "Cut off + 1 day",
+        "fr": "Cut off + 1 day"
+      },
+      "settlementDate": {
+        "en": "Cut off +2 days",
+        "fr": "Cut off +2 days"
+      },
+      "shareType": {
+        "en": "Capitalisation",
+        "fr": "Capitalisation"
+      },
+      "variation": "neutral"
+    },
+    {
+      "classId": "09876trfhgjkjli9897654erzdfgh4",
+      "className": "Class D",
+      "code": "US-000402625-3",
+      "nextEvent": {
+        "en": "Cut off in 7 months",
+        "fr": "Cut off in 7 months"
+      },
+      "nav": 6972.98,
+      "sharesInCirculation": 10867,
+      "valuation": {
+        "en": "Cut off + 1 day",
+        "fr": "Cut off + 1 day"
+      },
+      "settlementDate": {
+        "en": "Cut off +2 days",
+        "fr": "Cut off +2 days"
+      },
+      "shareType": {
+        "en": "Capitalisation",
+        "fr": "Capitalisation"
+      },
+      "variation": "down"
+    },
+    {
+      "classId": "09876trfhgjkjli9897654erzdfgh5",
+      "className": "Class E",
+      "code": "US-000402625-4",
+      "nextEvent": {
+        "en": "Cut off in 12 weeks",
+        "fr": "Cut off in 12 weeks"
+      },
+      "nav": 6972.98,
+      "sharesInCirculation": 10867,
+      "valuation": {
+        "en": "Cut off + 1 day",
+        "fr": "Cut off + 1 day"
+      },
+      "settlementDate": {
+        "en": "Cut off +2 days",
+        "fr": "Cut off +2 days"
+      },
+      "shareType": {
+        "en": "Capitalisation",
+        "fr": "Capitalisation"
+      },
+      "variation": "up"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "tenantId": "IZSqWMgORT3cZseAJmSfPyvR6HrlLUtu",
+  "category": "HYBRID",
+  "name": "Natwest impact bond demo",
+  "title": {
+    "en": "Fixed Rate Bond",
+    "fr": "Fixed Rate Bond"
+  },
+  "type": "FIXED_RATE_BOND",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "A fixed rate bond is a bond that pays the same level of interest over its entire term.",
+    "fr": "A fixed rate bond is a bond that pays the same level of interest over its entire term."
+  },
+  "topSections": [
+    {
+      "label": {
+        "en": "Asset details",
+        "fr": "Asset details"
+      },
+      "key": "asset",
+      "multiple": false,
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "key": "asset_general",
+          "elements": [
+            "fundInformations_fundName",
+            "fundInformations_fundSymbol",
+            "fundInformations_fundDescription"
+          ]
+        },
+        {
+          "key": "asset_borrowerDetails",
+          "label": {
+            "en": "Issuer details",
+            "fr": "Issuer details"
+          },
+          "elements": ["borrowerInformations_name_select"]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Asset characteristics",
+        "fr": "Asset characteristics"
+      },
+      "key": "class",
+      "multiple": false,
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "key": "class_general",
+          "elements": [
+            "shareClass_shareType_ib",
+            "shareClass_ISINCode",
+            "shareClass_currency",
+            "shareClass_calendar_ib",
+            "assetsCharacteristics_interestRate",
+            "assetsCharacteristics_interestRate_first_payment_date",
+            "assetsCharacteristics_interestRate_first_payment_hour",
+            "assetsCharacteristics_interestPaymentFrequency",
+            "assetsCharacteristics_minimumNominalAmount_ib",
+            "assetsCharacteristics_maximumNominalAmount_ib",
+            "assetsCharacteristics_pricePerUnit_ib"
+          ]
+        },
+        {
+          "label": {
+            "en": "Dates",
+            "fr": "Dates"
+          },
+          "key": "class_initialSubscription",
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_start_hour",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_cutoff_hour",
+            "shareClass_subscription_initialSubscription_settlement_date_ib",
+            "shareClass_subscription_initialSubscription_settlement_hour_ib",
+            "shareClass_subscription_initialSubscription_unpaidFlag_date_ib",
+            "shareClass_subscription_initialSubscription_unpaidFlag_hour_ib"
+          ]
+        }
+      ]
+    }
+  ]
+}

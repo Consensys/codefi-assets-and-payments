@@ -1,0 +1,103 @@
+._uiComponent_shareClassCard {
+  margin-right: 24px;
+  margin-bottom: 24px;
+  width: 350px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  > header {
+    background-color: #475166;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    flex-direction: column;
+
+    > h2 {
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    > p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  > .nextEvent {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00bf99;
+  }
+
+  > ul {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 24px;
+
+    > li {
+      list-style: none;
+      padding: 10px 0;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      > span:first-of-type {
+        color: #8e8e8e;
+      }
+
+      > span:last-of-type {
+        color: #4a4a4a;
+      }
+    }
+  }
+
+  > .nav {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+    flex-direction: column;
+
+    > .title {
+      font-size: 14px;
+      color: #8e8e8e;
+      margin-bottom: 8px;
+    }
+
+    > .value {
+      font-size: 20px;
+      color: #1a2233;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  > footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+
+    > button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

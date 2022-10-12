@@ -1,0 +1,52 @@
+#_routes_issuer_corporateActions {
+  > main {
+    padding: 32px 40px;
+  }
+}
+
+.corporateActionsDialog {
+  min-width: 580px;
+  max-height: 800px;
+  overflow: 'auto';
+  padding: 10px;
+  > div {
+    margin: 24px 32px;
+    > div {
+      max-width: 65%;
+    }
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  .corporateActionTime {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      margin-right: 32px;
+    }
+  }
+  .corporateActionConfirmation {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #1a2233;
+  }
+}
+
+.footer {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-picker-dropdown-placement-bottomLeft {
+  z-index: 999999;
+}
+
+.ant-picker-dropdown-hidden {
+  z-index: 999;
+}

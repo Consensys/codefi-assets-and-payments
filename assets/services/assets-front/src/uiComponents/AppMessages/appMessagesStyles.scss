@@ -1,0 +1,88 @@
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+._uiComponent_appMessages {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999999;
+
+  > div {
+    position: relative;
+    padding: var(--spacing-tight) var(--spacing-tight-looser);
+    word-break: break-word;
+    transition: transform 250ms ease-out, opacity 250ms ease-out;
+    background: #fff;
+    width: 100vw;
+    margin-top: var(--spacing-small);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dfe0e6;
+    display: flex;
+    animation: slidein 250ms ease;
+
+    &.hidden {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+
+    @media (min-width: 600px) {
+      border-radius: 4px;
+      margin: var(--spacing-tight);
+      max-width: 400px;
+    }
+
+    &.dark {
+      border: 1px solid #000a28;
+      background-color: #000a28;
+      color: #fff;
+    }
+
+    > .iconContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin-right: var(--spacing-small);
+
+      > svg {
+        display: block;
+      }
+    }
+
+    > .messagesContainer {
+      flex-grow: 1;
+
+      > .main {
+        font-size: var(--typography-size-f1);
+        font-weight: var(--typography-weight-bold);
+      }
+
+      > .secondary {
+        font-size: var(--typography-size-f1);
+      }
+    }
+
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      font-size: var(--typography-size-f1);
+      font-weight: var(--typography-weight-bold);
+      color: var(--colors-main);
+    }
+  }
+}

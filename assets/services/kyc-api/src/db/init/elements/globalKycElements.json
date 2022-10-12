@@ -1,0 +1,834 @@
+[
+  {
+    "key": "title_personalInformation_identification",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Personal Information",
+      "fr": "Information Personnel"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "firstName_personalInformation_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "First name",
+      "fr": "Prénom"
+    },
+    "placeholder": {
+      "en": "Ex: Bill",
+      "fr": "Ex: Bill"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "lastName_personalInformation_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Last name",
+      "fr": "Nom"
+    },
+    "placeholder": {
+      "en": "Ex: Boquet",
+      "fr": "Ex: Boquet"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "email_personalInformation_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Email address",
+      "fr": "Adresse email"
+    },
+    "placeholder": {
+      "en": "Your Email address",
+      "fr": "Votre adresse email"
+    },
+    "inputs": [],
+    "data": {
+      "validation": {
+        "isEmail": true
+      }
+    }
+  },
+  {
+    "key": "title_address_identification",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Address",
+      "fr": "Adresse"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressLine1_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Address line 1",
+      "fr": "Adresse"
+    },
+    "placeholder": {
+      "en": "",
+      "fr": ""
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressLine2_address_identification",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Address line 2",
+      "fr": "Complément d'adresse"
+    },
+    "placeholder": {
+      "en": "",
+      "fr": ""
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressCity_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "City",
+      "fr": "Ville"
+    },
+    "placeholder": {
+      "en": "New York",
+      "fr": "Paris"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressCountry_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Country of residence",
+      "fr": "Pays de résidence"
+    },
+    "placeholder": {
+      "en": "United States",
+      "fr": "France"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressState_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "State",
+      "fr": "Etat"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressZip_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "ZIP/Postal Code",
+      "fr": "Code postal"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressPhone_address_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Phone number",
+      "fr": "Numéro de téléphone"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "title_bankDetails_identification",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Bank details",
+      "fr": "Coordonnées bancaires"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "bankName_bankDetails_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Bank name",
+      "fr": "Nom de banque"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "bankIBAN_bankDetails_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "IBAN",
+      "fr": "IBAN"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "bankBIC_bankDetails_identification",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "BIC",
+      "fr": "BIC"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "title_investmentType_investment-entity",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Investment type",
+      "fr": "Type d'investissement"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "investmentEntityChoice_investmentType_investment-entity",
+    "type": "radio",
+    "status": "mandatory",
+    "label": {
+      "en": "Would you like to invest through an investment entity",
+      "fr": "Souhaitez-vous investir via une entité d'investissement"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": [
+          "title_entityInformation_investment-entity",
+          "entityName_entityInformation_investment-entity",
+          "entityType_entityInformation_investment-entity",
+          "countryOfIncorporation_entityInformation_investment-entity",
+          "presidentName_entityInformation_investment-entity",
+          "presidentEmail_entityInformation_investment-entity",
+          "addressLine1_entityInformation_investment-entity",
+          "addressLine2_entityInformation_investment-entity",
+          "addressCity_entityInformation_investment-entity",
+          "addressCountry_entityInformation_investment-entity",
+          "addressState_entityInformation_investment-entity",
+          "addressZik_entityInformation_investment-entity"
+        ]
+      },
+      {
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "title_entityInformation_investment-entity",
+    "type": "title",
+    "status": "conditional",
+    "label": {
+      "en": "Entity information",
+      "fr": "Informations sur l'entité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {
+      "validation": {
+        "status": "optional"
+      }
+    }
+  },
+  {
+    "key": "entityName_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Entity name",
+      "fr": "Entity name"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "entityType_entityInformation_investment-entity",
+    "type": "multistring",
+    "status": "conditional",
+    "label": {
+      "en": "Entity type",
+      "fr": "Type d'entité"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "A",
+          "fr": "A"
+        }
+      },
+      {
+        "label": {
+          "en": "B",
+          "fr": "B"
+        }
+      },
+      {
+        "label": {
+          "en": "C",
+          "fr": "C"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "countryOfIncorporation_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Country of incorporation",
+      "fr": "Pays d'immatriculation"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentName_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Président name",
+      "fr": "Nom du président"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentEmail_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "President(s) email",
+      "fr": "Email du président"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "validation": {
+          "isEmail": true
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "addressLine1_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Address line 1",
+      "fr": "Adresse"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressLine2_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Address line 2",
+      "fr": "Complément d'adresse"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressCity_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "City",
+      "fr": "Ville"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressCountry_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "Country",
+      "fr": "Pays"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressState_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "State",
+      "fr": "Etat"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "addressZik_entityInformation_investment-entity",
+    "type": "string",
+    "status": "conditional",
+    "label": {
+      "en": "ZIP/Postal Code",
+      "fr": "Code postal"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "title_investmentNature_risk-profile",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Investment nature",
+      "fr": "Nature de l'investissement"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "assetManagementMethod_investmentNature_risk-profile",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "What is the financial asset management method?",
+      "fr": "Quelle est la méthode de gestion des actifs financiers?"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "With the advice of an authorized third party institution",
+          "fr": "Avec les conseils d'un tiers autorisé"
+        }
+      },
+      {
+        "label": {
+          "en": "By mandate(s) untrusted to a manager(s)",
+          "fr": "Par mandat (s) non confié à un (des) gestionnaire (s)"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "transactionsFrequency_investmentNature_risk-profile",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "What is your expected frequency of financial transactions?",
+      "fr": "Quelle est votre fréquence attendue des transactions financières?"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "Daily",
+          "fr": "Quotidien"
+        }
+      },
+      {
+        "label": {
+          "en": "Weekly",
+          "fr": "Hebdomadaire"
+        }
+      },
+      {
+        "label": {
+          "en": "Monthly",
+          "fr": "Mensuel"
+        }
+      },
+      {
+        "label": {
+          "en": "Quarterly",
+          "fr": "Trimestriel"
+        }
+      },
+      {
+        "label": {
+          "en": "Annually",
+          "fr": "Annuellement"
+        }
+      },
+      {
+        "label": {
+          "en": "Punctually",
+          "fr": "Ponctuellement"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "investmentVehiclesUsed_investmentNature_risk-profile",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "What investment vehicles do you already use?",
+      "fr": "Quels véhicules d'investissement utilisez-vous déjà?"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "Money market securities",
+          "fr": "Money market securities"
+        }
+      },
+      {
+        "label": {
+          "en": "Bonds",
+          "fr": "Bonds"
+        }
+      },
+      {
+        "label": {
+          "en": "Convertible bonds",
+          "fr": "Convertible bonds"
+        }
+      },
+      {
+        "label": {
+          "en": "Listed shares",
+          "fr": "Listed shares"
+        }
+      },
+      {
+        "label": {
+          "en": "Unlisted shares",
+          "fr": "Unlisted shares"
+        }
+      },
+      {
+        "label": {
+          "en": "UCITS",
+          "fr": "UCITS"
+        }
+      },
+      {
+        "label": {
+          "en": "FIA",
+          "fr": "FIA"
+        }
+      },
+      {
+        "label": {
+          "en": "Not rated",
+          "fr": "Not rated"
+        }
+      },
+      {
+        "label": {
+          "en": "Pierre papier some really really long text that overflows",
+          "fr": "Pierre papier some really really long text that overflows"
+        }
+      },
+      {
+        "label": {
+          "en": "Forex market",
+          "fr": "Forex market"
+        }
+      },
+      {
+        "label": {
+          "en": "Swaps",
+          "fr": "Swaps"
+        }
+      },
+      {
+        "label": {
+          "en": "IFT",
+          "fr": "IFT"
+        }
+      },
+      {
+        "label": {
+          "en": "Other derivatives products",
+          "fr": "Other derivatives products"
+        }
+      },
+      {
+        "label": {
+          "en": "Other",
+          "fr": "Other"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "title_investmentObjectives_risk-profile",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Investment objectives",
+      "fr": "Objectifs d'investissement"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "investmentObjectives_investmentObjectives_risk-profile",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "What are your main investment objectives",
+      "fr": "Quels sont vos principaux objectifs d'investissement"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "Cross currency hedging",
+          "fr": "Couverture de change"
+        }
+      },
+      {
+        "label": {
+          "en": "Performance",
+          "fr": "Performance"
+        }
+      },
+      {
+        "label": {
+          "en": "Own fund investments",
+          "fr": "Investissements sur fonds propres"
+        }
+      },
+      {
+        "label": {
+          "en": "Estimated annual income",
+          "fr": "Revenu annuel estimé"
+        }
+      }
+    ],
+    "data": {}
+  },
+  {
+    "key": "title_identificationDocuments_documents",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Document upload",
+      "fr": "Téléchargement de documents"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "id_identificationDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "ID document",
+      "fr": "Document d'identité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "incomeStatement_identificationDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Income Statement",
+      "fr": "Relevé de revenus"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "countryOfResidence_identificationDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Country of residence proof",
+      "fr": "Justificatif pays de résidence"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "title_investmentEntityDocuments_documents",
+    "type": "title",
+    "status": "optional",
+    "label": {
+      "en": "Investment objectives",
+      "fr": "Documents d'entité d'investissement"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentId_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Investment entity documents",
+      "fr": "Document d'identité du président"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "mandatesOfAuthority_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Mandates of authority",
+      "fr": "Mandats d'autorité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "delegationOfAuthorithy_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Delegation of Authority",
+      "fr": "Délégation de l'autorité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "latestTaxReport_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Latest Tax report",
+      "fr": "Dernier avis d'imposition"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "copyOfBeneficialOwnersId_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Copy of beneficial owners ID",
+      "fr": "Copie des pièces d'identité des bénéficiaires"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "beneficialOwnersLegalJustification_investmentEntityDocuments_documents",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Beneficial owners legal justification",
+      "fr": "Justification légale des bénéficiaires effectifs"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "investorType_investorType",
+    "type": "radio",
+    "status": "mandatory",
+    "label": {
+      "en": "Select investor type",
+      "fr": "Select investor type"
+    },
+    "placeholder": {},
+    "inputs": [
+      {
+        "label": {
+          "en": "Legal Entity",
+          "fr": "Legal Entity"
+        },
+        "value": "LEGAL"
+      },
+      {
+        "label": {
+          "en": "Individual",
+          "fr": "Individual"
+        },
+        "value": "NATURAL"
+      }
+    ],
+    "data": {}
+  }
+]

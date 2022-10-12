@@ -1,0 +1,77 @@
+#_routes_issuer_corporateActionDetails {
+  > main {
+    padding: 32px 40px;
+    .keyInfoCutOff {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      .keyInfo {
+        display: flex;
+        margin: 0 -8px;
+        .infoBox {
+          border: 1px solid #dfe0e6;
+          border-radius: 4px;
+          margin: 0 8px;
+          padding: 16px 24px;
+          .infoTitle {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #475166;
+          }
+          .infoValue {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #000a28;
+          }
+        }
+      }
+    }
+  }
+  .scheduledClass {
+    background: #f0f0f2;
+    color: #475166;
+    border: 0.5px solid #475166;
+    font-weight: 500;
+    padding: 2px 8px;
+    margin: 6px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .settledClass {
+    background: #f2fcf6;
+    color: #008055;
+    border: 0.5px solid #008055;
+    font-weight: 500;
+    padding: 2px 8px;
+    margin: 6px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .cancelledClass {
+    background: #fcf5f5;
+    color: #b20000;
+    border: 0.5px solid #b20000;
+    font-weight: 500;
+    padding: 2px 8px;
+    margin: 6px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .eventSettleButton {
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .eventCancelButton {
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+}

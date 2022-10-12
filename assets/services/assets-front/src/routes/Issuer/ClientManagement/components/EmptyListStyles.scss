@@ -1,0 +1,18 @@
+._route_investorManagement_emptyList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--spacing-regular) 0;
+
+  > h3 {
+    font-weight: var(--typography-weight-medium);
+    font-size: var(--typography-size-f4);
+    margin: var(--spacing-regular) 0 var(--spacing-tight);
+    text-align: center;
+  }
+
+  > p {
+    font-size: var(--typography-size-f1);
+    margin-bottom: var(--spacing-regular);
+  }
+}

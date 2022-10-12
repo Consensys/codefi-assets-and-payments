@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "tenantDeleteCommand",
+  "namespace": "net.consensys.codefi.convergence.tenant",
+  "fields": [
+    { "name": "traceParent", "type": ["null", "string"], "default": null },
+    { "name": "tenantId", "type": "string" }
+  ]
+}

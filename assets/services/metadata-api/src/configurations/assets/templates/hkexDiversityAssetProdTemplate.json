@@ -1,0 +1,106 @@
+{
+  "tenantId": "t4aToIYYdGFOP6Nzm1AUvKmU0O4RGOdD",
+  "category": "HYBRID",
+  "name": "Digital Asset",
+  "type": "PHYSICAL_ASSET",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "Digital Asset is the digital representation of assets that are tradable on the HKEX Diamond Platform.",
+    "fr": "Digital Asset is the digital representation of assets that are tradable on the HKEX Diamond Platform."
+  },
+  "topSections": [
+    {
+      "label": {
+        "en": "Asset information",
+        "fr": "Asset information"
+      },
+      "key": "asset",
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "fundInformations_fundName_hkex",
+            "fundInformations_fundSymbol_hkex",
+            "fundInformations_fundDescription_hkex"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Asset documents",
+            "fr": "Asset documents"
+          },
+          "elements": ["fundInformations_prospectus_hkex"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Asset cover image",
+            "fr": "Asset cover image"
+          },
+          "elements": ["fundInformations_coverPicture_hkex"]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Order information",
+        "fr": "Order information"
+      },
+      "key": "class",
+      "sections": [
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes_hkexToken",
+            "shareClass_minimumSubscriptionInAmount_pa",
+            "shareClass_maximumSubscriptionInAmount_pa",
+            "shareClass_minimumSubscriptionInQuantity_hkexToken",
+            "shareClass_maximumSubscriptionInQuantity_hkexToken"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Asset issuance information",
+            "fr": "Asset issuance information"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date_hkex",
+            "shareClass_subscription_initialSubscription_start_hour_hkex"
+          ]
+        },
+        {
+          "key": "class_nav",
+          "label": {
+            "en": "Initial asset value",
+            "fr": "Initial asset value"
+          },
+          "elements": [
+            "assetClass_initialShareValue_value",
+            "shareClass_currency_hkex"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": ["sharedClass_maximum_entryFeesValue_hkex"]
+        }
+      ]
+    }
+  ]
+}

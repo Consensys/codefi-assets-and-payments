@@ -1,0 +1,1 @@
+export { SyndicatedLoanOrderOverview } from './SyndicatedLoanOrderOverview';

@@ -1,0 +1,16 @@
+.dockerignore
+.eslintcache
+.git
+.gitignore
+.vscode
+dist
+docker-compose*
+Dockerfile*
+LICENSE
+node_modules
+npm-debug.log
+README.md
+tags.json
+commitlint.config.js
+images
+api

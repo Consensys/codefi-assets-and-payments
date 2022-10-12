@@ -1,0 +1,1 @@
+export { ShareClassCard } from './ShareClassCard';

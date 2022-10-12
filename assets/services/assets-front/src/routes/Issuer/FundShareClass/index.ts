@@ -1,0 +1,1 @@
+export { FundShareClass } from './FundShareClass';

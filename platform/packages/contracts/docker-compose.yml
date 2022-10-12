@@ -1,0 +1,183 @@
+version: '3.7'
+
+x-default-variables: &default-variables
+  ENVELOPE_STORE_URL: ${ENVELOPE_STORE_URL-envelope-store:8080}
+  CONTRACT_REGISTRY_URL: ${CONTRACT_REGISTRY_URL-contract-registry:8080}
+  CHAIN_REGISTRY_URL: ${CHAIN_REGISTRY_URL-http://chain-registry:8081}
+  KAFKA_URL: ${KAFKA_URL-kafka:29092}
+  CHAIN_REGISTRY_INIT: ${CHAIN_REGISTRY_INIT-}
+  ETH_CLIENT_RETRY_MAX_ELAPSED_TIME: 5s
+  LOG_LEVEL: ${LOG_LEVEL-info}
+  LOG_FORMAT: ${LOG_FORMAT-json}
+  JAEGER_AGENT_HOST: ${JAEGER_AGENT_HOST-jaeger}
+  JAEGER_AGENT_PORT: ${JAEGER_AGENT_PORT-6831}
+  NONCE_MANAGER_TYPE: ${NONCE_MANAGER_TYPE-redis}
+  REDIS_URL: ${REDIS_URL-redis:6379}
+  VAULT_ADDR: ${VAULT_ADDR-http://vault:8200}
+  MULTI_TENANCY_ENABLED: ${MULTI_TENANCY_ENABLED-false}
+  AUTH_JWT_CLAIMS_NAMESPACE: ${AUTH_JWT_CLAIMS_NAMESPACE-http://tenant.info/}
+  AUTH_JWT_CERTIFICATE: ${AUTH_JWT_CERTIFICATE-}
+  AUTH_JWT_PRIVATE_KEY: ${AUTH_JWT_PRIVATE_KEY-}
+  AUTH_API_KEY: ${AUTH_API_KEY-}
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  image: ${DOCKER_REGISTRY}:${ORCHESTRATE_VERSION-latest}
+  networks:
+    - orchestrate
+
+x-contract-registry-common: &contract-registry-common
+  CONTRACT_REGISTRY_TYPE: ${CONTRACT_REGISTRY_TYPE-}
+  DB_HOST: postgres-contract-registry
+
+x-envelope-store-common: &envelope-store-common
+  ENVELOPE_STORE_TYPE: ${ENVELOPE_STORE_TYPE-}
+  DB_HOST: postgres-envelope-store
+
+x-chain-registry-common: &chain-registry-common
+  CHAIN_REGISTRY_TYPE: ${CHAIN_REGISTRY_TYPE-}
+  DB_HOST: postgres-chain-registry
+
+services:
+  chain-registry-migration-init:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *chain-registry-common
+    restart: 'no'
+    command: chain-registry migrate init
+
+  chain-registry-migration:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *chain-registry-common
+    restart: 'no'
+    depends_on:
+      - chain-registry-migration-init
+    command: chain-registry migrate
+
+  chain-registry:
+    <<: *container-common
+    ports:
+      - 8081:8081
+    environment:
+      <<: *default-variables
+      <<: *chain-registry-common
+      CHAIN_REGISTRY_INIT: ${CHAIN_REGISTRY_INIT-}
+    depends_on:
+      - chain-registry-migration
+    command: chain-registry run
+
+  contract-registry-migration-init:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *contract-registry-common
+    restart: 'no'
+    command: contract-registry migrate init
+
+  contract-registry-migration:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *contract-registry-common
+    restart: 'no'
+    depends_on:
+      - contract-registry-migration-init
+    command: contract-registry migrate
+
+  contract-registry:
+    <<: *container-common
+    ports:
+      - 8020:8080
+      - 8021:8081
+      - 8022:8082
+    environment:
+      <<: *default-variables
+      <<: *contract-registry-common
+      LOG_LEVEL: trace
+    depends_on:
+      - contract-registry-migration
+    command: contract-registry run
+
+  envelope-store-migration-init:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *envelope-store-common
+    restart: 'no'
+    command: envelope-store migrate init
+
+  envelope-store-migration:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      <<: *envelope-store-common
+    restart: 'no'
+    depends_on:
+      - envelope-store-migration-init
+    command: envelope-store migrate
+
+  envelope-store:
+    <<: *container-common
+    ports:
+      - 8030:8080
+      - 8031:8081
+      - 8032:8082
+    environment:
+      <<: *default-variables
+      <<: *envelope-store-common
+    depends_on:
+      - envelope-store-migration
+    command: envelope-store run
+
+  tx-crafter:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      JAEGER_SERVICE_NAME: TX-CRAFTER
+    depends_on:
+      - contract-registry
+    command: tx-crafter run
+
+  tx-signer:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      JAEGER_SERVICE_NAME: TX-SIGNER
+      TESSERA_URL: ${TESSERA_URL}
+      SECRET_PKEY: ${SECRET_PKEY-}
+      SECRET_STORE: ${SECRET_STORE-hashicorp}
+    volumes:
+      - vault-token:/vault/token:ro
+      - ./build/bin/orchestrate:/bin/main
+    command: tx-signer run
+
+  tx-sender:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      JAEGER_SERVICE_NAME: TX-SENDER
+    command: tx-sender run
+
+  tx-listener:
+    <<: *container-common
+    environment:
+      <<: *default-variables
+      LISTENER_START_DEFAULT: latest
+      JAEGER_SERVICE_NAME: TX-LISTENER
+    depends_on:
+      - envelope-store
+      - chain-registry
+    command: tx-listener run
+
+volumes:
+  vault-token:
+    external:
+      name: deps_vault-token
+
+networks:
+  orchestrate:
+    external:
+      name: deps_orchestrate

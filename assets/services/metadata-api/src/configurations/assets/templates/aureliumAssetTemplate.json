@@ -1,0 +1,128 @@
+{
+  "tenantId": "uINkRv9cTcJnRVoSMFlBgqbZiPnP8VY1",
+  "category": "HYBRID",
+  "name": "Commodity Aurelium",
+  "type": "PHYSICAL_ASSET",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "Commodity refer to raw material, basic resource, agricultural, or mining product, such as Gold or Iron, Sugar, or grains like rice and wheat.",
+    "fr": "Commodity refer to raw material, basic resource, agricultural, or mining product, such as Gold or Iron, Sugar, or grains like rice and wheat."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Token information",
+        "fr": "Token information"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "fundInformations_fundName_pa",
+            "fundInformations_fundSymbol_pa",
+            "fundInformations_fundDescription_pa"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Token documents",
+            "fr": "Token documents"
+          },
+          "elements": [
+            "fundInformations_prospectus_pa",
+            "shareClass_documents_KIID_pa"
+          ]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Token cover image",
+            "fr": "Token cover image"
+          },
+          "elements": ["fundInformations_coverPicture_pa"]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Bank information"
+          },
+          "elements": [
+            "bankInformation_holderName_pa",
+            "bankInformation_accountNumber_pa",
+            "bankInformation_IBAN_pa",
+            "bankInformation_Swift_pa",
+            "bankInformation_bankName_pa",
+            "bankInformation_bankAddress_pa",
+            "bankInformation_bankAddress2_pa",
+            "bankInformation_bankCity_pa",
+            "bankInformation_bankCounty_pa",
+            "bankInformation_bankZIP_pa",
+            "bankInformation_bankCountry_pa"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Share class",
+        "fr": "Classe d’actif"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": ["shareClass_currency_pa"]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes_pa",
+            "shareClass_minimumSubscriptionInAmount_pa",
+            "shareClass_maximumSubscriptionInAmount_pa",
+            "shareClass_minimumSubscriptionInQuantity_pa",
+            "shareClass_maximumSubscriptionInQuantity_pa"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Token issuing",
+            "fr": "Token issuing"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date_pa",
+            "shareClass_subscription_initialSubscription_start_hour_pa"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": ["sharedClass_maximum_entryFeesValue_pa"]
+        }
+      ]
+    }
+  ]
+}

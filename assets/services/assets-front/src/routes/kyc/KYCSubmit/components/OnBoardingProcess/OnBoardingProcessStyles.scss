@@ -1,0 +1,89 @@
+._route_onBoardingProcess {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 var(--spacing-tight-looser);
+  height: calc(100vh - var(--spacing-loose));
+
+  @media (max-width: 950px) {
+    display: none;
+  }
+
+  > form {
+    flex-grow: 1;
+
+    > h1 {
+      font-size: var(--typography-size-f6);
+      font-weight: var(--typography-weight-medium);
+      margin: 20px 0;
+    }
+
+    > h2 {
+      font-size: var(--typography-size-f5);
+      font-weight: var(--typography-weight-lightMedium);
+      margin: 20px 0;
+    }
+
+    > p {
+      font-size: var(--typography-size-f2);
+    }
+
+    > div {
+      margin: var(--spacing-tight-looser) 0;
+    }
+
+    > .subSectionHeader,
+    > div > .subSectionHeader {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--spacing-small) 0;
+      border-bottom: 1px solid #eee;
+      margin-bottom: var(--spacing-tight);
+      margin-top: var(--spacing-tight-looser);
+
+      > h2 {
+        font-size: var(--typography-size-f4);
+        font-weight: var(--typography-weight-lightMedium);
+        color: #475166;
+      }
+
+      > a {
+        float: right;
+        color: var(--colors-main);
+        text-decoration: none;
+        font-size: var(--typography-size-f2);
+      }
+    }
+
+    > div > div {
+      margin: var(--spacing-small) 0;
+      &.error {
+        color: var(--colors-warningDark);
+        font-weight: var(--typography-weight-medium);
+        display: flex;
+        align-items: center;
+        font-size: var(--typography-size-f1);
+        margin-bottom: var(--spacing-small);
+        margin-top: var(--spacing-xs);
+        > span {
+          font-weight: var(--typography-weight-normal);
+          margin-left: 5px;
+        }
+      }
+    }
+
+    > footer {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0;
+      > :not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  > menu {
+    top: calc(var(--spacing-large) - var(--spacing-regular));
+  }
+}

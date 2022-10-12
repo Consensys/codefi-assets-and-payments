@@ -1,0 +1,240 @@
+._route_issuer_assetIssuance_formField {
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 12px 0;
+
+  .periodSelectLabel {
+    padding: 8px 0 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &.size_1 {
+    width: calc(20% - 10px);
+
+    &.fillLine {
+      margin-right: 80%;
+    }
+  }
+
+  &.size_2 {
+    width: calc(40% - 10px);
+
+    &.fillLine {
+      margin-right: 60%;
+    }
+  }
+
+  &.size_3 {
+    width: calc(60% - 10px);
+
+    &.fillLine {
+      margin-right: 40%;
+    }
+  }
+
+  &.size_4 {
+    width: calc(80% - 10px);
+
+    &.fillLine {
+      margin-right: 20%;
+    }
+  }
+
+  > h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 24px 0 16px 0;
+    width: 100%;
+  }
+
+  > .rate {
+    > div {
+      display: flex;
+      align-items: center;
+
+      > button {
+        border: none;
+        background: transparent;
+        height: 30px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  > .percentage {
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > button {
+        border: none;
+        background: transparent;
+        height: 30px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  > .docusign {
+    width: 100%;
+    border-collapse: collapse;
+
+    > thead {
+      > tr {
+        > td {
+          vertical-align: middle;
+          font-size: var(--typography-size-f1);
+          font-weight: var(--typography-weight-lightMedium);
+
+          &:last-of-type {
+            border-right: none;
+          }
+          &:nth-child(1) {
+            width: 45%;
+          }
+          &:nth-child(2) {
+            width: 45%;
+          }
+          &:nth-child(3) {
+            width: 10%;
+          }
+        }
+      }
+    }
+
+    > tbody {
+      color: #444;
+      > tr {
+        > td {
+          border-top: 1px solid #ccc;
+          font-size: var(--typography-size-f1);
+          max-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          vertical-align: middle;
+          padding-top: 5px;
+
+          &:nth-child(1) {
+            padding-right: 5px;
+            > button > span {
+              overflow: hidden;
+              white-space: nowrap;
+              display: block;
+              text-overflow: ellipsis;
+            }
+          }
+
+          &:nth-child(3) {
+            text-align: center;
+            > button {
+              width: 40px;
+              background: #fcf5f5;
+              height: 37px;
+              border: 1px solid #f2cece;
+            }
+          }
+
+          > .docusign-url {
+            input {
+              height: 37px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .timeAfterSubscription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    > label {
+      width: 100%;
+    }
+
+    > div {
+      flex-grow: 1;
+    }
+
+    > span {
+      display: flex;
+      padding: 0 10px;
+      flex-shrink: 0;
+    }
+  }
+
+  > .impactTargets {
+    > div {
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > div {
+          margin-top: var(--spacing-tight);
+          margin-right: var(--spacing-tight);
+          width: 70%;
+        }
+
+        input {
+          height: var(--spacing-finger);
+        }
+
+        > button {
+          border: none;
+          background: transparent;
+          height: var(--spacing-regular);
+          margin-top: var(--spacing-small);
+        }
+        .target {
+          width: 150%;
+        }
+      }
+
+      .targetPreview {
+        display: block;
+        margin-top: var(--spacing-regular);
+        margin-bottom: var(--spacing-tight-looser);
+        font-size: var(--typography-size-f1);
+
+        h2 {
+          font-weight: var(--typography-weight-medium);
+        }
+
+        p {
+          color: #666;
+        }
+        > .targetBox {
+          border: 1px solid #dfe0e6;
+          box-sizing: border-box;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+          border-radius: var(--spacing-xs);
+        }
+
+        .ant-progress-inner {
+          margin: var(--spacing-tight);
+        }
+      }
+    }
+  }
+
+  .couponPaymentDate {
+    margin-top: 20px;
+    > div {
+      margin-right: 20px;
+      > p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

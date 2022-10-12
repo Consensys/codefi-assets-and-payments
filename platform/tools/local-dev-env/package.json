@@ -1,0 +1,9 @@
+{
+    "name": "@codefi-assets-and-payments/local-dev-env",
+    "version": "1.0.0",
+    "description": "Local Development Environment",
+    "scripts": {
+        "up": "sh ./up.sh",
+        "down": "sh ./down.sh"
+    }
+}

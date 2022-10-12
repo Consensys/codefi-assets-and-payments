@@ -1,0 +1,3885 @@
+[
+  {
+    "key": "fundInformations_fundName_l4g",
+    "map": "asset_general_name",
+    "type": "string",
+    "label": {
+      "en": "Loan name",
+      "fr": "Loan name"
+    },
+    "sublabel": {
+      "en": "Choose a name for your loan that describes it in about five words, e.g. Improving Waste Management in Tanzania ",
+      "fr": "Choose a name for your loan that describes it in about five words, e.g. Improving Waste Management in Tanzania "
+    },
+    "size": 3,
+    "status": "mandatory",
+    "maxLength": 50,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol_l4g",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Loan symbol",
+      "fr": "Symbole de fonds"
+    },
+    "sublabel": {
+      "en": "Enter the first four letters of the name of the borrower, e.g. TANW",
+      "fr": "Enter the first four letters of the name of the borrower, e.g. TANW"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundDescription_l4g",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Loan summary sentence",
+      "fr": "Loan summary sentence"
+    },
+    "sublabel": {
+      "en": "Describe the loan in one sentence, e.g. Helping the residents of Tanzania overcome the public health challenges of waste management by providing quality and sustainable waste services.",
+      "fr": "Describe the loan in one sentence, e.g. Helping the residents of Tanzania overcome the public health challenges of waste management by providing quality and sustainable waste services."
+    },
+    "status": "mandatory",
+    "maxLength": 175,
+    "updatable": false
+  },
+  {
+    "key": "LoanSummaryInformation_LoanSummary_Loansymbol",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan symbol",
+      "fr": "Loan symbol"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_loanshorturl",
+    "map": "asset_loanSummaryInformation_loanshort",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan short url",
+      "fr": "Loan short url"
+    },
+    "sublabel": {
+      "en": "Choose a short descriptor to be used in the URL for your loan, e.g. tanwaste-2022. (No spaces or special characters.)",
+      "fr": "Choose a short descriptor to be used in the URL for your loan, e.g. tanwaste-2022. (No spaces or special characters.)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_holderName",
+    "map": "asset_bankInformations_holderName",
+    "type": "string",
+    "label": {
+      "en": "Name of the account",
+      "fr": "Name of the account"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_accountType",
+    "map": "asset_bankInformations_accountType",
+    "type": "string",
+    "label": {
+      "en": "Account type",
+      "fr": "Account type"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankName",
+    "map": "asset_bankInformations_bankName",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank name",
+      "fr": "Bank name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bsb",
+    "map": "asset_bankInformations_bsb",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "BSB (for transfers from Australian bank accounts)",
+      "fr": "BSB (for transfers from Australian bank accounts)"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_accountNumber",
+    "map": "asset_bankInformations_accountNumber",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Account number (for transfers from Australian bank accounts)",
+      "fr": "Account number (for transfers from Australian bank accounts)"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_achRoutingNumber",
+    "map": "asset_bankInformations_achRoutingNumber",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "ACH routing number (for US to US transfers)",
+      "fr": "ACH routing number (for US to US transfers)"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_wireRoutingNumber",
+    "map": "asset_bankInformations_wireRoutingNumber",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Wire routing number (for US to US transfers)",
+      "fr": "Wire routing number (for US to US transfers)"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_IBAN",
+    "map": "asset_bankInformations_iban",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "IBAN",
+      "fr": "IBAN"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_docusign_l4g",
+    "map": "asset_documents_docusign",
+    "type": "docusign",
+    "fileAccept": "pdf",
+    "size": 4,
+    "label": {
+      "en": "Loan agreement",
+      "fr": "Loan agreement"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_documents_l4g",
+    "map": "asset_documents_other",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Loan agreement already signed by borrower",
+      "fr": "Loan agreement already signed by borrower"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_swift",
+    "map": "asset_bankInformations_swift",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "BIC/SWIFT code",
+      "fr": "BIC/SWIFT code"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankAddress",
+    "map": "asset_bankInformations_bankAddress",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address line 1",
+      "fr": "Bank address line 1"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankAddress2",
+    "map": "asset_bankInformations_bankAddress2",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address line 2",
+      "fr": "Bank address line 2"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankCity",
+    "map": "asset_bankInformations_bankCity",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank city",
+      "fr": "Bank city"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientBankCity",
+    "map": "asset_bankInformations_recipientBankCity",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Recipient city",
+      "fr": "Recipient city"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankCountry",
+    "map": "asset_bankInformations_bankCountry",
+    "type": "multistring",
+
+    "label": {
+      "en": "Bank country",
+      "fr": "Bank country"
+    },
+    "options": [
+      {
+        "key": "Argentina",
+        "value": "Argentina",
+        "label": {
+          "en": "Argentina",
+          "fr": "Argentina"
+        }
+      },
+      {
+        "key": "Australia",
+        "value": "Australia",
+        "label": {
+          "en": "Australia",
+          "fr": "Australia"
+        }
+      },
+      {
+        "key": "Bangladesh",
+        "value": "Bangladesh",
+        "label": {
+          "en": "Bangladesh",
+          "fr": "Bangladesh"
+        }
+      },
+      {
+        "key": "Belize",
+        "value": "Belize",
+        "label": {
+          "en": "Belize",
+          "fr": "Belize"
+        }
+      },
+      {
+        "key": "Bolivia",
+        "value": "Bolivia",
+        "label": {
+          "en": "Bolivia",
+          "fr": "Bolivia"
+        }
+      },
+      {
+        "key": "Brazil",
+        "value": "Brazil",
+        "label": {
+          "en": "Brazil",
+          "fr": "Brazil"
+        }
+      },
+      {
+        "key": "Bulgaria",
+        "value": "Bulgaria",
+        "label": {
+          "en": "Bulgaria",
+          "fr": "Bulgaria"
+        }
+      },
+      {
+        "key": "Cambodia",
+        "value": "Cambodia",
+        "label": {
+          "en": "Cambodia",
+          "fr": "Cambodia"
+        }
+      },
+      {
+        "key": "Canada",
+        "value": "Canada",
+        "label": {
+          "en": "Canada",
+          "fr": "Canada"
+        }
+      },
+      {
+        "key": "Chile",
+        "value": "Chile",
+        "label": {
+          "en": "Chile",
+          "fr": "Chile"
+        }
+      },
+      {
+        "key": "China",
+        "value": "China",
+        "label": {
+          "en": "China",
+          "fr": "China"
+        }
+      },
+      {
+        "key": "Colombia",
+        "value": "Colombia",
+        "label": {
+          "en": "Colombia",
+          "fr": "Colombia"
+        }
+      },
+      {
+        "key": "Congo",
+        "value": "Congo",
+        "label": {
+          "en": "Congo",
+          "fr": "Congo"
+        }
+      },
+      {
+        "key": "Costa Rica",
+        "value": "Costa Rica",
+        "label": {
+          "en": "Costa Rica",
+          "fr": "Costa Rica"
+        }
+      },
+      {
+        "key": "Cyprus",
+        "value": "Cyprus",
+        "label": {
+          "en": "Cyprus",
+          "fr": "Cyprus"
+        }
+      },
+      {
+        "key": "Dominican Republic",
+        "value": "Dominican Republic",
+        "label": {
+          "en": "Dominican Republic",
+          "fr": "Dominican Republic"
+        }
+      },
+      {
+        "key": "Ecuador",
+        "value": "Ecuador",
+        "label": {
+          "en": "Ecuador",
+          "fr": "Ecuador"
+        }
+      },
+      {
+        "key": "Egypt",
+        "value": "Egypt",
+        "label": {
+          "en": "Egypt",
+          "fr": "Egypt"
+        }
+      },
+      {
+        "key": "El Salvador",
+        "value": "El Salvador",
+        "label": {
+          "en": "El Salvador",
+          "fr": "El Salvador"
+        }
+      },
+      {
+        "key": "Ethiopia",
+        "value": "Ethiopia",
+        "label": {
+          "en": "Ethiopia",
+          "fr": "Ethiopia"
+        }
+      },
+      {
+        "key": "Germany",
+        "value": "Germany",
+        "label": {
+          "en": "Germany",
+          "fr": "Germany"
+        }
+      },
+      {
+        "key": "Ghana",
+        "value": "Ghana",
+        "label": {
+          "en": "Ghana",
+          "fr": "Ghana"
+        }
+      },
+      {
+        "key": "Guatemala",
+        "value": "Guatemala",
+        "label": {
+          "en": "Guatemala",
+          "fr": "Guatemala"
+        }
+      },
+      {
+        "key": "Honduras",
+        "value": "Honduras",
+        "label": {
+          "en": "Honduras",
+          "fr": "Honduras"
+        }
+      },
+      {
+        "key": "India",
+        "value": "India",
+        "label": {
+          "en": "India",
+          "fr": "India"
+        }
+      },
+      {
+        "key": "Indonesia",
+        "value": "Indonesia",
+        "label": {
+          "en": "Indonesia",
+          "fr": "Indonesia"
+        }
+      },
+      {
+        "key": "Israel",
+        "value": "Israel",
+        "label": {
+          "en": "Israel",
+          "fr": "Israel"
+        }
+      },
+      {
+        "key": "Kenya",
+        "value": "Kenya",
+        "label": {
+          "en": "Kenya",
+          "fr": "Kenya"
+        }
+      },
+      {
+        "key": "Lao",
+        "value": "Lao",
+        "label": {
+          "en": "Lao",
+          "fr": "Lao"
+        }
+      },
+      {
+        "key": "Liberia",
+        "value": "Liberia",
+        "label": {
+          "en": "Liberia",
+          "fr": "Liberia"
+        }
+      },
+      {
+        "key": "Madagascar",
+        "value": "Madagascar",
+        "label": {
+          "en": "Madagascar",
+          "fr": "Madagascar"
+        }
+      },
+      {
+        "key": "Malawi",
+        "value": "Malawi",
+        "label": {
+          "en": "Malawi",
+          "fr": "Malawi"
+        }
+      },
+      {
+        "key": "Malaysia",
+        "value": "Malaysia",
+        "label": {
+          "en": "Malaysia",
+          "fr": "Malaysia"
+        }
+      },
+      {
+        "key": "Mauritania",
+        "value": "Mauritania",
+        "label": {
+          "en": "Mauritania",
+          "fr": "Mauritania"
+        }
+      },
+      {
+        "key": "Mauritius",
+        "value": "Mauritius",
+        "label": {
+          "en": "Mauritius",
+          "fr": "Mauritius"
+        }
+      },
+      {
+        "key": "Mexico",
+        "value": "Mexico",
+        "label": {
+          "en": "Mexico",
+          "fr": "Mexico"
+        }
+      },
+      {
+        "key": "Mongolia",
+        "value": "Mongolia",
+        "label": {
+          "en": "Mongolia",
+          "fr": "Mongolia"
+        }
+      },
+      {
+        "key": "Mozambique",
+        "value": "Mozambique",
+        "label": {
+          "en": "Mozambique",
+          "fr": "Mozambique"
+        }
+      },
+      {
+        "key": "Myanmar",
+        "value": "Myanmar",
+        "label": {
+          "en": "Myanmar",
+          "fr": "Myanmar"
+        }
+      },
+      {
+        "key": "Namibia",
+        "value": "Namibia",
+        "label": {
+          "en": "Namibia",
+          "fr": "Namibia"
+        }
+      },
+      {
+        "key": "Nepal",
+        "value": "Nepal",
+        "label": {
+          "en": "Nepal",
+          "fr": "Nepal"
+        }
+      },
+      {
+        "key": "Netherlands",
+        "value": "Netherlands",
+        "label": {
+          "en": "Netherlands",
+          "fr": "Netherlands"
+        }
+      },
+      {
+        "key": "New Zealand",
+        "value": "New Zealand",
+        "label": {
+          "en": "New Zealand",
+          "fr": "New Zealand"
+        }
+      },
+      {
+        "key": "Nicaragua",
+        "value": "Nicaragua",
+        "label": {
+          "en": "Nicaragua",
+          "fr": "Nicaragua"
+        }
+      },
+      {
+        "key": "Pakistan",
+        "value": "Pakistan",
+        "label": {
+          "en": "Pakistan",
+          "fr": "Pakistan"
+        }
+      },
+      {
+        "key": "Papua New Guinea",
+        "value": "Papua New Guinea",
+        "label": {
+          "en": "Papua New Guinea",
+          "fr": "Papua New Guinea"
+        }
+      },
+      {
+        "key": "Paraguay",
+        "value": "Paraguay",
+        "label": {
+          "en": "Paraguay",
+          "fr": "Paraguay"
+        }
+      },
+      {
+        "key": "Peru",
+        "value": "Peru",
+        "label": {
+          "en": "Peru",
+          "fr": "Peru"
+        }
+      },
+      {
+        "key": "Philippines",
+        "value": "Philippines",
+        "label": {
+          "en": "Philippines",
+          "fr": "Philippines"
+        }
+      },
+      {
+        "key": "Russian Federation",
+        "value": "Russian Federation",
+        "label": {
+          "en": "Russian Federation",
+          "fr": "Russian Federation"
+        }
+      },
+      {
+        "key": "Rwanda",
+        "value": "Rwanda",
+        "label": {
+          "en": "Rwanda",
+          "fr": "Rwanda"
+        }
+      },
+      {
+        "key": "Senegal",
+        "value": "Senegal",
+        "label": {
+          "en": "Senegal",
+          "fr": "Senegal"
+        }
+      },
+      {
+        "key": "Sierra Leone",
+        "value": "Sierra Leone",
+        "label": {
+          "en": "Sierra Leone",
+          "fr": "Sierra Leone"
+        }
+      },
+      {
+        "key": "Singapore",
+        "value": "Singapore",
+        "label": {
+          "en": "Singapore",
+          "fr": "Singapore"
+        }
+      },
+      {
+        "key": "South Africa",
+        "value": "South Africa",
+        "label": {
+          "en": "South Africa",
+          "fr": "South Africa"
+        }
+      },
+      {
+        "key": "South Korea",
+        "value": "South Korea",
+        "label": {
+          "en": "South Korea",
+          "fr": "South Korea"
+        }
+      },
+      {
+        "key": "Sri Lanka",
+        "value": "Sri Lanka",
+        "label": {
+          "en": "Sri Lanka",
+          "fr": "Sri Lanka"
+        }
+      },
+      {
+        "key": "Tajikistan",
+        "value": "Tajikistan",
+        "label": {
+          "en": "Tajikistan",
+          "fr": "Tajikistan"
+        }
+      },
+      {
+        "key": "Tanzania",
+        "value": "Tanzania",
+        "label": {
+          "en": "Tanzania",
+          "fr": "Tanzania"
+        }
+      },
+      {
+        "key": "Thailand",
+        "value": "Thailand",
+        "label": {
+          "en": "Thailand",
+          "fr": "Thailand"
+        }
+      },
+      {
+        "key": "Turkey",
+        "value": "Turkey",
+        "label": {
+          "en": "Turkey",
+          "fr": "Turkey"
+        }
+      },
+      {
+        "key": "Turkmenistan",
+        "value": "Turkmenistan",
+        "label": {
+          "en": "Turkmenistan",
+          "fr": "Turkmenistan"
+        }
+      },
+      {
+        "key": "Uganda",
+        "value": "Uganda",
+        "label": {
+          "en": "Uganda",
+          "fr": "Uganda"
+        }
+      },
+      {
+        "key": "United Arab Emirates",
+        "value": "United Arab Emirates",
+        "label": {
+          "en": "United Arab Emirates",
+          "fr": "United Arab Emirates"
+        }
+      },
+      {
+        "key": "United Kingdom",
+        "value": "United Kingdom",
+        "label": {
+          "en": "United Kingdom",
+          "fr": "United Kingdom"
+        }
+      },
+      {
+        "key": "United States",
+        "value": "United States",
+        "label": {
+          "en": "United States",
+          "fr": "United States"
+        }
+      },
+      {
+        "key": "Uruguay",
+        "value": "Uruguay",
+        "label": {
+          "en": "Uruguay",
+          "fr": "Uruguay"
+        }
+      },
+      {
+        "key": "Viet Nam",
+        "value": "Viet Nam",
+        "label": {
+          "en": "Viet Nam",
+          "fr": "Viet Nam"
+        }
+      },
+      {
+        "key": "Zambia",
+        "value": "Zambia",
+        "label": {
+          "en": "Zambia",
+          "fr": "Zambia"
+        }
+      },
+      {
+        "key": "Zimbabwe",
+        "value": "Zimbabwe",
+        "label": {
+          "en": "Zimbabwe",
+          "fr": "Zimbabwe"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientCountry",
+    "map": "asset_bankInformations_recipientCountry",
+    "type": "multistring",
+
+    "label": {
+      "en": "Recipient country",
+      "fr": "Recipient country"
+    },
+    "options": [
+      {
+        "key": "Argentina",
+        "value": "Argentina",
+        "label": {
+          "en": "Argentina",
+          "fr": "Argentina"
+        }
+      },
+      {
+        "key": "Australia",
+        "value": "Australia",
+        "label": {
+          "en": "Australia",
+          "fr": "Australia"
+        }
+      },
+      {
+        "key": "Bangladesh",
+        "value": "Bangladesh",
+        "label": {
+          "en": "Bangladesh",
+          "fr": "Bangladesh"
+        }
+      },
+      {
+        "key": "Belize",
+        "value": "Belize",
+        "label": {
+          "en": "Belize",
+          "fr": "Belize"
+        }
+      },
+      {
+        "key": "Bolivia",
+        "value": "Bolivia",
+        "label": {
+          "en": "Bolivia",
+          "fr": "Bolivia"
+        }
+      },
+      {
+        "key": "Brazil",
+        "value": "Brazil",
+        "label": {
+          "en": "Brazil",
+          "fr": "Brazil"
+        }
+      },
+      {
+        "key": "Bulgaria",
+        "value": "Bulgaria",
+        "label": {
+          "en": "Bulgaria",
+          "fr": "Bulgaria"
+        }
+      },
+      {
+        "key": "Cambodia",
+        "value": "Cambodia",
+        "label": {
+          "en": "Cambodia",
+          "fr": "Cambodia"
+        }
+      },
+      {
+        "key": "Canada",
+        "value": "Canada",
+        "label": {
+          "en": "Canada",
+          "fr": "Canada"
+        }
+      },
+      {
+        "key": "Chile",
+        "value": "Chile",
+        "label": {
+          "en": "Chile",
+          "fr": "Chile"
+        }
+      },
+      {
+        "key": "China",
+        "value": "China",
+        "label": {
+          "en": "China",
+          "fr": "China"
+        }
+      },
+      {
+        "key": "Colombia",
+        "value": "Colombia",
+        "label": {
+          "en": "Colombia",
+          "fr": "Colombia"
+        }
+      },
+      {
+        "key": "Congo",
+        "value": "Congo",
+        "label": {
+          "en": "Congo",
+          "fr": "Congo"
+        }
+      },
+      {
+        "key": "Costa Rica",
+        "value": "Costa Rica",
+        "label": {
+          "en": "Costa Rica",
+          "fr": "Costa Rica"
+        }
+      },
+      {
+        "key": "Cyprus",
+        "value": "Cyprus",
+        "label": {
+          "en": "Cyprus",
+          "fr": "Cyprus"
+        }
+      },
+      {
+        "key": "Dominican Republic",
+        "value": "Dominican Republic",
+        "label": {
+          "en": "Dominican Republic",
+          "fr": "Dominican Republic"
+        }
+      },
+      {
+        "key": "Ecuador",
+        "value": "Ecuador",
+        "label": {
+          "en": "Ecuador",
+          "fr": "Ecuador"
+        }
+      },
+      {
+        "key": "Egypt",
+        "value": "Egypt",
+        "label": {
+          "en": "Egypt",
+          "fr": "Egypt"
+        }
+      },
+      {
+        "key": "El Salvador",
+        "value": "El Salvador",
+        "label": {
+          "en": "El Salvador",
+          "fr": "El Salvador"
+        }
+      },
+      {
+        "key": "Ethiopia",
+        "value": "Ethiopia",
+        "label": {
+          "en": "Ethiopia",
+          "fr": "Ethiopia"
+        }
+      },
+      {
+        "key": "Germany",
+        "value": "Germany",
+        "label": {
+          "en": "Germany",
+          "fr": "Germany"
+        }
+      },
+      {
+        "key": "Ghana",
+        "value": "Ghana",
+        "label": {
+          "en": "Ghana",
+          "fr": "Ghana"
+        }
+      },
+      {
+        "key": "Guatemala",
+        "value": "Guatemala",
+        "label": {
+          "en": "Guatemala",
+          "fr": "Guatemala"
+        }
+      },
+      {
+        "key": "Honduras",
+        "value": "Honduras",
+        "label": {
+          "en": "Honduras",
+          "fr": "Honduras"
+        }
+      },
+      {
+        "key": "India",
+        "value": "India",
+        "label": {
+          "en": "India",
+          "fr": "India"
+        }
+      },
+      {
+        "key": "Indonesia",
+        "value": "Indonesia",
+        "label": {
+          "en": "Indonesia",
+          "fr": "Indonesia"
+        }
+      },
+      {
+        "key": "Israel",
+        "value": "Israel",
+        "label": {
+          "en": "Israel",
+          "fr": "Israel"
+        }
+      },
+      {
+        "key": "Kenya",
+        "value": "Kenya",
+        "label": {
+          "en": "Kenya",
+          "fr": "Kenya"
+        }
+      },
+      {
+        "key": "Lao",
+        "value": "Lao",
+        "label": {
+          "en": "Lao",
+          "fr": "Lao"
+        }
+      },
+      {
+        "key": "Liberia",
+        "value": "Liberia",
+        "label": {
+          "en": "Liberia",
+          "fr": "Liberia"
+        }
+      },
+      {
+        "key": "Madagascar",
+        "value": "Madagascar",
+        "label": {
+          "en": "Madagascar",
+          "fr": "Madagascar"
+        }
+      },
+      {
+        "key": "Malawi",
+        "value": "Malawi",
+        "label": {
+          "en": "Malawi",
+          "fr": "Malawi"
+        }
+      },
+      {
+        "key": "Malaysia",
+        "value": "Malaysia",
+        "label": {
+          "en": "Malaysia",
+          "fr": "Malaysia"
+        }
+      },
+      {
+        "key": "Mauritania",
+        "value": "Mauritania",
+        "label": {
+          "en": "Mauritania",
+          "fr": "Mauritania"
+        }
+      },
+      {
+        "key": "Mauritius",
+        "value": "Mauritius",
+        "label": {
+          "en": "Mauritius",
+          "fr": "Mauritius"
+        }
+      },
+      {
+        "key": "Mexico",
+        "value": "Mexico",
+        "label": {
+          "en": "Mexico",
+          "fr": "Mexico"
+        }
+      },
+      {
+        "key": "Mongolia",
+        "value": "Mongolia",
+        "label": {
+          "en": "Mongolia",
+          "fr": "Mongolia"
+        }
+      },
+      {
+        "key": "Mozambique",
+        "value": "Mozambique",
+        "label": {
+          "en": "Mozambique",
+          "fr": "Mozambique"
+        }
+      },
+      {
+        "key": "Myanmar",
+        "value": "Myanmar",
+        "label": {
+          "en": "Myanmar",
+          "fr": "Myanmar"
+        }
+      },
+      {
+        "key": "Namibia",
+        "value": "Namibia",
+        "label": {
+          "en": "Namibia",
+          "fr": "Namibia"
+        }
+      },
+      {
+        "key": "Nepal",
+        "value": "Nepal",
+        "label": {
+          "en": "Nepal",
+          "fr": "Nepal"
+        }
+      },
+      {
+        "key": "Netherlands",
+        "value": "Netherlands",
+        "label": {
+          "en": "Netherlands",
+          "fr": "Netherlands"
+        }
+      },
+      {
+        "key": "New Zealand",
+        "value": "New Zealand",
+        "label": {
+          "en": "New Zealand",
+          "fr": "New Zealand"
+        }
+      },
+      {
+        "key": "Nicaragua",
+        "value": "Nicaragua",
+        "label": {
+          "en": "Nicaragua",
+          "fr": "Nicaragua"
+        }
+      },
+      {
+        "key": "Pakistan",
+        "value": "Pakistan",
+        "label": {
+          "en": "Pakistan",
+          "fr": "Pakistan"
+        }
+      },
+      {
+        "key": "Papua New Guinea",
+        "value": "Papua New Guinea",
+        "label": {
+          "en": "Papua New Guinea",
+          "fr": "Papua New Guinea"
+        }
+      },
+      {
+        "key": "Paraguay",
+        "value": "Paraguay",
+        "label": {
+          "en": "Paraguay",
+          "fr": "Paraguay"
+        }
+      },
+      {
+        "key": "Peru",
+        "value": "Peru",
+        "label": {
+          "en": "Peru",
+          "fr": "Peru"
+        }
+      },
+      {
+        "key": "Philippines",
+        "value": "Philippines",
+        "label": {
+          "en": "Philippines",
+          "fr": "Philippines"
+        }
+      },
+      {
+        "key": "Russian Federation",
+        "value": "Russian Federation",
+        "label": {
+          "en": "Russian Federation",
+          "fr": "Russian Federation"
+        }
+      },
+      {
+        "key": "Rwanda",
+        "value": "Rwanda",
+        "label": {
+          "en": "Rwanda",
+          "fr": "Rwanda"
+        }
+      },
+      {
+        "key": "Senegal",
+        "value": "Senegal",
+        "label": {
+          "en": "Senegal",
+          "fr": "Senegal"
+        }
+      },
+      {
+        "key": "Sierra Leone",
+        "value": "Sierra Leone",
+        "label": {
+          "en": "Sierra Leone",
+          "fr": "Sierra Leone"
+        }
+      },
+      {
+        "key": "Singapore",
+        "value": "Singapore",
+        "label": {
+          "en": "Singapore",
+          "fr": "Singapore"
+        }
+      },
+      {
+        "key": "South Africa",
+        "value": "South Africa",
+        "label": {
+          "en": "South Africa",
+          "fr": "South Africa"
+        }
+      },
+      {
+        "key": "South Korea",
+        "value": "South Korea",
+        "label": {
+          "en": "South Korea",
+          "fr": "South Korea"
+        }
+      },
+      {
+        "key": "Sri Lanka",
+        "value": "Sri Lanka",
+        "label": {
+          "en": "Sri Lanka",
+          "fr": "Sri Lanka"
+        }
+      },
+      {
+        "key": "Tajikistan",
+        "value": "Tajikistan",
+        "label": {
+          "en": "Tajikistan",
+          "fr": "Tajikistan"
+        }
+      },
+      {
+        "key": "Tanzania",
+        "value": "Tanzania",
+        "label": {
+          "en": "Tanzania",
+          "fr": "Tanzania"
+        }
+      },
+      {
+        "key": "Thailand",
+        "value": "Thailand",
+        "label": {
+          "en": "Thailand",
+          "fr": "Thailand"
+        }
+      },
+      {
+        "key": "Turkey",
+        "value": "Turkey",
+        "label": {
+          "en": "Turkey",
+          "fr": "Turkey"
+        }
+      },
+      {
+        "key": "Turkmenistan",
+        "value": "Turkmenistan",
+        "label": {
+          "en": "Turkmenistan",
+          "fr": "Turkmenistan"
+        }
+      },
+      {
+        "key": "Uganda",
+        "value": "Uganda",
+        "label": {
+          "en": "Uganda",
+          "fr": "Uganda"
+        }
+      },
+      {
+        "key": "United Arab Emirates",
+        "value": "United Arab Emirates",
+        "label": {
+          "en": "United Arab Emirates",
+          "fr": "United Arab Emirates"
+        }
+      },
+      {
+        "key": "United Kingdom",
+        "value": "United Kingdom",
+        "label": {
+          "en": "United Kingdom",
+          "fr": "United Kingdom"
+        }
+      },
+      {
+        "key": "United States",
+        "value": "United States",
+        "label": {
+          "en": "United States",
+          "fr": "United States"
+        }
+      },
+      {
+        "key": "Uruguay",
+        "value": "Uruguay",
+        "label": {
+          "en": "Uruguay",
+          "fr": "Uruguay"
+        }
+      },
+      {
+        "key": "Viet Nam",
+        "value": "Viet Nam",
+        "label": {
+          "en": "Viet Nam",
+          "fr": "Viet Nam"
+        }
+      },
+      {
+        "key": "Zambia",
+        "value": "Zambia",
+        "label": {
+          "en": "Zambia",
+          "fr": "Zambia"
+        }
+      },
+      {
+        "key": "Zimbabwe",
+        "value": "Zimbabwe",
+        "label": {
+          "en": "Zimbabwe",
+          "fr": "Zimbabwe"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankState",
+    "map": "asset_bankInformations_bankState",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank state",
+      "fr": "Bank state"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_bankZIP",
+    "map": "asset_bankInformations_bankZIP",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank postal code",
+      "fr": "Bank postal code"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientState",
+    "map": "asset_bankInformations_recipientState",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Recipient state",
+      "fr": "Recipient state"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientBankZIP",
+    "map": "asset_bankInformations_recipientBankZIP",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Recipient postal code",
+      "fr": "Recipient postal code"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientBankAddress1",
+    "map": "asset_bankInformations_recipientBankAddress1",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Recipient address line 1",
+      "fr": "Recipient address line 1"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientBankAddress2",
+    "map": "asset_bankInformations_recipientBankAddress2",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Recipient address line 2",
+      "fr": "Recipient address line 2"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientFullName",
+    "map": "asset_bankInformations_recipientFullName",
+    "type": "string",
+    "label": {
+      "en": "Recipient full name",
+      "fr": "Recipient full name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_pitchUrl",
+    "map": "asset_loanSummaryInformation_pitchUrl",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Link to a video pitch for this loan (Vimeo or YouTube links preferred)",
+      "fr": "Link to a video pitch for this loan (Vimeo or YouTube links preferred)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_amount",
+    "map": "asset_loanSummaryInformation_amount",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan amount (in Australian or US dollars)",
+      "fr": "Loan amount (in Australian or US dollars)"
+    },
+    "updatable": false
+  },
+
+  {
+    "key": "loanSummaryInformation_currencyCode",
+    "map": "asset_loanSummaryInformation_currencyCode",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Currency code",
+      "fr": "Currency code"
+    },
+    "options": ["AUD", "USD"],
+    "updatable": false
+  },
+
+  {
+    "key": "loanSummaryInformation_loanPeriod",
+    "map": "asset_loanSummaryInformation_loanPeriod",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan period (in months, must be full months)",
+      "fr": "Loan period (in months, must be full months)"
+    },
+    "sublabel": {
+      "en": "",
+      "fr": ""
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_loanInterestRate",
+    "map": "asset_loanSummaryInformation_loanInterestRate",
+    "type": "percentage",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan interest rate (% per annum)",
+      "fr": "Loan interest rate (% per annum)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_borrowerName",
+    "map": "asset_loanSummaryInformation_borrowerName",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Borrower name",
+      "fr": "Borrower name"
+    },
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_name_select_l4g",
+    "map": "asset_participants_reviewerId",
+    "type": "multistring",
+    "label": {
+      "en": "Borrower",
+      "fr": "Borrower"
+    },
+    "placeholder": {
+      "en": "Select borrower",
+      "fr": "Select borrower"
+    },
+    "options": [],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_name_ib_l4g",
+    "map": "asset_borrowerDetails_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Confirm borrower name",
+      "fr": "Confirm borrower name"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_borrowerCountry_l4g",
+    "map": "asset_loanSummaryInformation_borrowerCountry",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Borrower country",
+      "fr": "Borrower country"
+    },
+    "options": [
+      {
+        "key": "Argentina",
+        "value": "Argentina",
+        "label": {
+          "en": "Argentina",
+          "fr": "Argentina"
+        }
+      },
+      {
+        "key": "Australia",
+        "value": "Australia",
+        "label": {
+          "en": "Australia",
+          "fr": "Australia"
+        }
+      },
+      {
+        "key": "Bangladesh",
+        "value": "Bangladesh",
+        "label": {
+          "en": "Bangladesh",
+          "fr": "Bangladesh"
+        }
+      },
+      {
+        "key": "Belize",
+        "value": "Belize",
+        "label": {
+          "en": "Belize",
+          "fr": "Belize"
+        }
+      },
+      {
+        "key": "Bolivia",
+        "value": "Bolivia",
+        "label": {
+          "en": "Bolivia",
+          "fr": "Bolivia"
+        }
+      },
+      {
+        "key": "Brazil",
+        "value": "Brazil",
+        "label": {
+          "en": "Brazil",
+          "fr": "Brazil"
+        }
+      },
+      {
+        "key": "Bulgaria",
+        "value": "Bulgaria",
+        "label": {
+          "en": "Bulgaria",
+          "fr": "Bulgaria"
+        }
+      },
+      {
+        "key": "Cambodia",
+        "value": "Cambodia",
+        "label": {
+          "en": "Cambodia",
+          "fr": "Cambodia"
+        }
+      },
+      {
+        "key": "Canada",
+        "value": "Canada",
+        "label": {
+          "en": "Canada",
+          "fr": "Canada"
+        }
+      },
+      {
+        "key": "Chile",
+        "value": "Chile",
+        "label": {
+          "en": "Chile",
+          "fr": "Chile"
+        }
+      },
+      {
+        "key": "China",
+        "value": "China",
+        "label": {
+          "en": "China",
+          "fr": "China"
+        }
+      },
+      {
+        "key": "Colombia",
+        "value": "Colombia",
+        "label": {
+          "en": "Colombia",
+          "fr": "Colombia"
+        }
+      },
+      {
+        "key": "Congo",
+        "value": "Congo",
+        "label": {
+          "en": "Congo",
+          "fr": "Congo"
+        }
+      },
+      {
+        "key": "Costa Rica",
+        "value": "Costa Rica",
+        "label": {
+          "en": "Costa Rica",
+          "fr": "Costa Rica"
+        }
+      },
+      {
+        "key": "Cyprus",
+        "value": "Cyprus",
+        "label": {
+          "en": "Cyprus",
+          "fr": "Cyprus"
+        }
+      },
+      {
+        "key": "Dominican Republic",
+        "value": "Dominican Republic",
+        "label": {
+          "en": "Dominican Republic",
+          "fr": "Dominican Republic"
+        }
+      },
+      {
+        "key": "Ecuador",
+        "value": "Ecuador",
+        "label": {
+          "en": "Ecuador",
+          "fr": "Ecuador"
+        }
+      },
+      {
+        "key": "Egypt",
+        "value": "Egypt",
+        "label": {
+          "en": "Egypt",
+          "fr": "Egypt"
+        }
+      },
+      {
+        "key": "El Salvador",
+        "value": "El Salvador",
+        "label": {
+          "en": "El Salvador",
+          "fr": "El Salvador"
+        }
+      },
+      {
+        "key": "Ethiopia",
+        "value": "Ethiopia",
+        "label": {
+          "en": "Ethiopia",
+          "fr": "Ethiopia"
+        }
+      },
+      {
+        "key": "Germany",
+        "value": "Germany",
+        "label": {
+          "en": "Germany",
+          "fr": "Germany"
+        }
+      },
+      {
+        "key": "Ghana",
+        "value": "Ghana",
+        "label": {
+          "en": "Ghana",
+          "fr": "Ghana"
+        }
+      },
+      {
+        "key": "Guatemala",
+        "value": "Guatemala",
+        "label": {
+          "en": "Guatemala",
+          "fr": "Guatemala"
+        }
+      },
+      {
+        "key": "Honduras",
+        "value": "Honduras",
+        "label": {
+          "en": "Honduras",
+          "fr": "Honduras"
+        }
+      },
+      {
+        "key": "India",
+        "value": "India",
+        "label": {
+          "en": "India",
+          "fr": "India"
+        }
+      },
+      {
+        "key": "Indonesia",
+        "value": "Indonesia",
+        "label": {
+          "en": "Indonesia",
+          "fr": "Indonesia"
+        }
+      },
+      {
+        "key": "Israel",
+        "value": "Israel",
+        "label": {
+          "en": "Israel",
+          "fr": "Israel"
+        }
+      },
+      {
+        "key": "Kenya",
+        "value": "Kenya",
+        "label": {
+          "en": "Kenya",
+          "fr": "Kenya"
+        }
+      },
+      {
+        "key": "Lao",
+        "value": "Lao",
+        "label": {
+          "en": "Lao",
+          "fr": "Lao"
+        }
+      },
+      {
+        "key": "Liberia",
+        "value": "Liberia",
+        "label": {
+          "en": "Liberia",
+          "fr": "Liberia"
+        }
+      },
+      {
+        "key": "Madagascar",
+        "value": "Madagascar",
+        "label": {
+          "en": "Madagascar",
+          "fr": "Madagascar"
+        }
+      },
+      {
+        "key": "Malawi",
+        "value": "Malawi",
+        "label": {
+          "en": "Malawi",
+          "fr": "Malawi"
+        }
+      },
+      {
+        "key": "Malaysia",
+        "value": "Malaysia",
+        "label": {
+          "en": "Malaysia",
+          "fr": "Malaysia"
+        }
+      },
+      {
+        "key": "Mauritania",
+        "value": "Mauritania",
+        "label": {
+          "en": "Mauritania",
+          "fr": "Mauritania"
+        }
+      },
+      {
+        "key": "Mauritius",
+        "value": "Mauritius",
+        "label": {
+          "en": "Mauritius",
+          "fr": "Mauritius"
+        }
+      },
+      {
+        "key": "Mexico",
+        "value": "Mexico",
+        "label": {
+          "en": "Mexico",
+          "fr": "Mexico"
+        }
+      },
+      {
+        "key": "Mongolia",
+        "value": "Mongolia",
+        "label": {
+          "en": "Mongolia",
+          "fr": "Mongolia"
+        }
+      },
+      {
+        "key": "Mozambique",
+        "value": "Mozambique",
+        "label": {
+          "en": "Mozambique",
+          "fr": "Mozambique"
+        }
+      },
+      {
+        "key": "Myanmar",
+        "value": "Myanmar",
+        "label": {
+          "en": "Myanmar",
+          "fr": "Myanmar"
+        }
+      },
+      {
+        "key": "Namibia",
+        "value": "Namibia",
+        "label": {
+          "en": "Namibia",
+          "fr": "Namibia"
+        }
+      },
+      {
+        "key": "Nepal",
+        "value": "Nepal",
+        "label": {
+          "en": "Nepal",
+          "fr": "Nepal"
+        }
+      },
+      {
+        "key": "Netherlands",
+        "value": "Netherlands",
+        "label": {
+          "en": "Netherlands",
+          "fr": "Netherlands"
+        }
+      },
+      {
+        "key": "New Zealand",
+        "value": "New Zealand",
+        "label": {
+          "en": "New Zealand",
+          "fr": "New Zealand"
+        }
+      },
+      {
+        "key": "Nicaragua",
+        "value": "Nicaragua",
+        "label": {
+          "en": "Nicaragua",
+          "fr": "Nicaragua"
+        }
+      },
+      {
+        "key": "Pakistan",
+        "value": "Pakistan",
+        "label": {
+          "en": "Pakistan",
+          "fr": "Pakistan"
+        }
+      },
+      {
+        "key": "Papua New Guinea",
+        "value": "Papua New Guinea",
+        "label": {
+          "en": "Papua New Guinea",
+          "fr": "Papua New Guinea"
+        }
+      },
+      {
+        "key": "Paraguay",
+        "value": "Paraguay",
+        "label": {
+          "en": "Paraguay",
+          "fr": "Paraguay"
+        }
+      },
+      {
+        "key": "Peru",
+        "value": "Peru",
+        "label": {
+          "en": "Peru",
+          "fr": "Peru"
+        }
+      },
+      {
+        "key": "Philippines",
+        "value": "Philippines",
+        "label": {
+          "en": "Philippines",
+          "fr": "Philippines"
+        }
+      },
+      {
+        "key": "Russian Federation",
+        "value": "Russian Federation",
+        "label": {
+          "en": "Russian Federation",
+          "fr": "Russian Federation"
+        }
+      },
+      {
+        "key": "Rwanda",
+        "value": "Rwanda",
+        "label": {
+          "en": "Rwanda",
+          "fr": "Rwanda"
+        }
+      },
+      {
+        "key": "Senegal",
+        "value": "Senegal",
+        "label": {
+          "en": "Senegal",
+          "fr": "Senegal"
+        }
+      },
+      {
+        "key": "Sierra Leone",
+        "value": "Sierra Leone",
+        "label": {
+          "en": "Sierra Leone",
+          "fr": "Sierra Leone"
+        }
+      },
+      {
+        "key": "Singapore",
+        "value": "Singapore",
+        "label": {
+          "en": "Singapore",
+          "fr": "Singapore"
+        }
+      },
+      {
+        "key": "South Africa",
+        "value": "South Africa",
+        "label": {
+          "en": "South Africa",
+          "fr": "South Africa"
+        }
+      },
+      {
+        "key": "South Korea",
+        "value": "South Korea",
+        "label": {
+          "en": "South Korea",
+          "fr": "South Korea"
+        }
+      },
+      {
+        "key": "Sri Lanka",
+        "value": "Sri Lanka",
+        "label": {
+          "en": "Sri Lanka",
+          "fr": "Sri Lanka"
+        }
+      },
+      {
+        "key": "Tajikistan",
+        "value": "Tajikistan",
+        "label": {
+          "en": "Tajikistan",
+          "fr": "Tajikistan"
+        }
+      },
+      {
+        "key": "Tanzania",
+        "value": "Tanzania",
+        "label": {
+          "en": "Tanzania",
+          "fr": "Tanzania"
+        }
+      },
+      {
+        "key": "Thailand",
+        "value": "Thailand",
+        "label": {
+          "en": "Thailand",
+          "fr": "Thailand"
+        }
+      },
+      {
+        "key": "Turkey",
+        "value": "Turkey",
+        "label": {
+          "en": "Turkey",
+          "fr": "Turkey"
+        }
+      },
+      {
+        "key": "Turkmenistan",
+        "value": "Turkmenistan",
+        "label": {
+          "en": "Turkmenistan",
+          "fr": "Turkmenistan"
+        }
+      },
+      {
+        "key": "Uganda",
+        "value": "Uganda",
+        "label": {
+          "en": "Uganda",
+          "fr": "Uganda"
+        }
+      },
+      {
+        "key": "United Arab Emirates",
+        "value": "United Arab Emirates",
+        "label": {
+          "en": "United Arab Emirates",
+          "fr": "United Arab Emirates"
+        }
+      },
+      {
+        "key": "United Kingdom",
+        "value": "United Kingdom",
+        "label": {
+          "en": "United Kingdom",
+          "fr": "United Kingdom"
+        }
+      },
+      {
+        "key": "United States",
+        "value": "United States",
+        "label": {
+          "en": "United States",
+          "fr": "United States"
+        }
+      },
+      {
+        "key": "Uruguay",
+        "value": "Uruguay",
+        "label": {
+          "en": "Uruguay",
+          "fr": "Uruguay"
+        }
+      },
+      {
+        "key": "Viet Nam",
+        "value": "Viet Nam",
+        "label": {
+          "en": "Viet Nam",
+          "fr": "Viet Nam"
+        }
+      },
+      {
+        "key": "Zambia",
+        "value": "Zambia",
+        "label": {
+          "en": "Zambia",
+          "fr": "Zambia"
+        }
+      },
+      {
+        "key": "Zimbabwe",
+        "value": "Zimbabwe",
+        "label": {
+          "en": "Zimbabwe",
+          "fr": "Zimbabwe"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "loanSummaryInformation_borrowerCityState",
+    "map": "asset_loanSummaryInformation_borrowerCityState",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Borrower city/state",
+      "fr": "Borrower city/state"
+    },
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_proposedOnBehalfOfaBorrower",
+    "name": "impactIntermediaryDetails_proposedOnBehalfOfaBorrower",
+    "map": "asset_impactIntermediaryDetails_proposedOnBehalfOfaBorrower",
+    "type": "radio",
+    "status": "mandatory",
+    "fillLine": true,
+    "label": {
+      "en": "Is this loan being proposed by an impact intermediary on behalf of a borrower?",
+      "fr": "Is this loan being proposed by an impact intermediary on behalf of a borrower?"
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "map": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Yes"
+        },
+        "relatedElements": [
+          "impactIntermediaryDetails_impactIntermediaryName",
+          "impactIntermediaryDetails_impactIntermediaryCountry",
+          "impactIntermediaryDetails_businessExperience",
+          "impactIntermediaryDetails_historyWithBorrower",
+          "impactIntermediaryDetails_logo",
+          "impactIntermediaryDetails_website"
+        ]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "No"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_impactIntermediaryName",
+    "map": "asset_impactIntermediaryDetails_impactIntermediaryName",
+    "type": "string",
+    "multiline": true,
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Impact intermediary name",
+      "fr": "Impact intermediary name"
+    },
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_impactIntermediaryCountry",
+    "map": "asset_impactIntermediaryDetails_impactIntermediaryCountry",
+    "type": "multistring",
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Impact intermediary country",
+      "fr": "Impact intermediary country"
+    },
+    "options": [
+      {
+        "key": "Argentina",
+        "value": "Argentina",
+        "label": {
+          "en": "Argentina",
+          "fr": "Argentina"
+        }
+      },
+      {
+        "key": "Australia",
+        "value": "Australia",
+        "label": {
+          "en": "Australia",
+          "fr": "Australia"
+        }
+      },
+      {
+        "key": "Bangladesh",
+        "value": "Bangladesh",
+        "label": {
+          "en": "Bangladesh",
+          "fr": "Bangladesh"
+        }
+      },
+      {
+        "key": "Belize",
+        "value": "Belize",
+        "label": {
+          "en": "Belize",
+          "fr": "Belize"
+        }
+      },
+      {
+        "key": "Bolivia",
+        "value": "Bolivia",
+        "label": {
+          "en": "Bolivia",
+          "fr": "Bolivia"
+        }
+      },
+      {
+        "key": "Brazil",
+        "value": "Brazil",
+        "label": {
+          "en": "Brazil",
+          "fr": "Brazil"
+        }
+      },
+      {
+        "key": "Bulgaria",
+        "value": "Bulgaria",
+        "label": {
+          "en": "Bulgaria",
+          "fr": "Bulgaria"
+        }
+      },
+      {
+        "key": "Cambodia",
+        "value": "Cambodia",
+        "label": {
+          "en": "Cambodia",
+          "fr": "Cambodia"
+        }
+      },
+      {
+        "key": "Canada",
+        "value": "Canada",
+        "label": {
+          "en": "Canada",
+          "fr": "Canada"
+        }
+      },
+      {
+        "key": "Chile",
+        "value": "Chile",
+        "label": {
+          "en": "Chile",
+          "fr": "Chile"
+        }
+      },
+      {
+        "key": "China",
+        "value": "China",
+        "label": {
+          "en": "China",
+          "fr": "China"
+        }
+      },
+      {
+        "key": "Colombia",
+        "value": "Colombia",
+        "label": {
+          "en": "Colombia",
+          "fr": "Colombia"
+        }
+      },
+      {
+        "key": "Congo",
+        "value": "Congo",
+        "label": {
+          "en": "Congo",
+          "fr": "Congo"
+        }
+      },
+      {
+        "key": "Costa Rica",
+        "value": "Costa Rica",
+        "label": {
+          "en": "Costa Rica",
+          "fr": "Costa Rica"
+        }
+      },
+      {
+        "key": "Cyprus",
+        "value": "Cyprus",
+        "label": {
+          "en": "Cyprus",
+          "fr": "Cyprus"
+        }
+      },
+      {
+        "key": "Dominican Republic",
+        "value": "Dominican Republic",
+        "label": {
+          "en": "Dominican Republic",
+          "fr": "Dominican Republic"
+        }
+      },
+      {
+        "key": "Ecuador",
+        "value": "Ecuador",
+        "label": {
+          "en": "Ecuador",
+          "fr": "Ecuador"
+        }
+      },
+      {
+        "key": "Egypt",
+        "value": "Egypt",
+        "label": {
+          "en": "Egypt",
+          "fr": "Egypt"
+        }
+      },
+      {
+        "key": "El Salvador",
+        "value": "El Salvador",
+        "label": {
+          "en": "El Salvador",
+          "fr": "El Salvador"
+        }
+      },
+      {
+        "key": "Ethiopia",
+        "value": "Ethiopia",
+        "label": {
+          "en": "Ethiopia",
+          "fr": "Ethiopia"
+        }
+      },
+      {
+        "key": "Germany",
+        "value": "Germany",
+        "label": {
+          "en": "Germany",
+          "fr": "Germany"
+        }
+      },
+      {
+        "key": "Ghana",
+        "value": "Ghana",
+        "label": {
+          "en": "Ghana",
+          "fr": "Ghana"
+        }
+      },
+      {
+        "key": "Guatemala",
+        "value": "Guatemala",
+        "label": {
+          "en": "Guatemala",
+          "fr": "Guatemala"
+        }
+      },
+      {
+        "key": "Honduras",
+        "value": "Honduras",
+        "label": {
+          "en": "Honduras",
+          "fr": "Honduras"
+        }
+      },
+      {
+        "key": "India",
+        "value": "India",
+        "label": {
+          "en": "India",
+          "fr": "India"
+        }
+      },
+      {
+        "key": "Indonesia",
+        "value": "Indonesia",
+        "label": {
+          "en": "Indonesia",
+          "fr": "Indonesia"
+        }
+      },
+      {
+        "key": "Israel",
+        "value": "Israel",
+        "label": {
+          "en": "Israel",
+          "fr": "Israel"
+        }
+      },
+      {
+        "key": "Kenya",
+        "value": "Kenya",
+        "label": {
+          "en": "Kenya",
+          "fr": "Kenya"
+        }
+      },
+      {
+        "key": "Lao",
+        "value": "Lao",
+        "label": {
+          "en": "Lao",
+          "fr": "Lao"
+        }
+      },
+      {
+        "key": "Liberia",
+        "value": "Liberia",
+        "label": {
+          "en": "Liberia",
+          "fr": "Liberia"
+        }
+      },
+      {
+        "key": "Madagascar",
+        "value": "Madagascar",
+        "label": {
+          "en": "Madagascar",
+          "fr": "Madagascar"
+        }
+      },
+      {
+        "key": "Malawi",
+        "value": "Malawi",
+        "label": {
+          "en": "Malawi",
+          "fr": "Malawi"
+        }
+      },
+      {
+        "key": "Malaysia",
+        "value": "Malaysia",
+        "label": {
+          "en": "Malaysia",
+          "fr": "Malaysia"
+        }
+      },
+      {
+        "key": "Mauritania",
+        "value": "Mauritania",
+        "label": {
+          "en": "Mauritania",
+          "fr": "Mauritania"
+        }
+      },
+      {
+        "key": "Mauritius",
+        "value": "Mauritius",
+        "label": {
+          "en": "Mauritius",
+          "fr": "Mauritius"
+        }
+      },
+      {
+        "key": "Mexico",
+        "value": "Mexico",
+        "label": {
+          "en": "Mexico",
+          "fr": "Mexico"
+        }
+      },
+      {
+        "key": "Mongolia",
+        "value": "Mongolia",
+        "label": {
+          "en": "Mongolia",
+          "fr": "Mongolia"
+        }
+      },
+      {
+        "key": "Mozambique",
+        "value": "Mozambique",
+        "label": {
+          "en": "Mozambique",
+          "fr": "Mozambique"
+        }
+      },
+      {
+        "key": "Myanmar",
+        "value": "Myanmar",
+        "label": {
+          "en": "Myanmar",
+          "fr": "Myanmar"
+        }
+      },
+      {
+        "key": "Namibia",
+        "value": "Namibia",
+        "label": {
+          "en": "Namibia",
+          "fr": "Namibia"
+        }
+      },
+      {
+        "key": "Nepal",
+        "value": "Nepal",
+        "label": {
+          "en": "Nepal",
+          "fr": "Nepal"
+        }
+      },
+      {
+        "key": "Netherlands",
+        "value": "Netherlands",
+        "label": {
+          "en": "Netherlands",
+          "fr": "Netherlands"
+        }
+      },
+      {
+        "key": "New Zealand",
+        "value": "New Zealand",
+        "label": {
+          "en": "New Zealand",
+          "fr": "New Zealand"
+        }
+      },
+      {
+        "key": "Nicaragua",
+        "value": "Nicaragua",
+        "label": {
+          "en": "Nicaragua",
+          "fr": "Nicaragua"
+        }
+      },
+      {
+        "key": "Pakistan",
+        "value": "Pakistan",
+        "label": {
+          "en": "Pakistan",
+          "fr": "Pakistan"
+        }
+      },
+      {
+        "key": "Papua New Guinea",
+        "value": "Papua New Guinea",
+        "label": {
+          "en": "Papua New Guinea",
+          "fr": "Papua New Guinea"
+        }
+      },
+      {
+        "key": "Paraguay",
+        "value": "Paraguay",
+        "label": {
+          "en": "Paraguay",
+          "fr": "Paraguay"
+        }
+      },
+      {
+        "key": "Peru",
+        "value": "Peru",
+        "label": {
+          "en": "Peru",
+          "fr": "Peru"
+        }
+      },
+      {
+        "key": "Philippines",
+        "value": "Philippines",
+        "label": {
+          "en": "Philippines",
+          "fr": "Philippines"
+        }
+      },
+      {
+        "key": "Russian Federation",
+        "value": "Russian Federation",
+        "label": {
+          "en": "Russian Federation",
+          "fr": "Russian Federation"
+        }
+      },
+      {
+        "key": "Rwanda",
+        "value": "Rwanda",
+        "label": {
+          "en": "Rwanda",
+          "fr": "Rwanda"
+        }
+      },
+      {
+        "key": "Senegal",
+        "value": "Senegal",
+        "label": {
+          "en": "Senegal",
+          "fr": "Senegal"
+        }
+      },
+      {
+        "key": "Sierra Leone",
+        "value": "Sierra Leone",
+        "label": {
+          "en": "Sierra Leone",
+          "fr": "Sierra Leone"
+        }
+      },
+      {
+        "key": "Singapore",
+        "value": "Singapore",
+        "label": {
+          "en": "Singapore",
+          "fr": "Singapore"
+        }
+      },
+      {
+        "key": "South Africa",
+        "value": "South Africa",
+        "label": {
+          "en": "South Africa",
+          "fr": "South Africa"
+        }
+      },
+      {
+        "key": "South Korea",
+        "value": "South Korea",
+        "label": {
+          "en": "South Korea",
+          "fr": "South Korea"
+        }
+      },
+      {
+        "key": "Sri Lanka",
+        "value": "Sri Lanka",
+        "label": {
+          "en": "Sri Lanka",
+          "fr": "Sri Lanka"
+        }
+      },
+      {
+        "key": "Tajikistan",
+        "value": "Tajikistan",
+        "label": {
+          "en": "Tajikistan",
+          "fr": "Tajikistan"
+        }
+      },
+      {
+        "key": "Tanzania",
+        "value": "Tanzania",
+        "label": {
+          "en": "Tanzania",
+          "fr": "Tanzania"
+        }
+      },
+      {
+        "key": "Thailand",
+        "value": "Thailand",
+        "label": {
+          "en": "Thailand",
+          "fr": "Thailand"
+        }
+      },
+      {
+        "key": "Turkey",
+        "value": "Turkey",
+        "label": {
+          "en": "Turkey",
+          "fr": "Turkey"
+        }
+      },
+      {
+        "key": "Turkmenistan",
+        "value": "Turkmenistan",
+        "label": {
+          "en": "Turkmenistan",
+          "fr": "Turkmenistan"
+        }
+      },
+      {
+        "key": "Uganda",
+        "value": "Uganda",
+        "label": {
+          "en": "Uganda",
+          "fr": "Uganda"
+        }
+      },
+      {
+        "key": "United Arab Emirates",
+        "value": "United Arab Emirates",
+        "label": {
+          "en": "United Arab Emirates",
+          "fr": "United Arab Emirates"
+        }
+      },
+      {
+        "key": "United Kingdom",
+        "value": "United Kingdom",
+        "label": {
+          "en": "United Kingdom",
+          "fr": "United Kingdom"
+        }
+      },
+      {
+        "key": "United States",
+        "value": "United States",
+        "label": {
+          "en": "United States",
+          "fr": "United States"
+        }
+      },
+      {
+        "key": "Uruguay",
+        "value": "Uruguay",
+        "label": {
+          "en": "Uruguay",
+          "fr": "Uruguay"
+        }
+      },
+      {
+        "key": "Viet Nam",
+        "value": "Viet Nam",
+        "label": {
+          "en": "Viet Nam",
+          "fr": "Viet Nam"
+        }
+      },
+      {
+        "key": "Zambia",
+        "value": "Zambia",
+        "label": {
+          "en": "Zambia",
+          "fr": "Zambia"
+        }
+      },
+      {
+        "key": "Zimbabwe",
+        "value": "Zimbabwe",
+        "label": {
+          "en": "Zimbabwe",
+          "fr": "Zimbabwe"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_businessExperience",
+    "map": "asset_impactIntermediaryDetails_businessExperience",
+    "type": "string",
+    "multiline": true,
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Provide a short description of the intermediary's business and experience working with impact enterprises (2000 character limit)",
+      "fr": "Provide a short description of the intermediary's business and experience working with impact enterprises (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_historyWithBorrower",
+    "map": "asset_impactIntermediaryDetails_historyWithBorrower",
+    "type": "string",
+    "multiline": true,
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Provide a short description of the intermediary's history with the borrower (2000 character limit)",
+      "fr": "Provide a short description of the intermediary's history with the borrower (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_logo",
+    "map": "asset_impactIntermediaryDetails_logo",
+    "type": "document",
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Intermediary logo (max 10mb)",
+      "fr": "Intermediary logo (max 10mb)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "impactIntermediaryDetails_website",
+    "map": "asset_impactIntermediaryDetails_website",
+    "type": "string",
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "Intermediary website",
+      "fr": "Intermediary website"
+    },
+    "updatable": false
+  },
+  {
+    "key": "images_loanbackgroundimage",
+    "map": "asset_images_banner",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload an image that will display in the background of your loan information (max 10mb, banner image)",
+      "fr": "Upload an image that will display in the background of your loan information (max 10mb, banner image)"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "images_loanThumbnailImage",
+    "map": "asset_images_loanThumbnailImage",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload an image that will display on the website (max 10mb, 16x9 ratio)",
+      "fr": "Upload an image that will display on the website (max 10mb, 16x9 ratio)"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "images_cover_loanimage",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload an image that will display as the cover on the loan page (max 10mb, displays square)",
+      "fr": "Upload an image that will display as the cover on the loan page (max 10mb, displays square)"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_summary",
+    "map": "asset_borrowerDetails_description",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Provide a short summary on the background and context of the loan, and how this fits with the mission of the borrower (2000 character limit)",
+      "fr": "Provide a short summary on the background and context of the loan, and how this fits with the mission of the borrower (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_generaldescription",
+    "map": "asset_borrowerDetails_generaldescription",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Provide a 50-75 word description of the loan that describes what the money will be used for, how it will benefit the world, and how it will benefit the enterprise",
+      "fr": "Provide a 50-75 word description of the loan that describes what the money will be used for, how it will benefit the world, and how it will benefit the enterprise"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_borrowerbrief",
+    "map": "asset_loanGeneralDetails_borrowerbrief",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Provide brief insights and information on how the borrower has been pursuing its impact mission to date, and its long term impact and commercial ambitions (2000 character limit)",
+      "fr": "Provide brief insights and information on how the borrower has been pursuing its impact mission to date, and its long term impact and commercial ambitions (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_emailforlenders",
+    "map": "asset_loanGeneralDetails_emailforlenders",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Contact email for questions from lenders",
+      "fr": "Contact email for questions from lenders"
+    },
+    "updatable": false
+  },
+  {
+    "key": "bankInformations_recipientEmail",
+    "map": "asset_bankInformations_recipientEmail",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Recipient email",
+      "fr": "Recipient email"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_borrowerWebsite",
+    "map": "asset_borrowerDetails_website",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Borrower website",
+      "fr": "Borrower website"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_borrowerlogo",
+    "map": "asset_loanGeneralDetails_borrowerlogo",
+    "type": "document",
+    "status": "optional",
+    "label": {
+      "en": "Borrower logo",
+      "fr": "Borrower logo"
+    },
+    "updatable": false
+  },
+  {
+    "key": "loanGeneralDetails_featuredloan",
+    "map": "asset_loanGeneralDetails_featuredloan",
+    "type": "radio",
+    "label": {
+      "en": "Is this a featured loan?",
+      "fr": "Is this a featured loan?"
+    },
+    "sublabel": {
+      "en": "Please select \"no\". Featured loans will be set by the platform administrator.",
+      "fr": "Please select \"no\". Featured loans will be set by the platform administrator."
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        }
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "loanGeneralDetails_featuredloan",
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "loanImpacts_description",
+    "map": "asset_loanImpacts_description",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Describe the positive social and/or environmental impact the loan will create, and how it will be measured/assessed (2000 character limit)",
+      "fr": "Describe the positive social and/or environmental impact the loan will create, and how it will be measured/assessed (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanImpacts_borrowerImpact",
+    "map": "asset_loanImpacts_borrowerImpact",
+    "type": "string",
+    "status": "mandatory",
+    "multiline": true,
+    "label": {
+      "en": "Describe the impact the borrower has created so far (2000 character limit)",
+      "fr": "Describe the impact the borrower has created so far (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanImpacts_borrowerImpactLinks",
+    "map": "asset_loanImpacts_borrowerImpactLinks",
+    "type": "string",
+    "multiline": true,
+    "status": "optional",
+    "label": {
+      "en": "Please share any links to information online that demonstrates the impact story of the borrower (2000 character limit)",
+      "fr": "Please share any links to information online that demonstrates the impact story of the borrower (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanImpacts_documents",
+    "map": "asset_loanImpacts_documents",
+    "type": "document",
+    "status": "optional",
+    "label": {
+      "en": "Impact documents - upload documents in support of your loan request (each document < 10mb), including testimonials, case studies, reports",
+      "fr": "Impact documents - upload documents in support of your loan request (each document < 10mb), including testimonials, case studies, reports"
+    },
+    "multiline": true,
+    "updatable": false
+  },
+  {
+    "key": "loanImpacts_goals",
+    "map": "asset_impact_targets",
+    "type": "target",
+    "label": {
+      "en": "What Sustainable Development Goals does the loan help to achieve?",
+      "fr": "What Sustainable Development Goals does the loan help to achieve?"
+    },
+    "placeholder": {
+      "en": "Select One/More SDGs",
+      "fr": "Select One/More SDGs"
+    },
+    "options": [
+      {
+        "value": "NO_POVERTY",
+        "label": {
+          "en": "No Poverty",
+          "fr": "No Poverty"
+        }
+      },
+      {
+        "value": "ZERO_HUNGER",
+        "label": {
+          "en": "Zero Hunger",
+          "fr": "Zero Hunger"
+        }
+      },
+      {
+        "value": "GOOD_HEALTH_AND_WELL_BEING",
+        "label": {
+          "en": "Good Health and Well-being",
+          "fr": "Good Health and Well-being"
+        }
+      },
+      {
+        "value": "QUALITY_EDUCATION",
+        "label": {
+          "en": "Quality Education",
+          "fr": "Quality Education"
+        }
+      },
+      {
+        "value": "GENDER_EQUALITY",
+        "label": {
+          "en": "Gender Equality",
+          "fr": "Gender Equality"
+        }
+      },
+      {
+        "value": "CLEAN_WATER_AND_SANITATION",
+        "label": {
+          "en": "Clean Water and Sanitation",
+          "fr": "Clean Water and Sanitation"
+        }
+      },
+      {
+        "value": "AFFORDABLE_AND_CLEAN_ENERGY",
+        "label": {
+          "en": "Affordable and Clean Energy",
+          "fr": "Affordable and Clean Energy"
+        }
+      },
+      {
+        "value": "DECENT_WORK_AND_ECONOMIC_GROWTH",
+        "label": {
+          "en": "Decent Work and Economic Growth",
+          "fr": "Decent Work and Economic Growth"
+        }
+      },
+      {
+        "value": "INDUSTRY_INNOVATION_AND_INFRASTRUCTURE",
+        "label": {
+          "en": "Industry, Innovation and Infrastructure",
+          "fr": "Industry, Innovation and Infrastructure"
+        }
+      },
+      {
+        "value": "REDUCE_INEQUALITY",
+        "label": {
+          "en": "Reduced Inequality",
+          "fr": "Reduced Inequality"
+        }
+      },
+      {
+        "value": "SUSTAINABLE_CITIES_AND_COMMUNITIES",
+        "label": {
+          "en": "Sustainable Cities and Communities",
+          "fr": "Sustainable Cities and Communities"
+        }
+      },
+      {
+        "value": "RESPONSIBLE_CONSUMPTION_AND_PRODUCTION",
+        "label": {
+          "en": "Responsible Consumption and Production",
+          "fr": "Responsible Consumption and Production"
+        }
+      },
+      {
+        "value": "CLIMATE_ACTION",
+        "label": {
+          "en": "Climate Action",
+          "fr": "Climate Action"
+        }
+      },
+      {
+        "value": "LIFE_BELOW_WATER",
+        "label": {
+          "en": "Life Below Water",
+          "fr": "Life Below Water"
+        }
+      },
+      {
+        "value": "LIFE_ON_LAND",
+        "label": {
+          "en": "Life on Land",
+          "fr": "Life on Land"
+        }
+      },
+      {
+        "value": "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS",
+        "label": {
+          "en": "Peace and Justice Strong Institutions",
+          "fr": "Peace and Justice Strong Institutions"
+        }
+      },
+      {
+        "value": "PARTNERSHIP_TO_ACHIEVE_THE_GOAL",
+        "label": {
+          "en": "Partnerships to achieve the Goal",
+          "fr": "Partnerships to achieve the Goal"
+        }
+      }
+    ],
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_reasonsByBorrower",
+    "map": "asset_loanViabilityAndCommercialImpact_reasonsByBorrower",
+    "type": "string",
+    "status": "mandatory",
+    "multiline": true,
+    "label": {
+      "en": "Provide information on why the loan is needed by the borrower, and detail how the loan funds will be used (2000 character limit)",
+      "fr": "Provide information on why the loan is needed by the borrower, and detail how the loan funds will be used (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_otherFunding",
+    "map": "asset_loanViabilityAndCommercialImpact_otherFunding",
+    "type": "string",
+    "multiline": true,
+    "status": "optional",
+    "label": {
+      "en": "If any other funding has been secured or promised towards this loan or related activities, please provide details (2000 character limit)",
+      "fr": "If any other funding has been secured or promised towards this loan or related activities, please provide details (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_benefits",
+    "map": "asset_loanViabilityAndCommercialImpact_benefits",
+    "type": "string",
+    "status": "mandatory",
+    "multiline": true,
+    "label": {
+      "en": "Describe what commercial benefits the loan will provide to the borrower over the term of the loan and beyond (2000 character limit)",
+      "fr": "Describe what commercial benefits the loan will provide to the borrower over the term of the loan and beyond (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_securities",
+    "map": "asset_loanViabilityAndCommercialImpact_securities",
+    "type": "string",
+    "multiline": true,
+    "status": "optional",
+    "label": {
+      "en": "If the borrower is offering any securities or guarantees on this loan, please provide detail here (2000 character limit)",
+      "fr": "If the borrower is offering any securities or guarantees on this loan, please provide detail here (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_viability",
+    "map": "asset_loanViabilityAndCommercialImpact_viability",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Provide information on the viability of the loan and how the borrower will be able to pay the loan back by the end of the loan term (2000 character limit)",
+      "fr": "Provide information on the viability of the loan and how the borrower will be able to pay the loan back by the end of the loan term (2000 character limit)"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "loanViabilityAndCommercialImpact_documents",
+    "map": "asset_loanViabilityAndCommercialImpact_documents",
+    "type": "document",
+    "status": "optional",
+    "label": {
+      "en": "Commercial impact and viability documents - upload documents in support of your loan request (each document < 10mb), including references, cash flow projections, financial history",
+      "fr": "Commercial impact and viability documents - upload documents in support of your loan request (each document < 10mb), including references, cash flow projections, financial history"
+    },
+    "multiline": true,
+    "updatable": false
+  },
+  {
+    "key": "LoanDetail_LoanViability&CommercialImpact_Currency",
+    "map": "class_general_currency",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Currency",
+      "fr": "Currency"
+    },
+    "options": [
+      {
+        "label": {
+          "en": "Australian dollars",
+          "fr": "Australian dollars"
+        },
+        "value": "AUD"
+      },
+      {
+        "label": {
+          "en": "US dollars",
+          "fr": "US dollars"
+        },
+        "value": "USD"
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "LoanDetail_LoanViability&CommercialImpact_Decimalisation",
+    "map": "class_general_decimalisation",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Decimalisation",
+      "fr": "Decimalisation"
+    },
+    "updatable": false
+  },
+  {
+    "key": "LoanDetail_LoanViability&CommercialImpact_Calendar",
+    "map": "class_general_calendar",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Calendar",
+      "fr": "Calendar"
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minLoanAmount",
+    "map": "class_rules_minSubscriptionAmount",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Minimum loan amount (if fixed amount, set minimum and maximum as the same)",
+      "fr": "Minimum loan amount (if fixed amount, set minimum and maximum as the same)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maxLoanAmount",
+    "map": "class_rules_maxSubscriptionAmount",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Maximum loan amount (if fixed amount, set minimum and maximum as the same)",
+      "fr": "Maximum loan amount (if fixed amount, set minimum and maximum as the same)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_interestRate_l4g",
+    "map": "class_general_couponRate",
+    "size": 4,
+    "fillLine": true,
+    "multiline": true,
+    "type": "perPercentage",
+    "label": {
+      "en": "Loan interest rate",
+      "fr": "Loan interest rate"
+    },
+    "options": [
+      {
+        "value": "YEARLY",
+        "label": {
+          "en": "Year",
+          "fr": "Year"
+        }
+      },
+      {
+        "value": "QUARTERLY",
+        "label": {
+          "en": "Quarter",
+          "fr": "Quarter"
+        }
+      },
+      {
+        "value": "MONTHLY",
+        "label": {
+          "en": "Month",
+          "fr": "Month"
+        }
+      },
+      {
+        "value": "WEEKLY",
+        "label": {
+          "en": "Week",
+          "fr": "Week"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_loanContributionIncrements",
+    "map": "class_shareClass_loanContributionIncrements",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Lender contribution increments (e.g. $500, $5000, $10,000)",
+      "fr": "Lender contribution increments (e.g. $500, $5000, $10,000)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_currency_l4g",
+    "map": "class_general_currency",
+    "type": "multistring",
+    "label": {
+      "en": "Currency",
+      "fr": "Devise",
+      "ja": "通貨"
+    },
+    "placeholder": {
+      "en": "Select currency",
+      "fr": "Select currency",
+      "ja": "通貨を選択"
+    },
+    "options": ["AUD", "USD"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "loanCharacteristics_currency",
+    "map": "shareClass_loanCharacteristics_currency",
+    "type": "multistring",
+    "label": {
+      "en": "Currency",
+      "fr": "Devise",
+      "ja": "通貨"
+    },
+    "placeholder": {
+      "en": "Select currency",
+      "fr": "Select currency",
+      "ja": "通貨を選択"
+    },
+    "options": ["AUD", "USD"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_date_l4g",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Lender subscription start date",
+      "fr": "Lender subscription start date",
+      "ja": "販売開始日"
+    },
+    "sublabel": {
+      "en": "When lenders can start subscribing to the loan",
+      "fr": "When lenders can start subscribing to the loan"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_hour_l4g",
+    "map": "class_initialSubscription_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Lender subscription start hour",
+      "fr": "Lender subscription start hour",
+      "ja": "販売開始時間"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_cutoff_date_l4g",
+    "map": "class_initialSubscription_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Lender subscription cut-off date",
+      "fr": "Lender subscription cut-off date",
+      "ja": "販売終了日"
+    },
+    "sublabel": {
+      "en": "Lenders may not subscribe after this time",
+      "fr": "Lenders may not subscribe after this time"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_cutoff_hour_l4g",
+    "map": "class_initialSubscription_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Lender subscription cut-off hour",
+      "fr": "Lender subscription cut-off hour",
+      "ja": "販売終了時間"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_settlementPeriodInDays",
+    "map": "class_initialSubscription_settlementPeriodInDays",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Settlement period in days",
+      "fr": "Settlement period in days"
+    },
+    "sublabel": {
+      "en": "The amount of time allocated to cover funds transfers before the loan is issued. The issuer must agree to this time period.",
+      "fr": "The amount of time allocated to cover funds transfers before the loan is issued. The issuer must agree to this time period."
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_date_ib_l4g",
+    "map": "class_initialSubscription_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Loan issue date",
+      "fr": "Loan issue date"
+    },
+    "sublabel": {
+      "en": "Must be equal to or later than the subscription cut-off date plus the settlement period",
+      "fr": "Must be equal to or later than the subscription cut-off date plus the settlement period"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_hour_ib_l4g",
+    "map": "class_initialSubscription_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan issue hour",
+      "fr": "Loan issue hour"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_date_ib_l4g",
+    "map": "class_initialSubscription_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Loan maturity date",
+      "fr": "Loan maturity date"
+    },
+    "sublabel": {
+      "en": "Must be equal to the issue date plus the loan period",
+      "fr": "Must be equal to the issue date plus the loan period"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_start_date_l4g",
+    "map": "class_initialRedemption_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Loan redemption start date",
+      "fr": "Loan redemption start date"
+    },
+    "sublabel": {
+      "en": "Must be equal to or later than the loan maturity date",
+      "fr": "Must be equal to or later than the loan maturity date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_start_hour_l4g",
+    "map": "class_initialRedemption_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan redemption start hour",
+      "fr": "Loan redemption start hour"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_cutoff_date_l4g",
+    "map": "class_initialRedemption_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Loan redemption cut-off date",
+      "fr": "Loan redemption cut-off date"
+    },
+    "sublabel": {
+      "en": "Must be equal to or later than the loan maturity date plus the settlement period",
+      "fr": "Must be equal to or later than the loan maturity date plus the settlement period"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_cutoff_hour_l4g",
+    "map": "class_initialRedemption_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan redemption cut-off hour",
+      "fr": "Loan redemption cut-off hour"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_settlement_date_l4g",
+    "map": "class_initialRedemption_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Loan redemption settlement date",
+      "fr": "Loan redemption settlement date"
+    },
+    "sublabel": {
+      "en": "Please set this to be the same as the loan redemption cut-off date",
+      "fr": "Please set this to be the same as the loan redemption cut-off date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_settlement_hour_l4g",
+    "map": "class_initialRedemption_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan redemption settlement hour",
+      "fr": "Loan redemption settlement hour"
+    },
+    "sublabel": {
+      "en": "Please set this to be the same as the loan redemption cut-off hour",
+      "fr": "Please set this to be the same as the loan redemption cut-off hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_hour_ib_l4g",
+    "map": "class_initialSubscription_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan maturity hour",
+      "fr": "Loan maturity hour"
+    },
+    "sublabel": {
+      "en": "In UTC",
+      "fr": "In UTC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "LoanCharacteristics_General_Loanissuedate",
+    "map": "class_initialSubscription_settlementDate",
+    "type": "date",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan issue date",
+      "fr": "Loan issue date"
+    },
+    "updatable": false
+  },
+  {
+    "key": "LoanCharacteristics_General_Loanmaturitydate(needstoalignwithproposedloanperiodinmonths,fromdateofissue)",
+    "map": "class_initialSubscription_unpaidFlagDate",
+    "type": "date",
+    "status": "mandatory",
+    "label": {
+      "en": "Loan maturity date (needs to align with proposed loan period in months, from date of issue)",
+      "fr": "Loan maturity date (needs to align with proposed loan period in months, from date of issue)"
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_redemption_date_l4g",
+    "map": "class_shareClass_subscription_initialSubscription_redemption_date_l4g",
+    "type": "date",
+    "size": 3,
+    "status": "mandatory",
+    "label": {
+      "en": "Loan redemption date",
+      "fr": "Loan redemption date"
+    },
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_redemption_hour_l4g",
+    "map": "class_shareClass_subscription_initialSubscription_redemption_hour_l4g",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Loan redemption hour",
+      "fr": "Loan redemption hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "loanRepayment_schedule",
+    "map": "class_loanRepayment_schedule",
+    "type": "string",
+    "multiline": true,
+    "status": "mandatory",
+    "label": {
+      "en": "Repayment schedule from borrower to issuer",
+      "fr": "Repayment schedule from borrower to issuer"
+    },
+    "maxLength": 500,
+    "updatable": false
+  },
+  {
+    "key": "loanRepayment_terms",
+    "name": "loanRepayment_terms",
+    "map": "class_loanRepayment_terms",
+    "type": "radio",
+    "status": "mandatory",
+    "fillLine": true,
+    "label": {
+      "en": "What are the repayment terms for lenders?",
+      "fr": "What are the repayment terms for lenders?"
+    },
+    "inputs": [
+      {
+        "key": "FULL_REPAYMENT_MATURITY",
+        "label": {
+          "en": "Full repayment at maturity",
+          "fr": "Full repayment at maturity"
+        }
+      },
+      {
+        "key": "Repaymentviainstalmentsduringtheloanperiod",
+        "map": "REPAYMENT_VIA_INSTALMENTS_DURING_THE_LOAN_PERIOD",
+        "label": {
+          "en": "Repayment via instalments during the loan period",
+          "fr": "Repayment via instalments during the loan period"
+        },
+        "relatedElements": ["loanRepayment_instalmentsSchedule"]
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "loanRepayment_instalmentsSchedule",
+    "map": "class_loanRepayment_instalmentsSchedule",
+    "type": "string",
+    "multiline": true,
+    "status": "conditionalMandatory",
+    "label": {
+      "en": "If repayment via instalments, provide details of the repayment schedule",
+      "fr": "If repayment via instalments, provide details of the repayment schedule"
+    },
+    "maxLength": 2000,
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_minimumInvestment_ib_l4g",
+    "map": "class_rules_minSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum individual lender contribution to this loan",
+      "fr": "Minimum individual lender contribution to this loan"
+    },
+    "sublabel": {
+      "fr": "",
+      "en": ""
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_maximumInvestment_ib_l4g",
+    "map": "class_rules_maxSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum individual lender contribution to this loan",
+      "fr": "Maximum individual lender contribution to this loan"
+    },
+    "sublabel": {
+      "fr": "",
+      "en": ""
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_minimumNominalAmount_ib_l4g",
+    "map": "class_rules_minGlobalSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum investment target",
+      "fr": "Minimum investment target"
+    },
+    "sublabel": {
+      "fr": "How much the borrower needs for the loan to be able to proceed",
+      "en": "How much the borrower needs for the loan to be able to proceed"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_maximumNominalAmount_ib_l4g",
+    "map": "class_rules_maxGlobalSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum investment target",
+      "fr": "Maximum investment target"
+    },
+    "sublabel": {
+      "en": "The maximum amount the borrower can accept",
+      "fr": "The maximum amount the borrower can accept"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_pricePerUnit_ib_l4g",
+    "map": "class_nav_value",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Price per unit",
+      "fr": "Price per unit"
+    },
+    "sublabel": {
+      "en": "Each loan is divided into units of a nominal value. Please set to 1 unless otherwise instructed.",
+      "fr": "Each loan is divided into units of a nominal value. Please set to 1 unless otherwise instructed."
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_customFeesCheck_l4g",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define subscription fees for this share class?",
+      "fr": "Do you wish to define subscription fees for this share class?",
+      "ja": "販売手数料を設定しますか？"
+    },
+    "fillLine": true,
+    "sublabel": {
+      "en": "Please select \"no\". Impact loans will not have any associated fees.",
+      "fr": "Please select \"no\". Impact loans will not have any associated fees."
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui",
+          "ja": "はい"
+        },
+        "relatedElements": ["sharedClass_customFeesValue"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non",
+          "ja": "いいえ"
+        }
+      }
+    ],
+    "name": "sharedClass_customFeesCheck",
+    "status": "mandatory",
+    "updatable": false
+  }
+]

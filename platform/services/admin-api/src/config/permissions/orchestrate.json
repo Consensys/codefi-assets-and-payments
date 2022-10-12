@@ -1,0 +1,82 @@
+[
+  {
+    "description": "QKM - Allows reading operations over Ethereum accounts",
+    "value": "read:ethereum"
+  },
+  {
+    "description": "QKM - Allows creating Ethereum accounts",
+    "value": "write:ethereum"
+  },
+  {
+    "description": "QKM - Allows soft-deleting Ethereum accounts",
+    "value": "delete:ethereum"
+  },
+  {
+    "description": "QKM - Allows permanently deleting Ethereum accounts",
+    "value": "destroy:ethereum"
+  },
+  {
+    "description": "QKM - Allows signing and verifying signatures",
+    "value": "sign:ethereum"
+  },
+  {
+    "description": "QKM - Allows encryption and decryption",
+    "value": "encrypt:ethereum"
+  },
+  {
+    "description": "QKM - Allows reading operations over keys",
+    "value": "read:keys"
+  },
+  {
+    "description": "QKM - Allows creating keys",
+    "value": "write:keys"
+  },
+  {
+    "description": "QKM - Allows soft-deleting keys",
+    "value": "delete:keys"
+  },
+  {
+    "description": "QKM - Allows permanently deleting keys",
+    "value": "destroy:keys"
+  },
+  {
+    "description": "QKM - Allows signing and verifying signatures",
+    "value": "sign:keys"
+  },
+  {
+    "description": "QKM - Allows encryption and decryption",
+    "value": "encrypt:keys"
+  },
+  {
+    "description": "QKM - Allows creating nodes",
+    "value": "proxy:nodes"
+  },
+  {
+    "description": "QKM - Allows reading operations over secrets",
+    "value": "read:secrets"
+  },
+  {
+    "description": "QKM - Allows creating secrets",
+    "value": "write:secrets"
+  },
+  {
+    "description": "QKM - Allows soft-deleting secrets",
+    "value": "delete:secrets"
+  },
+  {
+    "description": "QKM - Allows permanently deleting secrets",
+    "value": "destroy:secrets"
+  },
+  {
+    "description": "QKM - Allows reading aliases over registries",
+    "value": "read:aliases"
+  },
+  {
+    "description": "QKM - Allows creating aliases",
+    "value": "write:aliases"
+  },
+  {
+    "description": "QKM - Allows deleting aliases",
+    "value": "delete:aliases"
+  }
+]

@@ -1,0 +1,1942 @@
+[
+  {
+    "key": "carbon_credits_project_details_project_name",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Project Name",
+      "fr": "Project Name"
+    },
+    "fillLine": true,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_project_description",
+    "map": "asset_general_description",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Project Description",
+      "fr": "Description du projet"
+    },
+    "multiline": true,
+    "sublabel": {
+      "en": "Provide as much detail as possible about this project and its impact targets",
+      "fr": "Fournir autant de détails que possible sur ce projet et ses objectifs d'impact"
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_project_link",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Project Link",
+      "fr": "Project Link"
+    },
+    "placeholder": {
+      "en": "https://",
+      "fr": "https://"
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_project_developer",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Project Developer",
+      "fr": "Project Developer"
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_country_region",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Country / Region",
+      "fr": "Country / Region"
+    },
+    "placeholder": {
+      "en": "Select Country",
+      "fr": "Select Country"
+    },
+    "size": 2,
+    "fillLine": true,
+    "options": [
+      {
+        "key": "Argentina",
+        "value": "Argentina",
+        "label": {
+          "en": "Argentina",
+          "fr": "Argentina"
+        }
+      },
+      {
+        "key": "Australia",
+        "value": "Australia",
+        "label": {
+          "en": "Australia",
+          "fr": "Australia"
+        }
+      },
+      {
+        "key": "Bangladesh",
+        "value": "Bangladesh",
+        "label": {
+          "en": "Bangladesh",
+          "fr": "Bangladesh"
+        }
+      },
+      {
+        "key": "Belize",
+        "value": "Belize",
+        "label": {
+          "en": "Belize",
+          "fr": "Belize"
+        }
+      },
+      {
+        "key": "Bolivia",
+        "value": "Bolivia",
+        "label": {
+          "en": "Bolivia",
+          "fr": "Bolivia"
+        }
+      },
+      {
+        "key": "Brazil",
+        "value": "Brazil",
+        "label": {
+          "en": "Brazil",
+          "fr": "Brazil"
+        }
+      },
+      {
+        "key": "Bulgaria",
+        "value": "Bulgaria",
+        "label": {
+          "en": "Bulgaria",
+          "fr": "Bulgaria"
+        }
+      },
+      {
+        "key": "Cambodia",
+        "value": "Cambodia",
+        "label": {
+          "en": "Cambodia",
+          "fr": "Cambodia"
+        }
+      },
+      {
+        "key": "Canada",
+        "value": "Canada",
+        "label": {
+          "en": "Canada",
+          "fr": "Canada"
+        }
+      },
+      {
+        "key": "Chile",
+        "value": "Chile",
+        "label": {
+          "en": "Chile",
+          "fr": "Chile"
+        }
+      },
+      {
+        "key": "China",
+        "value": "China",
+        "label": {
+          "en": "China",
+          "fr": "China"
+        }
+      },
+      {
+        "key": "Colombia",
+        "value": "Colombia",
+        "label": {
+          "en": "Colombia",
+          "fr": "Colombia"
+        }
+      },
+      {
+        "key": "Congo",
+        "value": "Congo",
+        "label": {
+          "en": "Congo",
+          "fr": "Congo"
+        }
+      },
+      {
+        "key": "Costa Rica",
+        "value": "Costa Rica",
+        "label": {
+          "en": "Costa Rica",
+          "fr": "Costa Rica"
+        }
+      },
+      {
+        "key": "Cyprus",
+        "value": "Cyprus",
+        "label": {
+          "en": "Cyprus",
+          "fr": "Cyprus"
+        }
+      },
+      {
+        "key": "Dominican Republic",
+        "value": "Dominican Republic",
+        "label": {
+          "en": "Dominican Republic",
+          "fr": "Dominican Republic"
+        }
+      },
+      {
+        "key": "Ecuador",
+        "value": "Ecuador",
+        "label": {
+          "en": "Ecuador",
+          "fr": "Ecuador"
+        }
+      },
+      {
+        "key": "Egypt",
+        "value": "Egypt",
+        "label": {
+          "en": "Egypt",
+          "fr": "Egypt"
+        }
+      },
+      {
+        "key": "El Salvador",
+        "value": "El Salvador",
+        "label": {
+          "en": "El Salvador",
+          "fr": "El Salvador"
+        }
+      },
+      {
+        "key": "Ethiopia",
+        "value": "Ethiopia",
+        "label": {
+          "en": "Ethiopia",
+          "fr": "Ethiopia"
+        }
+      },
+      {
+        "key": "Germany",
+        "value": "Germany",
+        "label": {
+          "en": "Germany",
+          "fr": "Germany"
+        }
+      },
+      {
+        "key": "Ghana",
+        "value": "Ghana",
+        "label": {
+          "en": "Ghana",
+          "fr": "Ghana"
+        }
+      },
+      {
+        "key": "Guatemala",
+        "value": "Guatemala",
+        "label": {
+          "en": "Guatemala",
+          "fr": "Guatemala"
+        }
+      },
+      {
+        "key": "Honduras",
+        "value": "Honduras",
+        "label": {
+          "en": "Honduras",
+          "fr": "Honduras"
+        }
+      },
+      {
+        "key": "India",
+        "value": "India",
+        "label": {
+          "en": "India",
+          "fr": "India"
+        }
+      },
+      {
+        "key": "Indonesia",
+        "value": "Indonesia",
+        "label": {
+          "en": "Indonesia",
+          "fr": "Indonesia"
+        }
+      },
+      {
+        "key": "Israel",
+        "value": "Israel",
+        "label": {
+          "en": "Israel",
+          "fr": "Israel"
+        }
+      },
+      {
+        "key": "Kenya",
+        "value": "Kenya",
+        "label": {
+          "en": "Kenya",
+          "fr": "Kenya"
+        }
+      },
+      {
+        "key": "Lao",
+        "value": "Lao",
+        "label": {
+          "en": "Lao",
+          "fr": "Lao"
+        }
+      },
+      {
+        "key": "Liberia",
+        "value": "Liberia",
+        "label": {
+          "en": "Liberia",
+          "fr": "Liberia"
+        }
+      },
+      {
+        "key": "Madagascar",
+        "value": "Madagascar",
+        "label": {
+          "en": "Madagascar",
+          "fr": "Madagascar"
+        }
+      },
+      {
+        "key": "Malawi",
+        "value": "Malawi",
+        "label": {
+          "en": "Malawi",
+          "fr": "Malawi"
+        }
+      },
+      {
+        "key": "Malaysia",
+        "value": "Malaysia",
+        "label": {
+          "en": "Malaysia",
+          "fr": "Malaysia"
+        }
+      },
+      {
+        "key": "Mauritania",
+        "value": "Mauritania",
+        "label": {
+          "en": "Mauritania",
+          "fr": "Mauritania"
+        }
+      },
+      {
+        "key": "Mauritius",
+        "value": "Mauritius",
+        "label": {
+          "en": "Mauritius",
+          "fr": "Mauritius"
+        }
+      },
+      {
+        "key": "Mexico",
+        "value": "Mexico",
+        "label": {
+          "en": "Mexico",
+          "fr": "Mexico"
+        }
+      },
+      {
+        "key": "Mongolia",
+        "value": "Mongolia",
+        "label": {
+          "en": "Mongolia",
+          "fr": "Mongolia"
+        }
+      },
+      {
+        "key": "Mozambique",
+        "value": "Mozambique",
+        "label": {
+          "en": "Mozambique",
+          "fr": "Mozambique"
+        }
+      },
+      {
+        "key": "Myanmar",
+        "value": "Myanmar",
+        "label": {
+          "en": "Myanmar",
+          "fr": "Myanmar"
+        }
+      },
+      {
+        "key": "Namibia",
+        "value": "Namibia",
+        "label": {
+          "en": "Namibia",
+          "fr": "Namibia"
+        }
+      },
+      {
+        "key": "Nepal",
+        "value": "Nepal",
+        "label": {
+          "en": "Nepal",
+          "fr": "Nepal"
+        }
+      },
+      {
+        "key": "Netherlands",
+        "value": "Netherlands",
+        "label": {
+          "en": "Netherlands",
+          "fr": "Netherlands"
+        }
+      },
+      {
+        "key": "New Zealand",
+        "value": "New Zealand",
+        "label": {
+          "en": "New Zealand",
+          "fr": "New Zealand"
+        }
+      },
+      {
+        "key": "Nicaragua",
+        "value": "Nicaragua",
+        "label": {
+          "en": "Nicaragua",
+          "fr": "Nicaragua"
+        }
+      },
+      {
+        "key": "Pakistan",
+        "value": "Pakistan",
+        "label": {
+          "en": "Pakistan",
+          "fr": "Pakistan"
+        }
+      },
+      {
+        "key": "Papua New Guinea",
+        "value": "Papua New Guinea",
+        "label": {
+          "en": "Papua New Guinea",
+          "fr": "Papua New Guinea"
+        }
+      },
+      {
+        "key": "Paraguay",
+        "value": "Paraguay",
+        "label": {
+          "en": "Paraguay",
+          "fr": "Paraguay"
+        }
+      },
+      {
+        "key": "Peru",
+        "value": "Peru",
+        "label": {
+          "en": "Peru",
+          "fr": "Peru"
+        }
+      },
+      {
+        "key": "Philippines",
+        "value": "Philippines",
+        "label": {
+          "en": "Philippines",
+          "fr": "Philippines"
+        }
+      },
+      {
+        "key": "Russian Federation",
+        "value": "Russian Federation",
+        "label": {
+          "en": "Russian Federation",
+          "fr": "Russian Federation"
+        }
+      },
+      {
+        "key": "Rwanda",
+        "value": "Rwanda",
+        "label": {
+          "en": "Rwanda",
+          "fr": "Rwanda"
+        }
+      },
+      {
+        "key": "Senegal",
+        "value": "Senegal",
+        "label": {
+          "en": "Senegal",
+          "fr": "Senegal"
+        }
+      },
+      {
+        "key": "Sierra Leone",
+        "value": "Sierra Leone",
+        "label": {
+          "en": "Sierra Leone",
+          "fr": "Sierra Leone"
+        }
+      },
+      {
+        "key": "Singapore",
+        "value": "Singapore",
+        "label": {
+          "en": "Singapore",
+          "fr": "Singapore"
+        }
+      },
+      {
+        "key": "South Africa",
+        "value": "South Africa",
+        "label": {
+          "en": "South Africa",
+          "fr": "South Africa"
+        }
+      },
+      {
+        "key": "South Korea",
+        "value": "South Korea",
+        "label": {
+          "en": "South Korea",
+          "fr": "South Korea"
+        }
+      },
+      {
+        "key": "Sri Lanka",
+        "value": "Sri Lanka",
+        "label": {
+          "en": "Sri Lanka",
+          "fr": "Sri Lanka"
+        }
+      },
+      {
+        "key": "Tajikistan",
+        "value": "Tajikistan",
+        "label": {
+          "en": "Tajikistan",
+          "fr": "Tajikistan"
+        }
+      },
+      {
+        "key": "Tanzania",
+        "value": "Tanzania",
+        "label": {
+          "en": "Tanzania",
+          "fr": "Tanzania"
+        }
+      },
+      {
+        "key": "Thailand",
+        "value": "Thailand",
+        "label": {
+          "en": "Thailand",
+          "fr": "Thailand"
+        }
+      },
+      {
+        "key": "Turkey",
+        "value": "Turkey",
+        "label": {
+          "en": "Turkey",
+          "fr": "Turkey"
+        }
+      },
+      {
+        "key": "Turkmenistan",
+        "value": "Turkmenistan",
+        "label": {
+          "en": "Turkmenistan",
+          "fr": "Turkmenistan"
+        }
+      },
+      {
+        "key": "Uganda",
+        "value": "Uganda",
+        "label": {
+          "en": "Uganda",
+          "fr": "Uganda"
+        }
+      },
+      {
+        "key": "United Arab Emirates",
+        "value": "United Arab Emirates",
+        "label": {
+          "en": "United Arab Emirates",
+          "fr": "United Arab Emirates"
+        }
+      },
+      {
+        "key": "United Kingdom",
+        "value": "United Kingdom",
+        "label": {
+          "en": "United Kingdom",
+          "fr": "United Kingdom"
+        }
+      },
+      {
+        "key": "United States",
+        "value": "United States",
+        "label": {
+          "en": "United States",
+          "fr": "United States"
+        }
+      },
+      {
+        "key": "Uruguay",
+        "value": "Uruguay",
+        "label": {
+          "en": "Uruguay",
+          "fr": "Uruguay"
+        }
+      },
+      {
+        "key": "Viet Nam",
+        "value": "Viet Nam",
+        "label": {
+          "en": "Viet Nam",
+          "fr": "Viet Nam"
+        }
+      },
+      {
+        "key": "Zambia",
+        "value": "Zambia",
+        "label": {
+          "en": "Zambia",
+          "fr": "Zambia"
+        }
+      },
+      {
+        "key": "Zimbabwe",
+        "value": "Zimbabwe",
+        "label": {
+          "en": "Zimbabwe",
+          "fr": "Zimbabwe"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_durability",
+    "name": "carbon_credits_project_details_durability",
+    "type": "radio",
+    "status": "mandatory",
+    "label": {
+      "en": "Durability",
+      "fr": "Durability"
+    },
+    "placeholder": {
+      "en": "Select Durability",
+      "fr": "Select Durability"
+    },
+    "inputs": [
+      {
+        "key": "Short Term (<100 years)",
+        "value": "Short Term (<100 years)",
+        "label": {
+          "en": "Short Term (<100 years)",
+          "fr": "Short Term (<100 years)"
+        }
+      },
+      {
+        "key": "Medium Term (100 to 1000 years)",
+        "value": "Medium Term (100 to 1000 years)",
+        "label": {
+          "en": "Medium Term (100 to 1000 years)",
+          "fr": "Medium Term (100 to 1000 years)"
+        }
+      },
+      {
+        "key": "Long-term (>1000 years)",
+        "value": "Long-term (>1000 years)",
+        "label": {
+          "en": "Long-term (>1000 years)",
+          "fr": "Long-term (>1000 years)"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_removal_avoidance",
+    "name": "carbon_credits_project_details_removal_avoidance",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "Removal / Avoidance",
+      "fr": "Removal / Avoidance"
+    },
+    "placeholder": {
+      "en": "Select Additional Certifications",
+      "fr": "Select Additional Certifications"
+    },
+    "inputs": [
+      {
+        "key": "Removal",
+        "value": "Removal",
+        "label": {
+          "en": "Removal",
+          "fr": "Removal"
+        }
+      },
+      {
+        "key": "Avoidance",
+        "value": "Avoidance",
+        "label": {
+          "en": "Avoidance",
+          "fr": "Avoidance"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_removal_avoidance_method",
+    "name": "carbon_credits_project_details_removal_avoidance_method",
+    "type": "radio",
+    "status": "mandatory",
+    "label": {
+      "en": "Removal / Avoidance Method",
+      "fr": "Removal / Avoidance Method"
+    },
+    "inputs": [
+      {
+        "key": "Tech-based",
+        "value": "Tech-based",
+        "label": {
+          "en": "Tech-based",
+          "fr": "Tech-based"
+        }
+      },
+      {
+        "key": "Nature-based",
+        "value": "Nature-based",
+        "label": {
+          "en": "Nature-based",
+          "fr": "Nature-based"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_certifier_registry",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Certifier/Registry",
+      "fr": "Certifier/Registry"
+    },
+    "placeholder": {
+      "en": "Select Certifier",
+      "fr": "Select Certifier"
+    },
+    "options": [
+      {
+        "key": "American Carbon Registry (ACR)",
+        "value": "American Carbon Registry (ACR)",
+        "label": {
+          "en": "American Carbon Registry (ACR)",
+          "fr": "American Carbon Registry (ACR)"
+        }
+      },
+      {
+        "key": "Climate Action Reserve (CAR)",
+        "value": "Climate Action Reserve (CAR)",
+        "label": {
+          "en": "Climate Action Reserve (CAR)",
+          "fr": "Climate Action Reserve (CAR)"
+        }
+      },
+      {
+        "key": "Community & Biodiversity Standards Registry (CCB)",
+        "value": "Community & Biodiversity Standards Registry (CCB)",
+        "label": {
+          "en": "Community & Biodiversity Standards Registry (CCB)",
+          "fr": "Community & Biodiversity Standards Registry (CCB)"
+        }
+      },
+      {
+        "key": "Gold Standard Impact Registry (GS)",
+        "value": "Gold Standard Impact Registry (GS)",
+        "label": {
+          "en": "Gold Standard Impact Registry (GS)",
+          "fr": "Gold Standard Impact Registry (GS)"
+        }
+      },
+      {
+        "key": "Plan Vivo Registry",
+        "value": "Plan Vivo Registry",
+        "label": {
+          "en": "Plan Vivo Registry",
+          "fr": "Plan Vivo Registry"
+        }
+      },
+      {
+        "key": "Social Carbon Registry",
+        "value": "Social Carbon Registry",
+        "label": {
+          "en": "Social Carbon Registry",
+          "fr": "Social Carbon Registry"
+        }
+      },
+      {
+        "key": "United Nations Clean Development Mechanism (CDM)",
+        "value": "United Nations Clean Development Mechanism (CDM)",
+        "label": {
+          "en": "United Nations Clean Development Mechanism (CDM)",
+          "fr": "United Nations Clean Development Mechanism (CDM)"
+        }
+      },
+      {
+        "key": "Verified Carbon Standard Registry (VCS)",
+        "value": "Verified Carbon Standard Registry (VCS)",
+        "label": {
+          "en": "Verified Carbon Standard Registry (VCS)",
+          "fr": "Verified Carbon Standard Registry (VCS)"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_project_id",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Project ID",
+      "fr": "Project ID"
+    },
+    "size": 2,
+    "fillLine": true,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_registry_link",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Registry Link",
+      "fr": "Registry Link"
+    },
+    "placeholder": {
+      "en": "https://",
+      "fr": "https://"
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_project_type",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Project Type",
+      "fr": "Project Type"
+    },
+    "placeholder": {
+      "en": "Select Project Type",
+      "fr": "Select Project Type"
+    },
+    "options": [
+      {
+        "key": "Afforestation and Reforestation",
+        "value": "Afforestation and Reforestation",
+        "label": {
+          "en": "Afforestation and Reforestation",
+          "fr": "Afforestation and Reforestation"
+        }
+      },
+      {
+        "key": "Agriculture",
+        "value": "Agriculture",
+        "label": {
+          "en": "Agriculture",
+          "fr": "Agriculture"
+        }
+      },
+      {
+        "key": "Chemical Industries",
+        "value": "Chemical Industries",
+        "label": {
+          "en": "Chemical Industries",
+          "fr": "Chemical Industries"
+        }
+      },
+      {
+        "key": "Construction",
+        "value": "Construction",
+        "label": {
+          "en": "Construction",
+          "fr": "Construction"
+        }
+      },
+      {
+        "key": "Energy Demand",
+        "value": "Energy Demand",
+        "label": {
+          "en": "Energy Demand",
+          "fr": "Energy Demand"
+        }
+      },
+      {
+        "key": "Energy Distribution",
+        "value": "Energy Distribution",
+        "label": {
+          "en": "Energy Distribution",
+          "fr": "Energy Distribution"
+        }
+      },
+      {
+        "key": "Energy Industries (Renewable/Non-Renewable Sources)",
+        "value": "Energy Industries (Renewable/Non-Renewable Sources)",
+        "label": {
+          "en": "Energy Industries (Renewable/Non-Renewable Sources)",
+          "fr": "Energy Industries (Renewable/Non-Renewable Sources)"
+        }
+      },
+      {
+        "key": "Fugitive Emissions from Fuels (Solid, Oil and Gas)",
+        "value": "Fugitive Emissions from Fuels (Solid, Oil and Gas)",
+        "label": {
+          "en": "Fugitive Emissions from Fuels (Solid, Oil and Gas)",
+          "fr": "Fugitive Emissions from Fuels (Solid, Oil and Gas)"
+        }
+      },
+      {
+        "key": "Fugitive Emissions from Production and Consumption of Halocarbons and Sulphur Hexafluoride",
+        "value": "Fugitive Emissions from Production and Consumption of Halocarbons and Sulphur Hexafluoride",
+        "label": {
+          "en": "Fugitive Emissions from Production and Consumption of Halocarbons and Sulphur Hexafluoride",
+          "fr": "Fugitive Emissions from Production and Consumption of Halocarbons and Sulphur Hexafluoride"
+        }
+      },
+      {
+        "key": "Manufacturing Industries",
+        "value": "Manufacturing Industries",
+        "label": {
+          "en": "Manufacturing Industries",
+          "fr": "Manufacturing Industries"
+        }
+      },
+      {
+        "key": "Metal Production",
+        "value": "Metal Production",
+        "label": {
+          "en": "Metal Production",
+          "fr": "Metal Production"
+        }
+      },
+      {
+        "key": "Mining/Mineral Production",
+        "value": "Mining/Mineral Production",
+        "label": {
+          "en": "Mining/Mineral Production",
+          "fr": "Mining/Mineral Production"
+        }
+      },
+      {
+        "key": "Solvents use",
+        "value": "Solvents use",
+        "label": {
+          "en": "Solvents use",
+          "fr": "Solvents use"
+        }
+      },
+      {
+        "key": "Transport",
+        "value": "Transport",
+        "label": {
+          "en": "Transport",
+          "fr": "Transport"
+        }
+      },
+      {
+        "key": "Waste Handling and Disposal",
+        "value": "Waste Handling and Disposal",
+        "label": {
+          "en": "Waste Handling and Disposal",
+          "fr": "Waste Handling and Disposal"
+        }
+      },
+      {
+        "key": "Agriculture Forestry and Other Land Use (AFOLU)",
+        "value": "Agriculture Forestry and Other Land Use (AFOLU)",
+        "label": {
+          "en": "Agriculture Forestry and Other Land Use (AFOLU)",
+          "fr": "Agriculture Forestry and Other Land Use (AFOLU)"
+        }
+      },
+      {
+        "key": "Improved Forest Management",
+        "value": "Improved Forest Management",
+        "label": {
+          "en": "Improved Forest Management",
+          "fr": "Improved Forest Management"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_accounting_methodology",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "Accounting Methodologies",
+      "fr": "Accounting Methodologies"
+    },
+    "placeholder": {
+      "en": "Select Methodology",
+      "fr": "Select Methodology"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "AR-ACM0003",
+        "value": "AR-ACM0003",
+        "label": {
+          "en": "AR-ACM0003",
+          "fr": "AR-ACM0003"
+        }
+      },
+      {
+        "key": "AR-AM0014",
+        "value": "AR-AM0014",
+        "label": {
+          "en": "AR-AM0014",
+          "fr": "AR-AM0014"
+        }
+      },
+      {
+        "key": "AR-AMS0003",
+        "value": "AR-AMS0003",
+        "label": {
+          "en": "AR-AMS0003",
+          "fr": "AR-AMS0003"
+        }
+      },
+      {
+        "key": "AR-AMS0007",
+        "value": "AR-AMS0007",
+        "label": {
+          "en": "AR-AMS0007",
+          "fr": "AR-AMS0007"
+        }
+      },
+      {
+        "key": "ACM0002",
+        "value": "ACM0002",
+        "label": {
+          "en": "ACM0002",
+          "fr": "ACM0002"
+        }
+      },
+      {
+        "key": "ACM0010",
+        "value": "ACM0010",
+        "label": {
+          "en": "ACM0010",
+          "fr": "ACM0010"
+        }
+      },
+      {
+        "key": "AM0073",
+        "value": "AM0073",
+        "label": {
+          "en": "AM0073",
+          "fr": "AM0073"
+        }
+      },
+      {
+        "key": "AMS-I.E",
+        "value": "AMS-I.E",
+        "label": {
+          "en": "AMS-I.E",
+          "fr": "AMS-I.E"
+        }
+      },
+      {
+        "key": "AMS-III.D",
+        "value": "AMS-III.D",
+        "label": {
+          "en": "AMS-III.D",
+          "fr": "AMS-III.D"
+        }
+      },
+      {
+        "key": "AMS-III.R",
+        "value": "AMS-III.R",
+        "label": {
+          "en": "AMS-III.R",
+          "fr": "AMS-III.R"
+        }
+      },
+      {
+        "key": "AM0053",
+        "value": "AM0053",
+        "label": {
+          "en": "AM0053",
+          "fr": "AM0053"
+        }
+      },
+      {
+        "key": "AM0075",
+        "value": "AM0075",
+        "label": {
+          "en": "AM0075",
+          "fr": "AM0075"
+        }
+      },
+      {
+        "key": "AM0089",
+        "value": "AM0089",
+        "label": {
+          "en": "AM0089",
+          "fr": "AM0089"
+        }
+      },
+      {
+        "key": "AMS-III.BH",
+        "value": "AMS-III.BH",
+        "label": {
+          "en": "AMS-III.BH",
+          "fr": "AMS-III.BH"
+        }
+      },
+      {
+        "key": "AMS-III.AL",
+        "value": "AMS-III.AL",
+        "label": {
+          "en": "AMS-III.AL",
+          "fr": "AMS-III.AL"
+        }
+      },
+      {
+        "key": "AMS-III.B",
+        "value": "AMS-III.B",
+        "label": {
+          "en": "AMS-III.B",
+          "fr": "AMS-III.B"
+        }
+      },
+      {
+        "key": "AMS-III.AW",
+        "value": "AMS-III.AW",
+        "label": {
+          "en": "AMS-III.AW",
+          "fr": "AMS-III.AW"
+        }
+      },
+      {
+        "key": "AMS-III.BB",
+        "value": "AMS-III.BB",
+        "label": {
+          "en": "AMS-III.BB",
+          "fr": "AMS-III.BB"
+        }
+      },
+      {
+        "key": "AMS-III.BL",
+        "value": "AMS-III.BL",
+        "label": {
+          "en": "AMS-III.BL",
+          "fr": "AMS-III.BL"
+        }
+      },
+      {
+        "key": "AM0007",
+        "value": "AM0007",
+        "label": {
+          "en": "AM0007",
+          "fr": "AM0007"
+        }
+      },
+      {
+        "key": "AM0019",
+        "value": "AM0019",
+        "label": {
+          "en": "AM0019",
+          "fr": "AM0019"
+        }
+      },
+      {
+        "key": "AM0026",
+        "value": "AM0026",
+        "label": {
+          "en": "AM0026",
+          "fr": "AM0026"
+        }
+      },
+      {
+        "key": "AM0052",
+        "value": "AM0052",
+        "label": {
+          "en": "AM0052",
+          "fr": "AM0052"
+        }
+      },
+      {
+        "key": "AM0100",
+        "value": "AM0100",
+        "label": {
+          "en": "AM0100",
+          "fr": "AM0100"
+        }
+      },
+      {
+        "key": "AM0064",
+        "value": "AM0064",
+        "label": {
+          "en": "AM0064",
+          "fr": "AM0064"
+        }
+      },
+      {
+        "key": "AMS-III.W",
+        "value": "AMS-III.W",
+        "label": {
+          "en": "AMS-III.W",
+          "fr": "AMS-III.W"
+        }
+      },
+      {
+        "key": "AM0001",
+        "value": "AM0001",
+        "label": {
+          "en": "AM0001",
+          "fr": "AM0001"
+        }
+      },
+      {
+        "key": "AM0078",
+        "value": "AM0078",
+        "label": {
+          "en": "AM0078",
+          "fr": "AM0078"
+        }
+      },
+      {
+        "key": "AM0096",
+        "value": "AM0096",
+        "label": {
+          "en": "AM0096",
+          "fr": "AM0096"
+        }
+      },
+      {
+        "key": "AM0049",
+        "value": "AM0049",
+        "label": {
+          "en": "AM0049",
+          "fr": "AM0049"
+        }
+      },
+      {
+        "key": "AM0070",
+        "value": "AM0070",
+        "label": {
+          "en": "AM0070",
+          "fr": "AM0070"
+        }
+      },
+      {
+        "key": "AM0092",
+        "value": "AM0092",
+        "label": {
+          "en": "AM0092",
+          "fr": "AM0092"
+        }
+      },
+      {
+        "key": "AM0121",
+        "value": "AM0121",
+        "label": {
+          "en": "AM0121",
+          "fr": "AM0121"
+        }
+      },
+      {
+        "key": "AM0030",
+        "value": "AM0030",
+        "label": {
+          "en": "AM0030",
+          "fr": "AM0030"
+        }
+      },
+      {
+        "key": "AM0059",
+        "value": "AM0059",
+        "label": {
+          "en": "AM0059",
+          "fr": "AM0059"
+        }
+      },
+      {
+        "key": "AM0065",
+        "value": "AM0065",
+        "label": {
+          "en": "AM0065",
+          "fr": "AM0065"
+        }
+      },
+      {
+        "key": "AM0082",
+        "value": "AM0082",
+        "label": {
+          "en": "AM0082",
+          "fr": "AM0082"
+        }
+      },
+      {
+        "key": "ACM0003",
+        "value": "ACM0003",
+        "label": {
+          "en": "ACM0003",
+          "fr": "ACM0003"
+        }
+      },
+      {
+        "key": "ACM0008",
+        "value": "ACM0008",
+        "label": {
+          "en": "ACM0008",
+          "fr": "ACM0008"
+        }
+      },
+      {
+        "key": "ACM0015",
+        "value": "ACM0015",
+        "label": {
+          "en": "ACM0015",
+          "fr": "ACM0015"
+        }
+      },
+      {
+        "key": "ACM0022",
+        "value": "ACM0022",
+        "label": {
+          "en": "ACM0022",
+          "fr": "ACM0022"
+        }
+      },
+      {
+        "key": "AMS-III.AJ",
+        "value": "AMS-III.AJ",
+        "label": {
+          "en": "AMS-III.AJ",
+          "fr": "AMS-III.AJ"
+        }
+      },
+      {
+        "key": "AMS-III.G",
+        "value": "AMS-III.G",
+        "label": {
+          "en": "AMS-III.G",
+          "fr": "AMS-III.G"
+        }
+      },
+      {
+        "key": "AMS-III.H",
+        "value": "AMS-III.H",
+        "label": {
+          "en": "AMS-III.H",
+          "fr": "AMS-III.H"
+        }
+      },
+      {
+        "key": "AM0031",
+        "value": "AM0031",
+        "label": {
+          "en": "AM0031",
+          "fr": "AM0031"
+        }
+      },
+      {
+        "key": "AM0090",
+        "value": "AM0090",
+        "label": {
+          "en": "AM0090",
+          "fr": "AM0090"
+        }
+      },
+      {
+        "key": "AM0110",
+        "value": "AM0110",
+        "label": {
+          "en": "AM0110",
+          "fr": "AM0110"
+        }
+      },
+      {
+        "key": "AMS-III.C",
+        "value": "AMS-III.C",
+        "label": {
+          "en": "AMS-III.C",
+          "fr": "AMS-III.C"
+        }
+      },
+      {
+        "key": "AMS-III.S",
+        "value": "AMS-III.S",
+        "label": {
+          "en": "AMS-III.S",
+          "fr": "AMS-III.S"
+        }
+      },
+      {
+        "key": "AMS-III.U",
+        "value": "AMS-III.U",
+        "label": {
+          "en": "AMS-III.U",
+          "fr": "AMS-III.U"
+        }
+      },
+      {
+        "key": "ACM0001",
+        "value": "ACM0001",
+        "label": {
+          "en": "ACM0001",
+          "fr": "ACM0001"
+        }
+      },
+      {
+        "key": "ACM0014",
+        "value": "ACM0014",
+        "label": {
+          "en": "ACM0014",
+          "fr": "ACM0014"
+        }
+      },
+      {
+        "key": "AMS-III.BJ",
+        "value": "AMS-III.BJ",
+        "label": {
+          "en": "AMS-III.BJ",
+          "fr": "AMS-III.BJ"
+        }
+      },
+      {
+        "key": "VM0011",
+        "value": "VM0011",
+        "label": {
+          "en": "VM0011",
+          "fr": "VM0011"
+        }
+      },
+      {
+        "key": "VM0012",
+        "value": "VM0012",
+        "label": {
+          "en": "VM0012",
+          "fr": "VM0012"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_sustainable_development_goals",
+    "name": "carbon_credits_project_details_sustainable_development_goals",
+    "type": "check",
+    "status": "mandatory",
+    "label": {
+      "en": "Sustainable Development Goals",
+      "fr": "Sustainable Development Goals"
+    },
+    "placeholder": {
+      "en": "Select One/More SDGs",
+      "fr": "Select One/More SDGs"
+    },
+    "inputs": [
+      {
+        "key": "Affordable and Clean Energy",
+        "value": "Affordable and Clean Energy",
+        "label": {
+          "en": "Affordable and Clean Energy",
+          "fr": "Affordable and Clean Energy"
+        }
+      },
+      {
+        "key": "Clean Water and Sanitation",
+        "value": "Clean Water and Sanitation",
+        "label": {
+          "en": "Clean Water and Sanitation",
+          "fr": "Clean Water and Sanitation"
+        }
+      },
+      {
+        "key": "Climate Action",
+        "value": "Climate Action",
+        "label": {
+          "en": "Climate Action",
+          "fr": "Climate Action"
+        }
+      },
+      {
+        "key": "Decent Work and Economic Growth",
+        "value": "Decent Work and Economic Growth",
+        "label": {
+          "en": "Decent Work and Economic Growth",
+          "fr": "Decent Work and Economic Growth"
+        }
+      },
+      {
+        "key": "Gender Equality",
+        "value": "Gender Equality",
+        "label": {
+          "en": "Gender Equality",
+          "fr": "Gender Equality"
+        }
+      },
+      {
+        "key": "Good Health and Well-being",
+        "value": "Good Health and Well-being",
+        "label": {
+          "en": "Good Health and Well-being",
+          "fr": "Good Health and Well-being"
+        }
+      },
+      {
+        "key": "Industry SDG Innovation and Infrastructure",
+        "value": "Industry SDG Innovation and Infrastructure",
+        "label": {
+          "en": "Industry SDG Innovation and Infrastructure",
+          "fr": "Industry SDG Innovation and Infrastructure"
+        }
+      },
+      {
+        "key": "Life Below Water",
+        "value": "Life Below Water",
+        "label": {
+          "en": "Life Below Water",
+          "fr": "Life Below Water"
+        }
+      },
+      {
+        "key": "Life On Land",
+        "value": "Life On Land",
+        "label": {
+          "en": "Life On Land",
+          "fr": "Life On Land"
+        }
+      },
+      {
+        "key": "No Poverty",
+        "value": "No Poverty",
+        "label": {
+          "en": "No Poverty",
+          "fr": "No Poverty"
+        }
+      },
+      {
+        "key": "Partnerships for the Goals",
+        "value": "Partnerships for the Goals",
+        "label": {
+          "en": "Partnerships for the Goals",
+          "fr": "Partnerships for the Goals"
+        }
+      },
+      {
+        "key": "Peace, Justice,and and Strong Institutions",
+        "value": "Peace, Justice,and and Strong Institutions",
+        "label": {
+          "en": "Peace, Justice,and and Strong Institutions",
+          "fr": "Peace, Justice,and and Strong Institutions"
+        }
+      },
+      {
+        "key": "Quality Education",
+        "value": "Quality Education",
+        "label": {
+          "en": "Quality Education",
+          "fr": "Quality Education"
+        }
+      },
+      {
+        "key": "Reducing Inequality",
+        "value": "Reducing Inequality",
+        "label": {
+          "en": "Reducing Inequality",
+          "fr": "Reducing Inequality"
+        }
+      },
+      {
+        "key": "Responsible Consumption and Production",
+        "value": "Responsible Consumption and Production",
+        "label": {
+          "en": "Responsible Consumption and Production",
+          "fr": "Responsible Consumption and Production"
+        }
+      },
+      {
+        "key": "Sustainable Cities and Communities",
+        "value": "Sustainable Cities and Communities",
+        "label": {
+          "en": "Sustainable Cities and Communities",
+          "fr": "Sustainable Cities and Communities"
+        }
+      },
+      {
+        "key": "Zero Hunger",
+        "value": "Zero Hunger",
+        "label": {
+          "en": "Zero Hunger",
+          "fr": "Zero Hunger"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_additional_certifications",
+    "type": "check",
+    "status": "optional",
+    "label": {
+      "en": "Additional Certifications",
+      "fr": "Additional Certifications"
+    },
+    "placeholder": {
+      "en": "Select One/More Additional Certifications",
+      "fr": "Select One/More Additional Certifications"
+    },
+    "inputs": [
+      {
+        "key": "Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA)",
+        "value": "Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA)",
+        "label": {
+          "en": "Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA)",
+          "fr": "Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA)"
+        }
+      },
+      {
+        "key": "Climate, Community and Biodiversity Standards (CCB)",
+        "value": "Climate, Community and Biodiversity Standards (CCB)",
+        "label": {
+          "en": "Climate, Community and Biodiversity Standards (CCB)",
+          "fr": "Climate, Community and Biodiversity Standards (CCB)"
+        }
+      },
+      {
+        "key": "Crown Standard",
+        "value": "Crown Standard",
+        "label": {
+          "en": "Crown Standard",
+          "fr": "Crown Standard"
+        }
+      },
+      {
+        "key": "Forest Stewardship Council (FSC)",
+        "value": "Forest Stewardship Council (FSC)",
+        "label": {
+          "en": "Forest Stewardship Council (FSC)",
+          "fr": "Forest Stewardship Council (FSC)"
+        }
+      },
+      {
+        "key": "Green-e Climate",
+        "value": "Green-e Climate",
+        "label": {
+          "en": "Green-e Climate",
+          "fr": "Green-e Climate"
+        }
+      },
+      {
+        "key": "ISO 14001 Environmental Management System (EMS)",
+        "value": "ISO 14001 Environmental Management System (EMS)",
+        "label": {
+          "en": "ISO 14001 Environmental Management System (EMS)",
+          "fr": "ISO 14001 Environmental Management System (EMS)"
+        }
+      },
+      {
+        "key": "ISO 14064 International Standard for GHG Emissions Inventories and Verification",
+        "value": "ISO 14064 International Standard for GHG Emissions Inventories and Verification",
+        "label": {
+          "en": "ISO 14064 International Standard for GHG Emissions Inventories and Verification",
+          "fr": "ISO 14064 International Standard for GHG Emissions Inventories and Verification"
+        }
+      },
+      {
+        "key": "Pacific Carbon Standard",
+        "value": "Pacific Carbon Standard",
+        "label": {
+          "en": "Pacific Carbon Standard",
+          "fr": "Pacific Carbon Standard"
+        }
+      },
+      {
+        "key": "Plan Vivo",
+        "value": "Plan Vivo",
+        "label": {
+          "en": "Plan Vivo",
+          "fr": "Plan Vivo"
+        }
+      },
+      {
+        "key": "SA 8000 Social Accountability Certification",
+        "value": "SA 8000 Social Accountability Certification",
+        "label": {
+          "en": "SA 8000 Social Accountability Certification",
+          "fr": "SA 8000 Social Accountability Certification"
+        }
+      },
+      {
+        "key": "Sustainable Development Verified Impact Standard (SD VISta)",
+        "value": "Sustainable Development Verified Impact Standard (SD VISta)",
+        "label": {
+          "en": "Sustainable Development Verified Impact Standard (SD VISta)",
+          "fr": "Sustainable Development Verified Impact Standard (SD VISta)"
+        }
+      },
+      {
+        "key": "SOCIALCARBON",
+        "value": "SOCIALCARBON",
+        "label": {
+          "en": "SOCIALCARBON",
+          "fr": "SOCIALCARBON"
+        }
+      },
+      {
+        "key": "The Rainforest Standard",
+        "value": "The Rainforest Standard",
+        "label": {
+          "en": "The Rainforest Standard",
+          "fr": "The Rainforest Standard"
+        }
+      },
+      {
+        "key": "UK Peatland Code",
+        "value": "UK Peatland Code",
+        "label": {
+          "en": "UK Peatland Code",
+          "fr": "UK Peatland Code"
+        }
+      },
+      {
+        "key": "UK Woodland Carbon Code",
+        "value": "UK Woodland Carbon Code",
+        "label": {
+          "en": "UK Woodland Carbon Code",
+          "fr": "UK Woodland Carbon Code"
+        }
+      },
+      {
+        "key": "W+ Standard",
+        "value": "W+ Standard",
+        "label": {
+          "en": "W+ Standard",
+          "fr": "W+ Standard"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_banner_image",
+    "type": "document",
+    "fileAccept": "image",
+    "status": "optional",
+    "label": {
+      "en": "Upload a banner image",
+      "fr": "Upload a banner image"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the project's overview page and will span the full width of the page.",
+      "fr": "This image will be shown in the project's overview page and will span the full width of the page."
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_project_details_background_image",
+    "type": "document",
+    "fileAccept": "image",
+    "status": "optional",
+    "label": {
+      "en": "Upload a card background image",
+      "fr": "Upload a card background image"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the project's card.",
+      "fr": "This image will be shown in the project's card."
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_credit_type",
+    "type": "multistring",
+    "status": "mandatory",
+    "label": {
+      "en": "Credit Type",
+      "fr": "Credit Type"
+    },
+    "placeholder": {
+      "en": "Select Credit Type",
+      "fr": "Select Credit Type"
+    },
+    "size": 2,
+    "fillLine": true,
+    "options": [
+      {
+        "key": "VCU",
+        "value": "VCU",
+        "label": {
+          "en": "VCU",
+          "fr": "VCU"
+        }
+      },
+      {
+        "key": "VER",
+        "value": "VER",
+        "label": {
+          "en": "VER",
+          "fr": "VER"
+        }
+      },
+      {
+        "key": "CER",
+        "value": "CER",
+        "label": {
+          "en": "CER",
+          "fr": "CER"
+        }
+      },
+      {
+        "key": "PER",
+        "value": "PER",
+        "label": {
+          "en": "PER",
+          "fr": "PER"
+        }
+      },
+      {
+        "key": "CRT",
+        "value": "CRT",
+        "label": {
+          "en": "CRT",
+          "fr": "CRT"
+        }
+      },
+      {
+        "key": "ERT",
+        "value": "ERT",
+        "label": {
+          "en": "ERT",
+          "fr": "ERT"
+        }
+      },
+      {
+        "key": "PVC",
+        "value": "PVC",
+        "label": {
+          "en": "PVC",
+          "fr": "PVC"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_issuance_date",
+    "map": "class_initialSubscription_settlementDate",
+    "type": "date",
+    "status": "optional",
+    "label": {
+      "en": "Issuance Date",
+      "fr": "Issuance Date"
+    },
+    "size": 2,
+    "fillLine": true,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_vintage_start_date",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "status": "optional",
+    "label": {
+      "en": "Vintage Start Date",
+      "fr": "Vintage Start Date"
+    },
+    "size": 2,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_vintage_end_date",
+    "map": "class_initialSubscription_cutoffDate",
+    "type": "date",
+    "status": "optional",
+    "label": {
+      "en": "Vintage End Date",
+      "fr": "Vintage End Date"
+    },
+    "size": 2,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_total_vintage_quantity",
+    "type": "number",
+    "status": "optional",
+    "label": {
+      "en": "Total Vintage Quantity",
+      "fr": "Total Vintage Quantity"
+    },
+    "size": 3,
+    "fillLine": true,
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_credits_quantity_issued",
+    "type": "number",
+    "status": "mandatory",
+    "label": {
+      "en": "Credits Quantity Issued on This Platform",
+      "fr": "Credits Quantity Issued on This Platform"
+    },
+    "size": 3,
+    "fillLine": true,
+    "updatable": true
+  },
+  {
+    "key": "carbon_credits_credit_information_documents",
+    "type": "document",
+    "status": "optional",
+    "label": {
+      "en": "Documents",
+      "fr": "Documents"
+    },
+    "sublabel": {
+      "en": "Upload any documents relevant to the project for buyers to review",
+      "fr": "Upload any documents relevant to the project for buyers to review"
+    },
+    "updatable": false
+  },
+  {
+    "key": "carbon_credits_credit_information_submission_notes",
+    "type": "string",
+    "status": "optional",
+    "label": {
+      "en": "Submission Notes",
+      "fr": "DNotes de soumission"
+    },
+    "multiline": true,
+    "sublabel": {
+      "en": "Please provide any additional details and information about this Carbon Credit Project",
+      "fr": "Veuillez fournir tous les détails et informations supplémentaires sur ce projet de crédit carbone"
+    },
+    "updatable": false
+  }
+]

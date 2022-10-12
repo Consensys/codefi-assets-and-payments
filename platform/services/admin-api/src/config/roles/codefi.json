@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Stack Admin",
+    "description": "Codefi Stack Admin",
+    "permissions": [
+      {
+        "description": "Create a Tenant",
+        "value": "create:tenant"
+      },
+      {
+        "description": "Delete a Tenant",
+        "value": "delete:tenant"
+      },
+      {
+        "description": "Read all Tenants",
+        "value": "read_all:tenant"
+      },
+      {
+        "description": "Update a Tenant",
+        "value": "update:tenant"
+      },
+      {
+        "description": "Update all Tenants",
+        "value": "update_all:tenant"
+      },
+      {
+        "description": "Delete all Tenants",
+        "value": "delete_all:tenant"
+      },
+      {
+        "description": "Read data about Tenant",
+        "value": "read:tenant"
+      },
+      {
+        "description": "Create a Stack Admin",
+        "value": "create:stack:admin"
+      },
+      {
+        "description": "Create all Tenant Admin",
+        "value": "create_all:tenant:admin"
+      },
+      {
+        "value": "read:user",
+        "description": "Reads user information"
+      },
+      {
+        "description": "Update a User",
+        "value": "update:user"
+      },
+      {
+        "description": "Delete a User",
+        "value": "delete:user"
+      },
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      },
+      {
+        "value": "write:data",
+        "description": "Reference Data API to write data records"
+      },
+      {
+        "value": "update:data",
+        "description": "Reference Data API to update data records"
+      },
+      {
+        "value": "delete:data",
+        "description": "Reference Data API to delete data records"
+      },
+      {
+        "value": "read:schema",
+        "description": "Reference Data API to read data schemas"
+      },
+      {
+        "value": "write:schema",
+        "description": "Reference Data API to write data schemas"
+      },
+      {
+        "value": "delete:schema",
+        "description": "Reference Data API to delete data schemas"
+      },
+      {
+        "description": "QKM - Allows reading operations over Ethereum accounts",
+        "value": "read:ethereum"
+      },
+      {
+        "description": "QKM - Allows creating Ethereum accounts",
+        "value": "write:ethereum"
+      },
+      {
+        "description": "QKM - Allows signing and verifying signatures",
+        "value": "sign:ethereum"
+      },
+      {
+        "description": "QKM - Allows encryption and decryption",
+        "value": "encrypt:ethereum"
+      }
+    ]
+  },
+  {
+    "name": "Tenant Admin",
+    "description": "Codefi Tenant Admin",
+    "permissions": [
+      {
+        "description": "Delete a Tenant",
+        "value": "delete:tenant"
+      },
+      {
+        "description": "Update a Tenant",
+        "value": "update:tenant"
+      },
+      {
+        "description": "Read data about Tenant",
+        "value": "read:tenant"
+      },
+      {
+        "description": "Create new Entity",
+        "value": "create:entity"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read all Entities",
+        "value": "read_all:entity"
+      },
+      {
+        "description": "Update all Entities",
+        "value": "update_all:entity"
+      },
+      {
+        "description": "Update a Entity",
+        "value": "update:entity"
+      },
+      {
+        "description": "Delete all Entities",
+        "value": "delete_all:entity"
+      },
+      {
+        "description": "Delete a Entity",
+        "value": "delete:entity"
+      },
+      {
+        "value": "read:user",
+        "description": "Reads user information"
+      },
+      {
+        "description": "Update a User",
+        "value": "update:user"
+      },
+      {
+        "description": "Delete a User",
+        "value": "delete:user"
+      },
+      {
+        "description": "Create a Tenant Admin",
+        "value": "create:tenant:admin"
+      },
+      {
+        "description": "Create all Entities Admin",
+        "value": "create_all:entity:admin"
+      },
+      {
+        "description": "QKM - Allows creating Ethereum accounts",
+        "value": "write:ethereum"
+      }
+    ]
+  },
+  {
+    "name": "Entity Admin",
+    "description": "Codefi Entity Admin",
+    "permissions": [
+      {
+        "description": "Read data about Tenant",
+        "value": "read:tenant"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Update a Entity",
+        "value": "update:entity"
+      },
+      {
+        "description": "Delete a Entity",
+        "value": "delete:entity"
+      },
+      {
+        "description": "Create all Entities Admin",
+        "value": "create_all:entity:admin"
+      },
+      {
+        "description": "Create a new Entity Admin",
+        "value": "create:entity:admin"
+      },
+      {
+        "description": "Create Entity Member",
+        "value": "create:entity:member"
+      },
+      {
+        "description": "Reads all Entity Members",
+        "value": "read_all:entity:member"
+      },
+      {
+        "description": "Updates all Entity Members",
+        "value": "update_all:entity:member"
+      },
+      {
+        "description": "Update a User",
+        "value": "update:user"
+      },
+      {
+        "description": "Delete all Entity Members",
+        "value": "delete_all:entity:member"
+      },
+      {
+        "description": "Delete a User",
+        "value": "delete:user"
+      },
+      {
+        "description": "QKM - Allows creating Ethereum accounts",
+        "value": "write:ethereum"
+      }
+    ]
+  },
+  {
+    "name": "Entity Member",
+    "description": "Codefi Entity Member",
+    "permissions": [
+      {
+        "description": "Read data about Tenant",
+        "value": "read:tenant"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Update a User",
+        "value": "update:user"
+      },
+      {
+        "description": "Delete all Entity Members",
+        "value": "delete_all:entity:member"
+      },
+      {
+        "description": "Delete a User",
+        "value": "delete:user"
+      }
+    ]
+  },
+  {
+    "name": "Wallet Owner",
+    "description": "Codefi Wallet Owner",
+    "permissions": [
+      {
+        "description": "QKM - Allows reading operations over Ethereum accounts",
+        "value": "read:ethereum"
+      },
+      {
+        "description": "QKM - Allows signing and verifying signatures",
+        "value": "sign:ethereum"
+      },
+      {
+        "description": "QKM - Allows encryption and decryption",
+        "value": "encrypt:ethereum"
+      }
+    ]
+  }
+]

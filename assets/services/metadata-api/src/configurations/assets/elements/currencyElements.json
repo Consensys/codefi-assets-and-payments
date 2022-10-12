@@ -1,0 +1,197 @@
+[
+  {
+    "key": "currency_name",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Name",
+      "fr": "Nom"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "currency_symbol",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Symbol",
+      "fr": "Symbole"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "currency_class_minSubscriptionQuantity",
+    "map": "class_rules_minSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum acquisition quantity",
+      "fr": "Minimum acquisition quantity"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "currency_class_maxSubscriptionQuantity",
+    "map": "class_rules_maxSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum acquisition quantity",
+      "fr": "Maximum acquisition quantity"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "currency_class_minRedemptionQuantity",
+    "map": "class_rules_minRedemptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum redemption quantity",
+      "fr": "Minimum redemption quantity"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "currency_initialShareValue_value",
+    "map": "class_nav_value",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Initial Share value",
+      "fr": "Initial Share value",
+      "ja": "初期価格"
+    },
+    "hidden": true,
+    "defaultValue": "1",
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "currency_subscription_initialSubscription_payment",
+    "map": "class_paymentOptions_option",
+    "type": "radio",
+    "name": "payment_subsequentSubscription",
+    "status": "mandatory",
+    "label": {
+      "en": "",
+      "fr": ""
+    },
+    "hidden": true,
+    "defaultValue": "AT_ORDER_CREATION",
+    "updatable": false
+  },
+  {
+    "key": "currency_class_maxRedemptionQuantity",
+    "map": "class_rules_maxRedemptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum redemption quantity",
+      "fr": "Maximum redemption quantity"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "currency_customAcquisitionFees_check",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define acquisition fees for this currency?",
+      "fr": "Do you wish to define acquisition fees for this currency?"
+    },
+    "fillLine": true,
+    "sublabel": {
+      "en": "All fees will be charged to the investor when acquiring the currency.",
+      "fr": "All fees will be charged to the investor when acquiring the currency."
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": ["sharedClass_customFeesValue"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "currency_customAcquisitionFees_check",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "currency_customRedemptionFees_check",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define redemption fees for this currency?",
+      "fr": "Do you wish to define redemption fees for this currency?"
+    },
+    "fillLine": true,
+    "sublabel": {
+      "en": "All fees will be charged to the investor when redeeming the currency.",
+      "fr": "All fees will be charged to the investor when redeeming the currency."
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": ["sharedClass_customRedemptionFeesValue"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "currency_customRedemptionFees_check",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "currency_bankInformation",
+    "label": {
+      "fr": "",
+      "en": ""
+    },
+    "map": "asset_general_bankInformation",
+    "type": "bank",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "currency_description",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Description",
+      "fr": "Description"
+    },
+    "sublabel": {
+      "en": "Provide as much detail as possible as this description will be seen by investors on the currency summary page.",
+      "fr": "Provide as much detail as possible as this description will be seen by investors on the currency summary page."
+    },
+    "status": "mandatory",
+    "updatable": false
+  }
+]

@@ -1,0 +1,29 @@
+#_routes_rejectedAccount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 450px;
+    position: relative;
+
+    > svg {
+      display: block;
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    > span {
+      font-size: var(--typography-size-f1);
+      line-height: 150%;
+      color: #475166;
+      margin-bottom: 16px;
+    }
+  }
+}

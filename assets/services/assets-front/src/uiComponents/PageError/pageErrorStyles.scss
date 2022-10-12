@@ -1,0 +1,25 @@
+.uiComponent_pageError {
+  width: 100%;
+  flex-grow: 1;
+  height: 100%;
+  padding: var(--spacing-regular);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--colors-error);
+  max-width: 100vw;
+  max-height: 100vh;
+
+  > h1 {
+    font-size: var(--typography-size-f6);
+    font-weight: var(--typography-weight-bold);
+    max-width: 450px;
+  }
+
+  > p {
+    max-width: 450px;
+    margin-bottom: var(--spacing-tight);
+  }
+}

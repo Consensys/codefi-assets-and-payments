@@ -1,0 +1,1 @@
+export { FundInvestorAssets } from './FundInvestorAssets';

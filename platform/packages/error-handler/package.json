@@ -1,0 +1,56 @@
+{
+  "name": "@codefi-assets-and-payments/error-handler",
+  "version": "1.0.0",
+  "description": "This package is a simple wrapper of common exceptions of NestJS and a central place to our filters",
+  "main": "dist/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo 0 # No test here",
+    "test:cov": "echo 0 # No test here",
+    "prettier": "prettier --write '{src,apps,libs,test}/**/*.ts'",
+    "prettier:check": "prettier --check '{src,apps,libs,test}/**/*.ts'",
+    "lint": "eslint --cache '{src,apps,libs,test}/**/*.ts'",
+    "lint:fix": "eslint --cache --fix '{src,apps,libs,test}/**/*.ts'",
+    "release": "standard-version"
+  },
+  "license": "Apache",
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/express": "^4.17.3",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.3.2",
+    "standard-version": "^9.0.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/observability": "*",
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "npm run lint:fix --",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
+  }
+}

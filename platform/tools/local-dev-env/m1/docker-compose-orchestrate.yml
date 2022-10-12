@@ -1,0 +1,29 @@
+version: "3.7"
+
+x-orchestrate-common: &orchestrate-common
+  image: consensys/orchestrate:v21.12.7.arm64
+
+x-qkm-common: &qkm-common
+  image: consensys/quorum-key-manager:v21.12.5.arm64
+
+services:
+  api-migration:
+    <<: *orchestrate-common
+
+  api:
+    <<: *orchestrate-common
+
+  tx-sender:
+    <<: *orchestrate-common
+
+  tx-listener:
+    <<: *orchestrate-common
+
+  vault:
+    image: regalpenguin/quorum-hashicorp-vault-plugin-arm64:v1.1.4
+
+  quorum-key-manager-migration:
+    <<: *qkm-common
+
+  quorum-key-manager:
+    <<: *qkm-common

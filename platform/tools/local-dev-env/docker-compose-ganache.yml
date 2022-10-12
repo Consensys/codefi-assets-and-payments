@@ -1,0 +1,74 @@
+version: "3.7"
+
+services:
+  ganache:
+    image: trufflesuite/ganache:v7.0.4
+    command: >-
+      -g ${GANACHE_GAS_PRICE-0} 
+      -k ${GANACHE_FORK-istanbul} 
+      -l ${GANACHE_BLOCK_GAS_LIMIT-10000000000} 
+      -e ${GANACHE_ACCOUNT_BALANCE-10000000000} 
+      -a ${GANACHE_ACCOUNT_COUNT-100} 
+      --chain.chainId ${GANACHE_CHAIN_ID-6322031373} 
+      --chain.networkId ${GANACHE_CHAIN_ID-6322031373} 
+      ${GANACHE_ARGS-}
+    ports:
+      - 8545:8545
+    networks:
+      - codefi
+
+  blockscout-db:
+    image: postgres:12.5
+    environment:
+      POSTGRES_PASSWORD:
+      POSTGRES_USER: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - 5433:5432
+    networks:
+      - codefi
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  blockscout:
+    image: consensys/blockscout:v4.0.0-beta
+    command: /bin/sh -c "mix do ecto.create, ecto.migrate; mix phx.server"
+    environment:
+      ETHEREUM_JSONRPC_VARIANT: ganache
+      ETHEREUM_JSONRPC_HTTP_URL: http://ganache:8545
+      ETHEREUM_JSONRPC_WS_URL: ws://ganache:8545
+      MIX_ENV: prod
+      DATABASE_URL: postgresql://postgres:@blockscout-db:5432/explorer?ssl=false
+      NETWORK: Ethereum
+      SUBNETWORK: local-dev-env
+      COIN: ETH
+    ports:
+      - 4000:4000
+    depends_on:
+      blockscout-db:
+        condition: service_healthy
+    networks:
+      - codefi
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--spider",
+          "--proxy=off",
+          "http://localhost:4000/api?module=stats&action=ethsupplyexchange",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi
+

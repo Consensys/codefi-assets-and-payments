@@ -1,0 +1,52 @@
+._route_fillKyc_firstConnection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - var(--spacing-loose));
+  margin: 0 auto;
+  max-width: 425px;
+
+  > svg,
+  > img {
+    margin: 0 auto;
+  }
+
+  > h1 {
+    margin-top: var(--spacing-tight-looser);
+    font-weight: var(--typography-weight-medium);
+    font-size: var(--typography-size-f5);
+    text-align: center;
+  }
+
+  > h2 {
+    font-size: var(--typography-size-f3);
+    font-weight: var(--typography-weight-medium);
+  }
+
+  > p {
+    margin: var(--spacing-tight-looser) 0;
+    font-size: var(--typography-size-f2);
+  }
+
+  > span {
+    margin: var(--spacing-tight-looser) 0;
+  }
+
+  > div {
+    margin: 0 0 var(--spacing-tight-looser);
+    > ul {
+      margin-left: 15px;
+      > li {
+        list-style-type: decimal;
+      }
+    }
+  }
+
+  > a {
+    margin-top: var(--spacing-tight-looser);
+  }
+
+  > button:not(:first-of-type) {
+    margin-top: 10px;
+  }
+}

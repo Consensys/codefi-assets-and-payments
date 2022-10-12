@@ -1,0 +1,1 @@
+export { InvestmentProduct } from './InvestmentProduct';

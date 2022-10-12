@@ -1,0 +1,43 @@
+version: "3.7"
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  networks:
+    - codefi
+
+services:
+  pgadmin:
+    <<: *container-common
+    image: dpage/pgadmin4
+    ports:
+      - 8080:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    volumes:
+      - ./config/pgadmin/servers.json:/pgadmin4/servers.json
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:80"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  cors-proxy:
+    <<: *container-common
+    image: testcab/cors-anywhere:0.4.4
+    ports:
+      - 8183:8080
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:8080"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+networks:
+  codefi:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16

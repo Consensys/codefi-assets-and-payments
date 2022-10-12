@@ -1,0 +1,49 @@
+version: '3'
+services:
+  workflow-api:
+    container_name: workflow-api
+    restart: always
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/workflow-api/${DOCKERFILE-Dockerfile.dev}
+    depends_on:
+      - workflow-api-db
+    env_file:
+      - .env
+      - ../../../.env
+    volumes:
+      - ./src:/usr/src/app/assets/services/workflow-api/src:delegated
+    networks:
+      - codefi
+    labels:
+      local.filebeat: 'true'
+
+  workflow-api-db:
+    image: 'postgres:11.15-alpine'
+    container_name: postgres-workflow
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=workflow
+    networks:
+      - codefi
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  db-test:
+    image: postgres:11.15-alpine
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5436:5432'
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi
+
+volumes:
+  db-data:
+    driver: local

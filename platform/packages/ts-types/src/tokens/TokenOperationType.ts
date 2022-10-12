@@ -1,0 +1,16 @@
+export enum TokenOperationType {
+  Register = "register",
+  Deploy = "deploy",
+  Mint = "mint",
+  Burn = "burn",
+  Transfer = "transfer",
+  TransferFrom = "transferFrom",
+  TransferOwnership = "transferOwnership",
+  Approve = "approve",
+  SetApprovalForAll = "setApprovalForAll",
+  SafeMint = "safeMint",
+  SafeMintWithData = "safeMintWithData",
+  SafeTransferFrom = "safeTransferFrom",
+  SafeTransferFromWithData = "safeTransferFromWithData",
+  SetTokenURI = "setTokenURI",
+}

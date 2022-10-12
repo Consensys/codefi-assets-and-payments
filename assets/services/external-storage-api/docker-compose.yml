@@ -1,0 +1,48 @@
+version: "3.4"
+services:
+  external-storage-api:
+    env_file:
+      - .env
+      - ../../../.env
+    environment:
+      STORES_FILE: ${STORES_FILE-./config/stores.json}
+    image: external-storage-api
+    networks:
+      - codefi
+    ports:
+      - 3009:3000
+    volumes:
+      - ./src:/usr/src/app/assets/services/external-storage-api/src:delegated
+    depends_on:
+      - external-storage-api-db
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/external-storage-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+  external-storage-api-db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=${DB_DATABASE_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    restart: always
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+    networks:
+      - codefi
+  external-storage-api-db-test:
+    image: postgres
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

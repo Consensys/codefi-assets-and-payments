@@ -1,0 +1,26 @@
+{
+  "info": {
+    "x-logo": {
+      "url": "/Codefi_Logo_White.png",
+      "backgroundColor": "#2B4BBF",
+      "altText": "Codefi Assets i18n API"
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "description": "This API uses OAuth 2 with the Client Credentials flow (defined in OAuth2.0 RFC 6749, section 4.4).\nTo use this API, you will be supplied with an API Key and Secret by a member of the Codefi team. Keys\nand Secrets can be exchanged for Bearer Tokens that identify your requests and authenticate you with the API. \n\n**Always keep your API Secret secure.**\n\nThis documentation should help you get an access token. https://auth0.com/docs/api/authentication#client-credentials-flow",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "<YOUR_OAUTH_TOKEN_URL>",
+            "scopes": {
+              "read:example": "Example scope with read access.",
+              "write:example": "Example scope requiring write access."
+            }
+          }
+        }
+      }
+    }
+  }
+}

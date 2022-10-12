@@ -1,0 +1,21 @@
+._uiComponent_collapsable-card {
+  position: relative;
+  width: 100%;
+  border: 1px solid #dfe0e5;
+  border-radius: 4px;
+
+  .collapsable-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em;
+    border-bottom: 1px solid #dfe0e5;
+    color: #475166;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .collapsable-card__body {
+    padding: 0.7em;
+  }
+}

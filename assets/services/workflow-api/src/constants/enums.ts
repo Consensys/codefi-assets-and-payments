@@ -1,0 +1,15 @@
+// SHALL BE THE SAME ENUM AS IN ASSETS-API
+export enum EntityType {
+  TOKEN = 'TOKEN',
+  ASSET_CLASS = 'ASSET_CLASS',
+  ISSUER = 'ISSUER',
+  ADMIN = 'ADMIN',
+  PROJECT = 'PROJECT',
+  PLATFORM = 'PLATFORM',
+}
+
+// SHALL BE THE SAME ENUM AS IN ASSETS-API
+export enum OrderSide {
+  BUY = 'BUY',
+  SELL = 'SELL',
+}

@@ -1,0 +1,26 @@
+{
+  "name": "loadtests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Apache",
+  "dependencies": {
+    "@babel/core": "7.17.12",
+    "@babel/plugin-proposal-class-properties": "7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "7.17.12",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/k6": "^0.37.0",
+    "@types/webpack": "5.28.0",
+    "babel-loader": "8.2.5",
+    "typescript": "4.6.4",
+    "webpack": "5.70.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "4.0.0",
+    "dotenv-webpack": "^7.1.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}

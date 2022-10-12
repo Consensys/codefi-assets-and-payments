@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  admin-api:
+    env_file:
+      - ../../../.env
+      - .env
+    image: admin-api
+    networks:
+      - codefi
+    ports:
+      - 3001:3000
+    volumes:
+      - ./src:/usr/src/app/platform/services/admin-api/src:delegated
+      - ./integration:/usr/src/app/platform/services/admin-api/integration:delegated
+    build:
+      context: ../../../
+      dockerfile: ./platform/services/admin-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      - 'local.filebeat=true'
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

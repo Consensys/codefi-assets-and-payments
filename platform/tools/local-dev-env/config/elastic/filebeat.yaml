@@ -1,0 +1,43 @@
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      templates:
+        - condition:
+            contains:
+              docker.container.labels.local.filebeat: "true"
+          config:
+            - type: container
+              paths:
+                - /var/lib/docker/containers/${data.docker.container.id}/*.log
+
+
+processors:
+  - add_cloud_metadata: ~
+  - decode_json_fields:
+      fields: ["message"]
+      process_array: false
+      max_depth: 2
+      target: "custom"
+      overwrite_keys: true
+      add_error_key: true
+  - drop_fields:
+      when:
+        has_fields: ["custom.message"]
+      fields: ["message"]
+      ignore_missing: true
+  - rename:
+      fields:
+        - from: "custom.message"
+          to: "message"
+      ignore_missing: true
+      fail_on_error: true
+
+output.elasticsearch:
+  hosts: '${ELASTICSEARCH_HOSTS:elasticsearch:9200}'
+  username: '${ELASTICSEARCH_USERNAME:}'
+  password: '${ELASTICSEARCH_PASSWORD:}'

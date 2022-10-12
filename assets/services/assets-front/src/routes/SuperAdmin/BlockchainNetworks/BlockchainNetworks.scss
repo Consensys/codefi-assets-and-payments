@@ -1,0 +1,51 @@
+#_route_superAdmin_blockchainNetworks_root {
+  main {
+    .blockchain-table {
+      margin: 40px 72px;
+
+      table {
+        thead {
+          tr {
+            td {
+              &:last-of-type {
+                width: 90px;
+              }
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              &:first-of-type {
+                div {
+                  display: flex;
+                  align-items: center;
+
+                  .default {
+                    margin: 0 8px;
+                    padding: 0px 4px;
+                    text-transform: uppercase;
+                    background: #e6f1ff;
+                    border-radius: 3px;
+                    color: #1a5afe;
+                    font-weight: 600;
+                    font-size: 11px;
+                    line-height: 16px;
+                  }
+                }
+              }
+
+              &:nth-of-type(2) {
+                a {
+                  text-decoration: none;
+                  color: #475166;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.swap-summary {
+  .swap-summary__swap-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      padding: 1em;
+
+      & > .inactive {
+        color: #c2c4cc;
+      }
+
+      & > * {
+        margin-bottom: 0.2em;
+      }
+
+      .swap-summary__asset-name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .swap-summary__quantity {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .swap-summary__price {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    & > div:nth-of-type(1) {
+      width: 40%;
+    }
+
+    & > div:nth-of-type(2) {
+      text-align: center;
+    }
+
+    & > div:last-of-type {
+      text-align: right;
+      width: 40%;
+    }
+  }
+
+  .swap-summary__swap-expiration.with-status {
+    background: #fbfbfc;
+    p {
+      margin: 0;
+    }
+  }
+
+  .swap-summary__swap-expiration.settled {
+    p {
+      color: #4ba687;
+    }
+  }
+
+  .swap-summary__swap-expiration {
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #dfe0e5;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+      margin: 0 auto;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      color: #777c8c;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+  .swap-summary__swap-status {
+    display: flex;
+    flex-direction: column;
+    margin-right: 34px;
+    & :first-child {
+      text-align: left;
+      color: #777c8c;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

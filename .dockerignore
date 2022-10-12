@@ -1,0 +1,16 @@
+.git
+.dockerignore
+platform/tools/
+**/.env
+**/.eslintcache
+**/.gitignore
+**/.vscode
+**/dist
+**/docker-compose*
+**/Dockerfile*
+**/LICENSE
+**/node_modules
+**/npm-debug.log
+**/README.md
+**/tags.json
+**/*.png

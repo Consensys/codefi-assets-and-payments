@@ -1,0 +1,368 @@
+[
+  {
+    "key": "firstName_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "First name",
+      "fr": "Prénom"
+    },
+    "placeholder": {
+      "en": "Ex: Bill",
+      "fr": "Ex: Bill"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "lastName_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Last name",
+      "fr": "Nom"
+    },
+    "placeholder": {
+      "en": "Ex: Boquet",
+      "fr": "Ex: Boquet"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "adress_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Adress",
+      "fr": "Adresse"
+    },
+    "placeholder": {
+      "en": "10 rue de Paris 75001 Paris",
+      "fr": "10 rue de Paris 75001 Paris"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "email_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Email",
+      "fr": "Email"
+    },
+    "placeholder": {
+      "en": "Ex: bill.boquet@company.com",
+      "fr": "Ex: bill.boquet@company.com"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "phoneNumber_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Phone number",
+      "fr": "Numéro de téléphone"
+    },
+    "placeholder": {
+      "en": "Ex: +33612345678",
+      "fr": "Ex: +33612345678"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "ID_natural",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Identification document",
+      "fr": "Pièce d'identité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "selfie_natural",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Selfie",
+      "fr": "Selfie"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "incomeStatement_natural",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Income statement",
+      "fr": "Déclaration de revenus"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "countryOfResidence_natural",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Pays de résidence",
+      "fr": "Country of residence"
+    },
+    "placeholder": {
+      "en": "France",
+      "fr": "France"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "proofOfResidence_natural",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Proof of residence",
+      "fr": "Justificatif de domicile"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "nameOfTheEntity_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Name of the entity",
+      "fr": "Nom de l'entité"
+    },
+    "placeholder": {
+      "en": "Ex: InvestCo",
+      "fr": "Ex: InvestCo"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "typeOfTheEntity_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Type of entity",
+      "fr": "Type d'entité"
+    },
+    "placeholder": {
+      "en": "Limited Liability Company (LLC)",
+      "fr": "Limited Liability Company (LLC)"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "countryOfIncorporation_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Country of incorporation",
+      "fr": "Pays d'immatriculation"
+    },
+    "placeholder": {
+      "en": "France",
+      "fr": "France"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "incorporationCertificate_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Copy of incoporation certificate/Articles of association/Public register extract",
+      "fr": "Copie du certificate d'immatriculation"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "proofOfLicensing_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Proof of licensing",
+      "fr": "Justificatif d'agrément"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "headquarterAdress_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Headquarter address",
+      "fr": "Adresse du siège social"
+    },
+    "placeholder": {
+      "en": "10 rue de Paris 75001 Paris",
+      "fr": "10 rue de Paris 75001 Paris"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentFirstName_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "President First Name",
+      "fr": "Prénom du président"
+    },
+    "placeholder": {
+      "en": "Bill",
+      "fr": "Bill"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentLastName_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "President Last Name",
+      "fr": "Nom du président"
+    },
+    "placeholder": {
+      "en": "Boquet",
+      "fr": "Boquet"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "presidentEmail_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "President Email",
+      "fr": "Email du président"
+    },
+    "placeholder": {
+      "en": "Ex: bill.boquet@investco.com",
+      "fr": "Ex: bill.boquet@investco.com"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "ID_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "President ID",
+      "fr": "Pièce d'identité du président"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "holds25_legal",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Name of the substantial shareholders (>25% shares)",
+      "fr": "Noms des actionnaires majoritaires"
+    },
+    "placeholder": {
+      "en": "Ex: John Doe, Paul Dupont",
+      "fr": "Ex: John Doe, Paul Dupont"
+    },
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "mandatesOfAuthority_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Mandates of authority",
+      "fr": "Mandat de l'autorité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "delegationOfAuthority_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Delegation of Authority",
+      "fr": "Délégation de l'autorité"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "certificateBeneficialOwners_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Certificate from the representatives about the beneficial owners",
+      "fr": "Certificat de la liste des bénéficiaires"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "taxReport_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Last Tax report/Last published account ",
+      "fr": "Dernier avis d'imposition public"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "beneficialOwnerID_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Copy of beneficial owners ID ",
+      "fr": "Copie des pièces d'identité des bénéficiaires"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  },
+  {
+    "key": "legalJustificationForBeneficialOwner_legal",
+    "type": "document",
+    "status": "mandatory",
+    "label": {
+      "en": "Beneficial owners legal justification",
+      "fr": "Justification légale des bénéficiaires effectifs"
+    },
+    "placeholder": {},
+    "inputs": [],
+    "data": {}
+  }
+]

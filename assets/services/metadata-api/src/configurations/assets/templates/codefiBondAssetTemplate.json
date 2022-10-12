@@ -1,0 +1,149 @@
+{
+  "tenantId": "codefi",
+  "category": "HYBRID",
+  "name": "Impact bond",
+  "type": "FIXED_RATE_BOND",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "Create a bond that is linked to specific ESG Impact targets.",
+    "fr": "Create a bond that is linked to specific ESG Impact targets."
+  },
+  "topSections": [
+    {
+      "label": {
+        "en": "Asset details",
+        "fr": "Asset details"
+      },
+      "key": "asset",
+      "multiple": false,
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "key": "asset_general",
+          "elements": [
+            "fundInformations_fundName",
+            "fundInformations_fundSymbol",
+            "fundInformations_fundDescription"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Informations bancaires"
+          },
+          "elements": ["currency_bankInformation"]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": ["fundInformations_documents"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Images",
+            "fr": "Images"
+          },
+          "elements": [
+            "fundInformations_bannerPicture_ib",
+            "fundInformations_coverPicture_ib"
+          ]
+        },
+        {
+          "key": "asset_impact",
+          "label": {
+            "en": "Impact",
+            "fr": "Impact"
+          },
+          "elements": ["impactInformations_impactTargets_ib"]
+        },
+        {
+          "key": "asset_borrowerDetails",
+          "label": {
+            "en": "Borrower details",
+            "fr": "Borrower details"
+          },
+          "elements": [
+            "borrowerInformations_name_ib",
+            "borrowerInformation_reviewer_select",
+            "borrowerInformations_description_ib",
+            "fundInformations_borrowerWebsite_ib",
+            "borrowerInformations_organisationLogo_ib",
+            "fundInformations_team"
+          ]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Asset characteristics",
+        "fr": "Asset characteristics"
+      },
+      "key": "class",
+      "multiple": false,
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "key": "class_general",
+          "elements": [
+            "shareClass_shareType_ib",
+            "shareClass_ISINCode",
+            "shareClass_currency",
+            "shareClass_decimalisation_ib",
+            "shareClass_calendar_ib",
+            "assetsCharacteristics_couponRate_ib",
+            "assetsCharacteristics_couponRate_first_payment_date",
+            "assetsCharacteristics_couponRate_first_payment_hour",
+            "assetsCharacteristics_couponPaymentFrequency_ib",
+            "assetsCharacteristics_minimumNominalAmount_ib",
+            "assetsCharacteristics_maximumNominalAmount_ib",
+            "assetsCharacteristics_pricePerUnit_ib",
+            "assetsCharacteristics_minimumInvestment_ib",
+            "assetsCharacteristics_maximumInvestment_ib"
+          ]
+        },
+        {
+          "label": {
+            "en": "Dates",
+            "fr": "Dates"
+          },
+          "key": "class_initialSubscription",
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_start_hour",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_cutoff_hour",
+            "shareClass_subscription_initialSubscription_settlement_date_ib",
+            "shareClass_subscription_initialSubscription_settlement_hour_ib",
+            "shareClass_subscription_initialSubscription_unpaidFlag_date_ib",
+            "shareClass_subscription_initialSubscription_unpaidFlag_hour_ib"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Fees"
+          },
+          "elements": [
+            "assetsCharacteristics_customFeesCheck_ib",
+            "assetsCharacteristics_customFeesValue_ib"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+FROM node:18
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+# Install dependencies using the Yarn cache from the previous build, if one exists.
+RUN --mount=type=cache,target=/yarn YARN_CACHE_FOLDER=/yarn yarn install
+
+# Build the Assets Front and all its local dependencies.
+RUN npx nx build assets-front
+
+# Remove the Assets Front build files as we want React to build it on startup.
+RUN rm -rf ./assets/services/assets-front/build
+
+CMD [ "npx", "nx", "start", "assets-front" ]

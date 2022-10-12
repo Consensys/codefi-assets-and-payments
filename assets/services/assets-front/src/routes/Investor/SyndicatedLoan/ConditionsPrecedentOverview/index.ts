@@ -1,0 +1,1 @@
+export { SyndicatedLoanConditionsPrecedentOverview } from './ConditionsPrecendentOverview';

@@ -1,0 +1,46 @@
+#Mac files
+.DS_Store
+*~
+*.log
+*.key
+*.*token
+*.pem
+
+#IDE
+/.vs
+.vscode
+.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+builds/
+public
+
+# dotenv environment variables file
+.env
+# Developer Local setup overrides/notes 
+notes.md
+# build -- Removed to avoid repeated deployment of contract for same blockchain
+dist
+s3bucket/.terraform
+s3bucket/terraform.tfstate
+
+tags.json

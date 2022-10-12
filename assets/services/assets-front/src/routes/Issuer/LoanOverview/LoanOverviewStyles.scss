@@ -1,0 +1,128 @@
+._route_issuer_loanOverview {
+  > main {
+    padding: var(--spacing-regular) 40px;
+    > ._uiComponent_card {
+      > header {
+        font-weight: 600;
+        font-size: var(--typography-size-f2);
+        color: #1a2233;
+        padding: var(--spacing-tight) var(--spacing-tight-looser);
+        border-bottom: 1px solid #eee;
+      }
+    }
+
+    > div.indicators {
+      display: flex;
+      > ._uiComponent_card {
+        padding: var(--spacing-tight) var(--spacing-tight-looser);
+        width: calc(100% / 5);
+
+        > header {
+          font-weight: var(--typography-weight-lightMedium);
+          font-size: var(--typography-size-f1);
+          color: #777c8c;
+        }
+        > div {
+          margin-top: var(--spacing-tight);
+        }
+        &:not(:last-child) {
+          margin-right: var(--spacing-tight);
+        }
+      }
+    }
+
+    > .documents {
+      > div {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 950px) {
+          flex-direction: row;
+        }
+
+        > div {
+          flex-grow: 0;
+          flex-shrink: 0;
+          width: 100%;
+          padding: var(--spacing-tight-looser);
+
+          @media (min-width: 950px) {
+            width: 50%;
+          }
+
+          > h3 {
+            font-weight: 500;
+            font-size: var(--typography-size-f2);
+            color: #1a2233;
+            margin-bottom: var(--spacing-small);
+          }
+
+          > ul {
+            > li {
+              list-style-type: none;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              border-bottom: 1px solid #eee;
+
+              > span {
+                display: block;
+                font-size: var(--typography-size-f1);
+                color: #1a2233;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .characteristics {
+      margin: 20px 0;
+      > div {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 950px) {
+          flex-direction: row;
+        }
+
+        > div {
+          flex-grow: 0;
+          flex-shrink: 0;
+          width: 100%;
+          padding: 24px;
+
+          @media (min-width: 950px) {
+            width: 50%;
+          }
+
+          > h3 {
+            font-weight: 500;
+            font-size: 16px;
+            color: #1a2233;
+            margin-bottom: 8px;
+          }
+
+          > ul {
+            > li {
+              list-style-type: none;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              border-bottom: 1px solid #eee;
+              padding: 8px 0;
+
+              > span {
+                display: block;
+                font-size: 14px;
+                color: #1a2233;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

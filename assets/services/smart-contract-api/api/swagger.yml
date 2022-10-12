@@ -1,0 +1,284 @@
+#Not up to date
+swagger: '2.0'
+info:
+  title: Transaction builder API
+  description: The transaction builder API write transactions in the permissioned blockchain
+  version: 1.0.0
+  contact:
+    email: benoit.mullocher@consensys.net
+consumes:
+  - application/json
+produces:
+  - application/json
+schemes:
+  - http
+host: localhost:3000
+paths:
+  /wallet/create:
+    get:
+      tags:
+        - Wallet
+      summary: Generate an ethereum wallet, fuel it and save it in the vault
+      parameters:
+        - in: query
+          name: funderAddress
+          required: false
+          type: string
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/Wallet'
+        400:
+          description: Bad Input
+        500:
+          description: Unexpected error
+  /generic/get-user-address:
+    get:
+      tags:
+        - Generic
+      summary: Get the default ethereum address unlocked in api-smart-contract
+      parameters:
+        - in: query
+          name: identifierWalletID
+          required: false
+          type: string
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/Address'
+        500:
+          description: Unexpected error
+  /generic/get-contract-default-address:
+    get:
+      tags:
+        - Generic
+      summary: Get the ethereum address where the fetched contract is deployed
+      parameters:
+        - in: query
+          name: contractName
+          type: string
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/Address'
+        400:
+          description: Bad Input
+        404:
+          description: Not Found
+        500:
+          description: Unexpected error
+  /generic/get-contract-abi:
+    get:
+      tags:
+        - Generic
+      summary: Get the ABI associated to the contract name fetched
+      parameters:
+        - in: query
+          name: contractName
+          type: string
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/ABI'
+        400:
+          description: Bad Input
+        404:
+          description: Not Found
+        500:
+          description: Unexpected error
+  /generic/get-contract-balance:
+    get:
+      tags:
+        - Generic
+      summary: Get the balance associated to the contract deployed at the fetched address
+      parameters:
+        - in: query
+          name: contractAddress
+          type: string
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/Balance'
+        400:
+          description: Bad Input
+        500:
+          description: Unexpected error
+  /contract/deploy:
+    post:
+      tags:
+        - Contract
+      summary: Deploy the contract provided as an input
+      parameters:
+        - in: body
+          name: contract
+          description: Contract data
+          schema:
+            $ref: '#/definitions/Contract'
+      responses:
+        200:
+          description: Transaction hash
+          schema:
+            $ref: '#/definitions/TransactionReceipt'
+        500:
+          description: Unexpected error
+  /contract/transaction/{contract_name}/{function_name}:
+    post:
+      tags:
+        - Contract
+      summary: Send a transaction to trigger a non-view function
+      parameters:
+        - in: body
+          name: contract
+          description: Contract data
+          schema:
+            $ref: '#/definitions/NonViewFunction'
+      responses:
+        200:
+          description: Call return
+          schema:
+            $ref: '#/definitions/TransactionReceipt'
+        500:
+          description: Unexpected error
+  /contract/call/{contract_name}/{function_name}:
+    post:
+      tags:
+        - Contract
+      summary: Send a transaction to call a view function
+      parameters:
+        - in: path
+          name: contract_name
+          description: Name of the contract to call
+        - in: path
+          name: function_name
+          description: Name of the contract function to call
+        - in: query
+          name: contractAddress
+          type: string
+          description: Address of the contract to call
+        - in: query
+          name: signerAddress
+          type: string
+          description: Address of the signer making the call
+        - in: query
+          name: parameter1
+          type: string
+          description: First parameter of the function to call
+        - in: query
+          name: parameter2
+          type: string
+          description: Second parameter of the function to call
+        - in: query
+          name: parameter3
+          type: string
+          description: Etc.
+      responses:
+        200:
+          description: Security created
+          schema:
+            $ref: '#/definitions/TransactionReceipt'
+        500:
+          description: Unexpected error
+  /healthcheck:
+    get:
+      tags:
+        - Healthcheck
+      summary: endpoint allowing kuberneties to check if the API is up and live
+      responses:
+        200:
+          description: API is live
+        500:
+          description: Unexpected error
+definitions:
+  Wallet:
+    type: object
+    properties:
+      address:
+        type: string
+        example: '0xf24339a4451510a461563F5044260Bffffffffff'
+      transactionHash:
+        type: string
+        example: '0x54f4f1b1cdef187a81b4aeeae6858633ac1f502973ee2e62b73c4d3de3624d6d'
+  Address:
+    type: string
+    example: '0xf24339a4451510a461563F5044260Bffffffffff'
+  ABI:
+    type: object
+  Balance:
+    type: integer
+    example: 34
+  TransactionReceipt:
+    type: object
+  Error:
+    type: object
+    properties:
+      status:
+        type: string
+        example: 'error'
+      message:
+        type: string
+        example: 'The following user was not found: Johnny Cadillac'
+  Contract:
+    type: object
+    properties:
+      contractName:
+        type: string
+        example: 'ERC1400ERC20'
+      signerAddress:
+        type: string
+        example: '0xF35015Ffba922b644DcA3b8e0D1b31d840792290'
+      arguments:
+        type: array
+        items:
+          type: string
+          description: parameters to be provided to the contract's constructor method
+          example:
+            - 'ERC1400TokenName'
+            - 'ERC1400TokenSymbol'
+            - 'Etc.'
+  NonViewFunction:
+    type: object
+    properties:
+      contractAddress:
+        type: string
+        example: '0x5e69478155B103aD3F79B647290695a4e875FE1E'
+      signerAddress:
+        type: string
+        example: '0xF35015Ffba922b644DcA3b8e0D1b31d840792290'
+      parameter1:
+        type: string
+        example: 'xxx'
+      parameter2:
+        type: string
+        example: 'yyy'
+      parameter3:
+        type: string
+        example: 'zzz'
+      etc:
+        type: string
+        example: 'etc.'
+  ViewFunction:
+    type: object
+    properties:
+      contractAddress:
+        type: string
+        example: '0x5e69478155B103aD3F79B647290695a4e875FE1E'
+      signerAddress:
+        type: string
+        example: '0xF35015Ffba922b644DcA3b8e0D1b31d840792290'
+      parameter1:
+        type: string
+        example: 'xxx'
+      parameter2:
+        type: string
+        example: 'yyy'
+      parameter3:
+        type: string
+        example: 'zzz'
+      etc:
+        type: string
+        example: 'etc.'

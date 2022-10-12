@@ -1,0 +1,146 @@
+[
+  {
+    "key": "fundInformations_fundName_yolo",
+    "map": "asset_general_name",
+    "type": "string",
+    "label": {
+      "en": "Fund name",
+      "fr": "Fund name",
+      "ja": "Fund name"
+    },
+    "size": 3,
+    "status": "mandatory",
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol_yolo",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Fund symbol",
+      "fr": "Symbole de fonds",
+      "ja": "ファンドのシンボル"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundDescription_yolo",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Fund description",
+      "fr": "Fund description"
+    },
+    "placeholder": {
+      "en": "Describe the fund",
+      "fr": "Describe the fund"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "wallet_information_cryptoCurrency",
+    "map": "asset_wallet_cryptoCurrency",
+    "type": "string",
+    "size": 2,
+    "label": {
+      "en": "Cryptocurrency",
+      "fr": "Crypto-monnaie",
+      "ja": "暗号通貨"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "wallet_information_blockchain",
+    "map": "asset_wallet_blockchain",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Blockchain",
+      "fr": "Blockchain",
+      "ja": "Blockchain"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "wallet_information_walletAddress",
+    "map": "asset_wallet_address",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Wallet Address",
+      "fr": "Wallet Address",
+      "ja": "Wallet Address"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "fund_prospectus",
+    "map": "asset_documents_prospectus",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload the Fund prospectus and any other relevant documents",
+      "fr": "Upload the Fund prospectus and any other relevant documents",
+      "ja": "Upload the Fund prospectus and any other relevant documents"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_className_yolo",
+    "map": "class_general_name",
+    "type": "string",
+    "leftTag": {
+      "en": "Class",
+      "fr": "Classe",
+      "ja": "詳細"
+    },
+    "size": 3,
+    "placeholder": {
+      "en": "e.g. A",
+      "fr": "ex : A",
+      "ja": "例 A"
+    },
+    "label": {
+      "en": "Coin class name",
+      "fr": "Coin class name",
+      "ja": "Coin class name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "documents_key_investor_information_document",
+    "map": "class_documents_kiid",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Key Investor Information Document (KIID)",
+      "fr": "Key Investor Information Document (KIID)",
+      "ja": "Key Investor Information Document (KIID)"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "documents_annual_report",
+    "map": "class_documents_annualReport",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Annual report",
+      "fr": "Annual report",
+      "ja": "Annual report"
+    },
+    "status": "optional",
+    "updatable": false
+  }
+]

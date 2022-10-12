@@ -1,0 +1,35 @@
+version: "3.7"
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  networks:
+    - codefi
+
+services:
+  prometheus:
+    <<: *container-common
+    image: prom/prometheus:v2.35.0
+    ports:
+      - 9090:9090
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    <<: *container-common
+    image: grafana/grafana-oss:8.5.3
+    ports:
+      - 3010:3000
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./config/grafana/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+      - ./config/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yml
+      - ./config/grafana/dashboards:/var/lib/grafana/dashboards
+
+volumes:
+  grafana-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

@@ -1,0 +1,1 @@
+export { FundInformationsReview } from './FundInformationsReview';

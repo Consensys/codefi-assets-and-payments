@@ -1,0 +1,291 @@
+{
+  "issuerId": "Codefi Assets",
+  "name": "Codefi Global KYC template",
+  "data": {
+    "welcomeMessage": {
+      "fr": "Welcome to Codefi Assets",
+      "en": "Welcome to Codefi Assets"
+    }
+  },
+  "topSections": [
+    {
+      "label": {
+        "en": "Legal Entity",
+        "fr": "Entité légale"
+      },
+      "key": "legalPersonSection",
+      "sections": [
+        {
+          "key": "investor-type",
+          "label": {
+            "en": "Investor type",
+            "fr": "Investor type"
+          },
+          "description": {
+            "en": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process.",
+            "fr": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process."
+          },
+          "elements": ["investorType_investorType"]
+        },
+        {
+          "key": "personalInformation_legalPersonSection",
+          "label": {
+            "en": "Personal Information",
+            "fr": "Personal Information"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "gender_personalInformation_legalPersonSection",
+            "firstName_personalInformation_legalPersonSection",
+            "middlename_personalInformation_legalPersonSection",
+            "lastName_personalInformation_legalPersonSection",
+            "dateOfBirth_personalInformation_legalPersonSection",
+            "phoneNumberCountryCode_personalInformation_legalPersonSection",
+            "phoneNumber_personalInformation_legalPersonSection",
+            "idNumber_personalInformation_legalPersonSection",
+            "birthplace_personalInformation_legalPersonSection",
+            "nationality_personalInformation_legalPersonSection",
+            "positionInTheCompany_personalInformation_legalPersonSection",
+            "confirmPowerOfAttorney_personalInformation_legalPersonSection",
+            "entity_legalPersonSection",
+            "entityName_entity_legalPersonSection",
+            "legalForm_entity_legalPersonSection",
+            "entityType_entity_legalPersonSection",
+            "dateOfIncorporation_entity_legalPersonSection",
+            "domicileAddressLine1_entity_legalPersonSection",
+            "domicileAddressLine2_entity_legalPersonSection",
+            "city_entity_legalPersonSection",
+            "postalCode_entity_legalPersonSection",
+            "country_entity_legalPersonSection",
+            "registrationNumber_entity_legalPersonSection",
+            "taxIdentificationNumber_entity_legalPersonSection",
+            "industry_entity_legalPersonSection",
+            "legalEntityidentification_entity_legalPersonSection",
+            "beneficialOwner_legalPersonSection",
+            "gender_beneficialOwner_legalPersonSection",
+            "firstName_beneficialOwner_legalPersonSection",
+            "middleName_beneficialOwner_legalPersonSection",
+            "lastName_beneficialOwner_legalPersonSection",
+            "domicileAddressLine1_beneficialOwner_legalPersonSection",
+            "domicileAddressLine2_beneficialOwner_legalPersonSection",
+            "city_beneficialOwner_legalPersonSection",
+            "postalCode_beneficialOwner_legalPersonSection",
+            "country_beneficialOwner_legalPersonSection",
+            "controllingOwner_legalPersonSection",
+            "confirmControllingOwner_controllingOwner_legalPersonSection",
+            "gender_controllingOwner_legalPersonSection",
+            "firstName_controllingOwner_legalPersonSection",
+            "middleName_controllingOwner_legalPersonSection",
+            "lastName_controllingOwner_legalPersonSection",
+            "domicileAddressLine1_controllingOwner_legalPersonSection",
+            "domicileAddressLine2_controllingOwner_legalPersonSection",
+            "city_controllingOwner_legalPersonSection",
+            "postalCode_controllingOwner_legalPersonSection",
+            "country_controllingOwner_legalPersonSection",
+            "bankAccountInformation_legalPersonSection",
+            "accountHoldersName_bankAccountInformation_legalPersonSection",
+            "accountNumber_bankAccountInformation_legalPersonSection",
+            "iban_bankAccountInformation_legalPersonSection",
+            "swiftBicCode_bankAccountInformation_legalPersonSection",
+            "bankName_bankAccountInformation_legalPersonSection",
+            "bankAddressLine1_bankAccountInformation_legalPersonSection",
+            "bankAddressLine2_bankAccountInformation_legalPersonSection",
+            "city_bankAccountInformation_legalPersonSection",
+            "postalCode_bankAccountInformation_legalPersonSection",
+            "country_bankAccountInformation_legalPersonSection"
+          ]
+        },
+        {
+          "key": "identityVerification_legalPersonSection",
+          "label": {
+            "en": "Identity verification",
+            "fr": "Identity verification"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": ["onfido_onfido_legalPersonSection"]
+        },
+        {
+          "key": "riskProfile_legalPersonSection",
+          "label": {
+            "en": "Risk profile",
+            "fr": "Risk profile"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "investmentDecicionsMaking_riskProfile_legalPersonSection",
+            "sourceOfKnowledge_riskProfile_legalPersonSection",
+            "investmentAttitude_riskProfile_legalPersonSection",
+            "incomeObjective_riskProfile_legalPersonSection",
+            "frequencyOfTransactions_riskProfile_legalPersonSection",
+            "investmentVehiclesUsed_riskProfile_legalPersonSection",
+            "amountToinvest_riskProfile_legalPersonSection",
+            "currency_riskProfile_legalPersonSection"
+          ]
+        },
+        {
+          "key": "documents_legalPersonSection",
+          "label": {
+            "en": "Entity Document upload",
+            "fr": "Entity Document upload"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "certificateOfIncorporation_entityIdentificationDocuments_legalPersonSection",
+            "directorsCertificate_entityIdentificationDocuments_legalPersonSection",
+            "shareholdersCertificate_entityIdentificationDocuments_legalPersonSection",
+            "poaDocument_entityIdentificationDocuments_legalPersonSection"
+          ]
+        },
+        {
+          "key": "termsAndConditions_legalPersonSection",
+          "label": {
+            "en": "Terms and Conditions",
+            "fr": "Terms and Conditions"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "termsAndConditions_termsAndConditions_legalPersonSection"
+          ]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Individual Person",
+        "fr": "Personne individuelle"
+      },
+      "key": "naturalPersonSection",
+      "sections": [
+        {
+          "key": "investor-type",
+          "label": {
+            "en": "Investor type",
+            "fr": "Investor type"
+          },
+          "description": {
+            "en": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process.",
+            "fr": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process."
+          },
+          "elements": ["investorType_investorType"]
+        },
+        {
+          "key": "personalInformation_naturalPersonSection",
+          "label": {
+            "en": "Personal Information",
+            "fr": "Personal Information"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "gender_personalInformation_naturalPersonSection",
+            "firstName_personalInformation_naturalPersonSection",
+            "middleName_personalInformation_naturalPersonSection",
+            "lastName_personalInformation_naturalPersonSection",
+            "dateOfBirth_personalInformation_naturalPersonSection",
+            "domicileAddressLine1_personalInformation_naturalPersonSection",
+            "domicileAddressLine2_personalInformation_naturalPersonSection",
+            "city_personalInformation_naturalPersonSection",
+            "country_personalInformation_naturalPersonSection",
+            "postalCode_personalInformation_naturalPersonSection",
+            "phoneNumberCountryCode_personalInformation_naturalPersonSection",
+            "phoneNumber_personalInformation_naturalPersonSection",
+            "idNumber_personalInformation_naturalPersonSection",
+            "birthplace_personalInformation_naturalPersonSection",
+            "nationality_personalInformation_naturalPersonSection",
+            "taxIdentificationNumber_personalInformation_naturalPersonSection",
+            "profession_personalInformation_naturalPersonSection",
+            "bankInformation_naturalPersonSection",
+            "accountHoldersName_bankInformation_naturalPersonSection",
+            "accountNumber_bankInformation_naturalPersonSection",
+            "iban_bankInformation_naturalPersonSection",
+            "swiftBicCode_bankInformation_naturalPersonSection",
+            "bankName_bankInformation_naturalPersonSection",
+            "bankAddressLine1_bankInformation_naturalPersonSection",
+            "bankAddressLine2_bankInformation_naturalPersonSection",
+            "city_bankInformation_naturalPersonSection",
+            "postalCode_bankInformation_naturalPersonSection",
+            "country_bankInformation_naturalPersonSection"
+          ]
+        },
+        {
+          "key": "identityVerification_naturalPersonSection",
+          "label": {
+            "en": "Identity verification",
+            "fr": "Identity verification"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": ["onfido_onfido_naturalPersonSection"]
+        },
+        {
+          "key": "riskProfile_naturalPersonSection",
+          "label": {
+            "en": "Risk profile",
+            "fr": "Risk profile"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "investmentDecicionsMaking_riskProfile_naturalPersonSection",
+            "sourceOfKnowledge_riskProfile_naturalPersonSection",
+            "investmentAttitude_riskProfile_naturalPersonSection",
+            "incomeObjective_riskProfile_naturalPersonSection",
+            "frequencyOfTransactions_riskProfile_naturalPersonSection",
+            "investmentVehiclesUsed_riskProfile_naturalPersonSection",
+            "amountToinvest_riskProfile_naturalPersonSection",
+            "currency_riskProfile_naturalPersonSection"
+          ]
+        },
+        {
+          "key": "documents_naturalPersonSection",
+          "label": {
+            "en": "Document upload",
+            "fr": "Document upload"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "verificationOfResidentialAddress_identificationDocuments_naturalPersonSection"
+          ]
+        },
+        {
+          "key": "termsAndConditions_naturalPersonSection",
+          "label": {
+            "en": "Terms and Conditions",
+            "fr": "Terms and Conditions"
+          },
+          "description": {
+            "en": "",
+            "fr": ""
+          },
+          "elements": [
+            "termsAndConditions_termsAndConditions_naturalPersonSection"
+          ]
+        }
+      ]
+    }
+  ]
+}

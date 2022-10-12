@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  redis:
+    container_name: assets-api-redis
+    image: redis:7-alpine
+    command: redis-server --maxmemory-policy volatile-lru
+    restart: always
+    ports:
+      - 6379:6379

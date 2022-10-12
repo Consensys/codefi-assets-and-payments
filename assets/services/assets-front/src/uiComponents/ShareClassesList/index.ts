@@ -1,0 +1,1 @@
+export { ShareClassesList } from './ShareClassesList';

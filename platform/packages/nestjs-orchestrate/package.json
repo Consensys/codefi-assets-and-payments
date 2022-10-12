@@ -1,0 +1,68 @@
+{
+  "name": "@codefi-assets-and-payments/nestjs-orchestrate",
+  "version": "8.1.0",
+  "description": "A package to use Orchestrate easily integrated into a NestJS project",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo 'ok'",
+    "test:cov": "echo 'ok'",
+    "prettier": "prettier --write '{src,apps,libs,test}/**/*.ts'",
+    "prettier:check": "prettier --check '{src,apps,libs,test}/**/*.ts'",
+    "lint": "eslint --cache '{src,apps,libs,test}/**/*.ts'",
+    "lint:fix": "eslint --cache --fix '{src,apps,libs,test}/**/*.ts'",
+    "release": "tsc && standard-version"
+  },
+  "license": "Apache",
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/jest": "^28.0.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "^28.0.3",
+    "jest-create-mock-instance": "^2.0.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.0.5",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^28.0.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/error-handler": "*",
+    "@codefi-assets-and-payments/ethers": "*",
+    "@codefi-assets-and-payments/observability": "*",
+    "@nestjs/axios": "^0.0.8",
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
+    "axios-retry": "^3.2.4",
+    "bignumber.js": "^9.0.0",
+    "dotenv": "^8.2.0",
+    "ethereumjs-tx": "^2.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "pegasys-orchestrate": "6.1.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "npm run lint:fix --",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
+  }
+}

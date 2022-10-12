@@ -1,0 +1,25 @@
+version: "3"
+services:
+  cofidocs-api:
+    container_name: cofidocs-api
+    restart: always
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/cofidocs-api/${DOCKERFILE-Dockerfile.dev}
+    env_file:
+      - .env
+      - ../../../.env
+    volumes:
+      - ./src:/usr/src/app/assets/services/cofidocs-api/src:delegated
+    command: yarn start
+    ports:
+      - 3009:3009
+    networks:
+      - codefi
+    labels:
+      local.filebeat: "true"
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db-test:
+    image: postgres:11.8
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5434:5432'
+    networks:
+      - functional_tests
+
+networks:
+  functional_tests:
+    driver: bridge

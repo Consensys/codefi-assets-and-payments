@@ -1,0 +1,177 @@
+{
+  "tenantId": "bfs3ndLGURamhf1HhiojeJH7r1G3bIMU",
+  "category": "HYBRID",
+  "name": "CLOSED END FUND DEJURE",
+  "type": "CLOSED_END_FUND",
+  "label": {
+    "en": "New asset dejure",
+    "fr": "New asset dejure"
+  },
+  "description": {
+    "en": "Closed-end fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund.",
+    "fr": "Closed-end fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Asset information",
+        "fr": "Informations du fond"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "fundInformations_fundName",
+            "fundInformations_fundSymbol",
+            "fundInformations_fundDescription"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Informations bancaires"
+          },
+          "elements": [
+            "bankInformation_bankName",
+            "bankInformation_IBAN",
+            "bankInformation_Swift"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": [
+            "fundInformations_docusign",
+            "fundInformations_documents"
+          ]
+        },
+        {
+          "key": "asset_managementTeam",
+          "label": {
+            "en": "Management team",
+            "fr": "Management team"
+          },
+          "elements": ["fundInformations_team"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Images",
+            "fr": "Images"
+          },
+          "elements": [
+            "fundInformations_bannerPicture",
+            "fundInformations_coverPicture"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Share class",
+        "fr": "Classe d’actif"
+      },
+      "legend": {
+        "en": "Complete the form below to create the first Share Class for the asset. You will be able to add classes later.",
+        "fr": "Complétez le formulaire pour créer votre première classe d’actifs. Vous pourrez en ajouter par la suite."
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "shareClass_className",
+            "shareClass_ISINCode",
+            "shareClass_currency"
+          ]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes",
+            "shareClass_minimumSubscriptionInAmount",
+            "shareClass_maximumSubscriptionInAmount",
+            "shareClass_minimumSubscriptionInQuantity",
+            "shareClass_maximumSubscriptionInQuantity"
+          ]
+        },
+        {
+          "key": "class_nav",
+          "label": {
+            "en": "Initial share value",
+            "fr": "Initial share value"
+          },
+          "elements": [
+            "shareClass_initialShareValue_check",
+            "shareClass_initialShareValue_value"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Subscription",
+            "fr": "Souscription"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_start_hour",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_cutoff_hour",
+            "shareClass_subscription_initialSubscription_valuation_date",
+            "shareClass_subscription_initialSubscription_valuation_hour",
+            "shareClass_subscription_initialSubscription_settlement_date",
+            "shareClass_subscription_initialSubscription_settlement_hour"
+          ]
+        },
+        {
+          "key": "class_subscription",
+          "label": {
+            "en": "Subsequent subscription periods",
+            "fr": "Subsequent subscription periods"
+          },
+          "elements": [
+            "shareClass_subscription_subsequentSubscription_check2",
+            "shareClass_subscription_subsequentSubscription_start_date",
+            "shareClass_subscription_subsequentSubscription_start_hour",
+            "shareClass_subscription_subsequentSubscription_cutoff_date",
+            "shareClass_subscription_subsequentSubscription_cutoff_hour",
+            "shareClass_subscription_subsequentSubscription_valuation_date",
+            "shareClass_subscription_subsequentSubscription_valuation_hour",
+            "shareClass_subscription_subsequentSubscription_settlement_date",
+            "shareClass_subscription_subsequentSubscription_settlement_hour"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": [
+            "sharedClass_customFeesCheck",
+            "sharedClass_customFeesValue"
+          ]
+        }
+      ]
+    }
+  ]
+}

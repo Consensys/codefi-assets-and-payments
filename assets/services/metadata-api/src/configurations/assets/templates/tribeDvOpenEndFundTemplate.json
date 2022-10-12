@@ -1,0 +1,234 @@
+{
+  "tenantId": "M80LJaBzPFnY7QVoldrarIbaAvI81B5W",
+  "category": "HYBRID",
+  "name": "OPEN END FUND TRIBE DV",
+  "type": "OPEN_END_FUND",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "Open-end fund is an investment vehicle that issues shares as long as buyers want them. It is always open to investment. Purchasing shares cause the fund to create new shares, whereas selling shares takes them out of circulation. Shares are bought and sold on demand at their Net Asset Value (NAV).",
+    "fr": "Open-end fund is an investment vehicle that issues shares as long as buyers want them. It is always open to investment. Purchasing shares cause the fund to create new shares, whereas selling shares takes them out of circulation. Shares are bought and sold on demand at their Net Asset Value (NAV)."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Asset information",
+        "fr": "Informations du fond"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "fundInformations_fundName",
+            "fundInformations_fundSymbol",
+            "fundInformations_fundDescription"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Informations bancaires"
+          },
+          "elements": [
+            "bankInformation_bankName",
+            "bankInformation_IBAN",
+            "bankInformation_Swift"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": ["fundInformations_documents"]
+        },
+        {
+          "key": "asset_managementTeam",
+          "label": {
+            "en": "Management team",
+            "fr": "Management team"
+          },
+          "elements": ["fundInformations_team"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Images",
+            "fr": "Images"
+          },
+          "elements": [
+            "fundInformations_bannerPicture",
+            "fundInformations_coverPicture"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Share class",
+        "fr": "Classe d’actif"
+      },
+      "legend": {
+        "en": "Complete the form below to create the first Share Class for the asset. You will be able to add classes later.",
+        "fr": "Complétez le formulaire pour créer votre première classe d’actifs. Vous pourrez en ajouter par la suite."
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "shareClass_className",
+            "shareClass_ISINCode_mandatory",
+            "shareClass_currency"
+          ]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes",
+            "shareClass_minimumSubscriptionInAmount",
+            "shareClass_maximumSubscriptionInAmount",
+            "shareClass_minimumSubscriptionInQuantity",
+            "shareClass_maximumSubscriptionInQuantity"
+          ]
+        },
+        {
+          "label": {
+            "en": "Initial share value",
+            "fr": "Initial share value"
+          },
+          "elements": [
+            "shareClass_initialShareValue_check",
+            "shareClass_initialShareValue_value"
+          ]
+        },
+        {
+          "key": "class_paymentOptions",
+          "label": {
+            "en": "Payment options",
+            "fr": "Payment options"
+          },
+          "elements": ["shareClass_subscription_initialSubscription_payment"]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Subscription",
+            "fr": "Souscription"
+          },
+          "description": {
+            "en": "Initial subscription period",
+            "fr": "Initial subscription period"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_start_hour",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_cutoff_hour",
+            "shareClass_subscription_initialSubscription_valuation_date",
+            "shareClass_subscription_initialSubscription_valuation_hour",
+            "shareClass_subscription_initialSubscription_settlement_date",
+            "shareClass_subscription_initialSubscription_settlement_hour",
+            "shareClass_subscription_initialSubscription_unpaidFlag_date",
+            "shareClass_subscription_initialSubscription_unpaidFlag_hour"
+          ]
+        },
+        {
+          "key": "class_subscription",
+          "label": {
+            "en": "Subsequent subscription periods",
+            "fr": "Subsequent subscription periods"
+          },
+          "elements": [
+            "shareClass_subscription_subsequentSubscription_startDateCheck",
+            "shareClass_subscription_subsequentSubscription_start_date",
+            "shareClass_subscription_subsequentSubscription_start_hour",
+            "shareClass_subscription_subsequentSubscription_cutoff_date",
+            "shareClass_subscription_subsequentSubscription_cutoff_hour",
+            "shareClass_subscription_subsequentSubscription_valuation_date",
+            "shareClass_subscription_subsequentSubscription_valuation_hour",
+            "shareClass_subscription_subsequentSubscription_settlement_date",
+            "shareClass_subscription_subsequentSubscription_settlement_hour",
+            "shareClass_subscription_subsequentSubscription_unpaidFlag_date",
+            "shareClass_subscription_subsequentSubscription_unpaidFlag_hour"
+          ]
+        },
+        {
+          "key": "class_initialRedemption",
+          "label": {
+            "en": "Redemption",
+            "fr": "Redemption"
+          },
+          "description": {
+            "en": "Initial redemption period",
+            "fr": "Initial redemption period"
+          },
+          "elements": [
+            "shareClass_redemption_initialRedemption_start_date",
+            "shareClass_redemption_initialRedemption_start_hour",
+            "shareClass_redemption_initialRedemption_cutoff_date",
+            "shareClass_redemption_initialRedemption_cutoff_hour",
+            "shareClass_redemption_initialRedemption_valuation_date",
+            "shareClass_redemption_initialRedemption_valuation_hour",
+            "shareClass_redemption_initialRedemption_settlement_date",
+            "shareClass_redemption_initialRedemption_settlement_hour",
+            "shareClass_redemption_initialRedemption_unpaidFlag_date",
+            "shareClass_redemption_initialRedemption_unpaidFlag_hour"
+          ]
+        },
+        {
+          "key": "class_redemption",
+          "label": {
+            "en": "Subsequent redemption periods",
+            "fr": "Subsequent redemption periods"
+          },
+          "elements": [
+            "shareClass_redemption_subsequentRedemption_startDateCheck",
+            "shareClass_redemption_subsequentRedemption_start_date",
+            "shareClass_redemption_subsequentRedemption_start_hour",
+            "shareClass_redemption_subsequentRedemption_cutoff_date",
+            "shareClass_redemption_subsequentRedemption_cutoff_hour",
+            "shareClass_redemption_subsequentRedemption_valuation_date",
+            "shareClass_redemption_subsequentRedemption_valuation_hour",
+            "shareClass_redemption_subsequentRedemption_settlement_date",
+            "shareClass_redemption_subsequentRedemption_settlement_hour",
+            "shareClass_redemption_subsequentRedemption_unpaidFlag_date",
+            "shareClass_redemption_subsequentRedemption_unpaidFlag_hour"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": [
+            "sharedClass_customFeesCheck",
+            "sharedClass_customFeesValue",
+            "sharedClass_customRedemptionFeesCheck",
+            "sharedClass_customRedemptionFeesValue"
+          ]
+        }
+      ]
+    }
+  ]
+}

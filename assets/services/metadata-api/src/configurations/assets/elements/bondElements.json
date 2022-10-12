@@ -1,0 +1,614 @@
+[
+  {
+    "key": "fundInformations_documents_ib",
+    "map": "asset_documents_other",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload any documents relevant to the fund for the investor to view",
+      "fr": "Upload any documents relevant to the fund for the investor to view"
+    },
+    "status": "mandatory",
+    "multiline": true,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_bannerPicture_ib",
+    "map": "asset_images_banner",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload a banner image",
+      "fr": "Upload a banner image"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the asset's overview page and will span the full width of the page.",
+      "fr": "This image will be shown in the asset's overview page and will span the full width of the page."
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_coverPicture_ib",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload a card background image",
+      "fr": "Upload a card background image"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the asset's card.",
+      "fr": "This image will be shown in the asset's card."
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "impactInformations_impactTargets_ib",
+    "map": "asset_impact_targets",
+    "type": "target",
+    "label": {
+      "en": "Impact targets",
+      "fr": "Impact targets"
+    },
+    "status": "mandatory",
+    "options": [
+      {
+        "value": "NO_POVERTY",
+        "label": {
+          "en": "No Poverty",
+          "fr": "No Poverty"
+        }
+      },
+      {
+        "value": "ZERO_HUNGER",
+        "label": {
+          "en": "Zero Hunger",
+          "fr": "Zero Hunger"
+        }
+      },
+      {
+        "value": "GOOD_HEALTH_AND_WELL_BEING",
+        "label": {
+          "en": "Good Health and Well-being",
+          "fr": "Good Health and Well-being"
+        }
+      },
+      {
+        "value": "QUALITY_EDUCATION",
+        "label": {
+          "en": "Quality Education",
+          "fr": "Quality Education"
+        }
+      },
+      {
+        "value": "GENDER_EQUALITY",
+        "label": {
+          "en": "Gender Equality",
+          "fr": "Gender Equality"
+        }
+      },
+      {
+        "value": "CLEAN_WATER_AND_SANITATION",
+        "label": {
+          "en": "Clean Water and Sanitation",
+          "fr": "Clean Water and Sanitation"
+        }
+      },
+      {
+        "value": "AFFORDABLE_AND_CLEAN_ENERGY",
+        "label": {
+          "en": "Affordable and Clean Energy",
+          "fr": "Affordable and Clean Energy"
+        }
+      },
+      {
+        "value": "DECENT_WORK_AND_ECONOMIC_GROWTH",
+        "label": {
+          "en": "Decent Work and Economic Growth",
+          "fr": "Decent Work and Economic Growth"
+        }
+      },
+      {
+        "value": "INDUSTRY_INNOVATION_AND_INFRASTRUCTURE",
+        "label": {
+          "en": "Industry, Innovation and Infrastructure",
+          "fr": "Industry, Innovation and Infrastructure"
+        }
+      },
+      {
+        "value": "REDUCE_INEQUALITY",
+        "label": {
+          "en": "Reduced Inequality",
+          "fr": "Reduced Inequality"
+        }
+      },
+      {
+        "value": "SUSTAINABLE_CITIES_AND_COMMUNITIES",
+        "label": {
+          "en": "Sustainable Cities and Communities",
+          "fr": "Sustainable Cities and Communities"
+        }
+      },
+      {
+        "value": "RESPONSIBLE_CONSUMPTION_AND_PRODUCTION",
+        "label": {
+          "en": "Responsible Consumption and Production",
+          "fr": "Responsible Consumption and Production"
+        }
+      },
+      {
+        "value": "CLIMATE_ACTION",
+        "label": {
+          "en": "Climate Action",
+          "fr": "Climate Action"
+        }
+      },
+      {
+        "value": "LIFE_BELOW_WATER",
+        "label": {
+          "en": "Life Below Water",
+          "fr": "Life Below Water"
+        }
+      },
+      {
+        "value": "LIFE_ON_LAND",
+        "label": {
+          "en": "Life on Land",
+          "fr": "Life on Land"
+        }
+      },
+      {
+        "value": "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS",
+        "label": {
+          "en": "Peace and Justice Strong Institutions",
+          "fr": "Peace and Justice Strong Institutions"
+        }
+      },
+      {
+        "value": "PARTNERSHIP_TO_ACHIEVE_THE_GOAL",
+        "label": {
+          "en": "Partnerships to achieve the Goal",
+          "fr": "Partnerships to achieve the Goal"
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_name_ib",
+    "map": "asset_borrowerDetails_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Name",
+      "fr": "Name"
+    },
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_borrowerWebsite_ib",
+    "map": "asset_borrowerDetails_website",
+    "type": "string",
+    "label": {
+      "en": "Borrower website",
+      "fr": "Borrower website"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_description_ib",
+    "map": "asset_borrowerDetails_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Description",
+      "fr": "Description"
+    },
+    "sublabel": {
+      "en": "Provide as much detail as possible as this description will be seen by investors on the asset summary page.",
+      "fr": "Provide as much detail as possible as this description will be seen by investors on the asset summary page."
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_organisationLogo_ib",
+    "map": "asset_borrowerDetails_logo",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload an organisation image",
+      "fr": "Upload an organisation image"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the project's organisation overview section.",
+      "fr": "This image will be shown in the project's organisation overview section."
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_shareType_ib",
+    "map": "class_general_shareType",
+    "type": "multistring",
+    "label": {
+      "en": "Type",
+      "fr": "Type"
+    },
+    "placeholder": {
+      "en": "Select type",
+      "fr": "Select type"
+    },
+    "options": [
+      {
+        "value": "BOND",
+        "label": {
+          "en": "Bond",
+          "fr": "Bond"
+        }
+      },
+      {
+        "value": "NOTE",
+        "label": {
+          "en": "Note",
+          "fr": "Note"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_decimalisation_ib",
+    "map": "class_general_decimalisation",
+    "type": "multistring",
+    "label": {
+      "en": "Decimalisation",
+      "fr": "Decimailisation"
+    },
+    "placeholder": {
+      "en": "Select decimalisation",
+      "fr": "Select decimalisation"
+    },
+    "options": ["1/1", "1/10", "1/100", "1/1000"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_calendar_ib",
+    "map": "class_general_calendar",
+    "type": "multistring",
+    "label": {
+      "en": "Calendar",
+      "fr": "Calendar"
+    },
+    "placeholder": {
+      "en": "Select calendar",
+      "fr": "Select calendar"
+    },
+    "options": [
+      {
+        "value": "ACTUAL/ACTUAL",
+        "label": {
+          "en": "actual/actual",
+          "fr": "actual/actual"
+        }
+      },
+      {
+        "value": "30/360_SIA",
+        "label": {
+          "en": "30/360 SIA",
+          "fr": "30/360 SIA"
+        }
+      },
+      {
+        "value": "30/360",
+        "label": {
+          "en": "30/360",
+          "fr": "30/360"
+        }
+      },
+      {
+        "value": "ACTUAL/365",
+        "label": {
+          "en": "actual/365",
+          "fr": "actual/365"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_couponRate_ib",
+    "map": "class_general_couponRate",
+    "size": 4,
+    "fillLine": true,
+    "multiline": true,
+    "type": "perPercentage",
+    "label": {
+      "en": "Coupon rate",
+      "fr": "Coupon rate"
+    },
+    "options": [
+      {
+        "value": "YEARLY",
+        "label": {
+          "en": "Year",
+          "fr": "Year"
+        }
+      },
+      {
+        "value": "QUARTERLY",
+        "label": {
+          "en": "Quarter",
+          "fr": "Quarter"
+        }
+      },
+      {
+        "value": "MONTHLY",
+        "label": {
+          "en": "Month",
+          "fr": "Month"
+        }
+      },
+      {
+        "value": "WEEKLY",
+        "label": {
+          "en": "Week",
+          "fr": "Week"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_couponRate_first_payment_date",
+    "map": "class_assetsCharacteristics_couponFirstPaymentDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "First coupon payment date",
+      "fr": "First coupon payment date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_couponRate_first_payment_hour",
+    "map": "class_assetsCharacteristics_couponFirstPaymentHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "First coupon payment hour",
+      "fr": "First coupon payment hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_couponPaymentFrequency_ib",
+    "map": "class_general_couponPaymentFrequency",
+    "type": "multistring",
+    "label": {
+      "en": "Coupon payment frequency",
+      "fr": "Coupon payment frequency"
+    },
+    "placeholder": {
+      "en": "Payment calendar",
+      "fr": "Payment calendar"
+    },
+    "options": [
+      {
+        "value": "YEARLY",
+        "label": {
+          "en": "Yearly",
+          "fr": "Yearly"
+        }
+      },
+      {
+        "value": "QUARTERLY",
+        "label": {
+          "en": "Quarterly",
+          "fr": "Quarterly"
+        }
+      },
+      {
+        "value": "MONTHLY",
+        "label": {
+          "en": "Monthly",
+          "fr": "Monthly"
+        }
+      },
+      {
+        "value": "WEEKLY",
+        "label": {
+          "en": "Weekly",
+          "fr": "Weekly"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_minimumNominalAmount_ib",
+    "map": "class_rules_minGlobalSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum nominal amount",
+      "fr": "Minimum nominal amount"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_maximumNominalAmount_ib",
+    "map": "class_rules_maxGlobalSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum nominal amount",
+      "fr": "Maximum nominal amount"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_pricePerUnit_ib",
+    "map": "class_nav_value",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Price per unit",
+      "fr": "Price per unit"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_minimumInvestment_ib",
+    "map": "class_rules_minSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum investment",
+      "fr": "Minimum investment"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_maximumInvestment_ib",
+    "map": "class_rules_maxSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum investment",
+      "fr": "Maximum investment"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_date_ib",
+    "map": "class_initialSubscription_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Issue date",
+      "fr": "Issue date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_hour_ib",
+    "map": "class_initialSubscription_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Issue hour",
+      "fr": "Issue hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_date_ib",
+    "map": "class_initialSubscription_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Maturity date",
+      "fr": "Maturity date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_hour_ib",
+    "map": "class_initialSubscription_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Maturity hour",
+      "fr": "Maturity hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_customFeesCheck_ib",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define subscription fees for this asset?",
+      "fr": "Do you wish to define subscription fees for this asset?"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": ["assetsCharacteristics_customFeesValue_ib"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "assetsCharacteristics_customFeesCheck_ib",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_customFeesValue_ib",
+    "map": "class_fees_general",
+    "size": 5,
+    "fillLine": true,
+    "type": "feeWithType",
+    "label": {
+      "en": "Fee amount",
+      "fr": "Fee amount"
+    },
+    "options": [
+      {
+        "value": "ENTRY_FEE",
+        "label": {
+          "en": "Entry Fee",
+          "fr": "Entry Fee"
+        }
+      },
+      {
+        "value": "MANAGEMENT_FEE",
+        "label": {
+          "en": "Management Fee",
+          "fr": "Management Fee"
+        }
+      },
+      {
+        "value": "EXIT_FEE",
+        "label": {
+          "en": "Exit Fee",
+          "fr": "Exit Fee"
+        }
+      }
+    ],
+    "status": "conditionalMandatory",
+    "updatable": false
+  }
+]

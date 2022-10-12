@@ -1,0 +1,1 @@
+export { FundInfos } from './FundInfos';

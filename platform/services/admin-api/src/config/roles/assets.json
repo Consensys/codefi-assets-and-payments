@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Assets-StackAdmin-Admin",
+    "description": "Codefi Assets Stack Admin role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-StackAdmin-User",
+    "description": "Codefi Assets Stack Admin role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-TenantAdmin-Admin",
+    "description": "Codefi Assets Tenant Admin role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-TenantAdmin-User",
+    "description": "Codefi Assets Tenant Admin role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Issuer-Admin",
+    "description": "Codefi Assets Issuer role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      },
+      {
+        "value": "write:data",
+        "description": "Reference Data API to write data records"
+      },
+      {
+        "value": "update:data",
+        "description": "Reference Data API to update data records"
+      },
+      {
+        "value": "delete:data",
+        "description": "Reference Data API to delete data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Issuer-User",
+    "description": "Codefi Assets Issuer role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Investor-Admin",
+    "description": "Codefi Assets Investor role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Investor-User",
+    "description": "Codefi Assets Investor role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-TradingDesk-Admin",
+    "description": "Codefi Assets Trading Desk role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-TradingDesk-User",
+    "description": "Codefi Assets Trading Desk role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Underwriter-Admin",
+    "description": "Codefi Assets Underwriter role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Underwriter-User",
+    "description": "Codefi Assets Underwriter role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Broker-Admin",
+    "description": "Codefi Assets Broker role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Broker-User",
+    "description": "Codefi Assets Broker role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Agent-Admin",
+    "description": "Codefi Assets Agent role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Agent-User",
+    "description": "Codefi Assets Agent role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Notary-Admin",
+    "description": "Codefi Assets Notary role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Notary-User",
+    "description": "Codefi Assets Notary role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Verifier-Admin",
+    "description": "Codefi Assets Verifier role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-Verifier-User",
+    "description": "Codefi Assets Verifier role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-NavManager-Admin",
+    "description": "Codefi Assets NavManager role (admin)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  },
+  {
+    "name": "Assets-NavManager-User",
+    "description": "Codefi Assets NavManager role (user)",
+    "permissions": [
+      {
+        "value": "read:data",
+        "description": "Reference Data API to read data records"
+      }
+    ]
+  }
+]

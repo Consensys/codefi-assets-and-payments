@@ -1,0 +1,10 @@
+tags.json
+node_modules
+dist
+test-report.xml
+.eslintcache
+test-report.xml
+junit.xml
+data/*
+coverage/*
+.env

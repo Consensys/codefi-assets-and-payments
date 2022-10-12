@@ -1,0 +1,17 @@
+.uiComponent_loader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.uiComponent_loader > svg {
+  display: block;
+}
+
+.uiComponent_loader > p {
+  color: #666;
+  font-size: var(--typography-size-f0);
+}

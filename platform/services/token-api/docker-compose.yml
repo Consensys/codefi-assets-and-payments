@@ -1,0 +1,44 @@
+version: '3.4'
+services:
+  token-db:
+    image: postgres
+    networks:
+      - codefi
+    environment:
+      - POSTGRES_DB=${DB_DATABASE_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  token-api:
+    env_file:
+      - ../../../.env
+      - .env
+    image: token-api
+    networks:
+      - codefi
+    ports:
+      - 3003:3000
+    volumes:
+      - ./src:/usr/src/app/platform/services/token-api/src:delegated
+      - ./integration:/usr/src/app/platform/services/token-api/integration:delegated
+    depends_on:
+      - token-db
+    build:
+      context: ../../../
+      dockerfile: ./platform/services/token-api/${DOCKERFILE-Dockerfile.dev}
+      labels:
+        local.filebeat: 'true'
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  mailing-api:
+    env_file:
+      - ../../../.env
+      - .env
+    image: mailing-api
+    networks:
+      - codefi
+    ports:
+      - 3004:3000
+    volumes:
+      - ./src:/usr/src/app/platform/services/mailing-api/src:delegated
+    build:
+      context: ../../../
+      dockerfile: ./platform/services/mailing-api/${DOCKERFILE-Dockerfile.dev}
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

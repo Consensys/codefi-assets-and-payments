@@ -1,0 +1,13 @@
+.uiComponent_inputGroup {
+  > .subTitle {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-size: var(--typography-size-f1);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--typography-size-f1);
+  }
+}

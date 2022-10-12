@@ -1,0 +1,37 @@
+phrase:
+  project_id: d080ea3b2df51f41d22ce635691aa736
+  file_format: react_simple_json
+  push:
+    sources:
+      - file: locales/defaults.json
+        params:
+          locale_id: en
+          update_translations: false
+  pull:
+    targets:
+      - file: locales/en.json
+        params:
+          locale_id: en
+      - file: locales/fr.json
+        params:
+          locale_id: fr
+      - file: locales/ja.json
+        params:
+          locale_id: ja
+      - file: locales/de.json
+        params:
+          locale_id: de
+      - file: locales/en_NFT.json
+        params:
+          # Locale ID cannot be duplicated, so using something random like en-NO
+          locale_id: en-NO
+      - file: locales/en_Payments.json
+        params:
+          # Locale ID cannot be duplicated, so using something random like en-PL
+          locale_id: en-PL
+      - file: locales/en-US.json
+        params:
+          locale_id: en-US
+      - file: locales/ar-SA.json
+        params:
+          locale_id: ar-SA

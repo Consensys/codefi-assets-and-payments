@@ -1,0 +1,1 @@
+export { CBDCPaymentConfirmation } from './CBDCPaymentConfirmation';

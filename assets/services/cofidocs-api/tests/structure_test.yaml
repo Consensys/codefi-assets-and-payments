@@ -1,0 +1,10 @@
+schemaVersion: 2.0.0
+commandTests:
+  - name: 'path'
+    command: 'sh'
+    args: ['-c', 'echo $PATH']
+    expectedOutput: ['/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin']
+fileExistenceTests:
+  - name: 'Dist A'
+    path: '/opt/dist/controllers/documentsController.js'
+    shouldExist: true

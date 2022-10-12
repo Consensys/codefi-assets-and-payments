@@ -1,0 +1,179 @@
+#_routes_issuer_KYCReview {
+  display: block;
+
+  > .kycReviewContainer {
+    padding: var(--spacing-tight-looser) var(--spacing-finger);
+    display: flex;
+
+    > form {
+      flex-grow: 1;
+      > h2 {
+        font-size: var(--typography-size-f5);
+        font-weight: var(--typography-weight-medium);
+        margin: var(--spacing-tight-looser) 0;
+      }
+
+      > h3 {
+        font-size: var(--typography-size-f2);
+        font-weight: var(--typography-weight-normal);
+        margin: var(--spacing-tight-looser) 0;
+        max-width: 700px;
+      }
+
+      .select-renewal-date {
+        max-width: 300px;
+      }
+
+      > .topHeader {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--spacing-small) 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: var(--spacing-tight);
+        margin-top: var(--spacing-tight-looser);
+
+        > h3 {
+          font-size: var(--typography-size-f4);
+          font-weight: var(--typography-weight-medium);
+          color: #444;
+        }
+
+        > div {
+          display: flex;
+        }
+
+        > a {
+          color: var(--colors-main);
+          text-decoration: none;
+          font-size: var(--typography-size-f2);
+        }
+      }
+
+      > .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        > span {
+          display: block;
+          color: #999;
+          font-size: var(--typography-size-f1);
+          margin-bottom: var(--spacing-xs);
+
+          &:not(:last-of-type) {
+            width: 45%;
+          }
+        }
+      }
+
+      .sub-title {
+        font-size: var(--typography-size-f4);
+        font-weight: var(--typography-weight-medium);
+        color: #444;
+      }
+
+      > .field {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        padding: var(--spacing-xs) 0;
+        flex-direction: column;
+
+        > div:first-child {
+          display: flex;
+          align-items: center;
+
+          > div:first-of-type {
+            display: flex;
+            align-items: center;
+            margin: var(--spacing-xs) 0;
+            width: 90%;
+
+            > span {
+              display: block;
+              width: 50%;
+
+              &:first-of-type {
+                font-weight: var(--typography-weight-medium);
+                padding-right: var(--spacing-xs);
+
+                > legend {
+                  color: #777c8c;
+                  font-weight: var(--typography-weight-normal);
+                  font-size: var(--typography-size-f2);
+                }
+              }
+
+              &:last-of-type {
+                display: flex;
+
+                > ul {
+                  list-style-type: none;
+                }
+              }
+            }
+          }
+
+          > div:last-of-type {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+
+            > button {
+              border: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: transparent;
+              height: var(--spacing-regular);
+              width: var(--spacing-regular);
+              border-radius: var(--spacing-xs);
+              transition: background-color 200ms ease-out;
+
+              &:disabled {
+                cursor: not-allowed;
+                opacity: 0.25;
+
+                &:hover {
+                  background: none;
+                }
+              }
+
+              &:hover {
+                background: #eee;
+              }
+            }
+
+            &.review {
+              justify-content: flex-end;
+            }
+          }
+        }
+
+        > div:nth-child(2) {
+          font-size: var(--typography-size-f1);
+          &.rejected {
+            padding: 5px 10px 2px;
+            background-color: var(--colors-errorLighter);
+          }
+          .document-renewal-date-input {
+            max-width: 250px;
+          }
+        }
+      }
+
+      > footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0;
+        > :not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    > menu {
+      margin-top: var(--spacing-tight-looser);
+    }
+  }
+}

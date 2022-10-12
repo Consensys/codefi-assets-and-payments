@@ -1,0 +1,49 @@
+version: "3.4"
+
+services:
+  kyc-api:
+    env_file:
+      - .env
+      - ../../../.env
+    environment:
+      STORES_FILE: ${STORES_FILE-./config/stores.json}
+    image: kyc-api
+    networks:
+      - codefi
+    volumes:
+      - ./src:/usr/src/app/assets/services/kyc-api/src:delegated
+    depends_on:
+      - kyc-api-db
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/kyc-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+  
+  kyc-api-db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    restart: always
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+    networks:
+      - codefi
+  
+  kyc-db-test:
+    image: postgres:11.15-alpine
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

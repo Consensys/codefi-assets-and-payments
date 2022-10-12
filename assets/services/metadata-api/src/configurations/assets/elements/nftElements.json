@@ -1,0 +1,140 @@
+[
+  {
+    "key": "collection_name",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Collection Name",
+      "fr": "Nom de la collection"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": true
+  },
+  {
+    "key": "collection_symbol",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Collection Symbol",
+      "fr": "Symbole de la collection"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_image",
+    "map": "asset_images_banner",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Collection Image",
+      "fr": "Collection Image"
+    },
+
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_description",
+    "map": "asset_general_description",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Collection Description",
+      "fr": "Collection Description"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": true
+  },
+  {
+    "key": "collection_storage",
+    "map": "asset_general_storage",
+    "type": "multistring",
+    "label": {
+      "en": "Collection Storage",
+      "fr": "Collection Storage"
+    },
+    "options": [
+      {
+        "value": "NONE",
+        "label": {
+          "en": "None",
+          "fr": "None"
+        }
+      },
+      {
+        "value": "IPFS",
+        "label": {
+          "en": "IPFS",
+          "fr": "IPFS"
+        }
+      },
+      {
+        "value": "PUBLIC",
+        "label": {
+          "en": "Public",
+          "fr": "Public"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_item_name",
+    "map": "class_general_name",
+    "type": "string",
+    "size": 3,
+    "label": {
+      "en": "Item Name",
+      "fr": "Item Name"
+    },
+
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_item_description",
+    "map": "class_general_description",
+    "type": "string",
+    "size": 3,
+    "label": {
+      "en": "Item Description",
+      "fr": "Item Description"
+    },
+
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_item_image",
+    "map": "class_general_image",
+    "type": "document",
+    "size": 3,
+    "label": {
+      "en": "Item Image",
+      "fr": "Item Image"
+    },
+
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "collection_item_attributes",
+    "map": "class_general_attributes",
+    "type": "json",
+    "size": 3,
+    "label": {
+      "en": "Item Attributes",
+      "fr": "Item Attributes"
+    },
+
+    "status": "mandatory",
+    "updatable": true
+  }
+]

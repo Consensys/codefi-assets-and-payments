@@ -1,0 +1,137 @@
+._route_issuer_fundInvestorAddress {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  > main {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 32px 40px;
+
+    > .informations {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      > div {
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 24px;
+
+        @media (min-width: 1050px) {
+          margin-bottom: 0;
+          width: calc(100% / 2 - 15px);
+        }
+
+        > header {
+          color: #475166;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: 500;
+          margin-bottom: 24px;
+          width: 100%;
+
+          > a {
+            display: block;
+            color: var(--colors-main);
+            text-decoration: none;
+          }
+        }
+
+        &.company {
+          display: flex;
+          flex-wrap: inline;
+          flex-wrap: wrap;
+
+          > div {
+            flex-shrink: 0;
+            width: 100%;
+            margin-bottom: 15px;
+
+            &.half {
+              width: 50%;
+            }
+
+            > span {
+              display: block;
+
+              &:first-of-type {
+                font-weight: 600;
+                font-size: 12px;
+                color: #475166;
+              }
+
+              &:last-of-type {
+                font-weight: 500;
+                font-size: 14px;
+                color: #1a2233;
+              }
+            }
+          }
+        }
+
+        &.kyc {
+          > ul {
+            > li {
+              display: flex;
+              border-bottom: 1px solid #eee;
+              padding: 12px 0;
+              align-items: center;
+              justify-content: space-between;
+
+              &:last-of-type {
+                border-bottom: none;
+              }
+
+              > span {
+                display: block;
+                font-size: 14px;
+                color: #777c8c;
+
+                &:last-of-type {
+                  color: #1a2233;
+                }
+              }
+            }
+          }
+        }
+
+        &.representative {
+          > .name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          > ul {
+            > li {
+              margin-top: 10px;
+              list-style-type: none;
+              display: flex;
+
+              > svg {
+                display: block;
+                margin-right: 10px;
+              }
+
+              > span {
+                font-size: 14px;
+                display: block;
+              }
+
+              > a {
+                font-size: 14px;
+                display: block;
+                color: var(--colors-main);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

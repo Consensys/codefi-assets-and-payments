@@ -1,0 +1,513 @@
+[
+  {
+    "key": "shareClass_ISINCode_mandatory",
+    "map": "class_general_isin",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "ISIN code",
+      "fr": "Code ISIN"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_payment",
+    "map": "class_paymentOptions_option",
+    "type": "radio",
+    "name": "payment_subsequentSubscription",
+    "status": "mandatory",
+    "label": {
+      "en": "",
+      "fr": ""
+    },
+    "inputs": [
+      {
+        "key": "AT_ORDER_CREATION",
+        "label": {
+          "en": "Paid at the time of the order.",
+          "fr": "Paid at the time of the order."
+        }
+      },
+      {
+        "key": "BETWEEN_CUTOFF_AND_SETTLEMENT",
+        "label": {
+          "en": "Paid between subscription cut off and settlement.",
+          "fr": "Paid between subscription cut off and settlement."
+        }
+      }
+    ],
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_date",
+    "map": "class_initialSubscription_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription unpaid flag date",
+      "fr": "Subscription unpaid flag date"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_unpaidFlag_hour",
+    "map": "class_initialSubscription_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription unpaid flag",
+      "fr": "Subscription unpaid flag"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_startDateCheck",
+    "type": "radio",
+    "label": {
+      "en": "Subsequent subscription period start date",
+      "fr": "Subsequent subscription period start date"
+    },
+    "inputs": [
+      {
+        "key": "INITIAL_CUT_OFF",
+        "label": {
+          "en": "Start automatically after the initial subscription cut off",
+          "fr": "Start automatically after the initial subscription cut off"
+        },
+        "relatedElements": [
+          "shareClass_subscription_subsequentSubscription_cutoff_date",
+          "shareClass_subscription_subsequentSubscription_cutoff_hour",
+          "shareClass_subscription_subsequentSubscription_valuation_date",
+          "shareClass_subscription_subsequentSubscription_valuation_hour",
+          "shareClass_subscription_subsequentSubscription_settlement_date",
+          "shareClass_subscription_subsequentSubscription_settlement_hour",
+          "shareClass_subscription_subsequentSubscription_unpaidFlag_date",
+          "shareClass_subscription_subsequentSubscription_unpaidFlag_hour"
+        ]
+      },
+      {
+        "key": "SPECIFIC_DATE",
+        "label": {
+          "en": "Start on a specific date",
+          "fr": "Start on a specific date"
+        },
+        "relatedElements": [
+          "shareClass_subscription_subsequentSubscription_start_date",
+          "shareClass_subscription_subsequentSubscription_start_hour",
+          "shareClass_subscription_subsequentSubscription_cutoff_date",
+          "shareClass_subscription_subsequentSubscription_cutoff_hour",
+          "shareClass_subscription_subsequentSubscription_valuation_date",
+          "shareClass_subscription_subsequentSubscription_valuation_hour",
+          "shareClass_subscription_subsequentSubscription_settlement_date",
+          "shareClass_subscription_subsequentSubscription_settlement_hour",
+          "shareClass_subscription_subsequentSubscription_unpaidFlag_date",
+          "shareClass_subscription_subsequentSubscription_unpaidFlag_hour"
+        ]
+      }
+    ],
+    "name": "shareClass_subscription_subsequentSubscription_startDateCheck",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_customRedemptionFeesCheck",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define redemption fees for this share class?",
+      "fr": "Do you wish to define redemption fees for this share class?"
+    },
+    "fillLine": true,
+    "sublabel": {
+      "en": "All fees will be charged to the investor when redeeming the asset.",
+      "fr": "All fees will be charged to the investor when redeeming the asset."
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": ["sharedClass_customRedemptionFeesValue"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "sharedClass_customRedemptionFeesCheck",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_customRedemptionFeesValue",
+    "map": "class_fees_redemptionCustomFeesValue",
+    "size": 4,
+    "fillLine": true,
+    "multiline": true,
+    "type": "percentage",
+    "label": {
+      "en": "Maximum fee amount",
+      "fr": "Maximum fee amount"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_documents_KIID",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Key Investor Information Document (KIID)",
+      "fr": "Key Investor Information Document (KIID)"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_documents_annualReport",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Annual report",
+      "fr": "Annual report"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_start_date",
+    "map": "class_initialRedemption_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Initial redemption start date",
+      "fr": "Initial redemption start date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_start_hour",
+    "map": "class_initialRedemption_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Initial redemption start hour",
+      "fr": "Initial redemption start hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_cutoff_date",
+    "map": "class_initialRedemption_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Initial redemption cut-off date",
+      "fr": "Initial redemption cut-off date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_cutoff_hour",
+    "map": "class_initialRedemption_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Initial redemption cut-off hour",
+      "fr": "Initial redemption cut-off hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_valuation_date",
+    "map": "class_initialRedemption_valuationDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Initial redemption valuation date",
+      "fr": "Initial redemption valuation date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_valuation_hour",
+    "map": "class_initialRedemption_valuationHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Initial redemption valuation hour",
+      "fr": "Initial redemption valuation hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_settlement_date",
+    "map": "class_initialRedemption_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Initial redemption settlement date",
+      "fr": "Initial redemption settlement date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_settlement_hour",
+    "map": "class_initialRedemption_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Initial redemption settlement hour",
+      "fr": "Initial redemption settlement hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_unpaidFlag_date",
+    "map": "class_initialRedemption_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Initial redemption unpaid flag date",
+      "fr": "Initial redemption unpaid flag date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_initialRedemption_unpaidFlag_hour",
+    "map": "class_initialRedemption_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Initial redemption unpaid flag hour",
+      "fr": "Initial redemption unpaid flag hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_startDateCheck",
+    "type": "radio",
+    "label": {
+      "en": "Subsequent redemption period start date",
+      "fr": "Subsequent redemption period start date"
+    },
+    "inputs": [
+      {
+        "key": "INITIAL_CUT_OFF",
+        "label": {
+          "en": "Start automatically after the initial redemption cut off",
+          "fr": "Start automatically after the initial redemption cut off"
+        },
+        "relatedElements": [
+          "shareClass_redemption_subsequentRedemption_cutoff_date",
+          "shareClass_redemption_subsequentRedemption_cutoff_hour",
+          "shareClass_redemption_subsequentRedemption_valuation_date",
+          "shareClass_redemption_subsequentRedemption_valuation_hour",
+          "shareClass_redemption_subsequentRedemption_settlement_date",
+          "shareClass_redemption_subsequentRedemption_settlement_hour",
+          "shareClass_redemption_subsequentRedemption_unpaidFlag_date",
+          "shareClass_redemption_subsequentRedemption_unpaidFlag_hour"
+        ]
+      },
+      {
+        "key": "SPECIFIC_DATE",
+        "label": {
+          "en": "Start on a specific date",
+          "fr": "Start on a specific date"
+        },
+        "relatedElements": [
+          "shareClass_redemption_subsequentRedemption_start_date",
+          "shareClass_redemption_subsequentRedemption_start_hour",
+          "shareClass_redemption_subsequentRedemption_cutoff_date",
+          "shareClass_redemption_subsequentRedemption_cutoff_hour",
+          "shareClass_redemption_subsequentRedemption_valuation_date",
+          "shareClass_redemption_subsequentRedemption_valuation_hour",
+          "shareClass_redemption_subsequentRedemption_settlement_date",
+          "shareClass_redemption_subsequentRedemption_settlement_hour",
+          "shareClass_redemption_subsequentRedemption_unpaidFlag_date",
+          "shareClass_redemption_subsequentRedemption_unpaidFlag_hour"
+        ]
+      }
+    ],
+    "name": "shareClass_redemption_subsequentRedemption_startDateCheck",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_start_date",
+    "map": "class_redemption_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Redemption start date",
+      "fr": "Redemption start date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_start_hour",
+    "map": "class_redemption_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Redemption start hour",
+      "fr": "Redemption start hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_cutoff_date",
+    "map": "class_redemption_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Redemption cut-off date",
+      "fr": "Redemption cut-off date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_cutoff_hour",
+    "map": "class_redemption_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Redemption cut-off hour",
+      "fr": "Redemption cut-off hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_valuation_date",
+    "map": "class_redemption_valuationDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Redemption valuation date",
+      "fr": "Redemption valuation date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_valuation_hour",
+    "map": "class_redemption_valuationHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Redemption valuation hour",
+      "fr": "Redemption valuation hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_settlement_date",
+    "map": "class_redemption_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Redemption settlement date",
+      "fr": "Redemption settlement date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_settlement_hour",
+    "map": "class_redemption_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Redemption settlement hour",
+      "fr": "Redemption settlement hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_unpaidFlag_date",
+    "map": "class_redemption_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Redemption unpaid flag date",
+      "fr": "Redemption unpaid flag date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_redemption_subsequentRedemption_unpaidFlag_hour",
+    "map": "class_redemption_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Redemption unpaid flag hour",
+      "fr": "Redemption unpaid flag hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_unpaidFlag_date",
+    "map": "class_subscription_unpaidFlagDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription unpaid flag date",
+      "fr": "Subscription unpaid flag date"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_unpaidFlag_hour",
+    "map": "class_subscription_unpaidFlagHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription unpaid flag hour",
+      "fr": "Subscription unpaid flag hour"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "borrowerInformation_reviewer_select",
+    "map": "asset_participants_reviewerId",
+    "type": "multistring",
+    "label": {
+      "en": "Asset Issuer",
+      "fr": "Asset Issuer"
+    },
+    "placeholder": {
+      "en": "Select issuer",
+      "fr": "Select issuer"
+    },
+    "options": [],
+    "status": "optional",
+    "updatable": false
+  }
+]

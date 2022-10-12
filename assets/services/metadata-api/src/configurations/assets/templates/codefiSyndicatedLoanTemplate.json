@@ -1,0 +1,145 @@
+{
+  "tenantId": "codefi",
+  "category": "HYBRID",
+  "name": "SYNDICATED LOAN",
+  "type": "SYNDICATED_LOAN",
+  "label": {
+    "en": "Create new loan",
+    "fr": "Create new loan"
+  },
+  "description": {
+    "en": "A syndicated loan is a loan offered by a group of lenders to a single borrower.",
+    "fr": "A syndicated loan is a loan offered by a group of lenders to a single borrower."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Loan information",
+        "fr": "Loan information"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "fundInformations_fundName_sl",
+            "fundInformations_fundSymbol_sl",
+            "borrowerInformation_reviewer_select",
+            "loan_type_syndication",
+            "loan_type_security",
+            "loan_type_terms",
+            "loan_facility_limit"
+          ]
+        },
+        {
+          "key": "asset_loanSecurity",
+          "label": {
+            "en": "Security",
+            "fr": "Security"
+          },
+          "elements": [
+            "loan_security_identifier",
+            "loan_security_type",
+            "loan_security_description",
+            "loan_security_trustee",
+            "loan_security_documents"
+          ]
+        },
+        {
+          "key": "asset_participants",
+          "label": {
+            "en": "Participants",
+            "fr": "Participants"
+          },
+          "elements": [
+            "loan_participants_borrower",
+            "loan_participants_underwriter"
+          ]
+        },
+        {
+          "key": "asset_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Fees"
+          },
+          "elements": [
+            "loan_fees_underwrittenFee",
+            "loan_fees_facilitynFee",
+            "loan_fees_trusteeFee"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": [
+            "fundInformations_prospectus_sl",
+            "fundInformations_docusign_sl",
+            "fundInformations_documents_sl"
+          ]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Cover image",
+            "fr": "Cover image"
+          },
+          "elements": ["fundInformations_coverPicture_sl"]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Facility information",
+        "fr": "Facility information"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "shareClass_className_sl",
+            "facility_facility_amount",
+            "shareClass_currency_sl"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Subscription",
+            "fr": "Souscription"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date_sl",
+            "shareClass_subscription_initialSubscription_cutoff_date_sl"
+          ]
+        },
+        {
+          "key": "class_interest",
+          "label": {
+            "en": "Interest",
+            "fr": "Interest"
+          },
+          "elements": [
+            "facility_interest_rateType",
+            "facility_interest_rateValue",
+            "facility_interest_margin",
+            "facility_interest_defaultRate"
+          ]
+        }
+      ]
+    }
+  ]
+}

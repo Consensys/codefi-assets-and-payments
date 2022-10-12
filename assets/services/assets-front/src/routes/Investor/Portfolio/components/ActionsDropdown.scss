@@ -1,0 +1,59 @@
+._route_investor_portfolio_actionDropdown {
+  position: relative;
+
+  &:hover {
+    > .menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+  }
+
+  > .spacer {
+    position: absolute;
+    background: transparent;
+    right: 0;
+    width: 260px;
+    height: 30px;
+  }
+
+  > .menu {
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    width: 260px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+    overflow: hidden;
+
+    > button {
+      display: flex;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #eee;
+      background: none;
+      align-items: center;
+      padding: 13px 17px;
+      font-size: 14px;
+      color: #475166;
+      transition: background-color 200ms ease-out;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      > svg {
+        display: block;
+        margin-right: 8px;
+      }
+
+      &:hover {
+        filter: brightness(0.95);
+        background-color: #f6f6f6;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+version: "3.7"
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  networks:
+    - codefi
+
+services:
+  zookeeper:
+    <<: *container-common
+    image: confluentinc/cp-zookeeper:5.4.3
+    ports:
+      - ${ZOOKEEPER_EXTERNAL_PORT-2181}:2181
+    environment:
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT-32181}
+      ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME-2000}
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "32181"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  kafka:
+    <<: *container-common
+    image: confluentinc/cp-kafka:5.4.3
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    ports:
+      - ${KAFKA_EXTERNAL_PORT-9092}:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:${ZOOKEEPER_CLIENT_PORT-32181}
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+    healthcheck:
+      test:
+        ["CMD", "kafka-topics", "--list", "--bootstrap-server", "kafka:9092"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+  schema-registry:
+    <<: *container-common
+    image: confluentinc/cp-schema-registry:5.4.1
+    hostname: schema-registry
+    depends_on:
+      kafka:
+        condition: service_healthy
+    ports:
+      - "8088:8081"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka:9092
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-t", "1", "http://localhost:8081/subjects"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  kafka-ui:
+    <<: *container-common
+    image: provectuslabs/kafka-ui:0.3.3
+    depends_on:
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8182:8080
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local-dev-env
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+      KAFKA_CLUSTERS_0_SCHEMAREGISTRY: http://schema-registry:8081
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:8080"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

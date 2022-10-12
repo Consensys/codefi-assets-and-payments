@@ -1,0 +1,50 @@
+._uiComponent_fundInformationsReview {
+  width: calc(100% - 30px);
+  max-width: 500px;
+  margin: 32px auto;
+  padding-bottom: 100px;
+
+  > h2 {
+    font-weight: 500;
+    font-size: 20px;
+
+    &.shareClasses {
+      margin-top: 48px;
+      border-top: 1px solid #ddd;
+      padding-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  > h3 {
+    margin: 32px 0 24px 0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  > h4 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  > .value {
+    margin-bottom: 24px;
+  }
+
+  > .fileLink {
+    color: #000;
+    margin-bottom: 24px;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--colors-main);
+    }
+  }
+
+  > .image {
+    display: block;
+    margin-bottom: 24px;
+    width: 180px;
+  }
+}

@@ -1,0 +1,20 @@
+._uiComponent_valueVariationIndicator {
+  color: #777;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+
+  &.up {
+    color: var(--colors-successDark);
+  }
+
+  &.down {
+    color: var(--colors-errorDark);
+  }
+
+  > svg {
+    display: block;
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,83 @@
+._route_issuer_fundOverview {
+  ._uiComponent_dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #989ca6;
+    box-sizing: border-box;
+    border-radius: 0 4px 4px 0;
+    margin: 0px 1px;
+    & svg {
+      fill: var(--colors-sidebar-text) !important;
+    }
+  }
+  .issue-shares-button {
+    border-radius: 4px 0 0 4px;
+    margin-left: var(--spacing-tight) !important;
+  }
+  > main {
+    padding: 32px 40px;
+
+    > div {
+      margin-bottom: 40px;
+    }
+    .keyInfoCutOff {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      .keyInfo {
+        display: flex;
+        margin: 0 -8px;
+        border-top: 1px solid #dfe0e6;
+        .infoBox {
+          border-right: 1px solid #dfe0e6;
+          margin: auto;
+          padding: 16px 24px;
+          .infoTitle {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #777c8c;
+          }
+          .infoValue {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: #1a2233;
+          }
+        }
+        .infoBox:last-of-type {
+          border-right: none;
+          margin: 0 8px;
+          padding: 16px 24px;
+        }
+      }
+    }
+    .progressBar {
+      width: 30%;
+      h1 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        color: #000a28;
+        margin-bottom: 0;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #777c8c;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .g2-tooltip-title {
+    display: none !important;
+  }
+}

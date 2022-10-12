@@ -1,0 +1,47 @@
+@import 'constants.scss';
+
+._route_stylesGuide_components_properties {
+  > div {
+    border-top: 1px solid #ddd;
+    padding: var(--spacing-tight) 0;
+
+    > h4 {
+      display: flex;
+      align-items: center;
+      color: var(--colors-main);
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-weight: bold;
+      margin-bottom: var(--spacing-small);
+
+      > span {
+        font-size: 12px;
+        color: #666;
+        display: block;
+        margin-left: var(--spacing-xs);
+      }
+    }
+
+    > div {
+      display: flex;
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      > span {
+        display: block;
+        width: 100px;
+        flex-grow: 0;
+        color: #666;
+        flex-shrink: 0;
+      }
+
+      > code {
+        font-weight: bold;
+        display: block;
+        color: #000;
+        white-space: pre-wrap;
+        word-break: break-all;
+        line-height: 1.6;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "description": "Digital Currency API read all Operations",
+    "value": "readall:digital-currency-operations"
+  },
+  {
+    "description": "Digital Currency API read Operations",
+    "value": "read:digital-currency-operations"
+  },
+  {
+    "description": "Digital Currency API read Digital Currency",
+    "value": "read:digital-currency"
+  },
+  {
+    "description": "Digital Currency API read Digital Currency Holders",
+    "value": "read:digital-currency-holders"
+  },
+  {
+    "description": "Digital Currency API read Cash Account",
+    "value": "read:cash-account"
+  },
+  {
+    "description": "Digital Currency API read Instruction",
+    "value": "read:instruction"
+  },
+  {
+    "description": "Digital Currency API read Notification",
+    "value": "read:notification"
+  },
+  {
+    "description": "Digital Currency API write Cash Account",
+    "value": "write:cash-account"
+  },
+  {
+    "description": "Digital Currency API accept Instruction",
+    "value": "accept:instruction"
+  },
+  {
+    "description": "Digital Currency API reject Instruction",
+    "value": "reject:instruction"
+  },
+  {
+    "description": "Digital Currency API approve transfer of Digital Currency",
+    "value": "approve:digital-currency"
+  },
+  {
+    "description": "Digital Currency API mint of Digital Currency",
+    "value": "mint:digital-currency"
+  },
+  {
+    "description": "Digital Currency API burn of Digital Currency",
+    "value": "burn:digital-currency"
+  },
+  {
+    "description": "Digital Currency API deposit of Digital Currency",
+    "value": "deposit:digital-currency"
+  },
+  {
+    "description": "Digital Currency API withdraw of Digital Currency",
+    "value": "withdraw:digital-currency"
+  },
+  {
+    "description": "Digital Currency API transfer of Digital Currency",
+    "value": "transfer:digital-currency"
+  },
+  {
+    "description": "Digital Currency API transfer from of Digital Currency",
+    "value": "transferFrom:digital-currency"
+  },
+  {
+    "description": "Digital Currency API hold of Digital Currency",
+    "value": "hold:digital-currency"
+  },
+  {
+    "description": "Digital Currency API execute hold of Digital Currency",
+    "value": "executeHold:digital-currency"
+  },
+  {
+    "description": "Digital Currency API release hold of Digital Currency",
+    "value": "releaseHold:digital-currency"
+  },
+  {
+    "description": "Digital Currency API deploy of Digital Currency",
+    "value": "deploy:digital-currency"
+  },
+  {
+    "description": "Digital Currency API read Balances History",
+    "value": "read:balance-history"
+  },
+  {
+    "description": "Digital Currency API read Legal Entities",
+    "value": "read:legal-entity"
+  }
+]

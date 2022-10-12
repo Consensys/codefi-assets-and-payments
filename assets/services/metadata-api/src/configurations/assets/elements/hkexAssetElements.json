@@ -1,0 +1,408 @@
+[
+  {
+    "key": "fundInformations_fundName_hkex",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Name",
+      "fr": "Name"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol_hkex",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Symbol",
+      "fr": "Symbol"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundDescription_hkex",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Description",
+      "fr": "Description"
+    },
+    "placeholder": {
+      "en": "Describe the asset",
+      "fr": "Describe the asset"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_prospectus_hkex",
+    "map": "asset_documents_prospectus",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload the prospectus",
+      "fr": "Upload the prospectus"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_coverPicture_hkex",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "label": {
+      "en": "Upload a cover image",
+      "fr": "Upload a cover image"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_holderName_hkex",
+    "map": "class_bankInformations_holderName",
+    "type": "string",
+    "label": {
+      "en": "Account holders name",
+      "fr": "Account holders name"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_accountNumber_hkex",
+    "map": "class_bankInformations_accountNumber",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Account number",
+      "fr": "Account number"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_IBAN_hkex",
+    "map": "class_bankInformations_iban",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "IBAN",
+      "fr": "IBAN"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_Swift_hkex",
+    "map": "class_bankInformations_swift",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "BIC/Swift code",
+      "fr": "BIC/Swift code"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_currency_hkex",
+    "map": "class_general_currency",
+    "size": 3,
+    "type": "multistring",
+    "label": {
+      "en": "Currency",
+      "fr": "Devise"
+    },
+    "placeholder": {
+      "en": "Currency",
+      "fr": "Currency"
+    },
+    "options": ["HKD", "RMB", "USD", "EUR"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankName_hkex",
+    "map": "class_bankInformations_bankName",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank name",
+      "fr": "Bank name"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankAddress_hkex",
+    "map": "class_bankInformations_bankName",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address",
+      "fr": "Bank address"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankAddress2_hkex",
+    "map": "class_bankInformations_bankAddress2",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address line 2",
+      "fr": "Bank address line 2"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankCity_hkex",
+    "map": "class_bankInformations_bankCity",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "City",
+      "fr": "City"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankCountry_hkex",
+    "map": "class_bankInformations_bankCounty",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Country",
+      "fr": "Country"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_orderSubscriptionsTypes_hkexPoint",
+    "name": "shareClass_orderSubscriptionsTypes",
+    "map": "class_rules_subscriptionType",
+    "type": "radio",
+    "label": {
+      "en": "Type of order subscriptions",
+      "fr": "Types d’ordres de souscription"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "AMOUNT",
+        "label": {
+          "en": "Amount",
+          "fr": "Valeur"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInAmount_pa",
+          "shareClass_maximumSubscriptionInAmount_pa"
+        ]
+      },
+      {
+        "key": "QUANTITY",
+        "label": {
+          "en": "Quantity",
+          "fr": "Quantité"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInQuantity_hkexPoint",
+          "shareClass_maximumSubscriptionInQuantity_hkexPoint"
+        ]
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInQuantity_hkexPoint",
+    "map": "class_rules_minSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription quantity",
+      "fr": "Minimum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Points",
+      "fr": "Points"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInQuantity_hkexPoint",
+    "map": "class_rules_maxSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription quantity",
+      "fr": "Maximum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Points",
+      "fr": "Points"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_orderSubscriptionsTypes_hkexToken",
+    "name": "shareClass_orderSubscriptionsTypes",
+    "map": "class_rules_subscriptionType",
+    "type": "radio",
+    "label": {
+      "en": "Type of order subscriptions",
+      "fr": "Types d’ordres de souscription"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "AMOUNT",
+        "label": {
+          "en": "Amount",
+          "fr": "Valeur"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInAmount_pa",
+          "shareClass_maximumSubscriptionInAmount_pa"
+        ]
+      },
+      {
+        "key": "QUANTITY",
+        "label": {
+          "en": "Quantity",
+          "fr": "Quantité"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInQuantity_hkexToken",
+          "shareClass_maximumSubscriptionInQuantity_hkexToken"
+        ]
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInQuantity_hkexToken",
+    "map": "class_rules_minSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription quantity",
+      "fr": "Minimum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Tokens",
+      "fr": "Tokens"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInQuantity_hkexToken",
+    "map": "class_rules_maxSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription quantity",
+      "fr": "Maximum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Tokens",
+      "fr": "Tokens"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "assetClass_initialShareValue_check",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define an initial value for this asset",
+      "fr": "Do you wish to define an initial value for this asset"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui"
+        },
+        "relatedElements": ["assetClass_initialShareValue_value"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non"
+        }
+      }
+    ],
+    "name": "assetClass_initialShareValue_check",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetClass_initialShareValue_value",
+    "map": "class_nav_value",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Initial asset value (per HKD - HKEX Point)",
+      "fr": "Initial asset value (per HKD - HKEX Point)"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_hour_hkex",
+    "map": "class_initialSubscription_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Asset issuance start hour",
+      "fr": "Asset issuance start hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_maximum_entryFeesValue_hkex",
+    "map": "class_fees_acquiredEntryFees",
+    "size": 2,
+    "fillLine": true,
+    "type": "percentage",
+    "label": {
+      "en": "Fees",
+      "fr": "Fees"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_date_hkex",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "fillLine": true,
+    "size": 3,
+    "label": {
+      "en": "Asset issuance start date",
+      "fr": "Asset issuance start date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "name": "@codefi-assets-and-payments/kyc-api",
+  "private": true,
+  "version": "1.29.4",
+  "description": "Repository of KYC API used in the Digital Assets Platform",
+  "license": "Apache",
+  "scripts": {
+    "build": "nest build",
+    "db:init": "yarn db:migrate && yarn db:seed",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:seed": "sequelize-cli db:seed:all",
+    "lint": "eslint '{src,test}/**/*.ts'",
+    "lint:fix": "eslint '{src,test}/**/*.ts' --fix",
+    "prebuild": "rimraf dist",
+    "prettier:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "release": "standard-version",
+    "start:debug": "yarn db:init && nest start --debug 0.0.0.0 --watch",
+    "start:dev": "yarn db:init && nest start --watch",
+    "start": "yarn db:init && nest start",
+    "start:prod": "yarn db:migrate --config dist/config/database.js --migrations-path dist/db/migrations && yarn db:seed --config dist/config/database.js --seeders-path dist/db/seeders && node dist/main",
+    "stop": "pkill --signal SIGINT codefi-api",
+    "test:cov": "APP_ENV=test yarn db:init && jest src test/functional --detectOpenHandles --bail --runInBand --forceExit --coverage",
+    "test:functional": "APP_ENV=test yarn db:init && jest test/functional --detectOpenHandles --bail --runInBand --forceExit",
+    "test:watch": "jest src --watch",
+    "docker": "docker-compose up --build",
+    "docker:detached": "docker-compose up --build -d",
+    "docker:down": "docker-compose down",
+    "test": "jest src"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/observability": "*",
+    "@nestjs/common": "^8.4.7",
+    "@nestjs/core": "^8.4.7",
+    "@nestjs/platform-express": "^8.4.7",
+    "@nestjs/sequelize": "^8.0.0",
+    "@nestjs/swagger": "^5.2.1",
+    "axios": "^0.27.2",
+    "axios-retry": "^3.3.1",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.13.1",
+    "dotenv": "^8.2.0",
+    "install": "^0.13.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
+    "rxjs": "^7.0.0",
+    "sequelize": "6.16.1",
+    "sequelize-cli": "~6.4.1",
+    "sequelize-typescript": "~2.1.0",
+    "swagger-ui-express": "^4.1.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@nestjs/cli": "^8.0.0",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@types/jest": "^27.0.0",
+    "@types/node": "^18.0.3",
+    "@types/sequelize": "^4.28.8",
+    "@types/supertest": "^2.0.8",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.0.0",
+    "jest-create-mock-instance": "^2.0.0",
+    "jest-junit": "^14.0.0",
+    "lint-staged": "^10.1.1",
+    "nock": "^13.2.8",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "supertest": "^6.2.4",
+    "ts-jest": "^27.0.0",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "^test/(.*)$": "<rootDir>/test/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/test/setEnvVars.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80,
+        "branches": 50,
+        "functions": 80,
+        "lines": 80
+      }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "rootDir": "./",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/*/**/*.{ts,js}",
+      "!src/db/migrations/**",
+      "!src/db/seeders/**",
+      "!src/config/database.js",
+      "!src/db/**"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 8"
+  }
+}

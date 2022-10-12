@@ -1,0 +1,93 @@
+version: "3.7"
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  networks:
+    - codefi
+
+services:
+  elasticsearch:
+    <<: *container-common
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.0
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms750m -Xmx750m"
+    ports:
+      - 9200:9200
+    volumes:
+      - elastic-data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD", "curl", "http://localhost:9200"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  kibana:
+    <<: *container-common
+    image: docker.elastic.co/kibana/kibana:7.11.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: ["CMD", "curl", "http://localhost:5601"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  filebeat:
+    <<: *container-common
+    image: docker.elastic.co/beats/filebeat:7.11.0
+    user: root
+    command: filebeat -e -strict.perms=false
+    volumes:
+      - ./config/elastic/filebeat.yaml:/usr/share/filebeat/filebeat.yml
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: ["CMD-SHELL", "ps", "|", "grep", filebeat"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  apm-server:
+    <<: *container-common
+    image: docker.elastic.co/apm/apm-server:7.11.0
+    cap_add: ["CHOWN", "DAC_OVERRIDE", "SETGID", "SETUID"]
+    cap_drop: ["ALL"]
+    ports:
+      - 9250:8200
+    depends_on:
+     - elasticsearch
+     - kibana
+    command: >
+      apm-server -e
+        -E apm-server.rum.enabled=true
+        -E setup.kibana.host=kibana:5601
+        -E setup.template.settings.index.number_of_replicas=0
+        -E apm-server.kibana.enabled=true
+        -E apm-server.kibana.host=kibana:5601
+        -E output.elasticsearch.hosts=["elasticsearch:9200"]
+    healthcheck:
+      test: ["CMD", "curl", "--write-out 'HTTP %{http_code}'", "--fail", "--silent", "--output /dev/null", "http://localhost:8200/"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+volumes:
+  elastic-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

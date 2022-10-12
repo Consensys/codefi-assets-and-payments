@@ -1,0 +1,16 @@
+FROM node:18
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+# Install dependencies using the Yarn cache from the previous build, if one exists.
+RUN --mount=type=cache,target=/yarn YARN_CACHE_FOLDER=/yarn yarn install
+
+# Build the cofidocs API and all its local dependencies.
+RUN npx nx build cofidocs-api
+
+# Remove the cofidocs API build files as we want to build it on startup.
+RUN rm -rf ./assets/services/cofidocs-api/dist
+
+CMD [ "npx", "nx", "start", "cofidocs-api" ]

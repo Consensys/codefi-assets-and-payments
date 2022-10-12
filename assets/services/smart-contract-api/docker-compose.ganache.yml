@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    command: --gasLimit 0x6691b7 -h 0.0.0.0 -m "coyote supreme region pig razor nothing ensure pottery utility unique exercise tired"
+    ports:
+      - 8555:8545
+    networks:
+      - ganache
+
+networks:
+  ganache:
+    name: ganache_ganache

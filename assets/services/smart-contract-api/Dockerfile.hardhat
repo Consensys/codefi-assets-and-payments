@@ -1,0 +1,10 @@
+FROM node:14-alpine
+
+WORKDIR /usr/hardhat-blockchain
+
+RUN npm init --yes && npm install --save-dev hardhat && npm install --save-dev @nomiclabs/hardhat-ethers
+RUN apk update && apk add curl
+
+COPY hardhat.config.js /usr/hardhat-blockchain
+
+EXPOSE 8546

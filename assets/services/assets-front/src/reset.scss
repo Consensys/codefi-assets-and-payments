@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  vertical-align: baseline;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+strong,
+b {
+  font-weight: bolder;
+}
+
+body {
+  overscroll-behavior: none;
+  font-size: var(--typography-size-f2);
+  line-height: 1.4;
+  font-family: 'inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  height: 100vh;
+  overflow: hidden;
+  color: #000a28;
+}
+
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
+body::backdrop {
+  background-color: #f6f6f6;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+i {
+  font-style: italic;
+}
+
+#launcher {
+  display: none;
+}

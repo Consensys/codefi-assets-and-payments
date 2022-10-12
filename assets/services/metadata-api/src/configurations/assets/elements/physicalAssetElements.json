@@ -1,0 +1,357 @@
+[
+  {
+    "key": "fundInformations_fundName_pa",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Token name",
+      "fr": "Token name"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol_pa",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Token symbol",
+      "fr": "Token symbol"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundDescription_pa",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Token description",
+      "fr": "Token description"
+    },
+    "placeholder": {
+      "en": "Describe the asset",
+      "fr": "Describe the asset"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_prospectus_pa",
+    "map": "asset_documents_prospectus",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload the token prospectus",
+      "fr": "Upload the token prospectus"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_documents_KIID_pa",
+    "map": "asset_documents_kiid",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload the Key Investor Information document",
+      "fr": "Upload the Key Investor Information document"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_coverPicture_pa",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "label": {
+      "en": "Upload a Token cover image",
+      "fr": "Upload a Token cover image"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_holderName_pa",
+    "map": "asset_bankInformations_holderName",
+    "type": "string",
+    "label": {
+      "en": "Account holders name",
+      "fr": "Account holders name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_accountNumber_pa",
+    "map": "asset_bankInformations_accountNumber",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Account number",
+      "fr": "Account number"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_IBAN_pa",
+    "map": "asset_bankInformations_iban",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "IBAN",
+      "fr": "IBAN"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_Swift_pa",
+    "map": "asset_bankInformations_swift",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "BIC/Swift code",
+      "fr": "BIC/Swift code"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_currency_pa",
+    "map": "class_general_currency",
+    "size": 3,
+    "type": "multistring",
+    "label": {
+      "en": "Currency",
+      "fr": "Devise"
+    },
+    "placeholder": {
+      "en": "Currency",
+      "fr": "Currency"
+    },
+    "options": ["USD", "EUR", "GBP", "CHF"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankName_pa",
+    "map": "asset_bankInformations_bankName",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank name",
+      "fr": "Bank name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankAddress_pa",
+    "map": "asset_bankInformations_bankAddress",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address",
+      "fr": "Bank address"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankAddress2_pa",
+    "map": "asset_bankInformations_bankAddress2",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Bank address line 2",
+      "fr": "Bank address line 2"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankCity_pa",
+    "map": "asset_bankInformations_bankCity",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "City",
+      "fr": "City"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankCounty_pa",
+    "map": "asset_bankInformations_bankCounty",
+    "type": "string",
+    "size": 2,
+    "label": {
+      "en": "County/State",
+      "fr": "County/State"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankZIP_pa",
+    "map": "asset_bankInformations_bankZip",
+    "type": "string",
+    "size": 2,
+    "label": {
+      "en": "ZIP/Postal Code",
+      "fr": "ZIP/Postal Code"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankCountry_pa",
+    "map": "asset_bankInformations_bankCountry",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Country",
+      "fr": "Country"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_orderSubscriptionsTypes_pa",
+    "name": "shareClass_orderSubscriptionsTypes",
+    "map": "class_rules_subscriptionType",
+    "type": "radio",
+    "label": {
+      "en": "Type of order subscriptions",
+      "fr": "Types d’ordres de souscription"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "AMOUNT",
+        "label": {
+          "en": "Amount",
+          "fr": "Valeur"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInAmount_pa",
+          "shareClass_maximumSubscriptionInAmount_pa"
+        ]
+      },
+      {
+        "key": "QUANTITY",
+        "label": {
+          "en": "Quantity",
+          "fr": "Quantité"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInQuantity_pa",
+          "shareClass_maximumSubscriptionInQuantity_pa"
+        ]
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInAmount_pa",
+    "map": "class_rules_minSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription amount",
+      "fr": "Minimum subscription amount"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInAmount_pa",
+    "map": "class_rules_maxSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription amount",
+      "fr": "Maximum subscription amount"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInQuantity_pa",
+    "map": "class_rules_minSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription quantity",
+      "fr": "Minimum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Shares",
+      "fr": "Shares"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInQuantity_pa",
+    "map": "class_rules_maxSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription quantity",
+      "fr": "Maximum subscription quantity"
+    },
+    "rightTag": {
+      "en": "Shares",
+      "fr": "Shares"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_date_pa",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Token issuance start date",
+      "fr": "Token issuance start date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_hour_pa",
+    "map": "class_initialSubscription_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Token issuance start hour",
+      "fr": "Token issuance start hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_maximum_entryFeesValue_pa",
+    "map": "class_fees_acquiredEntryFees",
+    "size": 2,
+    "fillLine": true,
+    "type": "percentage",
+    "label": {
+      "en": "Aurelium Maximum digitalization fees",
+      "fr": "Aurelium Maximum digitalization fees"
+    },
+    "status": "mandatory",
+    "updatable": true
+  }
+]

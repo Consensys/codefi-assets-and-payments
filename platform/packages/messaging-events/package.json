@@ -1,0 +1,57 @@
+{
+  "name": "@codefi-assets-and-payments/messaging-events",
+  "version": "15.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest src",
+    "test:cov": "echo 0 # No test here",
+    "prettier": "prettier --write '{src,apps,libs,test}/**/*.ts'",
+    "prettier:check": "prettier --check '{src,apps,libs,test}/**/*.ts'",
+    "lint": "eslint --cache '{src,apps,libs,test}/**/*.ts'",
+    "lint:fix": "eslint --cache --fix '{src,apps,libs,test}/**/*.ts'",
+    "release": "standard-version"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "@codefi-assets-and-payments/ts-types": "*",
+    "builder-pattern": "^1.2.4",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/jest": "^28.0.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "^28.0.3",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.0.5",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^28.0.1",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "npm run lint:fix --",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
+  }
+}

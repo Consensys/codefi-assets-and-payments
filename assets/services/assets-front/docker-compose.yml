@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+
+  assets-front:
+    env_file:
+      - ../../../.env
+      - .env
+    environment:
+      STORES_FILE: ${STORES_FILE-./config/stores.json}
+    image: assets-front
+    networks:
+      - codefi
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/usr/src/app/assets/services/assets-front/src:delegated
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/assets-front/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

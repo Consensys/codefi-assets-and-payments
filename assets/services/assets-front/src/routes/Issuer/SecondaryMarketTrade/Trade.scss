@@ -1,0 +1,158 @@
+.secondary-market-trade {
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .create-trade-form__section-summary {
+    .create-trade-form__section-summary__attribute {
+      width: 100%;
+      margin: 0.5em 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      & > * {
+        width: 50%;
+        font-size: 14px;
+      }
+
+      .create-trade-form__section-summary__attribute__label {
+        font-weight: 500;
+      }
+
+      .create-trade-form__section-summary__attribute__value {
+        font-weight: 400;
+
+        .create-trade-form__section-summary__attribute__value__tertiary {
+          color: #5e677a;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .secondary-market-trade__create-trade-form,
+  .secondary-market-trade__verify-trade-form,
+  .secondary-market-trade__accept-trade-form,
+  .secondary-market-trade__verify-payment-form,
+  .secondary-market-trade__settlement-trade-form {
+    .secondary-market-trade__create-trade-form__section,
+    .secondary-market-trade__accept-trade-form__section,
+    .secondary-market-trade__settlement-trade-form__section {
+      margin-bottom: 2em;
+    }
+
+    .secondary-market-trade__create-trade-form__field,
+    .secondary-market-trade__accept-trade-form__field {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      margin: 2em 0;
+
+      .create-trade-form__field__label {
+        width: 150px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1a2233;
+      }
+
+      .create-trade-form__field__control {
+        flex-grow: 1;
+        width: 100%;
+        padding-left: 1.5em;
+
+        .form-error {
+          color: red;
+          font-size: 14px;
+          margin: 0.5em 0 0;
+          padding: 0;
+        }
+
+        .create-trade-form__field__control__tertiary {
+          color: #5e677a;
+          font-size: 14px;
+          margin: 0.5em 0 0 0;
+
+          &.use-max-balance {
+            span {
+              margin-left: 1em;
+              color: #1a5afe;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .secondary-market-trade__create-trade-form_footer,
+    .secondary-market-trade__verify-trade-form_footer,
+    .secondary-market-trade__verify-payment-form_footer,
+    .secondary-market-trade__settlement-trade-form_footer {
+      padding: 0 0 1em 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .secondary-market-trade__settlement-trade-form_footer {
+      justify-content: space-between;
+    }
+  }
+
+  .secondary-market-trade__create-trade-confirm,
+  .secondary-market-trade__settle-trade-confirm,
+  .secondary-market-trade__settlement-trade-form__section {
+    .secondary-market-trade__create-trade-confirm__title,
+    .secondary-market-trade__settle-trade-confirm__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 1.5em;
+
+      h2 {
+        margin: 0 0 0 0.4em;
+      }
+    }
+
+    h3 {
+      margin-bottom: 1.5em;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    h4 {
+      margin: 2em 0 0.5em 0;
+      font-weight: 600;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      max-width: 450px;
+      color: #475166;
+    }
+
+    .secondary-market-trade__settlement-trade-confirm_footer,
+    .secondary-market-trade__create-trade-confirm_footer,
+    .secondary-market-trade__payment-confirm_footer {
+      margin-top: 3em;
+      padding: 0 0 1em 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .secondary-market-trade__create-trade-confirm_footer,
+    .secondary-market-trade__payment-confirm_footer {
+      justify-content: center;
+    }
+  }
+}

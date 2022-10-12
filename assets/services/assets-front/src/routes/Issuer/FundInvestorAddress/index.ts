@@ -1,0 +1,1 @@
+export { FundInvestorAddress } from './FundInvestorAddress';

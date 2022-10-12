@@ -1,0 +1,537 @@
+[
+  {
+    "key": "fundInformations_fundName_sl",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Syndicated facility name",
+      "fr": "Syndicated facility name"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol_sl",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Syndicated facility symbol",
+      "fr": "Syndicated facility symbol"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "loan_type_syndication",
+    "map": "asset_general_typeSyndication",
+    "type": "multistring",
+    "label": {
+      "en": "Loan type - Syndication",
+      "fr": "Loan type - Syndication"
+    },
+    "placeholder": {
+      "en": "Select a syndication type",
+      "fr": "Select a syndication type"
+    },
+    "options": [
+      {
+        "value": "UNDERWRITTEN",
+        "label": {
+          "en": "Underwritten",
+          "fr": "Underwritten"
+        }
+      },
+      {
+        "value": "BEST_EFFORT",
+        "label": {
+          "en": "Best Effort",
+          "fr": "Best Effort"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_type_security",
+    "map": "asset_general_security",
+    "type": "multistring",
+    "label": {
+      "en": "Loan type - Security",
+      "fr": "Loan type - Security"
+    },
+    "placeholder": {
+      "en": "Select a security type",
+      "fr": "Select a security type"
+    },
+    "options": [
+      {
+        "value": "SECURED",
+        "label": {
+          "en": "Secured Loan Facility",
+          "fr": "Secured Loan Facility"
+        }
+      },
+      {
+        "value": "UNSECURED",
+        "label": {
+          "en": "Unsecured Loan Facility",
+          "fr": "Unsecured Loan Facility"
+        }
+      },
+      {
+        "value": "SUBORDINATED",
+        "label": {
+          "en": "Subordinated Loan Facility",
+          "fr": "Subordinated Loan Facility"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_type_terms",
+    "map": "asset_general_terms",
+    "type": "multistring",
+    "label": {
+      "en": "Loan Facility type - Utilisation terms",
+      "fr": "Loan Facility type - Utilisation terms"
+    },
+    "placeholder": {
+      "en": "Select a utilisation term",
+      "fr": "Select a utilisation term"
+    },
+    "options": [
+      {
+        "value": "TERM",
+        "label": {
+          "en": "Term Loan Facility",
+          "fr": "Term Loan Facility"
+        }
+      },
+      {
+        "value": "REVOLVING",
+        "label": {
+          "en": "Revolving Loan Facility",
+          "fr": "Revolving Loan Facility"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "shareClass_currency_sl",
+    "map": "class_general_currency",
+    "type": "multistring",
+    "fillLine": true,
+    "label": {
+      "en": "Currency",
+      "fr": "Devise"
+    },
+    "placeholder": {
+      "en": "Select currency",
+      "fr": "Select currency"
+    },
+    "options": ["AUD", "EUR", "GBP", "SGD", "USD"],
+    "status": "mandatory",
+    "size": 2,
+    "updatable": false
+  },
+  {
+    "key": "loan_facility_limit",
+    "map": "asset_general_facilityLimit",
+    "type": "number",
+    "label": {
+      "en": "Loan Facility limit",
+      "fr": "Loan Facility limit"
+    },
+    "rightTag": {
+      "fr": "currency",
+      "en": "currency"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_security_identifier",
+    "map": "asset_loanSecurity_identifier",
+    "type": "string",
+    "label": {
+      "en": "Security identifier",
+      "fr": "Security identifier"
+    },
+    "status": "optional",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_security_type",
+    "map": "asset_loanSecurity_type",
+    "type": "multistring",
+    "label": {
+      "en": "Security type",
+      "fr": "Security type"
+    },
+    "placeholder": {
+      "en": "Select security type",
+      "fr": "Select security type"
+    },
+    "options": [
+      {
+        "value": "CASH",
+        "label": {
+          "en": "Cash",
+          "fr": "Cash"
+        }
+      },
+      {
+        "value": "PROPERTY",
+        "label": {
+          "en": "Property",
+          "fr": "Property"
+        }
+      },
+      {
+        "value": "ASSETS",
+        "label": {
+          "en": "Assets",
+          "fr": "Assets"
+        }
+      }
+    ],
+    "status": "optional",
+    "size": 2,
+    "fillLine": true,
+    "updatable": false
+  },
+  {
+    "key": "loan_security_description",
+    "map": "asset_loanSecurity_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Security description",
+      "fr": "Security description"
+    },
+    "placeholder": {
+      "en": "Describe the security",
+      "fr": "Describe the security"
+    },
+    "status": "optional",
+    "size": 4,
+    "updatable": false
+  },
+  {
+    "key": "loan_security_trustee",
+    "map": "asset_loanSecurity_trustee",
+    "type": "string",
+    "label": {
+      "en": "Security Trustee",
+      "fr": "Security Trustee"
+    },
+    "status": "optional",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_security_documents",
+    "map": "asset_loanSecurity_documents",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload any documents relevant to the security",
+      "fr": "Upload any documents relevant to the security"
+    },
+    "status": "optional",
+    "multiline": true,
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_participants_borrower",
+    "map": "asset_participants_borrowerId",
+    "type": "multistring",
+    "label": {
+      "en": "Borrower",
+      "fr": "Borrower"
+    },
+    "placeholder": {
+      "en": "Select a borrower",
+      "fr": "Select a borrower"
+    },
+    "options": [],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_participants_underwriter",
+    "map": "asset_participants_underwriterId",
+    "type": "multistring",
+    "label": {
+      "en": "Lead Arranger / Underwriter",
+      "fr": "Lead Arranger / Underwriter"
+    },
+    "placeholder": {
+      "en": "Select a Lead Arranger / Underwriter",
+      "fr": "Select a Lead Arranger / Underwriter"
+    },
+    "options": [],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "loan_fees_underwrittenFee",
+    "map": "asset_fees_establishmentFees",
+    "type": "number",
+    "label": {
+      "en": "Establishment and underwriting fee",
+      "fr": "Establishment and underwriting fee"
+    },
+    "rightTag": {
+      "fr": "currency",
+      "en": "currency"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": true
+  },
+  {
+    "key": "loan_fees_facilitynFee",
+    "map": "asset_fees_facilityFees",
+    "type": "percentage",
+    "label": {
+      "en": "Committment fee",
+      "fr": "Committment fee"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": true
+  },
+  {
+    "key": "loan_fees_trusteeFee",
+    "map": "asset_fees_trusteeFees",
+    "type": "number",
+    "label": {
+      "en": "Early Repayment Fee",
+      "fr": "Early Repayment Fee"
+    },
+    "rightTag": {
+      "fr": "currency",
+      "en": "currency"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": true
+  },
+  {
+    "key": "fundInformations_prospectus_sl",
+    "map": "asset_documents_prospectus",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload the Term Sheet",
+      "fr": "Upload the Term Sheet"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_docusign_sl",
+    "map": "asset_documents_docusign",
+    "type": "docusign",
+    "fileAccept": "pdf",
+    "size": 4,
+    "label": {
+      "en": "Upload the Loan Facility Agreement",
+      "fr": "Upload the Loan Facility Agreement"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_documents_sl",
+    "map": "asset_documents_other",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Additional documents",
+      "fr": "Additional documents"
+    },
+    "status": "optional",
+    "multiline": true,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_coverPicture_sl",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload a cover image",
+      "fr": "Upload a cover image"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_className_sl",
+    "map": "class_general_name",
+    "type": "string",
+    "size": 2,
+    "fillLine": true,
+    "label": {
+      "en": "Facility name",
+      "fr": "Facility name"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "facility_facility_amount",
+    "map": "class_general_facilityAmount",
+    "type": "number",
+    "fillLine": true,
+    "label": {
+      "en": "Facility amount",
+      "fr": "Facility amount"
+    },
+    "rightTag": {
+      "fr": "currency",
+      "en": "currency"
+    },
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_date_sl",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "fillLine": true,
+    "size": 3,
+    "label": {
+      "en": "Facility start date",
+      "fr": "Facility start date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_cutoff_date_sl",
+    "map": "class_initialSubscription_cutoffDate",
+    "type": "date",
+    "fillLine": true,
+    "size": 3,
+    "label": {
+      "en": "Facility expiry date",
+      "fr": "Facility expiry date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "facility_interest_rateType",
+    "map": "class_interest_baseRateType",
+    "type": "multistring",
+    "fillLine": true,
+    "label": {
+      "en": "Base interest rate type",
+      "fr": "Base interest rate type"
+    },
+    "placeholder": {
+      "en": "Select interest rate type",
+      "fr": "Select interest rate type"
+    },
+    "options": [
+      {
+        "value": "FIXED",
+        "label": {
+          "en": "Fixed Base Rate",
+          "fr": "Fixed Base Rate"
+        }
+      },
+      {
+        "value": "FLOATING",
+        "label": {
+          "en": "Floating Base Rate",
+          "fr": "Floating Base Rate"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "facility_interest_rateValue",
+    "map": "class_interest_baseRate",
+    "type": "multistring",
+    "fillLine": true,
+    "label": {
+      "en": "Base interest rate",
+      "fr": "Base interest rate"
+    },
+    "placeholder": {
+      "en": "Select interest rate",
+      "fr": "Select interest rate"
+    },
+    "options": [
+      {
+        "value": "BBSW",
+        "label": {
+          "en": "BBSW",
+          "fr": "BBSW"
+        }
+      },
+      {
+        "value": "CASH_RATE",
+        "label": {
+          "en": "Cash Rate",
+          "fr": "Cash Rate"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "size": 3,
+    "updatable": false
+  },
+  {
+    "key": "facility_interest_margin",
+    "map": "class_interest_margin",
+    "type": "percentage",
+    "size": 2,
+    "fillLine": true,
+    "label": {
+      "en": "Margin",
+      "fr": "Margin"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "facility_interest_defaultRate",
+    "map": "class_interest_defaultRate",
+    "type": "percentage",
+    "size": 2,
+    "fillLine": true,
+    "label": {
+      "en": "Default interest rate",
+      "fr": "Default interest rate"
+    },
+    "status": "mandatory",
+    "updatable": false
+  }
+]

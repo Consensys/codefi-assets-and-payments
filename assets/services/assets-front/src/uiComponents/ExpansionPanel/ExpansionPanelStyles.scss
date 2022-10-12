@@ -1,0 +1,20 @@
+.uiComponent_expansionPanel {
+  margin: 10px 0;
+
+  > .expansionPanelSummary {
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &.open {
+      border-bottom: 1px solid #eee;
+    }
+
+    > span {
+      font-weight: var(--typography-weight-medium);
+    }
+  }
+
+  > .expansionPanelDetails {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "info": {
+    "x-logo": {
+      "url": "/Codefi_Logo_White.png",
+      "backgroundColor": "#b30511",
+      "altText": "Codefi Admin API"
+    }
+  },
+  "x-tagGroups": [
+    {
+      "name": "User Endpoints",
+      "tags": [
+        "Users"
+      ]
+    },
+    {
+      "name": "Client Endpoints",
+      "tags": [
+        "Clients",
+        "Grants"
+      ]
+    },
+    {
+      "name": "Roles Endpoints",
+      "tags": [
+        "Roles"
+      ]
+    },
+    {
+      "name": "API Endpoints",
+      "tags": [
+        "APIs"
+      ]
+    },
+    {
+      "name": "System Endpoints",
+      "tags": [
+        "Hooks",
+        "Other"
+      ]
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "description": "This API uses OAuth 2 with the Client Credentials flow (defined in OAuth2.0 RFC 6749, section 4.4).\nTo use this API, you will be supplied with an API Key and Secret by a member of the Codefi team. Keys\nand Secrets can be exchanged for Bearer Tokens that identify your requests and authenticate you with the API. \n\n**Always keep your API Secret secure.**\n\nThis documentation should help you get an access token. https://auth0.com/docs/api/authentication#client-credentials-flow",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "<YOUR_OAUTH_TOKEN_URL>",
+            "scopes": {
+              "read:client": "Read Client Applications.",
+              "write:client": "Create or update a Client Application",
+              "delete:client": "Delete a Client Application",
+              "read:grant": "Read API grants given to /client_credentials type applications",
+              "write:grant": "Create or Update a Client Grant",
+              "delete:grant": "Delete a Client Grant",
+              "read:api": "Read API resouces",
+              "write:api": "Create or update API resources",
+              "delete:api": "Delete API Resources",
+              "read:user": "Read User resources",
+              "write:user": "Create or update User resources",
+              "read:role": "Read Roles",
+              "write:role": "Create or update roles",
+              "delete:role": "Delete roles",
+              "delete:user": "Delete a User",
+              "write:invite": "Create an email invitation to a Client Application",
+              "register:hook": "Special scope that allows the holder to trigger Consensys OS hooks."
+            }
+          }
+        }
+      }
+    }
+  }
+}

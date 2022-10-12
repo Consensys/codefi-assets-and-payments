@@ -1,0 +1,93 @@
+{
+  "assetName": "SI Global Index ",
+  "shareClass": "Class A",
+  "ISINCode": "US0004026250",
+  "status": "ISSUING_SHARES",
+  "cancelationDate": 1591701801958,
+  "cancelationReason": "I had a very good reason",
+  "canCancel": true,
+  "baseData": [
+    {
+      "label": {
+        "en": "Investor",
+        "fr": "Investor"
+      },
+      "value": "Brevan Howard"
+    },
+    {
+      "label": {
+        "en": "Order type",
+        "fr": "Order type"
+      },
+      "value": "Subscription"
+    },
+    {
+      "label": {
+        "en": "Order date",
+        "fr": "Order date"
+      },
+      "value": "20/02/2020"
+    },
+    {
+      "label": {
+        "en": "Amount",
+        "fr": "Amount"
+      },
+      "value": "€10,000"
+    },
+    {
+      "label": {
+        "en": "Fees",
+        "fr": "Fees"
+      },
+      "value": "€50.00"
+    },
+    {
+      "label": {
+        "en": "Total",
+        "fr": "Total"
+      },
+      "value": "€10,050",
+      "isBold": true
+    }
+  ],
+  "documents": [
+    {
+      "label": {
+        "en": "Trader order document",
+        "fr": "Trader order document"
+      },
+      "url": "https://mml-book.github.io/book/mml-book.pdf"
+    },
+    {
+      "label": {
+        "en": "Certification of registration",
+        "fr": "Certification of registration"
+      },
+      "url": "https://mml-book.github.io/book/mml-book.pdf"
+    }
+  ],
+  "keyDates": [
+    {
+      "label": {
+        "enn": "Cut off date and hour",
+        "fr": "Cut off date and hour"
+      },
+      "value": "20 May 2020 at 11:00 CET"
+    },
+    {
+      "label": {
+        "enn": "Payment due",
+        "fr": "Payment due"
+      },
+      "value": "20 May 2020 at 11:00 CET"
+    },
+    {
+      "label": {
+        "enn": "Settlement date and hour",
+        "fr": "Settlement date and hour"
+      },
+      "value": "20 May 2020 at 11:00 CET"
+    }
+  ]
+}

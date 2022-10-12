@@ -1,0 +1,131 @@
+[
+  {
+    "key": "assetsCharacteristics_interestRate",
+    "map": "class_general_couponRate",
+    "size": 4,
+    "fillLine": true,
+    "multiline": true,
+    "type": "perPercentage",
+    "label": {
+      "en": "Interest rate",
+      "fr": "Interest rate"
+    },
+    "options": [
+      {
+        "value": "YEARLY",
+        "label": {
+          "en": "Year",
+          "fr": "Year"
+        }
+      },
+      {
+        "value": "QUARTERLY",
+        "label": {
+          "en": "Quarter",
+          "fr": "Quarter"
+        }
+      },
+      {
+        "value": "MONTHLY",
+        "label": {
+          "en": "Month",
+          "fr": "Month"
+        }
+      },
+      {
+        "value": "WEEKLY",
+        "label": {
+          "en": "Week",
+          "fr": "Week"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_interestPaymentFrequency",
+    "map": "class_general_couponPaymentFrequency",
+    "type": "multistring",
+    "label": {
+      "en": "Interest payment frequency",
+      "fr": "Interest payment frequency"
+    },
+    "placeholder": {
+      "en": "Payment calendar",
+      "fr": "Payment calendar"
+    },
+    "options": [
+      {
+        "value": "YEARLY",
+        "label": {
+          "en": "Yearly",
+          "fr": "Yearly"
+        }
+      },
+      {
+        "value": "QUARTERLY",
+        "label": {
+          "en": "Quarterly",
+          "fr": "Quarterly"
+        }
+      },
+      {
+        "value": "MONTHLY",
+        "label": {
+          "en": "Monthly",
+          "fr": "Monthly"
+        }
+      },
+      {
+        "value": "WEEKLY",
+        "label": {
+          "en": "Weekly",
+          "fr": "Weekly"
+        }
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_interestRate_first_payment_date",
+    "map": "class_assetsCharacteristics_couponFirstPaymentDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "First interest payment date",
+      "fr": "First interest payment date"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "assetsCharacteristics_interestRate_first_payment_hour",
+    "map": "class_assetsCharacteristics_couponFirstPaymentHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "First interest payment hour",
+      "fr": "First interest payment hour"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "borrowerInformations_name_select",
+    "map": "asset_participants_reviewerId",
+    "type": "multistring",
+    "label": {
+      "en": "Name",
+      "fr": "Name"
+    },
+    "placeholder": {
+      "en": "Select issuer",
+      "fr": "Select issuer"
+    },
+    "options": [],
+    "status": "mandatory",
+    "updatable": false
+  }
+]

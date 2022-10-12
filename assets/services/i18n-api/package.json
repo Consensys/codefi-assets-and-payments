@@ -1,0 +1,129 @@
+{
+  "name": "@codefi-assets-and-payments/i18n-api",
+  "private": true,
+  "version": "1.0.4",
+  "description": "Nest TypeScript starter repository",
+  "license": "Apache",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "docs": "speccy serve ./api-spec.json",
+    "lint-docs": "speccy lint --json-schema ./api-spec.json",
+    "prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prettier:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "stop": "pkill --signal SIGINT api-boilerplate",
+    "start:dev": "nest start --debug --watch",
+    "lint": "eslint --cache '{src,apps,libs,test}/**/*.ts'",
+    "lint:fix": "eslint --cache --fix",
+    "test": "jest src",
+    "readiness:check": "PIPELINE=true ts-node integration/utils/readyCheck.ts",
+    "test:integration:pipeline": "PIPELINE=true NODE_ENV=development jest integration --detectOpenHandles --verbose  --forceExit --runInBand",
+    "test:integration": "INTEGRATION_TEST=true jest integration --detectOpenHandles --runInBand --verbose --forceExit",
+    "test:watch": "jest src --watch",
+    "test:cov": "jest src --ci --coverage || echo 0 # Make them pass",
+    "release": "standard-version",
+    "intl:extract": "formatjs extract --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
+    "intl:merge": "node scripts/intl-merge.js",
+    "prepare": "husky install",
+    "docker": "docker-compose up --build",
+    "docker:detached": "docker-compose up --build -d",
+    "docker:down": "docker-compose down"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/observability": "*",
+    "@godaddy/terminus": "^4.11.1",
+    "joi": "^17.6.0",
+    "@nestjs/common": "^8.4.7",
+    "@nestjs/core": "^8.4.7",
+    "@nestjs/platform-express": "^8.4.7",
+    "@nestjs/schedule": "^2.1.0",
+    "@nestjs/swagger": "^5.2.1",
+    "@nestjs/terminus": "^8.1.0",
+    "axios": "^0.27.2",
+    "axios-retry": "^3.3.1",
+    "dotenv": "^16.0.1",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.5.6",
+    "swagger-ui-express": "^4.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@formatjs/cli": "^5.0.2",
+    "@nestjs/cli": "^8.1.4",
+    "@nestjs/schematics": "^8.0.4",
+    "@nestjs/testing": "^8.1.2",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.0",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "jest": "^27.0.0",
+    "jest-create-mock-instance": "^2.0.0",
+    "jest-junit": "^14.0.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "json-merger": "^1.1.9",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "speccy": "^0.11.0",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^27.0.0",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 8"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "rootDir": "./",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/*/**/*.{ts,js}",
+      "!src/**/{server,sleep,jwtUtils}.{ts,js}",
+      "!src/{validation,modules,guards}/**",
+      "!src/services/instances/**"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "testResultsProcessor": "jest-sonar-reporter",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint:fix --",
+      "npm run prettier"
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "tenantId": "UIcZxAINq9Tx2SnUBdWSTqQLxlBw3FAq",
+  "category": "HYBRID",
+  "name": "CLOSED END FUND FAM",
+  "type": "CLOSED_END_FUND",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset",
+    "ja": "新しいトークン"
+  },
+  "description": {
+    "en": "Closed-end fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund.",
+    "fr": "Closed-end fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund.",
+    "ja": "クローズドエンド型ファンドは、ファンドから償還できない固定数の株式を発行することに基づく集団投資モデルである"
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Asset information",
+        "fr": "Informations du fond",
+        "ja": "トークンの情報"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général",
+            "ja": "一般"
+          },
+          "elements": [
+            "fundInformations_fundName",
+            "fundInformations_fundSymbol",
+            "fundInformations_fundDescription"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Informations bancaires",
+            "ja": "銀行の情報"
+          },
+          "elements": [
+            "bankInformation_bankName",
+            "bankInformation_IBAN",
+            "bankInformation_Swift"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents",
+            "ja": "書類"
+          },
+          "elements": [
+            "fundInformations_docusign",
+            "fundInformations_documents"
+          ]
+        },
+        {
+          "key": "asset_managementTeam",
+          "label": {
+            "en": "Management team",
+            "fr": "Management team",
+            "ja": "マネージメントチーム"
+          },
+          "elements": ["fundInformations_team"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Images",
+            "fr": "Images",
+            "ja": "イメージ"
+          },
+          "elements": [
+            "fundInformations_bannerPicture",
+            "fundInformations_coverPicture"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Share class",
+        "fr": "Classe d’actif",
+        "ja": "トークンの詳細"
+      },
+      "legend": {
+        "en": "Complete the form below to create the first Share Class for the asset. You will be able to add classes later.",
+        "fr": "Complétez le formulaire pour créer votre première classe d’actifs. Vous pourrez en ajouter par la suite.",
+        "ja": "以下のフォームに記入して、トークンの初期設定をおこないます。後から設定変更も可能です。"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général",
+            "ja": "一般"
+          },
+          "elements": [
+            "shareClass_className",
+            "shareClass_ISINCode",
+            "shareClass_currency"
+          ]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres",
+            "ja": "注文"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes",
+            "shareClass_minimumSubscriptionInAmount",
+            "shareClass_maximumSubscriptionInAmount",
+            "shareClass_minimumSubscriptionInQuantity",
+            "shareClass_maximumSubscriptionInQuantity"
+          ]
+        },
+        {
+          "key": "class_nav",
+          "label": {
+            "en": "Initial share value",
+            "fr": "Initial share value",
+            "ja": "初期価格"
+          },
+          "elements": [
+            "shareClass_initialShareValue_check",
+            "shareClass_initialShareValue_value"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Subscription",
+            "fr": "Souscription",
+            "ja": "販売"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_start_hour",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_cutoff_hour",
+            "shareClass_subscription_initialSubscription_valuation_date",
+            "shareClass_subscription_initialSubscription_valuation_hour",
+            "shareClass_subscription_initialSubscription_settlement_date",
+            "shareClass_subscription_initialSubscription_settlement_hour"
+          ]
+        },
+        {
+          "key": "class_subscription",
+          "label": {
+            "en": "Subsequent subscription periods",
+            "fr": "Subsequent subscription periods",
+            "ja": "次の販売期間"
+          },
+          "elements": [
+            "shareClass_subscription_subsequentSubscription_check2",
+            "shareClass_subscription_subsequentSubscription_start_date",
+            "shareClass_subscription_subsequentSubscription_start_hour",
+            "shareClass_subscription_subsequentSubscription_cutoff_date",
+            "shareClass_subscription_subsequentSubscription_cutoff_hour",
+            "shareClass_subscription_subsequentSubscription_valuation_date",
+            "shareClass_subscription_subsequentSubscription_valuation_hour",
+            "shareClass_subscription_subsequentSubscription_settlement_date",
+            "shareClass_subscription_subsequentSubscription_settlement_hour"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais",
+            "ja": "手数料"
+          },
+          "elements": [
+            "sharedClass_customFeesCheck",
+            "sharedClass_customFeesValue"
+          ]
+        }
+      ]
+    }
+  ]
+}

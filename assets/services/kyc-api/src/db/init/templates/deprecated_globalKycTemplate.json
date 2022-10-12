@@ -1,0 +1,247 @@
+{
+  "issuerId": "Gauthier",
+  "name": "Deprecated Codefi Global KYC template",
+  "data": {},
+  "topSections": [
+    {
+      "label": {
+        "en": "Legal Entity",
+        "fr": "Entité légale"
+      },
+      "key": "legalPersonSection",
+      "sections": [
+        {
+          "key": "investor-type",
+          "label": {
+            "en": "Investor type",
+            "fr": "Investor type"
+          },
+          "description": {
+            "en": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process.",
+            "fr": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process."
+          },
+          "elements": ["investorType_investorType"]
+        },
+        {
+          "key": "identification",
+          "label": {
+            "en": "Identification",
+            "fr": "Identification"
+          },
+          "description": {
+            "en": "Enter your personal information and address. all fields are required.",
+            "fr": "Entrez vos informations personnelles et votre adresse. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_personalInformation_identification",
+            "firstName_personalInformation_identification",
+            "lastName_personalInformation_identification",
+            "email_personalInformation_identification",
+            "title_address_identification",
+            "addressLine1_address_identification",
+            "addressLine2_address_identification",
+            "addressCity_address_identification",
+            "addressCountry_address_identification",
+            "addressState_address_identification",
+            "addressZip_address_identification",
+            "addressPhone_address_identification",
+            "title_bankDetails_identification",
+            "bankName_bankDetails_identification",
+            "bankIBAN_bankDetails_identification",
+            "bankBIC_bankDetails_identification"
+          ]
+        },
+        {
+          "key": "investment-entity",
+          "label": {
+            "en": "Investment entity",
+            "fr": "Entité d'investissement"
+          },
+          "description": {
+            "en": "Enter envestment entity information. All fields are required.",
+            "fr": "Saisissez les informations sur l'entité d'investissement. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_investmentType_investment-entity",
+            "investmentEntityChoice_investmentType_investment-entity",
+            "title_entityInformation_investment-entity",
+            "entityName_entityInformation_investment-entity",
+            "entityType_entityInformation_investment-entity",
+            "countryOfIncorporation_entityInformation_investment-entity",
+            "presidentName_entityInformation_investment-entity",
+            "presidentEmail_entityInformation_investment-entity",
+            "addressLine1_entityInformation_investment-entity",
+            "addressLine2_entityInformation_investment-entity",
+            "addressCity_entityInformation_investment-entity",
+            "addressCountry_entityInformation_investment-entity",
+            "addressState_entityInformation_investment-entity",
+            "addressZik_entityInformation_investment-entity"
+          ]
+        },
+        {
+          "key": "risk-profile",
+          "label": {
+            "en": "Risk profile",
+            "fr": "Profil de risque"
+          },
+          "description": {
+            "en": "Enter risk profile information so we can dispay the assets most suitable for you. All fields are required.",
+            "fr": "Saisissez les informations sur le profil de risque afin que nous puissions distribuer les actifs qui vous conviennent le mieux. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_investmentNature_risk-profile",
+            "assetManagementMethod_investmentNature_risk-profile",
+            "transactionsFrequency_investmentNature_risk-profile",
+            "investmentVehiclesUsed_investmentNature_risk-profile",
+            "title_investmentObjectives_risk-profile",
+            "investmentObjectives_investmentObjectives_risk-profile"
+          ]
+        },
+        {
+          "key": "documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "description": {
+            "en": "Upload the requested documents.",
+            "fr": "Téléchargez les documents demandés."
+          },
+          "elements": [
+            "title_identificationDocuments_documents",
+            "id_identificationDocuments_documents",
+            "incomeStatement_identificationDocuments_documents",
+            "countryOfResidence_identificationDocuments_documents",
+            "presidentId_investmentEntityDocuments_documents",
+            "title_investmentEntityDocuments_documents",
+            "mandatesOfAuthority_investmentEntityDocuments_documents",
+            "delegationOfAuthorithy_investmentEntityDocuments_documents",
+            "latestTaxReport_investmentEntityDocuments_documents",
+            "copyOfBeneficialOwnersId_investmentEntityDocuments_documents",
+            "beneficialOwnersLegalJustification_investmentEntityDocuments_documents"
+          ]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Individual Person",
+        "fr": "Personne individuelle"
+      },
+      "key": "naturalPersonSection",
+      "sections": [
+        {
+          "key": "investor-type",
+          "label": {
+            "en": "Investor type",
+            "fr": "Investor type"
+          },
+          "description": {
+            "en": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process.",
+            "fr": "Select your investor type. Be sure to select the correct type, as you cannot change your selection once you start filling out your information in the next steps of the onboarding process."
+          },
+          "elements": ["investorType_investorType"]
+        },
+        {
+          "key": "identification",
+          "label": {
+            "en": "Identification",
+            "fr": "Identification"
+          },
+          "description": {
+            "en": "Enter your personal information and address. all fields are required.",
+            "fr": "Entrez vos informations personnelles et votre adresse. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_personalInformation_identification",
+            "firstName_personalInformation_identification",
+            "lastName_personalInformation_identification",
+            "email_personalInformation_identification",
+            "title_address_identification",
+            "addressLine1_address_identification",
+            "addressLine2_address_identification",
+            "addressCity_address_identification",
+            "addressCountry_address_identification",
+            "addressState_address_identification",
+            "addressZip_address_identification",
+            "addressPhone_address_identification",
+            "title_bankDetails_identification",
+            "bankName_bankDetails_identification",
+            "bankIBAN_bankDetails_identification",
+            "bankBIC_bankDetails_identification"
+          ]
+        },
+        {
+          "key": "investment-entity",
+          "label": {
+            "en": "Investment entity",
+            "fr": "Entité d'investissement"
+          },
+          "description": {
+            "en": "Enter envestment entity information. All fields are required.",
+            "fr": "Saisissez les informations sur l'entité d'investissement. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_investmentType_investment-entity",
+            "investmentEntityChoice_investmentType_investment-entity",
+            "title_entityInformation_investment-entity",
+            "entityName_entityInformation_investment-entity",
+            "entityType_entityInformation_investment-entity",
+            "countryOfIncorporation_entityInformation_investment-entity",
+            "presidentName_entityInformation_investment-entity",
+            "presidentEmail_entityInformation_investment-entity",
+            "addressLine1_entityInformation_investment-entity",
+            "addressLine2_entityInformation_investment-entity",
+            "addressCity_entityInformation_investment-entity",
+            "addressCountry_entityInformation_investment-entity",
+            "addressState_entityInformation_investment-entity",
+            "addressZik_entityInformation_investment-entity"
+          ]
+        },
+        {
+          "key": "risk-profile",
+          "label": {
+            "en": "Risk profile",
+            "fr": "Profil de risque"
+          },
+          "description": {
+            "en": "Enter risk profile information so we can dispay the assets most suitable for you. All fields are required.",
+            "fr": "Saisissez les informations sur le profil de risque afin que nous puissions distribuer les actifs qui vous conviennent le mieux. Tous les champs sont requis."
+          },
+          "elements": [
+            "title_investmentNature_risk-profile",
+            "assetManagementMethod_investmentNature_risk-profile",
+            "transactionsFrequency_investmentNature_risk-profile",
+            "investmentVehiclesUsed_investmentNature_risk-profile",
+            "title_investmentObjectives_risk-profile",
+            "investmentObjectives_investmentObjectives_risk-profile"
+          ]
+        },
+        {
+          "key": "documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "description": {
+            "en": "Upload the requested documents.",
+            "fr": "Téléchargez les documents demandés."
+          },
+          "elements": [
+            "title_identificationDocuments_documents",
+            "id_identificationDocuments_documents",
+            "incomeStatement_identificationDocuments_documents",
+            "countryOfResidence_identificationDocuments_documents",
+            "presidentId_investmentEntityDocuments_documents",
+            "title_investmentEntityDocuments_documents",
+            "mandatesOfAuthority_investmentEntityDocuments_documents",
+            "delegationOfAuthorithy_investmentEntityDocuments_documents",
+            "latestTaxReport_investmentEntityDocuments_documents",
+            "copyOfBeneficialOwnersId_investmentEntityDocuments_documents",
+            "beneficialOwnersLegalJustification_investmentEntityDocuments_documents"
+          ]
+        }
+      ]
+    }
+  ]
+}

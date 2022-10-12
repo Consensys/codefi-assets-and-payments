@@ -1,0 +1,16 @@
+FROM node:18
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+# Install dependencies using the Yarn cache from the previous build, if one exists.
+RUN --mount=type=cache,target=/yarn YARN_CACHE_FOLDER=/yarn yarn install
+
+# Build the Workflow API and all its local dependencies.
+RUN npx nx build workflow-api
+
+# Remove the Workflow API build files as we want NestJS to build it on startup.
+RUN rm -rf ./assets/services/workflow-api/dist
+
+CMD [ "npx", "nx", "start:dev", "workflow-api" ]

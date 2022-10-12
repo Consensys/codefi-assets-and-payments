@@ -1,0 +1,41 @@
+version: '3.4'
+services:
+  external-identity-api:
+    container_name: external-identity-api
+    restart: always
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/external-identity-api/${DOCKERFILE-Dockerfile.dev}
+    env_file:
+      - .env
+      - ../../../.env
+    volumes:
+      - ./src:/usr/src/app/assets/services/external-identity-api/src:delegated
+    networks:
+      - codefi
+    depends_on:
+      - external-identity-db
+    labels:
+      local.filebeat: 'true'
+
+  external-identity-db:
+    image: postgres
+    container_name: external-identity-api-pg
+    environment:
+      - POSTGRES_DB=${DB_DATABASE_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - codefi
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

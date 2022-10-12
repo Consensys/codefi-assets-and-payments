@@ -1,0 +1,199 @@
+{
+  "tenantId": "WgmRQ1SM0TQ0ezc5Ib8UswOnnaoo9bGU",
+  "category": "HYBRID",
+  "name": "YOLO FUND TOKEN PRODUCTION",
+  "type": "CLOSED_END_FUND",
+  "label": {
+    "en": "Yolo Token",
+    "fr": "Jeton Yolo",
+    "ja": "ヨロトークン"
+  },
+  "description": {
+    "en": "Yolo Token fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund.",
+    "fr": "Yolo Token  fund is a collective investment model based on issuing a fixed number of shares which are not redeemable from the fund.",
+    "ja": "Tobe Transalted クローズドエンド型ファンドは、ファンドから償還できない固定数の株式を発行することに基づく集団投資モデルである"
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Fund information",
+        "fr": "Fund information",
+        "ja": "Fund information"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général",
+            "ja": "一般"
+          },
+          "elements": [
+            "fundInformations_fundName_yolo",
+            "fundInformations_fundSymbol_yolo",
+            "fundInformations_fundDescription_yolo"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Bank information",
+            "ja": "Bank information"
+          },
+          "elements": [
+            "bankInformation_bankName",
+            "bankInformation_IBAN",
+            "bankInformation_Swift"
+          ]
+        },
+        {
+          "key": "asset_wallet",
+          "label": {
+            "en": "Wallet information",
+            "fr": "Wallet information",
+            "ja": "Wallet information"
+          },
+          "elements": [
+            "wallet_information_cryptoCurrency",
+            "wallet_information_blockchain",
+            "wallet_information_walletAddress"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Fund prospectus",
+            "fr": "Fund prospectus",
+            "ja": "Fund prospectus"
+          },
+          "elements": ["fund_prospectus"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Fund cover image",
+            "fr": "Fund cover image",
+            "ja": "Fund cover image"
+          },
+          "elements": ["fundInformations_coverPicture_sl"]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Share information",
+        "fr": "Share information",
+        "ja": "Share information"
+      },
+      "legend": {
+        "en": "Complete the form below to create the first Share Class for the fund. You will be able to add classes later.",
+        "fr": "Remplissez le formulaire ci-dessous pour créer la première classe d'actions du fonds. Vous pourrez ajouter des cours plus tard.",
+        "ja": "以下のフォームに記入して、ファンドの最初のシェアクラスを作成してください。後でクラスを追加できるようになります。"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général",
+            "ja": "一般"
+          },
+          "elements": ["shareClass_className_yolo", "shareClass_currency"]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres",
+            "ja": "注文"
+          },
+          "elements": [
+            "shareClass_orderSubscriptionsTypes",
+            "shareClass_minimumSubscriptionInAmount",
+            "shareClass_maximumSubscriptionInAmount",
+            "shareClass_minimumSubscriptionInQuantity",
+            "shareClass_maximumSubscriptionInQuantity"
+          ]
+        },
+        {
+          "key": "class_paymentOptions",
+          "label": {
+            "en": "Payment options",
+            "fr": "Payment options"
+          },
+          "elements": ["shareClass_subscription_initialSubscription_payment"]
+        },
+        {
+          "key": "class_nav",
+          "label": {
+            "en": "Initial share value",
+            "fr": "Initial share value",
+            "ja": "初期価格"
+          },
+          "elements": [
+            "shareClass_initialShareValue_check",
+            "shareClass_initialShareValue_value"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Subscription",
+            "fr": "Souscription",
+            "ja": "販売"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date",
+            "shareClass_subscription_initialSubscription_cutoff_date",
+            "shareClass_subscription_initialSubscription_valuation_date",
+            "shareClass_subscription_initialSubscription_settlement_date"
+          ]
+        },
+        {
+          "key": "class_subscription",
+          "label": {
+            "en": "Subsequent subscription periods",
+            "fr": "Subsequent subscription periods",
+            "ja": "次の販売期間"
+          },
+          "elements": [
+            "shareClass_subscription_subsequentSubscription_check2",
+            "shareClass_subscription_subsequentSubscription_start_date",
+            "shareClass_subscription_subsequentSubscription_cutoff_date",
+            "shareClass_subscription_subsequentSubscription_valuation_date",
+            "shareClass_subscription_subsequentSubscription_settlement_date"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais",
+            "ja": "手数料"
+          },
+          "elements": [
+            "sharedClass_customFeesCheck",
+            "sharedClass_customFeesValue"
+          ]
+        },
+        {
+          "key": "class_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": [
+            "documents_key_investor_information_document",
+            "documents_annual_report"
+          ]
+        }
+      ]
+    }
+  ],
+  "data": null
+}

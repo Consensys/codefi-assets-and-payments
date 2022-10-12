@@ -1,0 +1,95 @@
+{
+  "tenantId": "codefi",
+  "category": "HYBRID",
+  "name": "CURRENCY",
+  "type": "CURRENCY",
+  "label": {
+    "en": "New Currency",
+    "fr": "New Currency"
+  },
+  "description": {
+    "en": "Create a medium of exchange for goods and services.",
+    "fr": "Create a medium of exchange for goods and services."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Currency information",
+        "fr": "Currency information"
+      },
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "currency_name",
+            "currency_symbol",
+            "borrowerInformation_reviewer_select",
+            "currency_description"
+          ]
+        },
+        {
+          "key": "asset_bankInformation",
+          "label": {
+            "en": "Bank information",
+            "fr": "Bank information"
+          },
+          "elements": ["currency_bankInformation"]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Class",
+        "fr": "Class"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "shareClass_currency",
+            "shareClass_decimalisation_ib",
+            "currency_initialShareValue_value",
+            "currency_subscription_initialSubscription_payment"
+          ]
+        },
+        {
+          "key": "class_rules",
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "elements": [
+            "currency_class_minSubscriptionQuantity",
+            "currency_class_maxSubscriptionQuantity",
+            "currency_class_minRedemptionQuantity",
+            "currency_class_maxRedemptionQuantity"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Fees"
+          },
+          "elements": [
+            "currency_customAcquisitionFees_check",
+            "sharedClass_customFeesValue",
+            "currency_customRedemptionFees_check",
+            "sharedClass_customRedemptionFeesValue"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2946 @@
+{
+  "contractName": "IERC20HoldableToken",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "expirationDateTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lockHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NewHold",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "lockPreimage",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "ExecutedHold",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "ReleaseHold",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "expirationDateTime",
+          "type": "uint256"
+        },
+        {
+          "name": "lockHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "hold",
+      "outputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "name": "lockPreimage",
+          "type": "bytes32"
+        }
+      ],
+      "name": "executeHold",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        },
+        {
+          "name": "lockPreimage",
+          "type": "bytes32"
+        },
+        {
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "executeHold",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "executeHold",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "releaseHold",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "holdBalanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grossBalanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupplyOnHold",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "holdId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "holdStatus",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"},{\"name\":\"lockPreimage\",\"type\":\"bytes32\"}],\"name\":\"executeHold\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupplyOnHold\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"},{\"name\":\"lockPreimage\",\"type\":\"bytes32\"},{\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"executeHold\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"}],\"name\":\"releaseHold\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grossBalanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"recipient\",\"type\":\"address\"},{\"name\":\"notary\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"},{\"name\":\"expirationDateTime\",\"type\":\"uint256\"},{\"name\":\"lockHash\",\"type\":\"bytes32\"}],\"name\":\"hold\",\"outputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"}],\"name\":\"holdStatus\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"holdBalanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"holdId\",\"type\":\"bytes32\"}],\"name\":\"executeHold\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"holdId\",\"type\":\"bytes32\"},{\"indexed\":true,\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"notary\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"expirationDateTime\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"lockHash\",\"type\":\"bytes32\"}],\"name\":\"NewHold\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"holdId\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"lockPreimage\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"ExecutedHold\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"holdId\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"ReleaseHold\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"like approve except the tokens can't be spent by the sender while they are on hold.\",\"methods\":{\"balanceOf(address)\":{\"params\":{\"account\":\"owner of the tokens\\u00df\"}},\"executeHold(bytes32)\":{\"params\":{\"holdId\":\"a unique identifier for the hold.\"}},\"executeHold(bytes32,bytes32)\":{\"params\":{\"holdId\":\"a unique identifier for the hold.\",\"lockPreimage\":\"the image used to generate the lock hash with a keccak256 hash\"}},\"executeHold(bytes32,bytes32,address)\":{\"params\":{\"holdId\":\"a unique identifier for the hold.\",\"lockPreimage\":\"the image used to generate the lock hash with a keccak256 hash\",\"recipient\":\"the account the tokens will be transferred to on execution.\"}},\"grossBalanceOf(address)\":{\"params\":{\"account\":\"owner of the tokens\"}},\"hold(address,address,uint256,uint256,bytes32)\":{\"params\":{\"amount\":\"of tokens to be transferred to the recipient on execution. Must be a non zero amount.\",\"expirationDateTime\":\"UNIX epoch seconds the held amount can be released back to the sender by the sender. Past dates are allowed.\",\"lockHash\":\"optional keccak256 hash of a lock preimage. An empty hash will not enforce the hash lock when the hold is executed.\",\"notary\":\"account that can execute the hold. Typically the recipient but can be a third party or a smart contact.\",\"recipient\":\"optional account the tokens will be transferred to on execution. If a zero address, the recipient must be specified on execution of the hold.\"},\"return\":\"a unique identifier for the hold.\"},\"holdBalanceOf(address)\":{\"params\":{\"account\":\"owner of the tokens\"}},\"holdStatus(bytes32)\":{\"params\":{\"holdId\":\"a unique identifier for the hold.\"},\"return\":\"hold status code.\"},\"releaseHold(bytes32)\":{\"params\":{\"holdId\":\"a unique identifier for the hold.\"}}},\"title\":\"Holdable ERC20 Token Interface.\"},\"userdoc\":{\"methods\":{\"balanceOf(address)\":{\"notice\":\"Amount of tokens owned by an account that are available for transfer. That is, the gross balance less any held tokens.\"},\"executeHold(bytes32)\":{\"notice\":\"Called by the notary to transfer the held tokens to the set at the hold recipient if there is no hash lock.\"},\"executeHold(bytes32,bytes32)\":{\"notice\":\"Called by the notary to transfer the held tokens to the recipient that was set at the hold.\"},\"executeHold(bytes32,bytes32,address)\":{\"notice\":\"Called by the notary to transfer the held tokens to the recipient if no recipient was specified at the hold.\"},\"grossBalanceOf(address)\":{\"notice\":\"Total amount of tokens owned by an account including all the held tokens pending execution or release.\"},\"hold(address,address,uint256,uint256,bytes32)\":{\"notice\":\"Called by the sender to hold some tokens for a recipient that the sender can not release back to themself until after the expiration date.\"},\"holdBalanceOf(address)\":{\"notice\":\"Amount of tokens owned by an account that are held pending execution or release.\"},\"releaseHold(bytes32)\":{\"notice\":\"Called by the notary at any time or the sender after the expiration date to release the held tokens back to the sender.\"}}}},\"settings\":{\"compilationTarget\":{\"universal-token/contracts/tokens/IERC20HoldableToken.sol\":\"IERC20HoldableToken\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":0},\"remappings\":[]},\"sources\":{\"universal-token/contracts/tokens/IERC20HoldableToken.sol\":{\"keccak256\":\"0x650fa5fce2eb9fd282f318882cdaeada42011cc9602f00e173f2e924ce7f62a5\",\"urls\":[\"bzzr://d21c9b695c9a3b03ed69b1199560b55f6841363cf321c0f748e17f435077c090\",\"dweb:/ipfs/QmWbR7m7DopcsD2ppbPtteQFaut5d2FExVKvAhig4Xz5kN\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\n * This code has not been reviewed.\n * Do not use or deploy this code before reviewing it personally first.\n */\npragma solidity ^0.5.0;\n\n/**\n * @title Holdable ERC20 Token Interface.\n * @dev like approve except the tokens can't be spent by the sender while they are on hold.\n */\ninterface IERC20HoldableToken {\n    enum HoldStatusCode {Nonexistent, Held, Executed, Released}\n\n    event NewHold(\n        bytes32 indexed holdId,\n        address indexed recipient,\n        address indexed notary,\n        uint256 amount,\n        uint256 expirationDateTime,\n        bytes32 lockHash\n    );\n    event ExecutedHold(\n        bytes32 indexed holdId,\n        bytes32 lockPreimage,\n        address recipient\n    );\n    event ReleaseHold(bytes32 indexed holdId, address sender);\n\n    /**\n     @notice Called by the sender to hold some tokens for a recipient that the sender can not release back to themself until after the expiration date.\n     @param recipient optional account the tokens will be transferred to on execution. If a zero address, the recipient must be specified on execution of the hold.\n     @param notary account that can execute the hold. Typically the recipient but can be a third party or a smart contact.\n     @param amount of tokens to be transferred to the recipient on execution. Must be a non zero amount.\n     @param expirationDateTime UNIX epoch seconds the held amount can be released back to the sender by the sender. Past dates are allowed.\n     @param lockHash optional keccak256 hash of a lock preimage. An empty hash will not enforce the hash lock when the hold is executed.\n     @return a unique identifier for the hold.\n     */\n    function hold(\n        address recipient,\n        address notary,\n        uint256 amount,\n        uint256 expirationDateTime,\n        bytes32 lockHash\n    ) external returns (bytes32 holdId);\n\n    /**\n     @notice Called by the notary to transfer the held tokens to the set at the hold recipient if there is no hash lock.\n     @param holdId a unique identifier for the hold.\n     */\n    function executeHold(bytes32 holdId) external;\n\n    /**\n     @notice Called by the notary to transfer the held tokens to the recipient that was set at the hold.\n     @param holdId a unique identifier for the hold.\n     @param lockPreimage the image used to generate the lock hash with a keccak256 hash\n     */\n    function executeHold(bytes32 holdId, bytes32 lockPreimage) external;\n\n    /**\n     @notice Called by the notary to transfer the held tokens to the recipient if no recipient was specified at the hold.\n     @param holdId a unique identifier for the hold.\n     @param lockPreimage the image used to generate the lock hash with a keccak256 hash\n     @param recipient the account the tokens will be transferred to on execution.\n     */\n    function executeHold(\n        bytes32 holdId,\n        bytes32 lockPreimage,\n        address recipient\n    ) external;\n\n    /**\n     @notice Called by the notary at any time or the sender after the expiration date to release the held tokens back to the sender.\n     @param holdId a unique identifier for the hold.\n     */\n    function releaseHold(bytes32 holdId) external;\n\n    /**\n     @notice Amount of tokens owned by an account that are available for transfer. That is, the gross balance less any held tokens.\n     @param account owner of the tokensß\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n    /**\n     @notice Amount of tokens owned by an account that are held pending execution or release.\n     @param account owner of the tokens\n     */\n    function holdBalanceOf(address account) external view returns (uint256);\n\n    /**\n     @notice Total amount of tokens owned by an account including all the held tokens pending execution or release.\n     @param account owner of the tokens\n     */\n    function grossBalanceOf(address account) external view returns (uint256);\n\n    function totalSupplyOnHold() external view returns (uint256);\n\n    /**\n     @param holdId a unique identifier for the hold.\n     @return hold status code.\n     */\n    function holdStatus(bytes32 holdId) external view returns (HoldStatusCode);\n}\n",
+  "sourcePath": "universal-token/contracts/tokens/IERC20HoldableToken.sol",
+  "ast": {
+    "absolutePath": "universal-token/contracts/tokens/IERC20HoldableToken.sol",
+    "exportedSymbols": {
+      "IERC20HoldableToken": [
+        26081
+      ]
+    },
+    "id": 26082,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25973,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "115:23:62"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Holdable ERC20 Token Interface.\n@dev like approve except the tokens can't be spent by the sender while they are on hold.",
+        "fullyImplemented": false,
+        "id": 26081,
+        "linearizedBaseContracts": [
+          26081
+        ],
+        "name": "IERC20HoldableToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IERC20HoldableToken.HoldStatusCode",
+            "id": 25978,
+            "members": [
+              {
+                "id": 25974,
+                "name": "Nonexistent",
+                "nodeType": "EnumValue",
+                "src": "339:11:62"
+              },
+              {
+                "id": 25975,
+                "name": "Held",
+                "nodeType": "EnumValue",
+                "src": "352:4:62"
+              },
+              {
+                "id": 25976,
+                "name": "Executed",
+                "nodeType": "EnumValue",
+                "src": "358:8:62"
+              },
+              {
+                "id": 25977,
+                "name": "Released",
+                "nodeType": "EnumValue",
+                "src": "368:8:62"
+              }
+            ],
+            "name": "HoldStatusCode",
+            "nodeType": "EnumDefinition",
+            "src": "318:59:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 25992,
+            "name": "NewHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 25991,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25980,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "406:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25979,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "406:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25982,
+                  "indexed": true,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "438:25:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25981,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "438:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25984,
+                  "indexed": true,
+                  "name": "notary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "473:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25983,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25986,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "505:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25985,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "505:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25988,
+                  "indexed": false,
+                  "name": "expirationDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "529:26:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25987,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25990,
+                  "indexed": false,
+                  "name": "lockHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "565:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25989,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "396:191:62"
+            },
+            "src": "383:205:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 26000,
+            "name": "ExecutedHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 25999,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25994,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "621:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25993,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25996,
+                  "indexed": false,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "653:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25995,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25998,
+                  "indexed": false,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "683:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25997,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:95:62"
+            },
+            "src": "593:114:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 26006,
+            "name": "ReleaseHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 26005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26002,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26006,
+                  "src": "730:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26001,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "730:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26004,
+                  "indexed": false,
+                  "name": "sender",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26006,
+                  "src": "754:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26003,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "754:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "729:40:62"
+            },
+            "src": "712:58:62"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the sender to hold some tokens for a recipient that the sender can not release back to themself until after the expiration date.\n@param recipient optional account the tokens will be transferred to on execution. If a zero address, the recipient must be specified on execution of the hold.\n@param notary account that can execute the hold. Typically the recipient but can be a third party or a smart contact.\n@param amount of tokens to be transferred to the recipient on execution. Must be a non zero amount.\n@param expirationDateTime UNIX epoch seconds the held amount can be released back to the sender by the sender. Past dates are allowed.\n@param lockHash optional keccak256 hash of a lock preimage. An empty hash will not enforce the hash lock when the hold is executed.\n@return a unique identifier for the hold.",
+            "id": 26021,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26017,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26008,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1683:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26007,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1683:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26010,
+                  "name": "notary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1710:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26009,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1710:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26012,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1734:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26011,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1734:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26014,
+                  "name": "expirationDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1758:26:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26013,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1758:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26016,
+                  "name": "lockHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1794:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26015,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1794:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1673:143:62"
+            },
+            "returnParameters": {
+              "id": 26020,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26019,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1835:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26018,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1835:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1834:16:62"
+            },
+            "scope": 26081,
+            "src": "1660:191:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the set at the hold recipient if there is no hash lock.\n@param holdId a unique identifier for the hold.",
+            "id": 26026,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26024,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26023,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26026,
+                  "src": "2068:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26022,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2068:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2067:16:62"
+            },
+            "returnParameters": {
+              "id": 26025,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2092:0:62"
+            },
+            "scope": 26081,
+            "src": "2047:46:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the recipient that was set at the hold.\n@param holdId a unique identifier for the hold.\n@param lockPreimage the image used to generate the lock hash with a keccak256 hash",
+            "id": 26033,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26031,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26028,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26033,
+                  "src": "2382:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26027,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2382:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26030,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26033,
+                  "src": "2398:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26029,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2398:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2381:38:62"
+            },
+            "returnParameters": {
+              "id": 26032,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2428:0:62"
+            },
+            "scope": 26081,
+            "src": "2361:68:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the recipient if no recipient was specified at the hold.\n@param holdId a unique identifier for the hold.\n@param lockPreimage the image used to generate the lock hash with a keccak256 hash\n@param recipient the account the tokens will be transferred to on execution.",
+            "id": 26042,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26035,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2826:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26034,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2826:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26037,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2850:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26036,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2850:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26039,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2880:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26038,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2880:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2816:87:62"
+            },
+            "returnParameters": {
+              "id": 26041,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2912:0:62"
+            },
+            "scope": 26081,
+            "src": "2796:117:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary at any time or the sender after the expiration date to release the held tokens back to the sender.\n@param holdId a unique identifier for the hold.",
+            "id": 26047,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "releaseHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26045,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26044,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26047,
+                  "src": "3142:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26043,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3142:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3141:16:62"
+            },
+            "returnParameters": {
+              "id": 26046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3166:0:62"
+            },
+            "scope": 26081,
+            "src": "3121:46:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Amount of tokens owned by an account that are available for transfer. That is, the gross balance less any held tokens.\n@param account owner of the tokensß",
+            "id": 26054,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26050,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26049,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26054,
+                  "src": "3382:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26048,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3382:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3381:17:62"
+            },
+            "returnParameters": {
+              "id": 26053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26052,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26054,
+                  "src": "3422:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26051,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3422:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3421:9:62"
+            },
+            "scope": 26081,
+            "src": "3363:68:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Amount of tokens owned by an account that are held pending execution or release.\n@param account owner of the tokens",
+            "id": 26061,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holdBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26057,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26056,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26061,
+                  "src": "3610:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3610:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3609:17:62"
+            },
+            "returnParameters": {
+              "id": 26060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26059,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26061,
+                  "src": "3650:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26058,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3650:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3649:9:62"
+            },
+            "scope": 26081,
+            "src": "3587:72:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Total amount of tokens owned by an account including all the held tokens pending execution or release.\n@param account owner of the tokens",
+            "id": 26068,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "grossBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26064,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26063,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26068,
+                  "src": "3861:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26062,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3861:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3860:17:62"
+            },
+            "returnParameters": {
+              "id": 26067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26066,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26068,
+                  "src": "3901:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26065,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3901:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3900:9:62"
+            },
+            "scope": 26081,
+            "src": "3837:73:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 26073,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupplyOnHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26069,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3942:2:62"
+            },
+            "returnParameters": {
+              "id": 26072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26071,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26073,
+                  "src": "3968:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26070,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3968:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3967:9:62"
+            },
+            "scope": 26081,
+            "src": "3916:61:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@param holdId a unique identifier for the hold.\n@return hold status code.",
+            "id": 26080,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holdStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26075,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26080,
+                  "src": "4103:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26074,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4103:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4102:16:62"
+            },
+            "returnParameters": {
+              "id": 26079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26078,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26080,
+                  "src": "4142:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_HoldStatusCode_$25978",
+                    "typeString": "enum IERC20HoldableToken.HoldStatusCode"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26077,
+                    "name": "HoldStatusCode",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 25978,
+                    "src": "4142:14:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_HoldStatusCode_$25978",
+                      "typeString": "enum IERC20HoldableToken.HoldStatusCode"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4141:16:62"
+            },
+            "scope": 26081,
+            "src": "4083:75:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 26082,
+        "src": "282:3878:62"
+      }
+    ],
+    "src": "115:4046:62"
+  },
+  "legacyAST": {
+    "absolutePath": "universal-token/contracts/tokens/IERC20HoldableToken.sol",
+    "exportedSymbols": {
+      "IERC20HoldableToken": [
+        26081
+      ]
+    },
+    "id": 26082,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25973,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "115:23:62"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Holdable ERC20 Token Interface.\n@dev like approve except the tokens can't be spent by the sender while they are on hold.",
+        "fullyImplemented": false,
+        "id": 26081,
+        "linearizedBaseContracts": [
+          26081
+        ],
+        "name": "IERC20HoldableToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IERC20HoldableToken.HoldStatusCode",
+            "id": 25978,
+            "members": [
+              {
+                "id": 25974,
+                "name": "Nonexistent",
+                "nodeType": "EnumValue",
+                "src": "339:11:62"
+              },
+              {
+                "id": 25975,
+                "name": "Held",
+                "nodeType": "EnumValue",
+                "src": "352:4:62"
+              },
+              {
+                "id": 25976,
+                "name": "Executed",
+                "nodeType": "EnumValue",
+                "src": "358:8:62"
+              },
+              {
+                "id": 25977,
+                "name": "Released",
+                "nodeType": "EnumValue",
+                "src": "368:8:62"
+              }
+            ],
+            "name": "HoldStatusCode",
+            "nodeType": "EnumDefinition",
+            "src": "318:59:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 25992,
+            "name": "NewHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 25991,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25980,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "406:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25979,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "406:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25982,
+                  "indexed": true,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "438:25:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25981,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "438:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25984,
+                  "indexed": true,
+                  "name": "notary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "473:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25983,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25986,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "505:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25985,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "505:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25988,
+                  "indexed": false,
+                  "name": "expirationDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "529:26:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25987,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25990,
+                  "indexed": false,
+                  "name": "lockHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25992,
+                  "src": "565:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25989,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "396:191:62"
+            },
+            "src": "383:205:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 26000,
+            "name": "ExecutedHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 25999,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25994,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "621:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25993,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25996,
+                  "indexed": false,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "653:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 25995,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25998,
+                  "indexed": false,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26000,
+                  "src": "683:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 25997,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:95:62"
+            },
+            "src": "593:114:62"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 26006,
+            "name": "ReleaseHold",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 26005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26002,
+                  "indexed": true,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26006,
+                  "src": "730:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26001,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "730:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26004,
+                  "indexed": false,
+                  "name": "sender",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26006,
+                  "src": "754:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26003,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "754:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "729:40:62"
+            },
+            "src": "712:58:62"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the sender to hold some tokens for a recipient that the sender can not release back to themself until after the expiration date.\n@param recipient optional account the tokens will be transferred to on execution. If a zero address, the recipient must be specified on execution of the hold.\n@param notary account that can execute the hold. Typically the recipient but can be a third party or a smart contact.\n@param amount of tokens to be transferred to the recipient on execution. Must be a non zero amount.\n@param expirationDateTime UNIX epoch seconds the held amount can be released back to the sender by the sender. Past dates are allowed.\n@param lockHash optional keccak256 hash of a lock preimage. An empty hash will not enforce the hash lock when the hold is executed.\n@return a unique identifier for the hold.",
+            "id": 26021,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26017,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26008,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1683:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26007,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1683:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26010,
+                  "name": "notary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1710:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26009,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1710:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26012,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1734:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26011,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1734:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26014,
+                  "name": "expirationDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1758:26:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26013,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1758:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26016,
+                  "name": "lockHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1794:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26015,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1794:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1673:143:62"
+            },
+            "returnParameters": {
+              "id": 26020,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26019,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26021,
+                  "src": "1835:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26018,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1835:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1834:16:62"
+            },
+            "scope": 26081,
+            "src": "1660:191:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the set at the hold recipient if there is no hash lock.\n@param holdId a unique identifier for the hold.",
+            "id": 26026,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26024,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26023,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26026,
+                  "src": "2068:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26022,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2068:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2067:16:62"
+            },
+            "returnParameters": {
+              "id": 26025,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2092:0:62"
+            },
+            "scope": 26081,
+            "src": "2047:46:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the recipient that was set at the hold.\n@param holdId a unique identifier for the hold.\n@param lockPreimage the image used to generate the lock hash with a keccak256 hash",
+            "id": 26033,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26031,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26028,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26033,
+                  "src": "2382:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26027,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2382:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26030,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26033,
+                  "src": "2398:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26029,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2398:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2381:38:62"
+            },
+            "returnParameters": {
+              "id": 26032,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2428:0:62"
+            },
+            "scope": 26081,
+            "src": "2361:68:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary to transfer the held tokens to the recipient if no recipient was specified at the hold.\n@param holdId a unique identifier for the hold.\n@param lockPreimage the image used to generate the lock hash with a keccak256 hash\n@param recipient the account the tokens will be transferred to on execution.",
+            "id": 26042,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26035,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2826:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26034,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2826:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26037,
+                  "name": "lockPreimage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2850:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26036,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2850:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26039,
+                  "name": "recipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26042,
+                  "src": "2880:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26038,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2880:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2816:87:62"
+            },
+            "returnParameters": {
+              "id": 26041,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2912:0:62"
+            },
+            "scope": 26081,
+            "src": "2796:117:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Called by the notary at any time or the sender after the expiration date to release the held tokens back to the sender.\n@param holdId a unique identifier for the hold.",
+            "id": 26047,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "releaseHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26045,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26044,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26047,
+                  "src": "3142:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26043,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3142:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3141:16:62"
+            },
+            "returnParameters": {
+              "id": 26046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3166:0:62"
+            },
+            "scope": 26081,
+            "src": "3121:46:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Amount of tokens owned by an account that are available for transfer. That is, the gross balance less any held tokens.\n@param account owner of the tokensß",
+            "id": 26054,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26050,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26049,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26054,
+                  "src": "3382:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26048,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3382:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3381:17:62"
+            },
+            "returnParameters": {
+              "id": 26053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26052,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26054,
+                  "src": "3422:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26051,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3422:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3421:9:62"
+            },
+            "scope": 26081,
+            "src": "3363:68:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Amount of tokens owned by an account that are held pending execution or release.\n@param account owner of the tokens",
+            "id": 26061,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holdBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26057,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26056,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26061,
+                  "src": "3610:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3610:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3609:17:62"
+            },
+            "returnParameters": {
+              "id": 26060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26059,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26061,
+                  "src": "3650:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26058,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3650:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3649:9:62"
+            },
+            "scope": 26081,
+            "src": "3587:72:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Total amount of tokens owned by an account including all the held tokens pending execution or release.\n@param account owner of the tokens",
+            "id": 26068,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "grossBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26064,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26063,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26068,
+                  "src": "3861:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 26062,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3861:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3860:17:62"
+            },
+            "returnParameters": {
+              "id": 26067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26066,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26068,
+                  "src": "3901:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26065,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3901:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3900:9:62"
+            },
+            "scope": 26081,
+            "src": "3837:73:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 26073,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupplyOnHold",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26069,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3942:2:62"
+            },
+            "returnParameters": {
+              "id": 26072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26071,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26073,
+                  "src": "3968:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26070,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3968:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3967:9:62"
+            },
+            "scope": 26081,
+            "src": "3916:61:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@param holdId a unique identifier for the hold.\n@return hold status code.",
+            "id": 26080,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holdStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26075,
+                  "name": "holdId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26080,
+                  "src": "4103:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26074,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4103:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4102:16:62"
+            },
+            "returnParameters": {
+              "id": 26079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26078,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26080,
+                  "src": "4142:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_HoldStatusCode_$25978",
+                    "typeString": "enum IERC20HoldableToken.HoldStatusCode"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 26077,
+                    "name": "HoldStatusCode",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 25978,
+                    "src": "4142:14:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_HoldStatusCode_$25978",
+                      "typeString": "enum IERC20HoldableToken.HoldStatusCode"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4141:16:62"
+            },
+            "scope": 26081,
+            "src": "4083:75:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 26082,
+        "src": "282:3878:62"
+      }
+    ],
+    "src": "115:4046:62"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.0",
+  "updatedAt": "2020-12-15T12:54:12.306Z",
+  "devdoc": {
+    "details": "like approve except the tokens can't be spent by the sender while they are on hold.",
+    "methods": {
+      "balanceOf(address)": {
+        "params": {
+          "account": "owner of the tokensß"
+        }
+      },
+      "executeHold(bytes32)": {
+        "params": {
+          "holdId": "a unique identifier for the hold."
+        }
+      },
+      "executeHold(bytes32,bytes32)": {
+        "params": {
+          "holdId": "a unique identifier for the hold.",
+          "lockPreimage": "the image used to generate the lock hash with a keccak256 hash"
+        }
+      },
+      "executeHold(bytes32,bytes32,address)": {
+        "params": {
+          "holdId": "a unique identifier for the hold.",
+          "lockPreimage": "the image used to generate the lock hash with a keccak256 hash",
+          "recipient": "the account the tokens will be transferred to on execution."
+        }
+      },
+      "grossBalanceOf(address)": {
+        "params": {
+          "account": "owner of the tokens"
+        }
+      },
+      "hold(address,address,uint256,uint256,bytes32)": {
+        "params": {
+          "amount": "of tokens to be transferred to the recipient on execution. Must be a non zero amount.",
+          "expirationDateTime": "UNIX epoch seconds the held amount can be released back to the sender by the sender. Past dates are allowed.",
+          "lockHash": "optional keccak256 hash of a lock preimage. An empty hash will not enforce the hash lock when the hold is executed.",
+          "notary": "account that can execute the hold. Typically the recipient but can be a third party or a smart contact.",
+          "recipient": "optional account the tokens will be transferred to on execution. If a zero address, the recipient must be specified on execution of the hold."
+        },
+        "return": "a unique identifier for the hold."
+      },
+      "holdBalanceOf(address)": {
+        "params": {
+          "account": "owner of the tokens"
+        }
+      },
+      "holdStatus(bytes32)": {
+        "params": {
+          "holdId": "a unique identifier for the hold."
+        },
+        "return": "hold status code."
+      },
+      "releaseHold(bytes32)": {
+        "params": {
+          "holdId": "a unique identifier for the hold."
+        }
+      }
+    },
+    "title": "Holdable ERC20 Token Interface."
+  },
+  "userdoc": {
+    "methods": {
+      "balanceOf(address)": {
+        "notice": "Amount of tokens owned by an account that are available for transfer. That is, the gross balance less any held tokens."
+      },
+      "executeHold(bytes32)": {
+        "notice": "Called by the notary to transfer the held tokens to the set at the hold recipient if there is no hash lock."
+      },
+      "executeHold(bytes32,bytes32)": {
+        "notice": "Called by the notary to transfer the held tokens to the recipient that was set at the hold."
+      },
+      "executeHold(bytes32,bytes32,address)": {
+        "notice": "Called by the notary to transfer the held tokens to the recipient if no recipient was specified at the hold."
+      },
+      "grossBalanceOf(address)": {
+        "notice": "Total amount of tokens owned by an account including all the held tokens pending execution or release."
+      },
+      "hold(address,address,uint256,uint256,bytes32)": {
+        "notice": "Called by the sender to hold some tokens for a recipient that the sender can not release back to themself until after the expiration date."
+      },
+      "holdBalanceOf(address)": {
+        "notice": "Amount of tokens owned by an account that are held pending execution or release."
+      },
+      "releaseHold(bytes32)": {
+        "notice": "Called by the notary at any time or the sender after the expiration date to release the held tokens back to the sender."
+      }
+    }
+  }
+}

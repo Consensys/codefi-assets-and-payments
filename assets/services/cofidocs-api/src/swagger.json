@@ -1,0 +1,107 @@
+{
+  "basePath": "/api/cofidocs",
+  "consumes": ["application/json"],
+  "definitions": {
+    "postDocumentOutput": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "number",
+          "description": "returns 201 if successful"
+        },
+        "postedDoc": {
+          "type": "object",
+          "properties": {
+            "uploadedDocumentName": {
+              "type": "string",
+              "description": "Document / fileName required to get document"
+            },
+            "documentURL": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "cofi-docs",
+    "version": "1.0.0",
+    "description": "API to save and retrieve Documents on S3",
+    "license": {
+      "name": "ISC"
+    }
+  },
+  "paths": {
+    "/document": {
+      "post": {
+        "operationId": "uploadDocument",
+        "produces": ["application/json"],
+        "responses": {
+          "201": {
+            "description": "Document Upload Successful",
+            "schema": {
+              "$ref": "#/definitions/postDocumentOutput"
+            }
+          }
+        },
+        "tags": ["Documents"],
+        "security": [],
+        "summary": "Upload Files to S3",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "required": true,
+            "type": "file",
+            "description": "File to be Uploaded"
+          }
+        ]
+      }
+    },
+    "/document/{fileName}": {
+      "get": {
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "tags": ["Documents"],
+        "security": [],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "fileName",
+            "description": "document name / document url",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/": {
+      "get": {
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "tags": ["HealthCheck"],
+        "security": []
+      }
+    }
+  },
+  "produces": ["application/json"],
+  "swagger": "2.0",
+  "securityDefinitions": {},
+  "schemes": ["https", "http"]
+}

@@ -1,0 +1,955 @@
+[
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_KYC_SUBMITTED",
+    "variables": [
+      "adminFirstName",
+      "investorName",
+      "issuerName"
+    ],
+    "subject": "The investor {{investorName}} submitted his KYC",
+    "messageTitle": "Dear {{adminFirstName}}",
+    "message": "The investor {{investorName}} has submitted information for you to review.",
+    "buttonLabel": "REVIEW INFORMATION"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_KYC_SUBMITTED",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "KYC Information submitted",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "KYC submitted successfully, your informations will be reviewed by the issuer of the platform."
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_VERIFIER_KYC_SUBMITTED",
+    "variables": [
+      "verifierFirstName",
+      "investorName",
+      "issuerName"
+    ],
+    "subject": "The investor {{investorName}} completed KYC",
+    "messageTitle": "Dear {{verifierFirstName}}",
+    "message": "{{investorName}} has submitted its KYC Application form; kindly proceed to the platform to approve or reject {{investorName}}'s application",
+    "buttonLabel": "REVIEW INFORMATION"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_KYC_VALIDATED",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "Your application has been approved",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "We are pleased to inform you, that your application has been approved.<br/>You have now access to the Codefi platform.",
+    "buttonLabel": "VIEW INVESTMENT PRODUCTS"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_KYC_NEEDS_UPDATE",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "Some KYC information needs updating",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "Our team is working on your onboarding and some information needs further clarification.<br/>Please log onto the platform to review, update and resubmit the relevant information.<br/>The system will guide you through the related items.",
+    "buttonLabel": "REVIEW INFORMATION"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_KYC_REJECTED",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "Your onboarding was not successful",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "We regret to inform you that we have not been able to conclude the onboarding process based on your given information."
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_INVITED",
+    "variables": [
+      "issuerName"
+    ],
+    "subject": "Create your profile",
+    "messageTitle": "Welcome to Codefi,",
+    "message": "Hit the button below to start building your profile and issue digital assets in a few clicks!",
+    "buttonLabel": "CREATE YOUR PROFILE"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_PLATFORM_ISSUER_INVITED",
+    "variables": [
+      "issuerName",
+      "defaultPassword"
+    ],
+    "subject": "Create your profile",
+    "messageTitle": "Welcome to Codefi,",
+    "message": "Hit the button below to start building your profile and issue digital assets in a few clicks!<br/>The password to use to log in is <b>{{defaultPassword}}</b>",
+    "buttonLabel": "CREATE YOUR PROFILE"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ADMIN_INVITED",
+    "variables": [
+      "tenantName",
+      "adminName"
+    ],
+    "subject": "Admin account created",
+    "messageTitle": "Dear {{adminName}},",
+    "message": "You have been invited to join the Codefi Assets platform. Click on the link below to get started.",
+    "buttonLabel": "START ISSUING DIGITAL ASSETS!"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_INVITED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "userType"
+    ],
+    "subject": "Create your profile",
+    "messageTitle": "Welcome to Codefi,",
+    "message": "{{issuerName}} has invited you to join the Codefi platform, a place to invest in digital assets.<br/>Hit the button below to start building your profile!",
+    "buttonLabel": "CREATE YOUR PROFILE"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_ASSET_REVIEW",
+    "variables": [
+      "name",
+      "issuerFirstName",
+      "importedFromMsg",
+      "approveForMsg"
+    ],
+    "subject": "Carbon Credit Project Review",
+    "messageTitle": "Dear {{issuerFirstName}},",
+    "message": "{{name}} has submitted a new Carbon Credit Project. Click the button below to review the project and approve for issuance.",
+    "buttonLabel": "REVIEW PROJECT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ASSET_APPROVED",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "Carbon Credit Project Approved",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "Your Carbon Credit Project has been approved and issued. Click the link below to view your project.",
+    "buttonLabel": "VIEW PROJECT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_IMPORTED_ASSET_APPROVED",
+    "variables": [
+      "investorName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Imported Carbon Credit Project Approved",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "Your imported Carbon Credit Project has been approved and issued. Click the link below to view your project.",
+    "buttonLabel": "VIEW PROJECT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ASSET_REJECTED",
+    "variables": [
+      "investorName",
+      "rejectedReasons"
+    ],
+    "subject": "Carbon Credit Project Rejected",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "Your Carbon Credit Project has been rejected. Click the link below to view your project.",
+    "buttonLabel": "VIEW PROJECT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ASSET_TOKEN_RETIRED",
+    "variables": [
+      "producerName",
+      "issuerName",
+      "buyerName",
+      "assetName",
+      "quantity",
+      "remarks"
+    ],
+    "subject": "Carbon Credit Project Token Retired",
+    "messageTitle": "Dear {{producerName}},",
+    "message": "The token(s) of your Carbon Credit Project have been retired. Click the link below to view your project.",
+    "buttonLabel": "VIEW PROJECT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_MINT_OR_FORCE_BURN",
+    "variables": [
+      "investorName",
+      "issuerName",
+      "assetName"
+    ],
+    "subject": "Transfer completed",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "We are writing to inform you that {{issuerName}} has updated the balance of {{assetName}} in your account.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ASSET_INVITED",
+    "variables": [
+      "investorName"
+    ],
+    "subject": "New Asset available!",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "We are pleased to invite you to participate in a new investment opportunity that has recently been made available to the Codefi Assets platform investors. To view the investment offering, please follow the link below.",
+    "buttonLabel": "VIEW ASSET"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECEPIENT_FORCE_TRANSFER",
+    "variables": [
+      "recipientName",
+      "senderName",
+      "issuerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Transfer completed",
+    "messageTitle": "Dear {{recipientName}},",
+    "message": "We are writing to inform you that {{issuerName}} has sent you {{quantity}} of {{assetName}} from the account of {{senderName}} to your account.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_FORCE_TRANSFER",
+    "variables": [
+      "recipientName",
+      "senderName",
+      "issuerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Transfer completed",
+    "messageTitle": "Dear {{senderName}},",
+    "message": "We are writing to inform you that {{issuerName}} has sent {{quantity}} of {{assetName}} from your account to the account of {{recipientName}}.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_ORDER_PLACED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "New Order",
+    "messageTitle": "Dear {{issuerName}},",
+    "message": "The investor {{investorName}} placed a subscription order for {{quantity}} for {{assetName}}. Please review the order.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_ORDER_CANCELED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Order cancelled",
+    "messageTitle": "Dear {{issuerName}},",
+    "message": "The investor {{investorName}} has cancelled the subscription order for {{quantity}} for {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ORDER_CANCELED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Order cancelled",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "{{issuerName}} has canceled the subscription order for {{quantity}} for {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ORDER_PAYMENT_CONFIRMED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "quantity",
+      "assetName",
+      "orderFee"
+    ],
+    "subject": "Payment confirmed",
+    "messageTitle": "Dear {{investorName}}",
+    "message": "{{issuerName}} has confirmed your payment for the subscription order for {{quantity}} for {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_ORDER_TOKENS_ISSUED",
+    "variables": [
+      "issuerName",
+      "investorName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Order completed",
+    "messageTitle": "Dear {{investorName}},",
+    "message": "{{issuerName}} has complete the subscription order for {{quantity}} for {{assetName}}.<br/>{{quantity}} of {{assetName}} have been issued to your account.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_TRADE_ORDER_CREATED",
+    "variables": [
+      "issuerFirstName",
+      "investorName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "New sell order",
+    "messageTitle": "Dear {{issuerFirstName}},",
+    "message": "The investor {{investorName}} has created an order to {{quantity}} {{assetName}}. Please review and approve or reject the order.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_TRADE_ORDER_CREATED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "quantityOrAmount",
+      "pricePerUnit",
+      "amount",
+      "assetName",
+      "tradeTypeSubjLabel",
+      "tradeTypeMsgLabel",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "New purchase order",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has created an order to buy {{quantityOrAmount}} {{assetName}}. Please review the order details.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ONBOARDED_RECIPIENT_TRADE_ORDER_CREATED",
+    "variables": [
+      "buyerFirstName",
+      "sellerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "New sell order",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has created an order to sell you {{quantity}} {{assetName}}. Please review the order details.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_NONE_ONBOARDED_RECIPIENT_TRADE_ORDER_CREATED",
+    "variables": [
+      "buyerFirstName",
+      "sellerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "New sell order",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has created an order to sell you {{quantity}} {{assetName}}.<br/>To view and progress with this order you must first be onboarded onto the platform.",
+    "buttonLabel": "START ONBOARDING PROCESS"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_TRADE_ORDER_APPROVED",
+    "variables": [
+      "sellerFirstName",
+      "issuerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order approved",
+    "messageTitle": "Dear {{sellerFirstName}}",
+    "message": "{{issuerName}} has approved your order to sell {{quantity}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_TRADE_ORDER_ACCEPTED",
+    "variables": [
+      "issuerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order accepted by buyer",
+    "messageTitle": "Dear {{issuerFirstName}},",
+    "message": "{{buyerName}} has accepted to purchase {{quantity}} {{assetName}} from {{sellerName}}. Please place the tokens/shares on hold.",
+    "buttonLabel": "CREATE HOLD"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_TRADE_ORDER_ACCEPTED",
+    "variables": [
+      "buyerFirstName",
+      "sellerName",
+      "quantityOrAmount",
+      "pricePerUnit",
+      "amount",
+      "assetName",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Buy order accepted by seller",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has accepted an order of {{quantityOrAmount}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_TRADE_ORDER_ACCEPTED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "quantityOrAmount",
+      "pricePerUnit",
+      "amount",
+      "assetName",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Buy order accepted by buyer",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has accepted an order of {{quantityOrAmount}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_TRADE_ORDER_HOLD_CREATED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Payment due",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "Please complete payment to purchase {{quantity}} {{assetName}} from {{sellerName}}.",
+    "buttonLabel": "COMPLETE PAYMENT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_TRADE_ORDER_HOLD_CREATED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order accepted by buyer",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has accepted your order to sell {{quantity}} {{assetName}} and will now complete payment.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_ATOMIC_TRADE_ORDER_PAID",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "issuerName",
+      "assetName",
+      "quantity",
+      "amount"
+    ],
+    "subject": "Sell order payment completed",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has completed payment of {{amount}} to purchase {{quantity}} {{assetName}}. {{issuerName}} has been notified and will settle the order.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_NONE_ATOMIC_TRADE_ORDER_PAID",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "assetName",
+      "quantity",
+      "amount",
+      "pricePerUnit",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Confirm payment for sell order",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has completed payment of {{amount}} to purchase {{quantity}} {{assetName}}. Please review and confirm receipt of payment.",
+    "buttonLabel": "CONFIRM PAYMENT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_TRADE_ORDER_PAID",
+    "variables": [
+      "issuerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "amount",
+      "pricePerUnit",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Sell order payment completed",
+    "messageTitle": "Dear {{issuerFirstName}},",
+    "message": "Payment of {{amount}} has been completed by {{buyerName}} to purchase {{quantity}} {{assetName}}. Please settle the order.",
+    "buttonLabel": "SETTLE ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_TRADE_ORDER_PAYMENT_CONFIRMED",
+    "variables": [
+      "buyerFirstName",
+      "sellerName",
+      "issuerName",
+      "assetName",
+      "quantity",
+      "amount",
+      "pricePerUnit",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Sell order payment confirmed",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has confirmed receipt of payment for {{quantity}} {{assetName}}.<bt/>{{issuerName}} has been notified and will now settle this order.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_TRADE_ORDER_SETTLED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "issuerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Sell order settled",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "Your purchase of {{quantity}} {{assetName}} from {{sellerName}} has been completed.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_SUBMITTED_TRADE_ORDER_REJECTED",
+    "variables": [
+      "sellerFirstName",
+      "issuerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order rejected",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{issuerName}} has rejected your order to sell {{quantity}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_APPROVED_TRADE_ORDER_REJECTED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order rejected by buyer",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has rejected your order to sell {{quantity}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_APPROVED_TRADE_ORDER_REJECTED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "comment",
+      "pricePerUnit",
+      "amount",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Buy order rejected by seller",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has rejected your order to buy {{quantity}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_ISSUER_APPROVED_TRADE_ORDER_REJECTED",
+    "variables": [
+      "issuerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order rejected by buyer",
+    "messageTitle": "Dear {{issuerFirstName}},",
+    "message": "{{buyerName}} has rejected {{sellerName}}'s order to sell {{quantity}} {{assetName}}.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_TRADE_ORDER_SETTLED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "assetName",
+      "quantity"
+    ],
+    "subject": "Sell order settled",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "Your order to sell {{quantity}} {{assetName}} to {{buyerName}} has been completed.",
+    "buttonLabel": "VIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SENDER_NON_BINDING_ENQUIRY_SUBMITTED",
+    "variables": [
+      "sellerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "withOrWithout",
+      "tokenUnit",
+      "assetCurrencyLabel"
+    ],
+    "subject": "Nonbinding enquiry submitted",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{buyerName}} has made a nonbinding enquiry and request to reserve {{quantity}} credits from {{assetName}}. Click the button below to view the details.",
+    "buttonLabel": "VIEW NONBINDING ENQUIRY"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_NON_BINDING_ENQUIRY_HOLD_GRANTED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Nonbinding enquiry hold granted",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "The request to reserve {{quantity}} {{assetName}} credits has been approved by the Producer. Click below to view the details.",
+    "buttonLabel": "VIEW HELD PROJECT DETAILS"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_NON_BINDING_ENQUIRY_UPDATED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Nonbinding enquiry updated",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "You have received an offer to purchase {{quantity}} {{assetName}} credits for {{amount}}. Click below to view the details.",
+    "buttonLabel": "VIEW ORDER DETAILS"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_RECIPIENT_NON_BINDING_ENQUIRY_HOLD_REJECTED",
+    "variables": [
+      "buyerFirstName",
+      "buyerName",
+      "sellerName",
+      "assetName",
+      "quantity",
+      "pricePerUnit",
+      "amount",
+      "comment",
+      "assetCurrencyLabel",
+      "tokenUnit"
+    ],
+    "subject": "Nonbinding enquiry hold rejected",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerName}} has rejected your request to hold {{quantity}} credits for {{assetName}} for the following reason:<br/><br/>Producer Note:<br/>{{comment}}<br/><br/>For more details click the link below.",
+    "buttonLabel": "VIEW PROJECT DETAILS"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_EVENT_CREATED",
+    "variables": [
+      "investorFirstName",
+      "issuerName",
+      "assetName",
+      "eventType"
+    ],
+    "subject": "{{eventType}} event created",
+    "messageTitle": "Dear {{investorFirstName}},",
+    "message": "Your {{eventType}} event for {{assetName}} asset from {{issuerName}} has been created.",
+    "buttonLabel": "VIEW EVENT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_EVENT_SETTLED",
+    "variables": [
+      "investorFirstName",
+      "issuerName",
+      "assetName",
+      "eventType"
+    ],
+    "subject": "{{eventType}} event settled",
+    "messageTitle": "Dear {{investorFirstName}},",
+    "message": "Your {{eventType}} event for {{assetName}} asset from {{issuerName}} has been settled.",
+    "buttonLabel": "VIEW EVENT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_INVESTOR_EVENT_CANCELED",
+    "variables": [
+      "investorFirstName",
+      "issuerName",
+      "assetName",
+      "eventType"
+    ],
+    "subject": "{{eventType}} event canceled",
+    "messageTitle": "Dear {{investorFirstName}},",
+    "message": "Your {{eventType}} event for {{assetName}} asset from {{issuerName}} has been canceled.",
+    "buttonLabel": "VIEW EVENT"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_OFFER_PENDING",
+    "variables": [
+      "sellerFirstName",
+      "assetName",
+      "marketplace",
+      "quantityOrAmount"
+    ],
+    "subject": "Your request to list credits",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "Your request to list {{quantityOrAmount}} carbon credits (tC02e) of {{assetName}} is in pending state. We will inform you as soon as it gets approved by {{marketplace}} marketplace",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_OFFER_APPROVED",
+    "variables": [
+      "sellerFirstName",
+      "assetName",
+      "marketplace",
+      "quantityOrAmount"
+    ],
+    "subject": "Your listing has been approved",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "Your request to list {{quantityOrAmount}} carbon credits (tC02e) of {{assetName}} on {{marketplace}} marketplace has been approved and ready for sale.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_OFFER_REJECTED",
+    "variables": [
+      "sellerFirstName",
+      "assetName",
+      "marketplace",
+      "quantityOrAmount"
+    ],
+    "subject": "Your listing has been rejected",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "Your request to list {{quantityOrAmount}} carbon credits (tC02e) of {{assetName}} has been rejected by {{marketplace}} marketplace.",
+    "buttonLabel": "VIEW PORTFOLIO"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_TRADE_ORDER_PRE_CREATED",
+    "variables": [
+      "sellerFirstName",
+      "agentName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "New sell order",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": "{{agentName}} has created an order for you to sell {{quantity}} {{assetName}}. Please review the order details.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_BUYER_TRADE_ORDER_APPROVED",
+    "variables": [
+      "buyerFirstName",
+      "sellerFirstName",
+      "agentName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Sell order approved",
+    "messageTitle": "Dear {{buyerFirstName}},",
+    "message": "{{sellerFirstName}} has approved the order created by {{agentName}} agent for you to buy {{quantity}} {{assetName}}. Please review the order details.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_TRADE_ORDER_PRE_CREATED",
+    "variables": [
+      "agentFirstName",
+      "sellerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade order created",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": "You have successfully created an order for {{sellerName}} to sell {{quantity}} {{assetName}}. Please review the order details.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_INSUFFICIENT_INVENTORY",
+    "variables": [
+      "agentFirstName",
+      "sellerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Insufficient Balance",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{sellerName}} does not have enough balance for the sell order of {{quantity}} {{assetName}}.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_SELLER_NOT_LINKED_TO_TOKEN",
+    "variables": [
+      "agentFirstName",
+      "sellerName",
+      "assetName"
+    ],
+    "subject": "Project not on-ramped",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{sellerName}} has not on-ramped any carbon credits for the project {{assetName}}.",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_PRECREATED_ORDER_APPROVED",
+    "variables": [
+      "sellerFirstName",
+      "agentName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Approved",
+    "messageTitle": "Dear {{sellerFirstName}}",
+    "message": " You have successfully approved the trade order created by {{agentName}} to sell {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_TRADE_ORDER_APPROVED",
+    "variables": [
+      "agentFirstName",
+      "sellerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Approved",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{sellerName}} has approved the trade order created by you to sell {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_TRADE_ORDER_ACCEPTED",
+    "variables": [
+      "agentFirstName",
+      "buyerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Accepted",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{buyerName}} has accepted the trade order created by you to buy {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_TRADE_ORDER_CANCELLED",
+    "variables": [
+      "agentFirstName",
+      "sellerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Cancelled",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{sellerName}} has cancelled the trade order created by you to sell {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_SELLER_TRADE_ORDER_CANCELLED",
+    "variables": [
+      "sellerFirstName",
+      "agentName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Cancelled",
+    "messageTitle": "Dear {{sellerFirstName}},",
+    "message": " {{agentName}} has cancelled the trade order created for you to sell {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  },
+  {
+    "tenantId": "codefi",
+    "key": "NOTIFY_AGENT_APPROVED_TRADE_ORDER_REJECTED",
+    "variables": [
+      "agentFirstName",
+      "buyerName",
+      "quantity",
+      "assetName"
+    ],
+    "subject": "Trade Order Rejected",
+    "messageTitle": "Dear {{agentFirstName}},",
+    "message": " {{buyerName}} has rejected the trade order to buy {{quantity}} {{assetName}}",
+    "buttonLabel": "REVIEW ORDER"
+  }
+]

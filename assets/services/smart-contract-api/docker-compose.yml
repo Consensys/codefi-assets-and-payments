@@ -1,0 +1,23 @@
+version: '3'
+services:
+  smart-contract-api:
+    env_file:
+      - .env
+      - ../../../.env
+    environment:
+      STORES_FILE: ${STORES_FILE-./config/stores.json}
+    image: smart-contract-api
+    networks:
+      - codefi
+    volumes:
+      - ./src:/usr/src/app/assets/services/smart-contract-api/src:delegated
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/smart-contract-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

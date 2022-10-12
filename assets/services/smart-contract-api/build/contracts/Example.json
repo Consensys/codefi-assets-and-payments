@@ -1,0 +1,25 @@
+{
+  "contractName": "ExampleContract",
+  "compiler": {
+    "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
+  },
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}

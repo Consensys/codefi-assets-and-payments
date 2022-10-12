@@ -1,0 +1,17 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": ["configurations/**/*"],
+    "plugins": [
+      {
+        "name": "@nestjs/swagger/plugin",
+        "options": {
+          "classValidatorShim": false,
+          "controllerFileNameSuffix": "Controller.ts",
+          "dtoFileNameSuffix": ["Request.ts", "Response.ts"]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+._route_fillKyc_kycProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+  height: calc(100vh - var(--spacing-loose));
+
+  > div.submitted {
+    margin-top: var(--spacing-tight-looser);
+    font-size: var(--typography-size-f1);
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--colors-successLighter);
+      color: var(--colors-successDark);
+      padding: 10px;
+      font-weight: var(--typography-weight-medium);
+      border-radius: 5px;
+      > svg {
+        margin-right: 5px;
+      }
+      &.error {
+        background-color: var(--colors-warningLight);
+        color: var(--colors-warningText);
+      }
+    }
+    > p {
+      margin-top: 10px;
+    }
+  }
+
+  > h1 {
+    font-weight: var(--typography-weight-medium);
+    font-size: var(--typography-size-f5);
+    margin-top: var(--spacing-tight-looser);
+  }
+
+  > p {
+    margin-top: var(--spacing-small);
+    text-align: center;
+  }
+
+  > menu {
+    margin-top: var(--spacing-small);
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      > li {
+        padding: var(--spacing-small) var(--spacing-tight);
+        list-style: none;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        > span {
+          display: block;
+
+          &.status {
+            display: flex;
+            align-items: center;
+            font-size: var(--typography-size-f0);
+            color: #666;
+          }
+
+          &.complete {
+            color: var(--colors-successDark);
+          }
+
+          &.rejected {
+            color: var(--colors-warningDark);
+          }
+
+          > svg {
+            display: block;
+            margin-right: var(--spacing-xs);
+          }
+        }
+      }
+    }
+  }
+
+  > a > button {
+    margin-top: var(--spacing-tight);
+  }
+}

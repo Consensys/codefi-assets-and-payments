@@ -1,0 +1,24 @@
+@import '../../constants.scss';
+
+._uiComponents_progressBar {
+  margin: var(--spacing-tight) 0;
+
+  > span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: var(--spacing-small);
+  }
+
+  > div {
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+
+    > div {
+      height: 4px;
+      background: linear-gradient(270deg, #2c56dd 0%, #3be3db 100%);
+      border-radius: 2px;
+    }
+  }
+}

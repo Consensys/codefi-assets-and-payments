@@ -1,0 +1,71 @@
+._route_issuer_fundInvestorAssets {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  > main {
+    padding: 32px 40px;
+
+    > header {
+      width: 100%;
+    }
+
+    > .numericData {
+      display: flex;
+      padding-top: 24px;
+
+      > .graph {
+        flex-grow: 1;
+      }
+
+      > .baseInfos {
+        padding: 24px;
+        width: 347px;
+        margin-right: 24px;
+        flex-shrink: 0;
+
+        > header {
+          > span {
+            font-weight: 500;
+            font-size: 16px;
+            color: #475166;
+            display: block;
+          }
+
+          > div {
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 24px;
+          }
+        }
+
+        > ul {
+          > li {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+
+            > span {
+              display: block;
+
+              &:first-of-type {
+                font-size: 14px;
+                color: #777c8c;
+              }
+
+              &:last-of-type {
+                font-size: 14px;
+              }
+            }
+
+            &:last-of-type {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

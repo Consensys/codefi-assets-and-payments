@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Payments-Issuer",
+    "description": "Codefi Payments Issuer role",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API deploy of Digital Currency",
+        "value": "deploy:digital-currency"
+      },
+      {
+        "description": "Digital Currency API mint of Digital Currency",
+        "value": "mint:digital-currency"
+      },
+      {
+        "description": "Digital Currency API transfer of Digital Currency",
+        "value": "transfer:digital-currency"
+      },
+      {
+        "description": "Digital Currency API burn of Digital Currency",
+        "value": "burn:digital-currency"
+      },
+      {
+        "value": "write:operations_request",
+        "description": "Able to create operation requests"
+      },
+      {
+        "value": "write:operations_resolve",
+        "description": "Able to resolve operation requests"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  },
+  {
+    "name": "Payments-Creator",
+    "description": "Codefi Payments Creator role",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API deploy of Digital Currency",
+        "value": "deploy:digital-currency"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  },
+  {
+    "name": "Payments-LiquidityProvider",
+    "description": "Codefi Payments Liquidity Provider role",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API mint of Digital Currency",
+        "value": "mint:digital-currency"
+      },
+      {
+        "description": "Digital Currency API transfer of Digital Currency",
+        "value": "transfer:digital-currency"
+      },
+      {
+        "description": "Digital Currency API burn of Digital Currency",
+        "value": "burn:digital-currency"
+      },
+      {
+        "value": "write:operations_request",
+        "description": "Able to create operation requests"
+      },
+      {
+        "value": "write:operations_resolve",
+        "description": "Able to resolve operation requests"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  },
+  {
+    "name": "Payments-Acquirer",
+    "description": "Codefi Payments Acquirer",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API transfer of Digital Currency",
+        "value": "transfer:digital-currency"
+      },
+      {
+        "value": "write:operations_request",
+        "description": "Able to create operation requests"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  },
+  {
+    "name": "Payments-Operator",
+    "description": "Codefi Payments Operator role",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API transfer of Digital Currency",
+        "value": "transfer:digital-currency"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  },
+  {
+    "name": "Payments-Auditor",
+    "description": "Codefi Payments Auditor role",
+    "permissions": [
+      {
+        "description": "Digital Currency API read Digital Currency",
+        "value": "read:digital-currency"
+      },
+      {
+        "description": "Digital Currency API read Digital Currency Holders",
+        "value": "read:digital-currency-holders"
+      },
+      {
+        "description": "Digital Currency API read Operations",
+        "value": "read:digital-currency-operations"
+      },
+      {
+        "description": "Digital Currency API read all Operations",
+        "value": "readall:digital-currency-operations"
+      },
+      {
+        "description": "Read a Entity",
+        "value": "read:entity"
+      },
+      {
+        "description": "Read a Legal Entity",
+        "value": "read:legal-entity"
+      },
+      {
+        "description": "Digital Currency API read Balances History",
+        "value": "read:balance-history"
+      }
+    ]
+  }
+]

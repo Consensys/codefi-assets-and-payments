@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "entityDeleteCommand",
+  "namespace": "net.consensys.codefi.convergence.entity",
+  "fields": [
+    { "name": "traceParent", "type": ["null", "string"], "default": null },
+    { "name": "tenantId", "type": ["null", "string"], "default": null },
+    { "name": "entityId", "type": "string" }
+  ]
+}

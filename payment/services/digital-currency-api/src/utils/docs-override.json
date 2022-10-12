@@ -1,0 +1,34 @@
+{
+  "info": {
+    "x-logo": {
+      "url": "/digital-currency/Codefi_Logo_White.png",
+      "backgroundColor": "#2B4BBF",
+      "altText": "Digital Currency API"
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "description": "Keys and Secrets can be exchanged for Bearer Tokens that identify your requests and authenticate you with the API. Codefi Payments API uses OAuth 2 with the Client Credentials flow (defined in OAuth2.0 RFC 6749, section 4.4). To receive your access token, please [contact us](https://consensys.net/contact/). For more information on the access token, please refer to Auth0 documentation.",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "<YOUR_OAUTH_TOKEN_URL>",
+            "scopes": {
+              "deploy:digital-currency": "Can create new digital currency",
+              "read:digital-currency": "Can retrieve digital currencies",
+              "mint:digital-currency": "Can mint a digital currency",
+              "transfer:digital-currency": "Can transfer digital currencies",
+              "burn:digital-currency": "Can burn digital currencies",
+              "read:digital-currency-holders": "Can read information about currencies holders",
+              "readall:digital-currency-operations": "Can read information about all currencies operations",
+              "read:digital-currency-operations": "Can read information about one currency operation",
+              "write:operations_resolve": "Can create and resolve acquisition and redeem operations"
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import '../../constants.scss';
+
+#_routes_stylesGuide {
+  > main {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $threshold-mobile) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    > menu {
+      width: 100%;
+      margin-bottom: var(--spacing-tight);
+
+      @media screen and (min-width: $threshold-mobile) {
+        margin-right: var(--spacing-regular);
+        margin-bottom: 0;
+        width: 150px;
+        flex-shrink: 0;
+      }
+
+      > header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        > span {
+          display: block;
+          padding: var(--spacing-small) var(--spacing-tight);
+        }
+
+        > button {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          border: none;
+
+          > svg {
+            display: block;
+          }
+        }
+
+        @media screen and (min-width: $threshold-mobile) {
+          display: none;
+        }
+      }
+
+      > div {
+        padding: var(--spacing-xs) 0;
+        display: none;
+
+        &.forceDisplayed {
+          display: block;
+          border-top: 1px solid #eee;
+          padding-top: var(--spacing-small);
+        }
+
+        @media screen and (min-width: $threshold-mobile) {
+          display: block;
+        }
+
+        > h3 {
+          text-transform: uppercase;
+          font-size: var(--typography-size-f0);
+          font-weight: var(--typography-weight-bold);
+          border-top: 1px solid #eee;
+          padding: var(--spacing-small);
+          margin-top: var(--spacing-small);
+          color: #999;
+        }
+
+        > a {
+          font-size: 14px;
+          display: block;
+          width: 100%;
+          text-decoration: none;
+          color: #000;
+          text-align: left;
+          padding: var(--spacing-xs) var(--spacing-small) var(--spacing-xs)
+            var(--spacing-tight);
+          border: none;
+          background: none;
+
+          &:hover,
+          &.active {
+            color: var(--colors-main);
+          }
+        }
+      }
+    }
+
+    > div {
+      flex-grow: 1;
+      min-width: 0;
+
+      > h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $threshold-mobile) {
+          margin-bottom: 32px;
+          font-size: 32px;
+        }
+      }
+
+      > h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 18px 0;
+        border-top: 1px solid #ccc;
+        padding-top: 5px;
+
+        @media screen and (min-width: $threshold-mobile) {
+          margin: 24px 0;
+          font-size: 24px;
+        }
+      }
+
+      > p {
+        margin-bottom: var(--spacing-tight);
+      }
+    }
+  }
+}

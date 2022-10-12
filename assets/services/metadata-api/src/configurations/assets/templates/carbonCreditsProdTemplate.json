@@ -1,0 +1,122 @@
+{
+  "tenantId": "KP4QIddmsA9JqT2BSgJtavxemC1wGxYc",
+  "category": "HYBRID",
+  "name": "Carbon Credits Prod",
+  "type": "CARBON_CREDITS",
+  "label": {
+    "en": "New Carbon Credit",
+    "fr": "New Carbon Credit",
+    "ja": "新しいカーボンクレジット"
+  },
+  "description": {
+    "en": "Carbon Credits Token is representation of a Carbon Credit i.e, a permit that allows a company that holds it to emit a certain amount of carbon dioxide or other greenhouse gases",
+    "fr": "Le jeton de crédits de carbone est la représentation d`un crédit de carbone, c`est-à-dire un permis qui permet à une entreprise qui le détient d`émettre une certaine quantité de dioxyde de carbone ou d`autres gaz à effet de serre",
+    "ja": "カーボンクレジットトークンは、カーボンクレジットの表現です。つまり、カーボンクレジットを保有する企業が、一定量の二酸化炭素またはその他の温室効果ガスを排出できるようにする許可証です"
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Carbon Credit Details",
+        "fr": "Détails du crédit carbone"
+      },
+      "sections": [
+        {
+          "key": "projectDetails",
+          "label": {
+            "en": "Project Details",
+            "fr": "Informations sur les actifs"
+          },
+          "elements": [
+            "carbon_credits_project_details_project_name",
+            "carbon_credits_project_details_project_description",
+            "carbon_credits_project_details_project_link",
+            "carbon_credits_project_details_project_developer",
+            "carbon_credits_project_details_country_region",
+            "carbon_credits_project_details_durability",
+            "carbon_credits_project_details_removal_avoidance",
+            "carbon_credits_project_details_removal_avoidance_method",
+            "carbon_credits_project_details_certifier_registry",
+            "carbon_credits_project_details_project_id",
+            "carbon_credits_project_details_registry_link",
+            "carbon_credits_project_details_project_type",
+            "carbon_credits_project_details_accounting_methodology"
+          ]
+        },
+        {
+          "key": "sustainableDevelopmentGoals",
+          "label": {
+            "en": "Sustainable Development Goals",
+            "fr": "Sustainable Development Goals"
+          },
+          "elements": [
+            "carbon_credits_project_details_sustainable_development_goals"
+          ]
+        },
+        {
+          "key": "additionalCertifications",
+          "label": {
+            "en": "Additional Certifications",
+            "fr": "Additional Certifications"
+          },
+          "elements": [
+            "carbon_credits_project_details_additional_certifications"
+          ]
+        },
+        {
+          "key": "images",
+          "label": {
+            "en": "Images",
+            "fr": "Images"
+          },
+          "elements": [
+            "carbon_credits_project_details_banner_image",
+            "carbon_credits_project_details_background_image"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Carbon Credit Information",
+        "fr": "Informations sur le crédit carbone"
+      },
+      "sections": [
+        {
+          "key": "carbonCreditInformation",
+          "label": {
+            "en": "Carbon Credit Information",
+            "fr": "Informations sur le crédit carbone"
+          },
+          "elements": [
+            "carbon_credits_credit_information_credit_type",
+            "carbon_credits_credit_information_issuance_date",
+            "carbon_credits_credit_information_vintage_start_date",
+            "carbon_credits_credit_information_vintage_end_date",
+            "carbon_credits_credit_information_total_vintage_quantity",
+            "carbon_credits_credit_information_credits_quantity_issued"
+          ]
+        },
+        {
+          "key": "documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": ["carbon_credits_credit_information_documents"]
+        },
+        {
+          "key": "notes",
+          "label": {
+            "en": "Notes",
+            "fr": "Remarques"
+          },
+          "elements": ["carbon_credits_credit_information_submission_notes"]
+        }
+      ]
+    }
+  ]
+}

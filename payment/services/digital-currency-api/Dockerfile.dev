@@ -1,0 +1,15 @@
+FROM node:18
+
+WORKDIR /usr/src/app
+
+COPY . .
+# Install dependencies using the Yarn cache from the previous build, if one exists.
+RUN --mount=type=cache,target=/yarn YARN_CACHE_FOLDER=/yarn yarn install
+
+# Build the Digital currency api and all its local dependencies.
+RUN npx nx build digital-currency-api
+
+# Remove the Digital currency API build files as we want NestJS to build it on startup.
+RUN rm -rf ./payment/services/digital-currency-api/dist
+
+CMD [ "npx", "nx", "start:dev", "digital-currency-api" ]

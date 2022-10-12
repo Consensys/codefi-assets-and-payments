@@ -1,0 +1,675 @@
+[
+  {
+    "key": "fundInformations_fundName",
+    "map": "asset_general_name",
+    "type": "string",
+    "status": "mandatory",
+    "label": {
+      "en": "Asset name",
+      "fr": "Nom du fond",
+      "ja": "トークン名"
+    },
+    "size": 3,
+    "maxLength": 25,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundSymbol",
+    "map": "asset_general_symbol",
+    "type": "string",
+    "label": {
+      "en": "Asset symbol",
+      "fr": "Symbole du fond",
+      "ja": "トークンの記号"
+    },
+    "size": 2,
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_fundDescription",
+    "map": "asset_general_description",
+    "type": "string",
+    "multiline": true,
+    "label": {
+      "en": "Asset description",
+      "fr": "Description du fond",
+      "ja": "トークンの概要"
+    },
+    "sublabel": {
+      "en": "Provide as much detail as possible as this description will be seen by investors on the asset summary page.",
+      "fr": "Provide as much detail as possible as this description will be seen by investors on the asset summary page.",
+      "ja": "この説明は投資家がトークンの概要ページで見ることになるので、できるだけ詳細に記入してください"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_bankName",
+    "map": "asset_bankInformations_bankName",
+    "type": "string",
+    "label": {
+      "en": "Bank name",
+      "fr": "Nom de la banque",
+      "ja": "銀行名"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_IBAN",
+    "map": "asset_bankInformations_iban",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "Account number or IBAN",
+      "fr": "Account number or IBAN",
+      "ja": "口座番号 or IBAN"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "bankInformation_Swift",
+    "map": "asset_bankInformations_swift",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "SWIFT/BIC",
+      "fr": "SWIFT/BIC",
+      "ja": "SWIFT/BIC"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_docusign",
+    "map": "asset_documents_docusign",
+    "type": "docusign",
+    "fileAccept": "pdf",
+    "size": 4,
+    "label": {
+      "en": "Subscription Agreement",
+      "fr": "Subscription Agreement",
+      "ja": "売買契約"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_documents",
+    "map": "asset_documents_other",
+    "type": "document",
+    "fileAccept": "pdf",
+    "label": {
+      "en": "Upload any documents relevant to the fund for the investor to view",
+      "fr": "Upload any documents relevant to the fund for the investor to view",
+      "ja": "契約締結前交付書面"
+    },
+    "status": "optional",
+    "multiline": true,
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_team",
+    "map": "asset_managementTeam_team",
+    "type": "team",
+    "size": 4,
+    "label": {
+      "en": "Add management team members",
+      "fr": "Add management team members",
+      "ja": "マネジメントチームのメンバー追加"
+    },
+    "sublabel": {
+      "en": "Team members information will be shown to investors on the asset overview page.",
+      "fr": "Team members information will be shown to investors on the asset overview page.",
+      "ja": "チームメンバーの情報は、資産概要ページで投資家に表示されます"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_bannerPicture",
+    "map": "asset_images_banner",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload a banner image",
+      "fr": "Upload a banner image",
+      "ja": "バナー画像のアップロード"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the asset’s overview page and will span the full width of the page.",
+      "fr": "This image will be shown in the asset’s overview page and will span the full width of the page.",
+      "ja": "この画像は、アセットの概要ページに表示され、ページの幅いっぱいに表示されます。"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "fundInformations_coverPicture",
+    "map": "asset_images_cover",
+    "type": "document",
+    "fileAccept": "image",
+    "size": 3,
+    "label": {
+      "en": "Upload a card background image",
+      "fr": "Upload a card background image",
+      "ja": "カード背景画像のアップロード"
+    },
+    "sublabel": {
+      "en": "This image will be shown in the asset’s card.",
+      "fr": "This image will be shown in the asset’s card.",
+      "ja": "この画像は資産のカードに表示されます。"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_className",
+    "map": "class_general_name",
+    "type": "string",
+    "leftTag": {
+      "en": "Class",
+      "fr": "Classe",
+      "ja": "詳細"
+    },
+    "size": 3,
+    "placeholder": {
+      "en": "e.g. A",
+      "fr": "ex : A",
+      "ja": "例 A"
+    },
+    "label": {
+      "en": "Share Class name",
+      "fr": "Nom de la classe de part",
+      "ja": "トークン名"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_ISINCode",
+    "map": "class_general_isin",
+    "type": "string",
+    "size": 4,
+    "label": {
+      "en": "ISIN code",
+      "fr": "Code ISIN",
+      "ja": "ISIN コード"
+    },
+    "status": "optional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_currency",
+    "map": "class_general_currency",
+    "type": "multistring",
+    "label": {
+      "en": "Currency",
+      "fr": "Devise",
+      "ja": "通貨"
+    },
+    "placeholder": {
+      "en": "Select currency",
+      "fr": "Select currency",
+      "ja": "通貨を選択"
+    },
+    "options": ["AUD", "CAD", "USD", "EUR", "GBP", "CHF", "JPY"],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_orderSubscriptionsTypes",
+    "name": "shareClass_orderSubscriptionsTypes",
+    "map": "class_rules_subscriptionType",
+    "type": "radio",
+    "label": {
+      "en": "Type of order subscriptions",
+      "fr": "Types d’ordres de souscription",
+      "ja": "売買単位"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "AMOUNT",
+        "label": {
+          "en": "Amount",
+          "fr": "Valeur",
+          "ja": "金額"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInAmount",
+          "shareClass_maximumSubscriptionInAmount"
+        ]
+      },
+      {
+        "key": "QUANTITY",
+        "label": {
+          "en": "Quantity",
+          "fr": "Quantité",
+          "ja": "数量"
+        },
+        "relatedElements": [
+          "shareClass_minimumSubscriptionInQuantity",
+          "shareClass_maximumSubscriptionInQuantity"
+        ]
+      }
+    ],
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInAmount",
+    "map": "class_rules_minSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription amount",
+      "fr": "Minimum subscription amount",
+      "ja": "最低売買金額"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInAmount",
+    "map": "class_rules_maxSubscriptionAmount",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription amount",
+      "fr": "Maximum subscription amount",
+      "ja": "最大売買金額"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_minimumSubscriptionInQuantity",
+    "map": "class_rules_minSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Minimum subscription quantity",
+      "fr": "Minimum subscription quantity",
+      "ja": "最低売買単位"
+    },
+    "rightTag": {
+      "en": "Shares",
+      "fr": "Shares",
+      "ja": "トークン"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_maximumSubscriptionInQuantity",
+    "map": "class_rules_maxSubscriptionQuantity",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Maximum subscription quantity",
+      "fr": "Maximum subscription quantity",
+      "ja": "最大売買数"
+    },
+    "rightTag": {
+      "en": "Shares",
+      "fr": "Shares",
+      "ja": "トークン"
+    },
+    "status": "conditionalOptional",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_initialShareValue_check",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define an initial value for this share",
+      "fr": "Do you wish to define an initial value for this share",
+      "ja": "このトークンの初期価格を設定しますか？"
+    },
+    "sublabel": {
+      "en": "All fees will be charged to the investor when purchasing the asset.",
+      "fr": "All fees will be charged to the investor when purchasing the asset.",
+      "ja": "すべての手数料は、トークンの購入時に投資家に請求されます。"
+    },
+    "fillLine": true,
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui",
+          "ja": "はい"
+        },
+        "relatedElements": ["shareClass_initialShareValue_value"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non",
+          "ja": "いいえ"
+        }
+      }
+    ],
+    "name": "shareClass_initialShareValue_check",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_initialShareValue_value",
+    "map": "class_nav_value",
+    "type": "number",
+    "size": 4,
+    "label": {
+      "en": "Initial Share value",
+      "fr": "Initial Share value",
+      "ja": "初期価格"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_date",
+    "map": "class_initialSubscription_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription start date",
+      "fr": "Subscription start date",
+      "ja": "販売開始日"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_start_hour",
+    "map": "class_initialSubscription_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription start hour",
+      "fr": "Subscription start hour",
+      "ja": "販売開始時間"
+    },
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_cutoff_date",
+    "map": "class_initialSubscription_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription cut-off date",
+      "fr": "Subscription cut-off date",
+      "ja": "販売終了日"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_cutoff_hour",
+    "map": "class_initialSubscription_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription cut-off hour",
+      "fr": "Subscription cut-off hour",
+      "ja": "販売終了時間"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_valuation_date",
+    "map": "class_initialSubscription_valuationDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription valuation date",
+      "fr": "Subscription valuation date",
+      "ja": "評価日"
+    },
+    "status": "optional",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_valuation_hour",
+    "map": "class_initialSubscription_valuationHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription valuation hour",
+      "fr": "Subscription valuation hour",
+      "ja": "評価時間"
+    },
+    "status": "optional",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_date",
+    "map": "class_initialSubscription_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription settlement date",
+      "fr": "Subscription settlement date",
+      "ja": "決済日"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_initialSubscription_settlement_hour",
+    "map": "class_initialSubscription_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription settlement hour",
+      "fr": "Subscription settlement hour",
+      "ja": "決済時間"
+    },
+    "status": "mandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_check2",
+    "type": "radio",
+    "label": {
+      "en": "Do you want to define a subsequent subscription period?",
+      "fr": "Do you want to define a subsequent subscription period?",
+      "ja": "次の販売期間を定義しますか?"
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui",
+          "ja": "はい"
+        },
+        "relatedElements": [
+          "shareClass_subscription_subsequentSubscription_start_date",
+          "shareClass_subscription_subsequentSubscription_start_hour",
+          "shareClass_subscription_subsequentSubscription_cutoff_date",
+          "shareClass_subscription_subsequentSubscription_cutoff_hour",
+          "shareClass_subscription_subsequentSubscription_valuation_date",
+          "shareClass_subscription_subsequentSubscription_valuation_hour",
+          "shareClass_subscription_subsequentSubscription_settlement_date",
+          "shareClass_subscription_subsequentSubscription_settlement_hour"
+        ]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non",
+          "ja": "いいえ"
+        }
+      }
+    ],
+    "name": "shareClass_subscription_subsequentSubscription_check2",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_start_date",
+    "map": "class_subscription_startDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription start date",
+      "fr": "Subscription start date",
+      "ja": "販売開始時間"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_start_hour",
+    "map": "class_subscription_startHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription start hour",
+      "fr": "Subscription start hour",
+      "ja": "販売開始時間"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_cutoff_date",
+    "map": "class_subscription_cutoffDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription cut-off date",
+      "fr": "Subscription cut-off date",
+      "ja": "販売終了日"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_cutoff_hour",
+    "map": "class_subscription_cutoffHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription cut-off hour",
+      "fr": "Subscription cut-off hour",
+      "ja": "販売終了時間"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_valuation_date",
+    "map": "class_subscription_valuationDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription valuation date",
+      "fr": "Subscription valuation date",
+      "ja": "評価日"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_valuation_hour",
+    "map": "class_subscription_valuationHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription valuation hour",
+      "fr": "Subscription valuation hour",
+      "ja": "評価時間"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_settlement_date",
+    "map": "class_subscription_settlementDate",
+    "type": "date",
+    "size": 3,
+    "label": {
+      "en": "Subscription settlement date",
+      "fr": "Subscription settlement date",
+      "ja": "決済日"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "shareClass_subscription_subsequentSubscription_settlement_hour",
+    "map": "class_subscription_settlementHour",
+    "type": "time",
+    "size": 2,
+    "label": {
+      "en": "Subscription settlement hour",
+      "fr": "Subscription settlement hour",
+      "ja": "決済時間"
+    },
+    "status": "conditionalMandatory",
+    "updatable": true
+  },
+  {
+    "key": "sharedClass_customFeesCheck",
+    "type": "radio",
+    "label": {
+      "en": "Do you wish to define subscription fees for this share class?",
+      "fr": "Do you wish to define subscription fees for this share class?",
+      "ja": "販売手数料を設定しますか？"
+    },
+    "fillLine": true,
+    "sublabel": {
+      "en": "All fees will be charged to the investor when purchasing the asset.",
+      "fr": "All fees will be charged to the investor when purchasing the asset.",
+      "ja": "すべての手数料は、トークン購入時に投資家に請求されます。"
+    },
+    "inputs": [
+      {
+        "key": "YES",
+        "label": {
+          "en": "Yes",
+          "fr": "Oui",
+          "ja": "はい"
+        },
+        "relatedElements": ["sharedClass_customFeesValue"]
+      },
+      {
+        "key": "NO",
+        "label": {
+          "en": "No",
+          "fr": "Non",
+          "ja": "いいえ"
+        }
+      }
+    ],
+    "name": "sharedClass_customFeesCheck",
+    "status": "mandatory",
+    "updatable": false
+  },
+  {
+    "key": "sharedClass_customFeesValue",
+    "map": "class_fees_subscriptionCustomFeesValue",
+    "size": 4,
+    "fillLine": true,
+    "multiline": true,
+    "type": "percentage",
+    "label": {
+      "en": "Maximum fee amount",
+      "fr": "Maximum fee amount",
+      "ja": "最大手数料額"
+    },
+    "status": "conditionalMandatory",
+    "updatable": false
+  }
+]

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  zookeeper:
+    image: kymeric/cp-zookeeper:latest
+
+  schema-registry:
+    image: eugenetea/schema-registry-arm64:latest
+
+  kafka:
+    image: kymeric/cp-kafka:latest

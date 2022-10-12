@@ -1,0 +1,41 @@
+version: '3'
+services:
+  metadata-api:
+    image: metadata-api
+    restart: always
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/metadata-api/${DOCKERFILE-Dockerfile.dev}
+    environment:
+      STORES_FILE: ${STORES_FILE-./config/stores.json}
+    env_file:
+      - .env
+      - ../../../.env
+    volumes:
+      - ./src:/usr/src/app/assets/services/metadata-api/src:delegated
+    networks:
+      - codefi
+    depends_on:
+      - metadata-api-db
+    labels:
+      local.filebeat: 'true'
+
+  metadata-api-db:
+    container_name: metadata-api-db
+    image: postgres:11.8
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - codefi
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi
+volumes:
+  db-data:
+    driver: local

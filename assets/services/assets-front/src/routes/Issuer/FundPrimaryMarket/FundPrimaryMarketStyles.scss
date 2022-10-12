@@ -1,0 +1,52 @@
+._route_issuer_fundPrimaryMarket {
+  > main {
+    padding: 32px 40px;
+    .keyInfoCutOff {
+      margin-bottom: 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      .keyInfo {
+        display: flex;
+        margin: 0 -8px;
+        .infoBox {
+          border: 1px solid #dfe0e6;
+          border-radius: 4px;
+          margin: 0 8px;
+          padding: 16px 24px;
+          .infoTitle {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #475166;
+          }
+          .infoValue {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #000a28;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  width: 580px;
+}
+
+.dialogMessage {
+  font-size: 14px;
+  background: #f0f8ff;
+  border: 1px solid #f0f0f2;
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px 25px;
+  margin-bottom: 20px;
+  > svg {
+    margin: 10px;
+    width: 40px;
+  }
+}

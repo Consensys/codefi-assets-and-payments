@@ -1,0 +1,64 @@
+version: '3.4'
+
+x-common: &common
+  restart: always
+  image: regalpenguin/kube-tunnel:latest
+  volumes:
+    - ~/.kube/config:/root/.kube/config
+    - ~/.aws:/root/.aws
+
+x-kafka-broker-common: &kafka-broker-common
+  <<: *common
+  ports:
+    - 9092
+
+x-kafka-broker-common-env: &kafka-broker-common-env
+  NAMESPACE: orchestrate
+  REMOTE_PORT: 9092
+  LOCAL_PORT: 9092
+
+services:
+  kafka-0:
+    <<: *kafka-broker-common
+    networks:
+      codefi:
+        ipv4_address: 172.18.0.80
+    environment:
+      <<: *kafka-broker-common-env
+      POD: kafka-0
+
+  kafka-1:
+    <<: *kafka-broker-common
+    networks:
+      codefi:
+        ipv4_address: 172.18.0.81
+    environment:
+      <<: *kafka-broker-common-env
+      POD: kafka-1
+
+  kafka-2:
+    <<: *kafka-broker-common
+    networks:
+      codefi:
+        ipv4_address: 172.18.0.82
+    environment:
+      <<: *kafka-broker-common-env
+      POD: kafka-2
+
+  remote-schema-registry:
+    <<: *common
+    networks:
+      codefi:
+        ipv4_address: 172.18.0.83
+    environment:
+      NAMESPACE: convergence
+      POD: confluent-stack-cp-schema-registry-f449b7b84-cm2cz
+      REMOTE_PORT: 8081
+      LOCAL_PORT: 8081
+    ports:
+      - 8081
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

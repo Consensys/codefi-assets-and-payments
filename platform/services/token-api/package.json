@@ -1,0 +1,169 @@
+{
+  "name": "@codefi-assets-and-payments/token-api",
+  "private": true,
+  "version": "22.7.1",
+  "description": "Token-API exposes a unique interface to interact with tokens via http calls and events",
+  "license": "Apache",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "docs": "speccy serve ./api-spec.json",
+    "lint-docs": "speccy lint --json-schema ./api-spec.json",
+    "start": "nest start",
+    "stop": "pkill --signal SIGINT token-api",
+    "start:dev": "nest start --debug 0.0.0.0:9229 --watch",
+    "docker": "docker-compose up --build",
+    "docker:detached": "docker-compose up -d --build",
+    "docker:down": "docker-compose down",
+    "prettier": "prettier --write '{src,apps,libs,test}/**/*.ts'",
+    "prettier:check": "prettier --check '{src,apps,libs,test}/**/*.ts'",
+    "lint": "eslint --cache '{src,apps,libs,test}/**/*.ts'",
+    "lint:fix": "eslint --cache --fix '{src,apps,libs,test}/**/*.ts'",
+    "test": "jest src",
+    "test:watch": "jest src --watch",
+    "test:cov": "jest src --ci --coverage",
+    "test:integration": "INTEGRATION_TEST=true jest integration --detectOpenHandles --runInBand --verbose --forceExit",
+    "test:integration:operations:get": "INTEGRATION_TEST=true jest integration/operations.get.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:get": "INTEGRATION_TEST=true jest integration/tokens.get.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:burn": "INTEGRATION_TEST=true jest integration/tokens.erc20.burn.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:deploy": "INTEGRATION_TEST=true jest integration/tokens.erc20.deploy.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:register": "INTEGRATION_TEST=true jest integration/tokens.erc20.register.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:mint": "INTEGRATION_TEST=true jest integration/tokens.erc20.mint.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:transfer": "INTEGRATION_TEST=true jest integration/tokens.erc20.transfer.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc20:exec": "INTEGRATION_TEST=true jest integration/tokens.erc20.exec.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:deploy": "INTEGRATION_TEST=true jest integration/tokens.erc721.deploy.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:register": "INTEGRATION_TEST=true jest integration/tokens.erc721.register.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:mint": "INTEGRATION_TEST=true jest integration/tokens.erc721.mint.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:burn": "INTEGRATION_TEST=true jest integration/tokens.erc721.burn.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:transfer": "INTEGRATION_TEST=true jest integration/tokens.erc721.transfer.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:exec": "INTEGRATION_TEST=true jest integration/tokens.erc721.exec.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:tokens:erc721:set-token-uri": "INTEGRATION_TEST=true jest integration/tokens.erc721.set-token-uri.integration.test.ts --detectOpenHandles --runInBand --verbose --forceExit ",
+    "test:integration:pipeline": "INTEGRATION_TEST=true PIPELINE=true NODE_ENV=development jest integration --detectOpenHandles --runInBand --verbose --forceExit",
+    "readiness:check": "PIPELINE=true ts-node integration/utils/readyCheck.ts",
+    "release": "standard-version",
+    "database:configure": "configure-database",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli -f ./src/ormconfig.ts",
+    "typeorm:create": "npm run typeorm migration:create -- -n",
+    "typeorm:migrate": "npm run typeorm migration:generate -- -n",
+    "typeorm:run": "npm run typeorm migration:run -t=each",
+    "typeorm:revert": "npm run typeorm migration:revert"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/auth": "*",
+    "@codefi-assets-and-payments/configure-database": "*",
+    "@codefi-assets-and-payments/contracts": "*",
+    "@codefi-assets-and-payments/error-handler": "*",
+    "@codefi-assets-and-payments/messaging-events": "*",
+    "@codefi-assets-and-payments/nestjs-messaging": "*",
+    "@codefi-assets-and-payments/nestjs-orchestrate": "*",
+    "@codefi-assets-and-payments/observability": "*",
+    "@codefi-assets-and-payments/tokens": "*",
+    "@codefi-assets-and-payments/ts-types": "*",
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
+    "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/swagger": "^5.2.1",
+    "@nestjs/terminus": "^8.0.0",
+    "@nestjs/typeorm": "~8.0.0",
+    "bignumber.js": "9.0.0",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.5.4",
+    "joi": "^17.6.0",
+    "kafkajs": "^1.16.0",
+    "pg": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.2.0",
+    "swagger-ui-express": "^4.4.0",
+    "ts-node": "^10.8.1",
+    "tsconfig-paths": "^4.0.0",
+    "typeorm": "~0.2.45",
+    "typescript": "^4.3.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@nestjs/cli": "^8.0.0",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.0.0",
+    "@types/node": "^18.0.0",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "axios": "^0.27.2",
+    "axios-retry": "^3.2.5",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "^28.0.0",
+    "jest-create-mock-instance": "^2.0.0",
+    "jest-junit": "^12.0.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.3.2",
+    "speccy": "^0.11.0",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^28.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/setEnvVars.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/customConsole.ts"
+    ],
+    "globalSetup": "./integration/utils/globalSetup.ts",
+    "globalTeardown": "./integration/utils/globalTeardown.ts",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95
+      }
+    },
+    "rootDir": "./",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/*/**/*.{ts,js}",
+      "!src/**/{server,sleep}.{ts,js}",
+      "!src/{validation,modules,guards,responses,requests,migration}/**",
+      "!src/data/entities/**",
+      "!src/data/dto/**",
+      "!src/services/instances/**",
+      "!src/migration/**"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "testResultsProcessor": "jest-sonar-reporter",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "npm run lint:fix --",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

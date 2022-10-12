@@ -1,0 +1,43 @@
+version: '3.4'
+services:
+  digital-currency-db:
+    image: postgres
+    networks:
+      - codefi
+    environment:
+      - POSTGRES_DB=${DB_DATABASE_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+    - 5435:5432
+  digital-currency-api:
+    env_file:
+      - ../../../.env
+      - .env
+    image: digital-currency-api
+    networks:
+      - codefi
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/usr/src/app/payment/services/digital-currency-api/src:delegated
+      - ./integration:/usr/src/app/payment/services/digital-currency-api/integration:delegated
+    depends_on:
+      - digital-currency-db
+    build:
+      context: ../../../
+      dockerfile: ./payment/services/digital-currency-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

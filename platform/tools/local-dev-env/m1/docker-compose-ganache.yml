@@ -1,0 +1,5 @@
+version: "3.7"
+
+services:
+  blockscout:
+    image: regalpenguin/blockscout-arm64:v4.1.0-beta

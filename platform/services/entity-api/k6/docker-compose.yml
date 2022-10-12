@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  k6:
+    image: regalpenguin/k6:latest
+    networks:
+      - codefi
+    extra_hosts:
+      - kafka-0.kafka-headless.orchestrate.svc.cluster.local:172.18.0.80
+      - kafka-1.kafka-headless.orchestrate.svc.cluster.local:172.18.0.81
+      - kafka-2.kafka-headless.orchestrate.svc.cluster.local:172.18.0.82
+    env_file:
+      - ../.env
+    volumes:
+      - ./dist:/scripts
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

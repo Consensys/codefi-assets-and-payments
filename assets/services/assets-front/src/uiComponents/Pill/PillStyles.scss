@@ -1,0 +1,114 @@
+._uiComponent_pill {
+  display: inline-block;
+  padding: 6px var(--spacing-small);
+  background: var(--colors-mainLighter);
+  color: var(--colors-main);
+  border: 1px solid var(--colors-main);
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.1);
+  border-radius: var(--spacing-xs);
+  font-size: var(--typography-size-f0);
+  line-height: 1;
+  position: relative;
+  white-space: nowrap;
+
+  &.withAction {
+    padding-right: 24px;
+  }
+
+  > button {
+    display: inline-block;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    height: var(--spacing-tight);
+    margin-left: var(--spacing-xs);
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+
+    > svg {
+      display: block;
+      fill: var(--colors-main) !important;
+    }
+  }
+
+  &.accent1 {
+    color: var(--colors-accent1);
+    border-color: var(--colors-accent1);
+    background-color: var(--colors-accent1Light);
+
+    > button > svg {
+      fill: var(--colors-accent1) !important;
+    }
+  }
+
+  &.accent2 {
+    color: var(--colors-accent2);
+    border-color: var(--colors-accent2);
+    background-color: var(--colors-accent2Light);
+
+    > button > svg {
+      fill: var(--colors-accent2) !important;
+    }
+  }
+
+  &.accent3 {
+    color: var(--colors-accent3);
+    border-color: var(--colors-accent3);
+    background-color: var(--colors-accent3Light);
+
+    > button > svg {
+      fill: var(--colors-accent3) !important;
+    }
+  }
+
+  &.accent4 {
+    color: var(--colors-accent4);
+    border-color: var(--colors-accent4);
+    background-color: var(--colors-accent4Light);
+
+    > button > svg {
+      fill: var(--colors-accent4) !important;
+    }
+  }
+
+  &.accent5 {
+    color: var(--colors-accent5);
+    border-color: var(--colors-accent5);
+    background-color: var(--colors-accent5Light);
+
+    > button > svg {
+      fill: var(--colors-accent5) !important;
+    }
+  }
+
+  &.success {
+    color: var(--colors-successDark);
+    border-color: var(--colors-success);
+    background-color: var(--colors-successLight);
+
+    > button > svg {
+      fill: var(--colors-success) !important;
+    }
+  }
+
+  &.error {
+    color: var(--colors-errorDark);
+    border-color: var(--colors-error);
+    background-color: var(--colors-errorLight);
+
+    > button > svg {
+      fill: var(--colors-error) !important;
+    }
+  }
+
+  &.warning {
+    color: var(--colors-warningDark);
+    border-color: var(--colors-warning);
+    background-color: var(--colors-warningLight);
+
+    > button > svg {
+      fill: var(--colors-warning) !important;
+    }
+  }
+}

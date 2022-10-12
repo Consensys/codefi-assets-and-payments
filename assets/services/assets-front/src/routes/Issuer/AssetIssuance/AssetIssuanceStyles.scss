@@ -1,0 +1,52 @@
+#_routes_issuer_assetIssuance {
+  > .assetTypeChoice {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 500px;
+    padding: var(--spacing-large) var(--spacing-tight-looser);
+
+    > div:first-of-type {
+      > h2 {
+        font-weight: var(--typography-weight-medium);
+        margin-bottom: var(--spacing-tight-looser);
+        font-size: var(--typography-size-f4);
+      }
+      > span {
+        font-size: var(--typography-size-f2);
+        color: #475166;
+      }
+
+      border-bottom: 1px solid #dfe0e6;
+      margin-bottom: var(--spacing-tight);
+      padding-bottom: var(--spacing-tight);
+    }
+
+    > .assetTypeCard {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #f0f0f2;
+      box-shadow: 0px 3px 6px rgba(0, 10, 40, 0.06);
+      border-radius: 4px;
+      margin: var(--spacing-small) 0;
+      padding: var(--spacing-tight-looser);
+
+      > h2 {
+        font-size: var(--typography-size-f2);
+        color: #000a28;
+        line-height: var(--spacing-tight-looser);
+        font-weight: var(--typography-weight-medium);
+
+        &.error {
+          color: var(--colors-errorDark);
+        }
+      }
+
+      > span {
+        color: #475166;
+        font-size: var(--typography-size-f1);
+        margin: var(--spacing-small) 0;
+      }
+    }
+  }
+}

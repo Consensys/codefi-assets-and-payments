@@ -1,0 +1,90 @@
+@import '../../../constants.scss';
+
+._route_issuer_fundInvestors {
+  > main {
+    padding: var(--spacing-regular);
+  }
+  .dropdownMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    width: 56px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #989ca6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0px 8px;
+  }
+}
+
+._route_issuer_fundInvestors_dialog {
+  width: 580px;
+  .dialogMessage {
+    font-size: 14px;
+    background: #f0f8ff;
+    border: 1px solid #f0f0f2;
+    box-sizing: border-box;
+    display: flex;
+    padding: 5px 25px;
+    > svg {
+      margin: 10px;
+      width: 40px;
+    }
+  }
+  .dialogLabel {
+    font-size: 18px;
+    font-weight: 500;
+    color: #475166;
+    border: 1px solid #c2c4cc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 48px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1a2233;
+    margin-top: 10px;
+  }
+  h2 {
+    margin: 11px;
+  }
+}
+
+._uiComponent_button > span > svg {
+  margin-left: 8px;
+}
+
+.assetInput {
+  padding: 16px 32px;
+  border-bottom: 1px solid #dfe0e5;
+}
+
+.investorSelector {
+  font-weight: 600;
+  font-size: '16px';
+  margin-bottom: '16px';
+}
+
+.balanceInput {
+  max-width: 300px;
+  margin-bottom: var(--spacing-small);
+}
+
+.verifyQuantityCheckbox {
+  margin-top: 16px;
+}
+
+.footer {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: flex-end;
+}
+
+.footerButton {
+  margin-left: 16px;
+}

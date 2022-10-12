@@ -1,0 +1,53 @@
+#_routes_issuer_ordersManagement {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+
+  > main {
+    padding: 32px 32px;
+
+    > .dataView {
+      > header {
+        font-weight: 600;
+        padding: 16px 24px;
+        font-size: 20px;
+        color: #1a2233;
+        border-bottom: 1px solid #eee;
+      }
+
+      > .empty {
+        height: 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > .img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgb(228, 238, 253);
+          width: 80px;
+          height: 80px;
+          border-radius: 100px;
+
+          > svg {
+            display: block;
+          }
+        }
+
+        > h2 {
+          font-weight: 600;
+          font-size: 20px;
+          color: #777c8c;
+        }
+
+        > p {
+          font-size: 14px;
+          color: #475166;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "fundName": "ASI Global Index",
+  "assetId": "4567yuhjbgvcfdxres45r67t8yuih",
+  "general": {
+    "fundType": {
+      "en": "Open end asset",
+      "fr": "Open end asset"
+    },
+    "fundSymbol": "GGF",
+    "fundDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "bankInfo": {
+    "name": "Example bank name",
+    "iban": "987654321",
+    "bic": "DABAIE2D"
+  },
+  "fundProspectus": {
+    "fileName": "Legal_agreement_doc.pdf",
+    "file": "https://unsplash.com/photos/L2oedF1AsH8/download?force=true&w=640"
+  },
+  "fundCover": "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=640",
+  "shareClasses": [
+    {
+      "id": "lighkj5687yu1",
+      "name": "Class A",
+      "ISIN": "XS20641717XX",
+      "initialSubscriptionCutOffDate": 1588717119485
+    },
+    {
+      "id": "lighkj5687yu2",
+      "name": "Class B",
+      "ISIN": "9876FTYGHJKIO",
+      "initialSubscriptionCutOffDate": 1588717119485
+    },
+    {
+      "id": "lighkj5687yu3",
+      "name": "Class C",
+      "ISIN": "NBGR57689OPIU",
+      "initialSubscriptionCutOffDate": 1588717119485
+    }
+  ]
+}

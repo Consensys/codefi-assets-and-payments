@@ -1,0 +1,24 @@
+# IDE & OS specific
+.DS_Store
+.idea
+
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+*.lock
+
+# Contracts build
+build
+
+# Compiled JS
+dist
+
+# Coverage
+coverage
+coverage.json
+
+# Other
+.env

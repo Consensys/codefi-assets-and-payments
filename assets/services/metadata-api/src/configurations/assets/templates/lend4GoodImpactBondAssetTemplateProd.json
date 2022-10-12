@@ -1,0 +1,257 @@
+{
+  "tenantId": "IJS9AsRFXJ1ycuPmTd9ZU2gi6Fv3Cj0d",
+  "category": "HYBRID",
+  "name": "Impact Loan/bond Prod",
+  "type": "FIXED_RATE_BOND",
+  "label": {
+    "en": "New loan",
+    "fr": "New loan"
+  },
+  "description": {
+    "en": "Create a Impact Loan/Bond",
+    "fr": "Create a Impact Loan/Bond"
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Loan information",
+        "fr": "Informations du fond"
+      },
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "fundInformations_fundName_l4g",
+            "fundInformations_fundSymbol_l4g",
+            "fundInformations_fundDescription_l4g",
+            "loanGeneralDetails_featuredloan"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Documents",
+            "fr": "Documents"
+          },
+          "elements": [
+            "fundInformations_docusign_l4g",
+            "fundInformations_documents_l4g"
+          ]
+        },
+        {
+          "key": "asset_loanSummary",
+          "label": {
+            "en": "Loan Summary",
+            "fr": "Loan Summary"
+          },
+          "elements": [
+            "loanSummaryInformation_loanshorturl",
+            "loanSummaryInformation_pitchUrl",
+            "loanSummaryInformation_amount",
+            "loanSummaryInformation_loanPeriod",
+            "loanSummaryInformation_loanInterestRate",
+            "borrowerInformations_name_select_l4g",
+            "borrowerInformations_name_ib_l4g",
+            "loanSummaryInformation_borrowerCountry_l4g",
+            "loanSummaryInformation_borrowerCityState"
+          ]
+        },
+        {
+          "key": "asset_impactIntermediaryDetails",
+          "label": {
+            "en": "Impact intermediary details",
+            "fr": "Impact intermediary details"
+          },
+          "elements": [
+            "impactIntermediaryDetails_proposedOnBehalfOfaBorrower",
+            "impactIntermediaryDetails_impactIntermediaryName",
+            "impactIntermediaryDetails_impactIntermediaryCountry",
+            "impactIntermediaryDetails_businessExperience",
+            "impactIntermediaryDetails_historyWithBorrower",
+            "impactIntermediaryDetails_logo",
+            "impactIntermediaryDetails_website"
+          ]
+        },
+        {
+          "key": "asset_cover_image",
+          "label": {
+            "en": "Loan cover image",
+            "fr": "Loan cover image"
+          },
+          "elements": ["images_cover_loanimage"]
+        },
+        {
+          "key": "asset_loanbackgroundimage",
+          "label": {
+            "en": "Loan background image",
+            "fr": "Loan background image"
+          },
+          "elements": ["images_loanbackgroundimage"]
+        },
+        {
+          "key": "asset_loanthumbnailimage",
+          "label": {
+            "en": "Loan thumbnail image",
+            "fr": "Loan thumbnail image"
+          },
+          "elements": ["images_loanThumbnailImage"]
+        },
+        {
+          "key": "asset_loanGeneralDetails",
+          "label": {
+            "en": "Loan General Details",
+            "fr": "Loan General Details"
+          },
+          "elements": [
+            "loanGeneralDetails_generaldescription",
+            "loanGeneralDetails_summary",
+            "loanGeneralDetails_borrowerbrief",
+            "loanGeneralDetails_emailforlenders",
+            "loanGeneralDetails_borrowerWebsite",
+            "loanGeneralDetails_borrowerlogo"
+          ]
+        },
+        {
+          "key": "asset_loanImpacts",
+          "label": {
+            "en": "Loan Impacts",
+            "fr": "Loan Impacts"
+          },
+          "elements": [
+            "loanImpacts_description",
+            "loanImpacts_borrowerImpact",
+            "loanImpacts_borrowerImpactLinks",
+            "loanImpacts_documents",
+            "loanImpacts_goals"
+          ]
+        },
+        {
+          "key": "asset_loanViabilityAndCommercialImpact",
+          "label": {
+            "en": "Loan Viability & Commercial Impact",
+            "fr": "Loan Viability & Commercial Impact"
+          },
+          "elements": [
+            "loanViabilityAndCommercialImpact_reasonsByBorrower",
+            "loanViabilityAndCommercialImpact_otherFunding",
+            "loanViabilityAndCommercialImpact_benefits",
+            "loanViabilityAndCommercialImpact_securities",
+            "loanViabilityAndCommercialImpact_viability",
+            "loanViabilityAndCommercialImpact_documents"
+          ]
+        },
+        {
+          "key": "asset_bankInformations",
+          "label": {
+            "en": "Bank information",
+            "fr": "Bank information"
+          },
+          "elements": [
+            "bankInformations_holderName",
+            "bankInformations_accountType",
+            "bankInformations_bankName",
+            "bankInformations_bsb",
+            "bankInformations_accountNumber",
+            "bankInformations_achRoutingNumber",
+            "bankInformations_wireRoutingNumber",
+            "bankInformations_swift",
+            "bankInformations_IBAN",
+            "bankInformations_bankAddress",
+            "bankInformations_bankAddress2",
+            "bankInformations_bankCity",
+            "bankInformations_bankState",
+            "bankInformations_bankZIP",
+            "bankInformations_bankCountry",
+            "bankInformations_recipientFullName",
+            "bankInformations_recipientBankAddress1",
+            "bankInformations_recipientBankAddress2",
+            "bankInformations_recipientBankCity",
+            "bankInformations_recipientState",
+            "bankInformations_recipientBankZIP",
+            "bankInformations_recipientCountry",
+            "bankInformations_recipientEmail"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Loan characteristics",
+        "fr": "Loan characteristics"
+      },
+      "sections": [
+        {
+          "key": "class_general",
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "shareClass_currency_l4g",
+            "assetsCharacteristics_minimumInvestment_ib_l4g",
+            "assetsCharacteristics_maximumInvestment_ib_l4g",
+            "assetsCharacteristics_minimumNominalAmount_ib_l4g",
+            "assetsCharacteristics_maximumNominalAmount_ib_l4g",
+            "shareClass_loanContributionIncrements",
+            "assetsCharacteristics_pricePerUnit_ib_l4g"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Dates",
+            "fr": "Dates"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date_l4g",
+            "shareClass_subscription_initialSubscription_start_hour_l4g",
+            "shareClass_subscription_initialSubscription_cutoff_date_l4g",
+            "shareClass_subscription_initialSubscription_cutoff_hour_l4g",
+            "shareClass_subscription_settlementPeriodInDays",
+            "shareClass_subscription_initialSubscription_settlement_date_ib_l4g",
+            "shareClass_subscription_initialSubscription_settlement_hour_ib_l4g",
+            "shareClass_subscription_initialSubscription_unpaidFlag_date_ib_l4g",
+            "shareClass_subscription_initialSubscription_unpaidFlag_hour_ib_l4g",
+            "shareClass_redemption_initialRedemption_start_date_l4g",
+            "shareClass_redemption_initialRedemption_start_hour_l4g",
+            "shareClass_redemption_initialRedemption_cutoff_date_l4g",
+            "shareClass_redemption_initialRedemption_cutoff_hour_l4g",
+            "shareClass_redemption_initialRedemption_settlement_date_l4g",
+            "shareClass_redemption_initialRedemption_settlement_hour_l4g"
+          ]
+        },
+        {
+          "key": "class_loanRepayment",
+          "label": {
+            "en": "Loan repayment",
+            "fr": "Loan repayment"
+          },
+          "elements": [
+            "loanRepayment_schedule",
+            "loanRepayment_terms",
+            "loanRepayment_instalmentsSchedule"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": [
+            "sharedClass_customFeesCheck_l4g",
+            "sharedClass_customFeesValue"
+          ]
+        }
+      ]
+    }
+  ]
+}

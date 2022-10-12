@@ -1,0 +1,19 @@
+#_route_subscriptionOrderOverview {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  > main {
+    background: #f6f6f6;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-tight);
+    height: 100%;
+    > div {
+      @media (min-width: 1050px) {
+        width: 600px;
+      }
+    }
+  }
+}

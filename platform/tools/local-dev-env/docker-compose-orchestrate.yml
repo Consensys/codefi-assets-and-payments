@@ -1,0 +1,236 @@
+version: "3.7"
+
+x-orchestrate-common-env: &orchestrate-common-env
+  API_URL: ${API_URL-http://api:8081}
+  API_METRICS_URL: ${API_METRICS_URL-http://api:8082}
+  KEY_MANAGER_URL: ${KEY_MANAGER_URL-http://quorum-key-manager:8080}
+  KEY_MANAGER_METRICS_URL: ${KEY_MANAGER_URL-http://quorum-key-manager:8081}
+  KEY_MANAGER_STORE_NAME: ${KEY_MANAGER_STORE_NAME-orchestrate-eth}
+  KEY_MANAGER_TLS_SKIP_VERIFY: ${KEY_MANAGER_TLS_SKIP_VERIFY-true}
+  KEY_MANAGER_API_KEY: ${KEY_MANAGER_API_KEY-} # Used to authenticate "Orchestrate-Api <> Quorum Key Mananger"
+  KEY_MANAGER_CLIENT_TLS_CERT: ${KEY_MANAGER_CLIENT_TLS_CERT-} # Used to authenticate "Orchestrate-Api <> Quorum Key Mananger" (not used for now, this is an alternative to KEY_MANAGER_API_KEY)
+  KEY_MANAGER_CLIENT_TLS_KEY: ${KEY_MANAGER_CLIENT_TLS_KEY-} # Used to authenticate "Orchestrate-Api <> Quorum Key Mananger" (not used for now, this is an alternative to KEY_MANAGER_API_KEY)
+  TX_SENDER_METRICS_URL: ${TX_SENDER_METRICS_URL-http://tx-sender:8082}
+  TX_LISTENER_METRICS_URL: ${TX_LISTENER_METRICS_URL-http://tx-listener:8082}
+  ETH_CLIENT_RETRY_MAX_ELAPSED_TIME: 5s
+  LOG_LEVEL: ${LOG_LEVEL-info}
+  LOG_FORMAT: ${LOG_FORMAT-text}
+  LOG_TIMESTAMP: ${LOG_TIMESTAMP-true}
+  NONCE_MANAGER_TYPE: ${NONCE_MANAGER_TYPE-in-memory}
+  MULTI_TENANCY_ENABLED: ${MULTI_TENANCY_ENABLED-true}
+  AUTH_JWT_ISSUER_URL: ${AUTH0_URL-} # Used to authenticate "End user <> Orchestrate-Api"
+  AUTH_JWT_AUDIENCE: ${AUTH_JWT_AUDIENCE-https://api.codefi.network} # Used to authenticate "End user <> Orchestrate-Api"
+  AUTH_JWT_ORCHESTRATE_CLAIMS: ${AUTH_JWT_ORCHESTRATE_CLAIMS-https://api.orchestrate.network} # Used to authenticate "End user <> Orchestrate-Api"
+  AUTH_API_KEY: ${AUTH_API_KEY-mock} # Used to authenticate Orchestrate internal calls
+  KAFKA_URL: ${KAFKA_URL-kafka:29092}
+  KAFKA_SASL_ENABLED: ${KAFKA_SASL_ENABLED-false}
+  KAFKA_SASL_MECHANISM: ${KAFKA_SASL_MECHANISM-PLAIN}
+  KAFKA_SASL_USER: ${KAFKA_SASL_USER-}
+  KAFKA_SASL_PASSWORD: ${KAFKA_SASL_PASSWORD-}
+  KAFKA_TLS_ENABLED: ${KAFKA_TLS_ENABLED-false}
+  KAFKA_TLS_INSECURE_SKIP_VERIFY: ${KAFKA_TLS_INSECURE_SKIP_VERIFY-false}
+  KAFKA_NUM_CONSUMERS: ${KAFKA_NUM_CONSUMERS-}
+  DB_TLS_SSLMODE: ${DB_TLS_SSLMODE-}
+  DB_TLS_CERT: ${DB_TLS_CERT-}
+  DB_TLS_KEY: ${DB_TLS_KEY-}
+  DB_TLS_CA: ${DB_TLS_CA-}
+  DB_HOST: ${DB_HOST-orchestrate-db}
+  DB_PORT: ${DB_PORT-}
+  DB_DATABASE: ${DB_DATABASE-}
+  DB_POOLSIZE: ${DB_POOLSIZE-}
+  DB_POOL_TIMEOUT: ${DB_POOL_TIMEOUT-}
+  METRICS_MODULES: ${METRICS_MODULES-}
+
+x-container-common: &container-common
+  restart: ${CONTAINER_RESTART-on-failure}
+  image: consensys/orchestrate:v21.12.7
+  networks:
+    - codefi
+
+x-proxy-common: &proxy-common
+  PROXY_MAXIDLECONNSPERHOST: ${PROXY_MAXIDLECONNSPERHOST-}
+  PROXY_CACHE_TTL: ${PROXY_CACHE_TTL-}
+
+x-qkm-common: &qkm-common
+  image: consensys/quorum-key-manager:v21.12.5
+
+x-qkm-common-env: &qkm-common-env
+  DB_HOST: ${DB_HOST-orchestrate-db}
+  DB_PORT: ${DB_PORT-}
+  DB_PASSWORD: ${DB_PASSWORD-postgres}
+  LOG_LEVEL: ${LOG_LEVEL-info}
+  LOG_FORMAT: ${LOG_FORMAT-text}
+  AUTH_OIDC_ISSUER_URL: ${AUTH_OIDC_ISSUER_URL-} # Used to authenticate "End user <> QKM"
+  AUTH_OIDC_AUDIENCE: ${AUTH_OIDC_AUDIENCE-} # Used to authenticate "End user <> QKM"
+  AUTH_OIDC_CUSTOM_CLAIMS: ${AUTH_OIDC_CUSTOM_CLAIMS-} # Used to authenticate "End user <> QKM"
+
+x-postgres-common: &postgres-common
+  environment:
+    POSTGRES_PASSWORD: postgres
+
+services:
+  api-migration:
+    <<: *container-common
+    environment:
+      <<: *orchestrate-common-env
+    restart: "no"
+    command: api migrate up
+    depends_on:
+      orchestrate-db:
+        condition: service_healthy
+
+  api:
+    <<: *container-common
+    ports:
+      - 8031:8081
+      - 8032:8082
+    environment:
+      <<: *orchestrate-common-env
+      <<: *proxy-common
+    depends_on:
+      api-migration:
+        condition: service_completed_successfully
+    command: api run
+    labels:
+      filebeat: "false"
+
+  tx-sender:
+    <<: *container-common
+    ports:
+      - 8062:8082
+    environment:
+      <<: *orchestrate-common-env
+    depends_on:
+      - api
+    command: tx-sender run
+
+  tx-listener:
+    ports:
+      - 8082:8082
+    <<: *container-common
+    environment:
+      <<: *orchestrate-common-env
+    depends_on:
+      - api
+    command: tx-listener run
+
+  orchestrate-db:
+    <<: *container-common
+    <<: *postgres-common
+    image: postgres:13.4-alpine
+    volumes:
+      - db-data-api:/var/lib/postgresql/data
+    ports:
+      - 5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  vault:
+    <<: *container-common
+    image: consensys/quorum-hashicorp-vault-plugin:v1.1.2
+    tty: true
+    restart: "no"
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_TOKEN-DevVaultToken}
+      VAULT_ADDR: http://vault:8200
+      PLUGIN_MOUNT_PATH: quorum
+      PLUGIN_PATH: /vault/plugins
+    entrypoint:
+      - sh
+      - -c
+      - |
+        ( sleep 2 && vault-init-dev.sh ) &
+         vault server -dev -dev-plugin-dir=/vault/plugins -dev-listen-address="0.0.0.0:8200"
+    ports:
+      - 8200:8200
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--spider",
+          "--proxy",
+          "off",
+          "http://vault:8200/v1/sys/health?standbyok=true",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+  quorum-key-manager-init:
+    image: gcr.io/distroless/static:debug
+    volumes:
+      - manifests:/manifests
+    entrypoint:
+      - sh
+      - -c
+      - |
+        cat <<EOF > /manifests/default.yml
+          - kind: Vault
+            type: hashicorp
+            name: hashicorp-quorum
+            specs:
+              mount_point: quorum
+              address: http://vault:8200
+              token: ${VAULT_TOKEN-DevVaultToken}
+              namespace: ''
+          - kind: Store
+            type: key
+            name: orchestrate-keystore
+            specs:
+              vault: hashicorp-quorum
+          - kind: Store
+            type: ethereum
+            name: orchestrate-eth
+            specs:
+              key_store: orchestrate-keystore
+        EOF
+
+  quorum-key-manager-migration:
+    <<: *container-common
+    <<: *qkm-common
+    environment:
+      <<: *qkm-common-env
+    depends_on:
+      orchestrate-db:
+        condition: service_healthy
+    restart: "on-failure"
+    command: migrate up
+
+  quorum-key-manager:
+    <<: *container-common
+    <<: *qkm-common
+    depends_on:
+      vault:
+        condition: service_started
+      quorum-key-manager-init:
+        condition: service_completed_successfully
+      quorum-key-manager-migration:
+        condition: service_completed_successfully
+    volumes:
+      - manifests:/manifests
+    ports:
+      - 8180:8080
+      - 8181:8081
+    environment:
+      <<: *qkm-common-env
+      MANIFEST_PATH: ${MANIFEST_PATH-/manifests}
+    command: run
+
+volumes:
+  db-data-api:
+    driver: local
+  manifests:
+    driver: local
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

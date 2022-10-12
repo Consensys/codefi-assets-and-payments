@@ -1,0 +1,124 @@
+{
+  "tenantId": "swzDLMjTWu3gilMxWZHkIADchUab7BEI",
+  "category": "HYBRID",
+  "name": "Settlement Point",
+  "type": "PHYSICAL_ASSET",
+  "label": {
+    "en": "New asset",
+    "fr": "New asset"
+  },
+  "description": {
+    "en": "Settlement Point is the settlement currency for trading digital assets on the HKEX Diamond Platform.",
+    "fr": "Settlement Point is the settlement currency for trading digital assets on the HKEX Diamond Platform."
+  },
+  "topSections": [
+    {
+      "label": {
+        "en": "Asset information",
+        "fr": "Asset information"
+      },
+      "key": "asset",
+      "sections": [
+        {
+          "key": "asset_general",
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "fundInformations_fundName_hkex",
+            "fundInformations_fundSymbol_hkex",
+            "fundInformations_fundDescription_hkex"
+          ]
+        },
+        {
+          "key": "asset_documents",
+          "label": {
+            "en": "Asset documents",
+            "fr": "Asset documents"
+          },
+          "elements": ["fundInformations_prospectus_hkex"]
+        },
+        {
+          "key": "asset_images",
+          "label": {
+            "en": "Asset cover image",
+            "fr": "Asset cover image"
+          },
+          "elements": ["fundInformations_coverPicture_hkex"]
+        }
+      ]
+    },
+    {
+      "label": {
+        "en": "Order information",
+        "fr": "Order information"
+      },
+      "key": "class",
+      "sections": [
+        {
+          "label": {
+            "en": "Bank information",
+            "fr": "Bank information"
+          },
+          "key": "class_general",
+          "elements": [
+            "bankInformation_holderName_hkex",
+            "bankInformation_accountNumber_hkex",
+            "bankInformation_IBAN_hkex",
+            "bankInformation_Swift_hkex",
+            "bankInformation_bankName_hkex",
+            "bankInformation_bankAddress_hkex",
+            "bankInformation_bankAddress2_hkex",
+            "bankInformation_bankCity_hkex",
+            "bankInformation_bankCountry_hkex",
+            "shareClass_currency_hkex"
+          ]
+        },
+        {
+          "label": {
+            "en": "Orders",
+            "fr": "Ordres"
+          },
+          "key": "class_rules",
+          "elements": [
+            "shareClass_orderSubscriptionsTypes_hkexPoint",
+            "shareClass_minimumSubscriptionInAmount_pa",
+            "shareClass_maximumSubscriptionInAmount_pa",
+            "shareClass_minimumSubscriptionInQuantity_hkexPoint",
+            "shareClass_maximumSubscriptionInQuantity_hkexPoint"
+          ]
+        },
+        {
+          "key": "class_initialSubscription",
+          "label": {
+            "en": "Asset issuance information",
+            "fr": "Asset issuance information"
+          },
+          "elements": [
+            "shareClass_subscription_initialSubscription_start_date_hkex",
+            "shareClass_subscription_initialSubscription_start_hour_hkex"
+          ]
+        },
+        {
+          "key": "class_nav",
+          "label": {
+            "en": "Initial asset value",
+            "fr": "Initial asset value"
+          },
+          "elements": [
+            "assetClass_initialShareValue_value"
+          ]
+        },
+        {
+          "key": "class_fees",
+          "label": {
+            "en": "Fees",
+            "fr": "Frais"
+          },
+          "elements": ["sharedClass_maximum_entryFeesValue_hkex"]
+        }
+      ]
+    }
+  ]
+}

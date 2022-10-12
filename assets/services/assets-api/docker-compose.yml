@@ -1,0 +1,24 @@
+version: "3.4"
+services:
+  assets-api:
+    env_file:
+      - .env
+      - ../../../.env
+    image: assets-api
+    networks:
+      - codefi
+    ports:
+      - 3002:3000
+      - 9231:9229
+    volumes:
+      - ./src:/usr/src/app/assets/services/assets-api/src:delegated
+    build:
+      context: ../../../
+      dockerfile: ./assets/services/assets-api/${DOCKERFILE-Dockerfile.dev}
+    labels:
+      local.filebeat: 'true'
+
+networks:
+  codefi:
+    external:
+      name: local-dev-env-deps_codefi

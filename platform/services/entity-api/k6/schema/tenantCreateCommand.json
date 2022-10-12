@@ -1,0 +1,175 @@
+{
+  "type": "record",
+  "name": "tenantCreateCommand",
+  "namespace": "net.consensys.codefi.convergence.tenant",
+  "fields": [
+    { "name": "traceParent", "type": ["null", "string"], "default": null },
+    { "name": "tenantId", "type": "string" },
+    { "name": "name", "type": "string" },
+    {
+      "name": "products",
+      "type": {
+        "name": "productTypes",
+        "type": "record",
+        "fields": [
+          { "name": "assets", "type": ["null", "boolean"], "default": null },
+          { "name": "payments", "type": ["null", "boolean"], "default": null },
+          {
+            "name": "compliance",
+            "type": ["null", "boolean"],
+            "default": null
+          },
+          { "name": "staking", "type": ["null", "boolean"], "default": null },
+          { "name": "workflows", "type": ["null", "boolean"], "default": null }
+        ]
+      }
+    },
+    { "name": "defaultNetworkKey", "type": "string" },
+    { "name": "metadata", "type": ["null", "string"], "default": null },
+    {
+      "name": "initialAdmins",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "admin",
+            "type": "record",
+            "fields": [
+              { "name": "email", "type": "string" },
+              { "name": "name", "type": "string" }
+            ]
+          }
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "initialEntities",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "tenantEntity",
+            "fields": [
+              {
+                "name": "entityId",
+                "type": ["null", "string"],
+                "default": null
+              },
+              { "name": "name", "type": "string" },
+              {
+                "name": "metadata",
+                "type": ["null", "string"],
+                "default": null
+              },
+              {
+                "name": "initialAdmins",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": {
+                      "name": "entityAdmin",
+                      "type": "record",
+                      "fields": [
+                        { "name": "email", "type": "string" },
+                        { "name": "name", "type": "string" }
+                      ]
+                    }
+                  }
+                ],
+                "default": null
+              },
+              {
+                "name": "initialWallets",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": {
+                      "name": "entityWallet",
+                      "type": "record",
+                      "fields": [
+                        {
+                          "name": "address",
+                          "type": ["null", "string"],
+                          "default": null
+                        },
+                        {
+                          "name": "type",
+                          "type": {
+                            "type": "enum",
+                            "name": "WalletType",
+                            "symbols": [
+                              "orchestrate",
+                              "external",
+                              "INTERNAL_CODEFI_HASHICORP_VAULT",
+                              "INTERNAL_CODEFI_AZURE_VAULT",
+                              "INTERNAL_CODEFI_AWS_VAULT",
+                              "INTERNAL_CLIENT_AZURE_VAULT",
+                              "INTERNAL_CLIENT_AWS_VAULT",
+                              "EXTERNAL_CLIENT_METAMASK",
+                              "EXTERNAL_CLIENT_METAMASK_INSTITUTIONAL",
+                              "EXTERNAL_OTHER"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "metadata",
+                          "type": ["null", "string"],
+                          "default": null
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "default": null
+              },
+              {
+                "name": "defaultWallet",
+                "type": ["null", "string"],
+                "default": null
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    },
+    { "name": "createdBy", "type": ["null", "string"], "default": null },
+    {
+      "name": "stores",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "storeMapping",
+            "type": "record",
+            "fields": [
+              { "name": "storeId", "type": "string" },
+              {
+                "name": "walletType",
+                "type": {
+                  "type": "enum",
+                  "name": "StoreMappingWalletType",
+                  "symbols": [
+                    "INTERNAL_CODEFI_HASHICORP_VAULT",
+                    "INTERNAL_CODEFI_AZURE_VAULT",
+                    "INTERNAL_CODEFI_AWS_VAULT",
+                    "INTERNAL_CLIENT_AZURE_VAULT",
+                    "INTERNAL_CLIENT_AWS_VAULT"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    }
+  ]
+}

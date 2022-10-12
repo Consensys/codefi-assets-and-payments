@@ -1,0 +1,89 @@
+._route_investor_portfolio_orderContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 100vh;
+  max-width: 550px;
+  background: #fff;
+  z-index: 99;
+  box-shadow: var(--box-shadow-5);
+
+  > header {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    color: #1a2233;
+    border-bottom: 1px solid #eee;
+
+    > span {
+      display: block;
+      padding: 24px;
+    }
+
+    > button {
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: none;
+
+      > svg {
+        display: block;
+      }
+    }
+  }
+
+  > main {
+    > .actions {
+      padding: 32px 40px;
+    }
+
+    > header {
+      padding: 10px 40px;
+      background: #f6f6f6;
+
+      > div {
+        margin: 24px 0;
+
+        > span {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #777c8c;
+          display: block;
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    > ul {
+      padding: 20px 40px;
+
+      > h3 {
+        font-weight: 600;
+        font-size: 14px;
+        color: #1a2233;
+        margin-bottom: 8px;
+      }
+
+      > li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+
+        > span {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          color: #777c8c;
+        }
+      }
+    }
+  }
+}

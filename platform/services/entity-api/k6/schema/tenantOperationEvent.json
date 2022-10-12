@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "tenantOperation",
+  "namespace": "net.consensys.codefi.convergence.tenant",
+  "fields": [
+    { "name": "traceParent", "type": ["null", "string"], "default": null },
+    {
+      "name": "operation",
+      "type": {
+        "name": "operationEnum",
+        "type": "enum",
+        "symbols": ["CREATE", "UPDATE", "DELETE"]
+      }
+    },
+    { "name": "tenantId", "type": "string" },
+    { "name": "name", "type": "string" },
+    {
+      "name": "products",
+      "type": {
+        "name": "productTypes",
+        "type": "record",
+        "fields": [
+          { "name": "assets", "type": ["null", "boolean"], "default": null },
+          { "name": "payments", "type": ["null", "boolean"], "default": null },
+          {
+            "name": "compliance",
+            "type": ["null", "boolean"],
+            "default": null
+          },
+          { "name": "staking", "type": ["null", "boolean"], "default": null },
+          { "name": "workflows", "type": ["null", "boolean"], "default": null }
+        ]
+      }
+    },
+    { "name": "defaultNetworkKey", "type": "string" },
+    { "name": "metadata", "type": "string" },
+    { "name": "createdBy", "type": "string" },
+    { "name": "createdAt", "type": "string" }
+  ]
+}

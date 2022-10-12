@@ -1,0 +1,23 @@
+# IDE & OS specific
+.DS_Store
+.idea
+
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+yarn.lock
+
+# Contracts build
+build
+
+# Compiled JS
+dist
+
+# Env variable
+.env
+
+# vim
+*.swp

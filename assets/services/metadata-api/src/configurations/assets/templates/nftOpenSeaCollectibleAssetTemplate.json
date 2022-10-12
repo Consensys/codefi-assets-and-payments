@@ -1,0 +1,61 @@
+{
+  "tenantId": "Prdya0nNAvqebnHDHuyDqDGlFKIZa2K4",
+  "category": "NONFUNGIBLE",
+  "name": "OpenSea Collection - NFT",
+  "type": "COLLECTIBLE",
+  "label": {
+    "en": "New Collection",
+    "fr": "New Collection"
+  },
+  "description": {
+    "en": "Collection...",
+    "fr": "Collection..."
+  },
+  "topSections": [
+    {
+      "key": "asset",
+      "multiple": false,
+      "label": {
+        "en": "Collection information",
+        "fr": "Collection information"
+      },
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "General"
+          },
+          "elements": [
+            "collection_name",
+            "collection_symbol",
+            "collection_image",
+            "collection_description",
+            "collection_storage"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "class",
+      "multiple": false,
+      "label": {
+        "en": "Items",
+        "fr": "Items"
+      },
+      "sections": [
+        {
+          "label": {
+            "en": "General",
+            "fr": "Général"
+          },
+          "elements": [
+            "collection_item_name",
+            "collection_item_description",
+            "collection_item_image",
+            "collection_item_attributes"
+          ]
+        }
+      ]
+    }
+  ]
+}

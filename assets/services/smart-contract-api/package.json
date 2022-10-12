@@ -1,0 +1,119 @@
+{
+  "name": "@codefi-assets-and-payments/smart-contract-api",
+  "version": "2.40.4",
+  "private": true,
+  "license": "Apache",
+  "scripts": {
+    "build:DVPHoldableLockable": "npx sol-merger \"./contracts/DVPHoldableLockable.sol\" ./artifacts",
+    "build:ERC1400TokensValidator": "npx sol-merger \"./contracts/ERC1400TokensValidator.sol\" ./artifacts",
+    "build:ERC1400": "npx sol-merger \"./contracts/ERC1400.sol\" ./artifacts",
+    "build:ERC1400HoldableCertificateToken": "npx sol-merger \"./contracts/ERC1400HoldableCertificateToken.sol\" ./artifacts",
+    "build:ERC20Token": "npx sol-merger \"./contracts/ERC20Token.sol\" ./artifacts",
+    "build:ERC721Token": "npx sol-merger \"./contracts/ERC721Token.sol\" ./artifacts",
+    "build:MultiSigWallet": "npx sol-merger \"./contracts/MultiSigWallet.sol\" ./artifacts",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build": "yarn run cleanBuiltContracts && yarn run build:ERC1400 && yarn run build:ERC1400HoldableCertificateToken && yarn run build:MultiSigWallet && yarn run build:ERC20Token && yarn run build:ERC721Token && yarn run build:ERC1400TokensValidator && yarn run build:DVPHoldableLockable && yarn run build:ts",
+    "cleanBuiltContracts": "rm -rf artifacts",
+    "cleanCompiledContracts": "rm -rf ./build",
+    "compile": "truffle compile",
+    "initialize:dev": "yarn run cleanCompiledContracts && yarn run initialize && yarn run build",
+    "initialize": "yarn run compile && ts-node src/scripts/compiler.ts",
+    "lint:fix": "eslint '{src,test}/**/*.ts' --fix",
+    "lint": "eslint '{src,test}/**/*.ts'",
+    "prettier:check": "prettier --check '{src,test}/**/*.ts'",
+    "prettier": "prettier --write '{src,test}/**/*.ts'",
+    "release": "standard-version",
+    "start": "ts-node src",
+    "test:cov": "APP_ENV=test jest test/functional --detectOpenHandles --bail --runInBand --forceExit --coverage",
+    "test:functional": "APP_ENV=test jest test/functional --detectOpenHandles --bail --runInBand --forceExit",
+    "truffle": "truffle",
+    "watch": "nodemon",
+    "docker": "docker-compose up --build",
+    "docker:detached": "docker-compose up --build -d",
+    "docker:down": "docker-compose down"
+  },
+  "dependencies": {
+    "@codefi-assets-and-payments/auth": "*",
+    "@codefi-assets-and-payments/observability": "*",
+    "@ethereumjs/tx": "^3.5.2",
+    "axios": "^0.27.2",
+    "bip39": "^2.5.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^8.2.0",
+    "ethereumjs-wallet": "^1.0.2",
+    "express": "^4.18.1",
+    "fs-extra": "^10.0.0",
+    "http-errors": "^1.6.3",
+    "ioredis": "^4.22.0",
+    "jwt-decode": "^3.1.2",
+    "pegasys-orchestrate": "~6.0.2",
+    "universal-token": "git+https://github.com/ConsenSys/UniversalToken#b062702b78649ecd5821a1b383bd1d6ed35a3c4c",
+    "uuid": "^8.3.2",
+    "web3": "^1.7.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^28.1.1",
+    "@types/lodash": "^4.14.182",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^28.1.1",
+    "lodash": "^4.17.21",
+    "nock": "^13.2.6",
+    "nodemon": "2.0.4",
+    "prettier": "^2.1.2",
+    "sol-merger": "0.1.4",
+    "solc": "0.5.10",
+    "standard-version": "^9.0.0",
+    "supertest": "^6.2.3",
+    "truffle": "5.1.48",
+    "truffle-hdwallet-provider": "1.0.17",
+    "ts-jest": "^28.0.4",
+    "ts-node": "^10.8.2",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">= 16",
+    "npm": ">= 8"
+  },
+  "resolutions": {
+    "web3": "1.7.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "^test/(.*)$": "<rootDir>/test/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/test/setEnvVars.ts"
+    ],
+    "reporters": [
+      "default"
+    ],
+    "rootDir": "./",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/*/**/*.{ts,js}",
+      "!src/scripts/**/*"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --fix",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

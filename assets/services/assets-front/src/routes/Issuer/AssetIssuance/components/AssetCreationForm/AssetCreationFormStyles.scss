@@ -1,0 +1,123 @@
+#_routes_issuer_assetCreationForm {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--spacing-regular);
+
+  > form,
+  > div {
+    width: calc(100% - 30px);
+    max-width: 670px;
+    padding-top: var(--spacing-finger);
+
+    > header {
+      margin-bottom: var(--spacing-finger);
+      border-bottom: 1px solid #ddd;
+
+      > h2 {
+        font-weight: var(--typography-weight-medium);
+        font-size: var(--typography-size-f4);
+        padding-bottom: 10px;
+      }
+
+      > .shareClassBaseline {
+        padding-bottom: 24px;
+        color: #444;
+      }
+    }
+
+    > .shareClassesList {
+      width: 100%;
+      margin-bottom: 24px;
+
+      > thead {
+        > tr {
+          > td {
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            line-height: 24px;
+            color: #999;
+            padding-bottom: 8px;
+          }
+        }
+      }
+
+      > tbody {
+        > tr {
+          > td {
+            vertical-align: middle;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            padding: 8px 0;
+
+            &:first-of-type {
+              color: #000;
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            > span {
+              color: var(--colors-errorDark);
+            }
+          }
+        }
+      }
+    }
+
+    > div {
+      margin-bottom: var(--spacing-small);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &.reviewSection {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: var(--spacing-tight);
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      > h3 {
+        font-size: var(--typography-size-f3);
+        width: 100%;
+        margin-bottom: var(--spacing-tight);
+        font-weight: var(--typography-weight-lightMedium);
+        display: flex;
+        align-items: center;
+
+        > button {
+          margin-left: 16px;
+        }
+      }
+
+      > .baseLine {
+        font-weight: var(--typography-weight-medium);
+        font-size: 16px;
+        margin-bottom: var(--spacing-small);
+        width: 100%;
+      }
+    }
+
+    > footer {
+      margin-top: var(--spacing-tight-looser);
+      display: block;
+      padding-top: var(--spacing-tight-looser);
+      width: 100%;
+      padding-bottom: var(--spacing-finger);
+      border-top: 1px solid #ddd;
+
+      > button {
+        float: right;
+      }
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
