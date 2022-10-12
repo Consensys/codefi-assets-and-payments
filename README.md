@@ -3,6 +3,7 @@
 ## Quick Start
 
 The following values are required before starting:
+
 - Mailjet Api key and secret
 - Sendgrid Api key
 - A public facing redis
@@ -11,7 +12,7 @@ The following values are required before starting:
 
 For externally provided postgresql servers (e.g. AWS RDS), the supported major version is 11.
 
-A video tutorial to help in the bootstrapping of a local Assets stack is available at: https://user-images.githubusercontent.com/14951297/194505802-fd7d2a99-2cb7-4eb7-8ccf-24caa5d43894.mp4
+A video tutorial to help in the bootstrapping of a local Assets stack is available at: https://user-images.githubusercontent.com/14951297/195321347-a9df7408-59de-4fa4-aa9b-463d123df43f.mp4
 
 ### Step 1 - Create an Auth0 tenant
 
