@@ -49,36 +49,37 @@ Ensure for every network listed in [networks](./src/config/networks.js) file:
 
 #### Initial Configuration
 
-| Name | Optional | Description |
-| ---  | --- | --- |
+| Name                              | Optional | Description                                                             |
+| --------------------------------- | -------- | ----------------------------------------------------------------------- |
+| ASSETS_API_URL                    | No       | Assets-API address                                                      |
+| ASSETS_API_SECRET                 | No       | Assets-API secret                                                       |
+| FAUCET_MNEMONIC                   | No       | Faucet blockchain account Used to deploy contracts                      |
+| INFURA_KEY                        | Yes      | Infura service account key Used for public networks                     |
+| ORCHESTRATE_NEW_CONTRACT_TX       | No       | Needed for Orchestrate versions 21.12.1 and above                       |
+| ORCHESTRATE_BROKER_HOST           | No       | Orchestrate Kafka broker address                                        |
+| ORCHESTRATE_BROKER_PORT           | No       | Orchestrate Kafka broker port                                           |
+| ORCHESTRATE_URL                   | No       | Orchestrate API address                                                 |
+| ORCHESTRATE_TOPIC_RECOVER         | No       | Orchestrate topic recover                                               |
+| ORCHESTRATE_TOPIC_DECODED         | No       | Orchestrate topic decoded                                               |
+| ORCHESTRATE_REGISTRY_TAG          | No       | Orchestrate registry tag                                                |
+| CONTRACTS_DIRECTORY               | No       | Contracts directory                                                     |
+| CONTRACTS_CUSTOM_BUILD_DIRECTORY  | No       | Contracts truffle custom build directory                                |
+| CONTRACTS_TRUFFLE_BUILD_DIRECTORY | No       | Contracts truffle build directory                                       |
+| DEFAULT_NETWORK_KEY               | Yes      | Default blockchain network to use when none is specified in the request |
+| AUTH0_URL                         | No       | Entity-API address                                                      |
+| AUTH_BYPASS_AUTHENTICATION_CHECK  | Yes      | Bypass Auth0 authentication check if configured                         |
+| AUTH_BYPASS_PERMISSION_CHECK      | Yes      | Bypass Auth0 permission check if configured                             |
+| AUTH_ACCEPTED_AUDIENCE            | No       | Accepted Auth0 Audience for access tokens                               |
+| AUTH_CUSTOM_NAMESPACE             | No       | Auth0 custom namespace                                                  |
+| AUTH_CUSTOM_ORCHESTRATE_NAMESPACE | No       | Auth0 custom orchestrate namespace                                      |
+| AUTH_HMAC_SECRET                  | Yes      | Hmac secret                                                             |
+| M2M_TOKEN_REDIS_ENABLE            | Yes      | Enable M2M tokens caching (default to true)                             |
+| M2M_TOKEN_REDIS_HOST              | Yes      | Redis Host used to cache M2M tokens                                     |
+| M2M_TOKEN_REDIS_PASS              | Yes      | Redis Pass used to cache M2M tokens                                     |
+| M2M_TOKEN_CLIENT_ID               | No       | Codefi M2M Client ID used to connect to other Codefi apps               |
+| M2M_TOKEN_CLIENT_SECRET           | No       | Codefi M2M Client Secret                                                |
+| M2M_TOKEN_AUDIENCE                | No       | Codefi M2M Client Audience                                              |
 
-| ASSETS_API_URL | No | Assets-API address |
-| ASSETS_API_SECRET | No | Assets-API secret |
-| FAUCET_MNEMONIC | No | Faucet blockchain account Used to deploy contracts |
-| ORCHESTRATE_NEW_CONTRACT_TX | No | Needed for Orchestrate versions 21.12.1 and above |
-| ORCHESTRATE_BROKER_HOST | No | Orchestrate Kafka broker address |
-| ORCHESTRATE_BROKER_PORT | No | Orchestrate Kafka broker port |
-| ORCHESTRATE_URL | No | Orchestrate API address |
-| ORCHESTRATE_TOPIC_RECOVER | No | Orchestrate topic recover |
-| ORCHESTRATE_TOPIC_DECODED | No | Orchestrate topic decoded |
-| ORCHESTRATE_REGISTRY_TAG | No | Orchestrate registry tag |
-| CONTRACTS_DIRECTORY | No | Contracts directory |
-| CONTRACTS_CUSTOM_BUILD_DIRECTORY | No | Contracts truffle custom build directory |
-| CONTRACTS_TRUFFLE_BUILD_DIRECTORY | No | Contracts truffle build directory |
-| DEFAULT_NETWORK_KEY | Yes | Default blockchain network to use when none is specified in the request |
-| AUTH0_URL | No | Entity-API address |
-| AUTH_BYPASS_AUTHENTICATION_CHECK | Yes | Bypass Auth0 authentication check if configured |
-| AUTH_BYPASS_PERMISSION_CHECK | Yes | Bypass Auth0 permission check if configured |
-| AUTH_ACCEPTED_AUDIENCE | No | Accepted Auth0 Audience for access tokens |
-| AUTH_CUSTOM_NAMESPACE | No | Auth0 custom namespace |
-| AUTH_CUSTOM_ORCHESTRATE_NAMESPACE | No | Auth0 custom orchestrate namespace |
-| AUTH_HMAC_SECRET | Yes | Hmac secret |
-| M2M_TOKEN_REDIS_ENABLE | Yes | Enable M2M tokens caching (default to true) |
-| M2M_TOKEN_REDIS_HOST | Yes | Redis Host used to cache M2M tokens |
-| M2M_TOKEN_REDIS_PASS | Yes | Redis Pass used to cache M2M tokens |
-| M2M_TOKEN_CLIENT_ID | No | Codefi M2M Client ID used to connect to other Codefi apps |
-| M2M_TOKEN_CLIENT_SECRET | No | Codefi M2M Client Secret |
-| M2M_TOKEN_AUDIENCE | No | Codefi M2M Client Audience |
 
 ## Tests
 ### Functional Tests

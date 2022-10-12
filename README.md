@@ -151,6 +151,12 @@ DEFAULT_NETWORK_KEY=
 ```
 that network key has to be present (together with that network's other params) in the Smart contract API service's network.js file.
 
+##### Docker performance problems
+
+Launching the whole aforementioned stack can demand a lot of docker system resources especially in terms of RAM.
+If you run into any of these problems, and some containers fail to start (or they start and will be killed afterwards), try to increase resources allocated to your docker daemon. This can be done differently depending on the platform you are running in the stack.
+Also you could disable/not run services: PgAdmin and Cors proxy in the local dev env platfrom tool, as those are not required dependencies.
+
 ### Supported Services
 
 - [entity-api](./platform/services/entity-api/README.md)
