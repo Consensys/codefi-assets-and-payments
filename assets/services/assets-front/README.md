@@ -52,10 +52,10 @@ For adding new language check `i18n-api` readme.
 
 ### Environment Variables
 
-| Name | Description |
-| ---  | --- |
-| REACT_APP_AUTH_CLIENT_ID | Auth0 client id |
-| REACT_APP_AUTH_DOMAIN |Auth0 domain |
-| REACT_APP_AUTH_AUDIENCE | Auth0 audience |
-| REACT_APP_DOMAIN_NAME | assets-api domain name |
-|REACT_APP_APP_URL| assets-api url|
+| Name                     | Description                                     |
+| ------------------------ | ----------------------------------------------- |
+| REACT_APP_AUTH_CLIENT_ID | Auth0 application client id or Assets tenant Id |
+| REACT_APP_AUTH_DOMAIN    | Auth0 domain linked to your Auth0 tenant        |
+| REACT_APP_AUTH_AUDIENCE  | Auth0 audience                                  |
+| REACT_APP_DOMAIN_NAME    | assets-api domain name                          |
+| REACT_APP_APP_URL        | assets-api url                                  |
