@@ -4460,18 +4460,6 @@ export class ApiMailingCallService {
           buttonHref,
           tenantName,
         },
-        options: {
-          Bcc: [
-            {
-              Name: 'Salah-Eddine Saakoun',
-              Email: 'salah-eddine.saakoun@consensys.net',
-            },
-            {
-              Name: 'Matthieu Bouchaud',
-              Email: 'matthieu.bouchaud@consensys.net',
-            },
-          ],
-        },
       };
 
       const requestConfig: AxiosRequestConfig =
