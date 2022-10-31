@@ -136,7 +136,15 @@ function getExportFileBlob({ columns, data, fileType }: any) {
   if (fileType === 'csv') {
     // CSV
     const headerNames = columns.map((col: any) => col.exportValue);
-    const csvString = Papa.unparse({ fields: headerNames, data });
+    const csvData = data.map((row: any) => {
+      return row.map((rowData: any) => {
+        if (/^[=+-@]/.test(rowData)) {
+          return `'${rowData}`;
+        }
+        return rowData;
+      });
+    });
+    const csvString = Papa.unparse({ fields: headerNames, data: csvData });
     return new Blob([csvString], { type: 'text/csv' });
   }
   return false;
