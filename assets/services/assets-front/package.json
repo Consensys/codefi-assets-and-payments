@@ -19,7 +19,7 @@
     "release": "standard-version",
     "docker": "docker-compose up --build",
     "docker:detached": "docker-compose up --build -d",
-    "docker:down": "docker-compose up --build down"
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
     "@ant-design/charts": "1.2.11",
