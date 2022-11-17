@@ -10,6 +10,7 @@ import {
   ApiOperation,
 } from '@nestjs/swagger'
 import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { Protected } from '@codefi/auth'
 
 @ApiTags('Hooks')
 @ApiBearerAuth('access-token')
@@ -27,6 +28,7 @@ export class WebHookController {
   @Permissions('register:hook')
   @ApiOAuth2(['register:hook'])
   @ApiOperation({ summary: 'Register a new hook' })
+  @Protected(true, [])
   async authHook(
     @Body() authRegisterRequest: AuthHookRegisterRequest,
   ): Promise<AuthHookRegisterResponse> {

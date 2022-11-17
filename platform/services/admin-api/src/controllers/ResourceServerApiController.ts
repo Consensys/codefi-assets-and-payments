@@ -21,6 +21,7 @@ import {
   ApiOperation,
   ApiParam,
 } from '@nestjs/swagger'
+import { Protected } from '@codefi/auth'
 
 @ApiTags('APIs')
 @ApiBearerAuth('access-token')
@@ -39,6 +40,7 @@ export class ResourceServerApiController {
   @Permissions('write:api')
   @ApiOAuth2(['write:api'])
   @ApiOperation({ summary: 'Create an API' })
+  @Protected(true, [])
   async createApi(
     @Body() request: CreateApiRequest,
   ): Promise<CreateApiResponse> {
@@ -56,6 +58,7 @@ export class ResourceServerApiController {
   @Permissions('read:api')
   @ApiOperation({ summary: 'Retrieve permissions (scopes) for this API' })
   @ApiParam({ name: 'id', description: 'The API/Resource Server id' })
+  @Protected(true, [])
   async getApiScopes(@Param('id') resourceServerId: string): Promise<Scope[]> {
     return this.resourceServerApiService.getResourceServerScopes(
       resourceServerId,
@@ -65,6 +68,7 @@ export class ResourceServerApiController {
   @Get(`/scopes`)
   @Permissions('read:api')
   @ApiOperation({ summary: 'Get the default API scopes' })
+  @Protected(true, [])
   async getDefaultApiScopes(): Promise<Scope[]> {
     return this.resourceServerApiService.getResourceServerScopes()
   }

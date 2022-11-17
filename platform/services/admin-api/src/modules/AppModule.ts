@@ -14,13 +14,14 @@ import {
   ApmClientModule,
   initApm,
   nestjsLoggerModuleConfig,
-  LoggerModule
+  LoggerModule,
 } from '@codefi-assets-and-payments/observability'
 import {
   KafkaConsumerModule,
   KafkaPreview,
   KafkaProducerModule,
 } from '@codefi-assets-and-payments/nestjs-messaging'
+import { AuthGuard } from '@codefi/auth'
 
 const apm = initApm()
 
@@ -43,6 +44,10 @@ const apm = initApm()
   ],
   controllers: [],
   providers: [
+    {
+      provide: APP_GUARD,
+      useClass: AuthGuard,
+    },
     {
       provide: APP_GUARD,
       useClass: ScopesPermissionsGuard,

@@ -31,6 +31,7 @@ import {
 import { ClientGetAllResponse } from '../responses/ClientGetAllResponse'
 import { UpdateClientRequest } from '../requests/UpdateClientRequest'
 import { ErrorName } from '../enums/ErrorName'
+import { Protected } from '@codefi/auth'
 
 @ApiTags('Clients')
 @ApiBearerAuth('access-token')
@@ -50,6 +51,7 @@ export class ClientController {
   @Permissions('write:client')
   @ApiOAuth2(['write:client'])
   @ApiOperation({ summary: 'Create an auth0 application' })
+  @Protected(true, [])
   async createClient(
     @Body() request: CreateClientRequest,
   ): Promise<ClientResponse> {
@@ -65,6 +67,7 @@ export class ClientController {
   @ApiOAuth2(['read:client'])
   @ApiOperation({ summary: 'Retrieve a Client by ID' })
   @ApiQuery({ name: 'id', required: true, description: 'ID of the client' })
+  @Protected(true, [])
   async getClient(@Param('id') clientId: string): Promise<ClientResponse> {
     this.logger.info(`get client by client_id: ${clientId}`)
     try {
@@ -90,6 +93,7 @@ export class ClientController {
     required: false,
     description: 'Page limit',
   })
+  @Protected(true, [])
   async getAllClients(
     @Query('skip') skip: number,
     @Query('limit') limit: number,
@@ -115,6 +119,7 @@ export class ClientController {
   @ApiOAuth2(['delete:client'])
   @ApiOperation({ summary: 'Delete an Application Client' })
   @ApiParam({ name: 'id', description: 'The clientId to delete' })
+  @Protected(true, [])
   async deleteClientById(@Param('id') clientId: string) {
     this.logger.info(`deleteClientById. clientId: ${clientId}`)
     await this.clientService.deleteClientById(clientId)
@@ -126,6 +131,7 @@ export class ClientController {
   @ApiOperation({ summary: 'Update an Application Client' })
   @ApiParam({ name: 'id', description: 'The client to update' })
   @UsePipes(new JoiValidationPipe(createClientSchema))
+  @Protected(true, [])
   async updateClient(
     @Body() request: UpdateClientRequest,
     @Param('id') id: string,

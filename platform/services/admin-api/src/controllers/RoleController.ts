@@ -24,6 +24,7 @@ import { RoleResponse } from '../responses/RoleResponse'
 import { RolePermissionRequest } from '../requests/RolePermissionRequest'
 import { RolePermissionResponse } from '../responses/RolePermissionResponse'
 import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { Protected } from '@codefi/auth'
 
 @ApiTags('Roles')
 @ApiBearerAuth('access-token')
@@ -41,6 +42,7 @@ export class RoleController {
   @ApiOAuth2(['read:role'])
   @ApiOperation({ summary: 'Get role by ID' })
   @ApiParam({ name: 'id', description: 'Role ID' })
+  @Protected(true, [])
   async getRoleById(@Param('id') roleId: string): Promise<RoleResponse> {
     this.logger.info(`getRoleById. param.id: %o`, roleId)
     const response = await this.roleService.getRoleById(roleId)
@@ -53,6 +55,7 @@ export class RoleController {
   @Permissions('write:role')
   @ApiOAuth2(['write:role'])
   @ApiOperation({ summary: 'Create a role' })
+  @Protected(true, [])
   async createRole(@Body() request: CreateRoleRequest): Promise<RoleResponse> {
     this.logger.info(`createRole. request: %o`, request)
     const response = await this.roleService.createRole(request)
@@ -64,6 +67,7 @@ export class RoleController {
   @Permissions('write:role')
   @ApiOAuth2(['write:role'])
   @ApiOperation({ summary: 'Assign permission to role' })
+  @Protected(true, [])
   async assignPermissionsToRole(
     @Param('id') roleId: string,
     @Body() permissions: RolePermissionRequest[],
@@ -81,6 +85,7 @@ export class RoleController {
     name: 'roleId',
     description: 'Role from which to remove permission',
   })
+  @Protected(true, [])
   async removePermissionsToRole(
     @Param('id') roleId: string,
     @Body() permissions: RolePermissionRequest[],
@@ -93,6 +98,7 @@ export class RoleController {
   @Permissions('read:role')
   @ApiOAuth2(['read:role'])
   @ApiOperation({ summary: 'Get permissions assigned to role' })
+  @Protected(true, [])
   async getRolePermissions(
     @Param('id') roleId: string,
   ): Promise<RolePermissionResponse[]> {
