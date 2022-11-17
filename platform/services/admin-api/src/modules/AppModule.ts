@@ -21,7 +21,7 @@ import {
   KafkaPreview,
   KafkaProducerModule,
 } from '@codefi-assets-and-payments/nestjs-messaging'
-import { AuthGuard } from '@codefi/auth'
+import { AuthGuard } from '@codefi-assets-and-payments/auth'
 
 const apm = initApm()
 
