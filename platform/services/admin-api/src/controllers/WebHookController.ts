@@ -10,7 +10,7 @@ import {
   ApiOperation,
 } from '@nestjs/swagger'
 import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected } from '@codefi/auth'
+import { Protected } from '@codefi-assets-and-payments/auth'
 
 @ApiTags('Hooks')
 @ApiBearerAuth('access-token')

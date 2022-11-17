@@ -31,8 +31,7 @@ import {
 import { ClientGetAllResponse } from '../responses/ClientGetAllResponse'
 import { UpdateClientRequest } from '../requests/UpdateClientRequest'
 import { ErrorName } from '../enums/ErrorName'
-import { Protected } from '@codefi/auth'
-
+import { Protected } from '@codefi-assets-and-payments/auth'
 @ApiTags('Clients')
 @ApiBearerAuth('access-token')
 @Controller('client')

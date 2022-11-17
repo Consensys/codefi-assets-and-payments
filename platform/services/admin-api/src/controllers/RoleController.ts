@@ -24,7 +24,7 @@ import { RoleResponse } from '../responses/RoleResponse'
 import { RolePermissionRequest } from '../requests/RolePermissionRequest'
 import { RolePermissionResponse } from '../responses/RolePermissionResponse'
 import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected } from '@codefi/auth'
+import { Protected } from '@codefi-assets-and-payments/auth'
 
 @ApiTags('Roles')
 @ApiBearerAuth('access-token')

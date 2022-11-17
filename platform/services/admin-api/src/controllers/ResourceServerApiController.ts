@@ -21,7 +21,7 @@ import {
   ApiOperation,
   ApiParam,
 } from '@nestjs/swagger'
-import { Protected } from '@codefi/auth'
+import { Protected } from '@codefi-assets-and-payments/auth'
 
 @ApiTags('APIs')
 @ApiBearerAuth('access-token')

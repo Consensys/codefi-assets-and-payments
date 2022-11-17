@@ -5,7 +5,7 @@ import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiQuery } from '@nestjs/swagger'
 import { ClientGetAllResponse } from '../responses/ClientGetAllResponse'
 import { ConfigConstants } from '../config/ConfigConstants'
-import { Protected } from '@codefi/auth'
+import { Protected } from '@codefi-assets-and-payments/auth'
 
 @ApiTags('Infura')
 @ApiBearerAuth('access-token')
