@@ -4,7 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
 import cfg from './config'
 import { writeFileSync } from 'fs'
 import * as docsOverrides from './utils/docs-override.json'
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 
 let context = null
 export const ApplicationContext = async () => {

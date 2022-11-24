@@ -1,6 +1,6 @@
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 import {
   Commands,
@@ -14,8 +14,8 @@ import {
   TransferTokenCommandBuilder,
   BurnTokenCommandBuilder,
   IBurnTokenCommand,
-} from '@codefi-assets-and-payments/messaging-events'
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { TokenType } from '@consensys/ts-types'
 
 @Injectable()
 export class EventsService {

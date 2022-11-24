@@ -1,15 +1,15 @@
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
-import { ITokenCommand } from '@codefi-assets-and-payments/messaging-events'
-import { OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { M2mTokenService } from '@consensys/auth'
+import { ITokenCommand } from '@consensys/messaging-events'
+import { OrchestrateUtils } from '@consensys/nestjs-orchestrate'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { NewTokenResponse } from '@codefi-assets-and-payments/ts-types'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { NewTokenResponse } from '@consensys/ts-types'
 
 import config from '../config'
 import { EventsService } from '../services/EventsService'
 import { TokenEntity } from '../data/entities/TokenEntity'
 import { OperationEntity } from '../data/entities/OperationEntity'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 
 @Injectable()
 export abstract class TokenCommandConsumer

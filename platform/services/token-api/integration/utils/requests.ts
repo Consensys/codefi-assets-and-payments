@@ -4,10 +4,10 @@ import {
   IExecTokenCommand,
   IMintTokenCommand,
   ISetTokenURICommand,
-} from '@codefi-assets-and-payments/messaging-events'
-import { IDeployTokenCommand } from '@codefi-assets-and-payments/messaging-events/dist/messages/commands/DeployTokenCommand'
-import { ITransferTokenCommand } from '@codefi-assets-and-payments/messaging-events/dist/messages/commands/TransferTokenCommand'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/messaging-events'
+import { IDeployTokenCommand } from '@consensys/messaging-events/dist/messages/commands/DeployTokenCommand'
+import { ITransferTokenCommand } from '@consensys/messaging-events/dist/messages/commands/TransferTokenCommand'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import Axios, { AxiosRequestConfig } from 'axios'
 import axiosRetry from 'axios-retry'
 import {
@@ -32,8 +32,8 @@ import {
   TokenQueryRequest,
   TokenOperationQueryRequest,
   TokenOperationPaginatedResponse,
-} from '@codefi-assets-and-payments/ts-types'
-import { UserTokenService } from '@codefi-assets-and-payments/auth'
+} from '@consensys/ts-types'
+import { UserTokenService } from '@consensys/auth'
 import { v4 as uuidv4 } from 'uuid'
 
 export interface AxiosResponse<T = any> {

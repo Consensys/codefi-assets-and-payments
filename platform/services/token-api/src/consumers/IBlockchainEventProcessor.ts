@@ -1,4 +1,4 @@
-import { IReceipt, ITransactionContext } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { IReceipt, ITransactionContext } from '@consensys/nestjs-orchestrate'
 
 export interface IBlockchainEventProcessor {
   eventName(): string

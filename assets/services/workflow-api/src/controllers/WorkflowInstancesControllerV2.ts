@@ -1,6 +1,6 @@
 import { Body, Controller, Get, ParseIntPipe, Put, Query } from '@nestjs/common'
 import { ApiTags, ApiQuery, ApiBody } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import { WorkflowInstance } from '../models/WorkflowInstanceEntity'
 import { WorkflowInstancesService } from '../services/WorkflowInstancesService'

@@ -2,8 +2,8 @@ import {
   ContractManager,
   TransactionConfig,
   IHeaders,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { ApmService } from '@codefi-assets-and-payments/observability'
+} from '@consensys/nestjs-orchestrate'
+import { ApmService } from '@consensys/observability'
 import { Injectable } from '@nestjs/common'
 import BigNumber from 'bignumber.js'
 import { RawTransaction } from '../types/RawTransaction'

@@ -1,7 +1,7 @@
-import { Commands, ITenantUpdateCommand } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { Commands, ITenantUpdateCommand } from '@consensys/messaging-events'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { TenantService } from '../services/TenantService'
 import { getGroupId } from '../utils/kafka'
 

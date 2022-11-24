@@ -171,13 +171,13 @@ import { ApiMailingCallService } from 'src/modules/v2ApiCall/api.call.service/ma
 import { keys as ConfigKeys, Config } from 'src/types/config';
 import { ConfigService } from 'src/modules/v2Config/config.service';
 import { WorkFlowsEventService } from './event';
-import { couponsScheduler, dayCounter } from '@codefi-assets-and-payments/day-counter';
+import { couponsScheduler, dayCounter } from '@consensys/day-counter';
 import {
   addDate,
   dateAmountType,
   getFractionFromFrequency,
 } from 'src/utils/date';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { AssetElementInstance } from 'src/types/asset/elementInstance';
 import { checkUserType } from 'src/utils/checks/userType';
 import { ApiExternalStorageCallService } from 'src/modules/v2ApiCall/api.call.service/externalStorage';

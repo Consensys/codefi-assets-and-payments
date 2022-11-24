@@ -33,7 +33,7 @@ import { V2ConfigModule } from 'src/modules/v2Config/config.module';
 import { V2NetworkModule } from 'src/modules/v2Network/network.module';
 import { ApiReferenceDataCallService } from '../v2ApiCall/api.call.service/referencedata';
 import { V2WorkflowInstanceModule } from '../v2WorkflowInstance/workflow.instance.module';
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth';
+import { M2mTokenModule } from '@consensys/auth';
 
 @Module({
   controllers: [TokenController],

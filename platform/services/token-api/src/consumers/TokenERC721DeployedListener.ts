@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { AbstractTokenDeployedListener } from './AbstractTokenDeployedListener'
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+import { TokenType } from '@consensys/ts-types'
 
 @Injectable()
 export class TokenERC721DeployedListener extends AbstractTokenDeployedListener {

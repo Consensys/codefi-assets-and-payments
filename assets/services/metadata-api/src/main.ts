@@ -1,4 +1,4 @@
-import { initApm } from '@codefi-assets-and-payments/observability';
+import { initApm } from '@consensys/observability';
 initApm();
 
 import { startServer } from './server';

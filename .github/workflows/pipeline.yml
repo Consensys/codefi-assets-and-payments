@@ -16,8 +16,8 @@ jobs:
       - name: Install Dependencies
         run: yarn
       - name: Build
-        run: npm run build:all
+        run: yarn run build:all
       - name: Unit Tests
-        run: npm run test:all
+        run: yarn run test:all
       - name: Lint
-        run: npm run lint:all
+        run: yarn run lint:all

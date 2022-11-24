@@ -18,13 +18,13 @@ import { ApiDocumentCallService } from 'src/modules/v2ApiCall/api.call.service/d
 import { DocumentDownloadQueryInput } from './document.dto';
 import { EntityType } from 'src/types/entity';
 import { Request, Response } from 'express';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { uploadedFile } from 'src/utils/uploadedFile';
 import { checkUserType } from 'src/utils/checks/userType';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
 import { UserRetrievalService } from '../v2User/user.service/retrieveUser';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 @Controller('v2/document')
 @UseFilters(new AppToHttpFilter()) // Used to preserve error codes coming from packages (Ex: 401 from auth package). Otherwise, coming from packages are turned into 500.

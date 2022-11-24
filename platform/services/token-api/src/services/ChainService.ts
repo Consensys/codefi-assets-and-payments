@@ -1,9 +1,9 @@
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import {
   ChainRegistry,
   ContractManager,
   IHeaders,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Injectable } from '@nestjs/common'
 
 @Injectable()

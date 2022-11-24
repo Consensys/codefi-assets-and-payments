@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 import { sleep } from '../utils/utils'
 import { QueryFailedError, Repository } from 'typeorm'
@@ -14,7 +14,7 @@ import {
   TenantCreateRequest,
   EntityCreateRequest,
   WalletCreateRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 
 @Injectable()
 export class PersistentConfigurationService {

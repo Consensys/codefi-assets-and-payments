@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiMetadataCallService } from './metadata';
 import createMockInstance from 'jest-create-mock-instance';
 import { ApiCallHelperService } from '.';
@@ -18,7 +18,7 @@ import { Token, keys as TokenKeys } from 'src/types/token';
 import axios from 'axios';
 import { ApiEntityCallService } from './entity';
 import { generateToken, generateUser } from 'test/mockDataGenerators';
-import { WalletType as EntityApiWalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType as EntityApiWalletType } from '@consensys/ts-types';
 
 const axiosClientGetMock = jest.fn();
 

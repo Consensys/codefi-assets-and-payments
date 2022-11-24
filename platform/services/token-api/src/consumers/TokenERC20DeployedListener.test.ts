@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EventsService } from '../services/EventsService'
 import {
   addressMock,
@@ -14,8 +14,8 @@ import {
 import { TokenERC20DeployedListener } from './TokenERC20DeployedListener'
 import { TokensService } from '../services/TokensService'
 import { OperationsService } from '../services/OperationsService'
-import { EntityStatus, TokenType, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { EntityStatus, TokenType, TokenOperationType } from '@consensys/ts-types'
+import { M2mTokenService } from '@consensys/auth'
 import { ChainService } from '../services/ChainService'
 
 describe('TokensERC20DeployedListener', () => {

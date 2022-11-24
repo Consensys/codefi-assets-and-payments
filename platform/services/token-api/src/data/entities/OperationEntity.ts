@@ -1,6 +1,6 @@
 import { Entity, PrimaryColumn, Column } from 'typeorm'
-import { EntityStatus, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
-import { IReceipt } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { EntityStatus, TokenOperationType } from '@consensys/ts-types'
+import { IReceipt } from '@consensys/nestjs-orchestrate'
 
 @Entity()
 export class OperationEntity {

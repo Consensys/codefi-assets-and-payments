@@ -1,4 +1,4 @@
-import { nestjsLogger } from '@codefi-assets-and-payments/observability';
+import { nestjsLogger } from '@consensys/observability';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { TestingModule, Test } from '@nestjs/testing';
 import { AuthenticationGuard } from 'src/authentication.guard';

@@ -7,13 +7,13 @@ import {
   UsePipes,
 } from '@nestjs/common'
 import { ApiOAuth2, ApiOperation, ApiTags } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected } from '@codefi-assets-and-payments/auth'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { Protected } from '@consensys/auth'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import {
   TokenOperationPaginatedResponse,
   TokenOperationQueryRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { OperationsService } from '../services/OperationsService'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'

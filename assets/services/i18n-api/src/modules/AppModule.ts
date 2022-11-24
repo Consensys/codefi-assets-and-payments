@@ -4,7 +4,7 @@ import { APP_GUARD } from '@nestjs/core'
 import { ScopesPermissionsGuard } from '../guards/ScopesPermissionsGuard'
 import { TerminusModule } from '@nestjs/terminus'
 import { ScheduleModule } from '@nestjs/schedule'
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability'
+import { CodefiLoggerModule } from '@consensys/observability'
 import { KeysModule } from './KeysModule'
 
 const imports = [

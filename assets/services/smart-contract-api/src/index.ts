@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { initApm, apm } from '@codefi-assets-and-payments/observability';
+import { initApm, apm } from '@consensys/observability';
 initApm({
   transactionSampleRate: 1,
   logLevel: (process.env.APM_LOG_LEVEL || 'info') as apm.LogLevel,

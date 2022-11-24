@@ -1,4 +1,4 @@
-import { decodeTokenFromRequest, Protected } from '@codefi-assets-and-payments/auth'
+import { decodeTokenFromRequest, Protected } from '@consensys/auth'
 import {
   Body,
   Controller,
@@ -15,12 +15,12 @@ import {
 } from '@nestjs/common'
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
 import { Request } from 'express'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { DeleteResult, FindManyOptions, Raw } from 'typeorm'
 import { TenantService } from '../services/TenantService'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { tenantCreateRequestSchema } from '../validation/tenantCreateRequestSchema'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { tenantUpdateRequestSchema } from '../validation/tenantUpdateRequestSchema'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import { LocalErrorName } from '../LocalErrorNameEnum'
@@ -31,7 +31,7 @@ import {
   TenantCreateRequest,
   TenantUpdateRequest,
   TenantQueryRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { tenantQueryRequestSchema } from '../validation/tenantQueryRequestSchema'
 import { checkTenantMatchesRequest } from '../utils/controller'
 

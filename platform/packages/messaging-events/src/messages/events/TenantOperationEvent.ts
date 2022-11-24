@@ -1,4 +1,4 @@
-import { ProductType } from '@codefi-assets-and-payments/ts-types';
+import { ProductType } from '@consensys/ts-types';
 import { TenantOperationEventSchema } from '../../schemas/TenantOperationEventSchema';
 import { AbstractMessage } from '../AbstractMessage';
 import { MessageDataOperation } from '../MessageOperation';

@@ -1,5 +1,5 @@
-import { IEntityWallet } from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, WalletType } from '@codefi-assets-and-payments/ts-types'
+import { IEntityWallet } from '@consensys/messaging-events'
+import { EntityStatus, WalletType } from '@consensys/ts-types'
 import { Column, Entity, PrimaryColumn } from 'typeorm'
 
 @Entity()

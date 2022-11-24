@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import { DigitalCurrencyEntity } from '../data/entities/DigitalCurrencyEntity'
 import { v4 as uuidv4 } from 'uuid'
@@ -12,15 +12,15 @@ import {
   ProcessingMessageException,
   UnauthorizedException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { LegalEntityEntity } from '../data/entities/LegalEntityEntity'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { addHex, isGreaterOrEqualToHex } from '../utils/bignumberUtils'
 import {
   EntityStatus,
   OperationType,
-} from '@codefi-assets-and-payments/ts-types'
-import { IEntityWallet } from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/ts-types'
+import { IEntityWallet } from '@consensys/messaging-events'
 import { EthereumAddressService } from './EthereumAddressService'
 import Web3 from 'web3'
 

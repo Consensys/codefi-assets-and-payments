@@ -11,7 +11,7 @@ import {
   IUserCreateCommand,
   IUserCreatedEvent,
   IUserUpdatedEvent,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import {
   DEV_MAIN_CLIENT_ID,
   DEV_ADMIN_AUDIENCE,
@@ -24,7 +24,7 @@ import { DECODED_TOKEN_HEADER } from '../src/utils/jwtUtils'
 import cfg from '../src/config'
 import { Request } from 'express'
 import { CreateUserRequest } from '../src/requests/CreateUserRequest'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { ProductsEnum } from '@consensys/ts-types'
 import { UpdateUserRequest } from '../src/requests/UpdateUserRequest'
 import codefiScopes from '../src/config/permissions/codefi.json'
 import orchestrateScopes from '../src/config/permissions/orchestrate.json'

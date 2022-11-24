@@ -1,7 +1,7 @@
 import { RegisterTokenCommandSchema } from '../../schemas/RegisterTokenCommandSchema';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
 import { Builder, IBuilder } from 'builder-pattern';
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 
 export class RegisterTokenCommand extends TokenCommand {
   public messageName = 'register_token';

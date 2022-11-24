@@ -1,4 +1,4 @@
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
+import { ValidationException } from '@consensys/error-handler'
 import { PipeTransform } from '@nestjs/common'
 import Joi from 'joi'
 import { LocalErrorName } from '../LocalErrorNameEnum'

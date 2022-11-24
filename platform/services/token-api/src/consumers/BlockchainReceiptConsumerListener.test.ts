@@ -1,5 +1,5 @@
 import { BlockchainReceiptConsumerListener } from './BlockchainReceiptConsumerListener'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   uuidMock,
@@ -19,7 +19,7 @@ import { TokenTransferListener } from './TokenTransferListener'
 import { TokensService } from '../services/TokensService'
 import { OperationsService } from '../services/OperationsService'
 import { EventsService } from '../services/EventsService'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 import config from '../config'
 import { OperationEntity } from '../data/entities/OperationEntity'
 

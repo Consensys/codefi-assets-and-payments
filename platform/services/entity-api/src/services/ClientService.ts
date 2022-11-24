@@ -1,18 +1,18 @@
 import { FindManyOptions, Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { AdminApiService } from './AdminApiService'
 import {
   ClientType,
   EntityClientCreateRequest,
   EntityStatus,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { ClientEntity } from '../data/entities/ClientEntity'
 import { Injectable } from '@nestjs/common'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { InjectRepository } from '@nestjs/typeorm'
 import { v4 as uuidv4 } from 'uuid'
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
+import { ValidationException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 
 const SUPPORTED_TYPES = [ClientType.SinglePage, ClientType.NonInteractive]

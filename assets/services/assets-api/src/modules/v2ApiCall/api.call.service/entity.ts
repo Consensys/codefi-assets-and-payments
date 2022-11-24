@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 import ErrorService from 'src/utils/errorService';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { ApiCallHelperService } from '.';
 
@@ -24,9 +24,9 @@ import {
   WalletUpdateRequest,
   WalletType as EntityApiWalletType,
   EntityQueryRequest,
-} from '@codefi-assets-and-payments/ts-types';
-import { OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
+} from '@consensys/ts-types';
+import { OrchestrateUtils } from '@consensys/nestjs-orchestrate';
+import { M2mTokenService } from '@consensys/auth';
 import config from '../../../config';
 import { keys as UserKeys, User, EntityEnum } from 'src/types/user';
 import _ from 'lodash';

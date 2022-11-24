@@ -127,15 +127,15 @@ import { keys as TokenKeys, Token } from 'src/types/token';
 import { RawAssetTemplate } from 'src/types/asset/template';
 import { keys as ClientKeys, TenantType } from 'src/types/clientApplication';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { sleep } from 'src/utils/sleep';
 import {
   extractEntityIdFromRequest,
   extractTenantIdFromRequest,
   Protected,
-} from '@codefi-assets-and-payments/auth';
+} from '@consensys/auth';
 import { Auth0User, craftAuth0TenantId } from 'src/types/authentication';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import {
   keys as GrantKeys,
   Grant,

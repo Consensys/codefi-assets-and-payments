@@ -2,7 +2,7 @@ import createMockInstance from 'jest-create-mock-instance';
 import { ApiCallHelperService } from '.';
 
 import RedisCache from 'ioredis-cache';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { of } from 'rxjs';
 

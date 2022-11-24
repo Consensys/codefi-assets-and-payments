@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/observability
+# @consensys/observability
 
 All-in-one Observability package for NodeJS services.
 
@@ -7,7 +7,7 @@ All-in-one Observability package for NodeJS services.
 Run the following command to install this package:
 
 ```shell script
-npm install @codefi-assets-and-payments/observability
+npm install @consensys/observability
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @codefi-assets-and-payments/observability
 **tl;dr** :
 
 ```typescript
-import { createLogger, initApm } from '@codefi-assets-and-payments/observability'
+import { createLogger, initApm } from '@consensys/observability'
 
 initApm()
 
@@ -31,7 +31,7 @@ This is only required if support for `ApmService` is needed to enable traces for
 Given that `initApm()` needs to be invoked before any other NestJS modules are loaded and can only be called once. It is necessary to call `initApm()` within the root `AppModule.ts` file like this.
 
 ```typescript
-import { ApmClientModule, initApm } from '@codefi-assets-and-payments/observability'
+import { ApmClientModule, initApm } from '@consensys/observability'
 
 const apm = initApm()
 
@@ -58,7 +58,7 @@ Check the `.env.sample` file for a complete list or required environment variabl
 To enable APM this should be the first two lines ran by an application:
 
 ```typescript
-import { initApm } from '@codefi-assets-and-payments/observability'
+import { initApm } from '@consensys/observability'
 initApm()
 ```
 
@@ -70,7 +70,7 @@ To enable configured logger available for NestJS components add the following to
 
 ```typescript
 import { Module } from '@nestjs/common'
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability'
+import { CodefiLoggerModule } from '@consensys/observability'
 
 @Module({
   imports: [CodefiLoggerModule.forRoot()],
@@ -87,7 +87,7 @@ To enable configured logger available for NestJS components add the following to
 ```typescript
 import { Module } from '@nestjs/common'
 import { LoggerModule } from 'nestjs-pino'
-import { nestjsLoggerModuleConfig } from '@codefi-assets-and-payments/observability'
+import { nestjsLoggerModuleConfig } from '@consensys/observability'
 
 @Module({
   imports: [LoggerModule.forRoot(nestjsLoggerModuleConfig())],
@@ -100,7 +100,7 @@ export class AppModule {}
 To ensure that NestJS is using pino logger to log its internal debug messages we should pass it when we create a Nest application:
 
 ```typescript
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 
 await NestFactory.create(AppModule, {
   logger: nestjsLogger(),
@@ -190,7 +190,7 @@ app.listen(port, () =>
 If you need to log messages outside Nest framework or provide a logger instance to another library/framework we can get a configured logger instance:
 
 ```typescript
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 import { startServer } from './server'
 
 // Get configured logger instance

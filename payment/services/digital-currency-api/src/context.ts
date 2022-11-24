@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core'
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 import { AppModule } from './modules/AppModule'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
 import * as docsOverrides from './utils/docs-override.json'

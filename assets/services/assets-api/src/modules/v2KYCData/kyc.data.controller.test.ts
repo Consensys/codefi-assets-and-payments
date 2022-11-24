@@ -7,7 +7,7 @@ import { KycCheckService } from 'src/modules/v2KYCCheck/kyc.check.service';
 import { KYCTemplateService } from 'src/modules/v2KYCTemplate/kyc.template.service';
 import { EntityService } from 'src/modules/v2Entity/entity.service';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiEntityCallService } from '../v2ApiCall/api.call.service/entity';
 
 describe('KYCEssentialDataController', () => {

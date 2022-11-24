@@ -1,7 +1,7 @@
 import { ConfigStageRequest, IConfigStage } from '../types/ConfigStage'
 import { ConfigConstants } from '../ConfigConstants'
 import cfg from '../../config'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import codefiRoles from '../roles/codefi.json'
 import assetsRoles from '../roles/assets.json'
 import paymentsRoles from '../roles/payments.json'

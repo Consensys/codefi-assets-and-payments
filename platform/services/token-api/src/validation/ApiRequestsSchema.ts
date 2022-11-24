@@ -1,4 +1,4 @@
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+import { TokenType } from '@consensys/ts-types'
 import Joi from 'joi'
 
 // bytesLength * 2 because 1 string char = 2 bytes

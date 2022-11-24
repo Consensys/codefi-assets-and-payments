@@ -9,17 +9,17 @@ import {
   Query,
   Body,
 } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
-import { Protected } from '@codefi-assets-and-payments/auth'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { Protected } from '@consensys/auth'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { errorApiResponse } from '../responses/error-api-response'
 import {
   EntityClientCreateRequest,
   EntityClientPaginatedResponse,
   EntityClientQueryRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { Request } from 'express'
 import { ClientEntity } from '../data/entities/ClientEntity'
 import { FindManyOptions } from 'typeorm'

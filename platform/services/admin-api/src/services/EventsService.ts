@@ -1,12 +1,12 @@
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   IUserCreatedEvent,
   Events,
   IClientCreatedEvent,
   ITenantCreatedEvent,
   IUserUpdatedEvent,
-} from '@codefi-assets-and-payments/messaging-events'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+} from '@consensys/messaging-events'
+import { NestJSPinoLogger } from '@consensys/observability'
 import cfg from '../config'
 import { Injectable } from '@nestjs/common'
 

@@ -1,13 +1,13 @@
 import {
   IEntityOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { RecoveryService } from '../services/RecoveryService'
 import { entityIdMock } from '../../test/mocks'
 import { EntityOperationEventConsumer } from './EntityOperationEventConsumer'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityNotFoundException } from '@consensys/error-handler'
 
 describe('EntityOperationEventConsumer', () => {
   let consumer: EntityOperationEventConsumer

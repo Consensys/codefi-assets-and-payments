@@ -14,14 +14,14 @@ import {
   ApmClientModule,
   initApm,
   nestjsLoggerModuleConfig,
-  LoggerModule,
-} from '@codefi-assets-and-payments/observability'
+  LoggerModule
+} from '@consensys/observability'
 import {
   KafkaConsumerModule,
   KafkaPreview,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
-import { AuthGuard } from '@codefi-assets-and-payments/auth'
+} from '@consensys/nestjs-messaging'
+import { AuthGuard } from '@consensys/auth'
 
 const apm = initApm()
 

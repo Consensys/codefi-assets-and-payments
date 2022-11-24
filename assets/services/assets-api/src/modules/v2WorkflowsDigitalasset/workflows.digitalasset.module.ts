@@ -36,7 +36,7 @@ import { V2KYCWorkflowModule } from '../v2KYCWorkflow/kyc.workflow.module';
 import { V2ConfigModule } from '../v2Config/config.module';
 import { ApiReferenceDataCallService } from '../v2ApiCall/api.call.service/referencedata';
 import { WorkFlowsEventService } from './workflows.digitalasset.service/event';
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth';
+import { M2mTokenModule } from '@consensys/auth';
 import { V2OrderModule } from 'src/modules/v2Order/order.module';
 
 @Module({

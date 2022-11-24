@@ -1,4 +1,4 @@
-import { ChainRegistry, ContractManager } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ChainRegistry, ContractManager } from '@consensys/nestjs-orchestrate'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   authTokenMock,

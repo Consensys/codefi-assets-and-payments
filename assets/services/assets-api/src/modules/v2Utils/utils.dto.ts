@@ -44,7 +44,7 @@ import {
 import { Type } from 'class-transformer';
 import { AssetType } from 'src/types/asset/template';
 import { Hold, HoldExample, formatHold } from 'src/types/hold';
-import { TenantResponse } from '@codefi-assets-and-payments/ts-types';
+import { TenantResponse } from '@consensys/ts-types';
 
 export const MAX_TENANTS_COUNT = 50;
 

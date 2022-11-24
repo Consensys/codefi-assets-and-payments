@@ -12,14 +12,14 @@ import {
   UseFilters,
 } from '@nestjs/common'
 import { ApiOAuth2, ApiOperation, ApiTags } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   Protected,
   decodeTokenFromRequest,
   extractTenantIdFromToken,
   extractTokenFromRequest,
   extractEntityIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import {
   TokenQueryRequestSchema,
@@ -48,8 +48,8 @@ import {
   TokenPaginatedResponse,
   NewTokenResponse,
   TokenOperationResponse,
-} from '@codefi-assets-and-payments/ts-types'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/ts-types'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { FindManyOptions } from 'typeorm'
 
 @ApiTags('Tokens')

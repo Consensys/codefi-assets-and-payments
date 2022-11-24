@@ -1,5 +1,5 @@
 import { EntityController } from './EntityController'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   entityIdMock,
@@ -10,10 +10,10 @@ import {
   walletAddressMock,
 } from '../../test/mocks'
 import { EntityService } from '../services/EntityService'
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
+import { UnauthorizedException } from '@consensys/error-handler'
 import { MAX_PAGINATED_LIMIT } from '../validation/paginatedQueryRequestProperties'
-import { EntityQueryRequest } from '@codefi-assets-and-payments/ts-types'
+import { EntityQueryRequest } from '@consensys/ts-types'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { FindOperator } from 'typeorm'
 

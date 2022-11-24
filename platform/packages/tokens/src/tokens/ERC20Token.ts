@@ -3,10 +3,10 @@ import {
   ContractManager,
   TransactionConfig,
   IHeaders,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Injectable } from '@nestjs/common'
 import { RawTransaction } from '../types/RawTransaction'
-import { ApmService } from '@codefi-assets-and-payments/observability'
+import { ApmService } from '@consensys/observability'
 import { labelsWithApm } from './utils'
 @Injectable()
 export class ERC20Token {

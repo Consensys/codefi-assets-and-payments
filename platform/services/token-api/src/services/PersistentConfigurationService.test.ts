@@ -1,11 +1,11 @@
 import { PersistentConfigurationService } from './PersistentConfigurationService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
-import { ContractRegistry, OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ContractRegistry, OrchestrateUtils } from '@consensys/nestjs-orchestrate'
 import cfg from '../config'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import { authTokenMock, createMockLogger } from '../../test/mocks'
-import mockContractJson from '@codefi-assets-and-payments/contracts/build/contracts/CodefiERC20.json'
+import mockContractJson from '@consensys/contracts/build/contracts/CodefiERC20.json'
 
 jest.setTimeout(20000)
 
@@ -108,7 +108,7 @@ describe('PersistentConfigurationService', () => {
       jest.resetModules()
       const contractName = 'CodefiERC20'
       jest.doMock(
-        `@codefi-assets-and-payments/contracts/build/contracts/${contractName}.json`,
+        `@consensys/contracts/build/contracts/${contractName}.json`,
         () => {
           return undefined
         },

@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { createLogger } from '@codefi-assets-and-payments/observability/dist'
+import { createLogger } from '@consensys/observability/dist'
 import { BadRequestException } from '@nestjs/common'
 
 const logger = createLogger('api-utils')

@@ -41,7 +41,7 @@ import {
   TokenCategory,
   ZERO_ADDRESS,
 } from 'src/types/smartContract';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { NetworkService } from 'src/modules/v2Network/network.service';
 import { getEnumValues } from 'src/utils/enumUtils';
 import {

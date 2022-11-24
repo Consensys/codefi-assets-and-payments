@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/assets-api",
+  "name": "@consensys/assets-api",
   "private": true,
   "version": "3.178.1",
   "description": "Assets API",
@@ -25,7 +25,7 @@
     "test:functional": "jest test/functional --detectOpenHandles --runInBand --verbose --forceExit",
     "test:functional:record": "RECORD=true jest test/functional --detectOpenHandles --runInBand --verbose --forceExit",
     "test:watch": "jest src --watch",
-    "test": "jest src --b --runInBand --forceExit",
+    "test": "jest src",
     "type-check": "tsc -p tsconfig.json --noEmit",
     "prepare": "husky install"
   },
@@ -36,12 +36,12 @@
     ]
   },
   "dependencies": {
-    "@codefi-assets-and-payments/auth": "*",
-    "@codefi-assets-and-payments/day-counter": "*",
-    "@codefi-assets-and-payments/error-handler": "*",
-    "@codefi-assets-and-payments/nestjs-orchestrate": "*",
-    "@codefi-assets-and-payments/observability": "*",
-    "@codefi-assets-and-payments/ts-types": "*",
+    "@consensys/auth": "workspace:*",
+    "@consensys/day-counter": "workspace:*",
+    "@consensys/error-handler": "workspace:*",
+    "@consensys/nestjs-orchestrate": "workspace:*",
+    "@consensys/observability": "workspace:*",
+    "@consensys/ts-types": "workspace:*",
     "@nestjs/axios": "^0.0.8",
     "@nestjs/common": "^8.4.7",
     "@nestjs/core": "^8.4.7",
@@ -64,6 +64,7 @@
     "node-cache": "^5.1.2",
     "opentracing": "^0.14.7",
     "pegasys-orchestrate": "6.1.1",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5",
     "swagger-ui-express": "^4.4.0",
     "uuid": "8.3.2",
@@ -128,6 +129,11 @@
       "<rootDir>/test/setEnvVars.ts"
     ],
     "testEnvironment": "node",
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "testResultsProcessor": "jest-sonar-reporter",
     "coverageReporters": [
       "json",

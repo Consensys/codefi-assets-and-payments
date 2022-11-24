@@ -1,4 +1,4 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType } from '@consensys/ts-types';
 import { Builder, IBuilder } from 'builder-pattern';
 import { WalletCreateCommandSchema } from '../../schemas/WalletCreateCommandSchema';
 import { AbstractMessage } from '../AbstractMessage';

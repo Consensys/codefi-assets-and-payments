@@ -1,5 +1,5 @@
-import { KafkaProducerModule } from '@codefi-assets-and-payments/nestjs-messaging'
-import { OrchestrateAccountsModule } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { KafkaProducerModule } from '@consensys/nestjs-messaging'
+import { OrchestrateAccountsModule } from '@consensys/nestjs-orchestrate'
 import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { TenantStoreEntity } from '../data/entities/TenantStoreEntity'

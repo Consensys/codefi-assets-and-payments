@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { ProductsEnum } from '@consensys/ts-types'
 
 export const updateUserSchema = Joi.object({
   appMetadata: Joi.object(),

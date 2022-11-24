@@ -11,7 +11,7 @@ import {
   Res,
 } from '@nestjs/common';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiTags, ApiOperation, ApiBody, ApiConsumes } from '@nestjs/swagger';
 
 import { AssetElementsService } from 'src/services/AssetElementsService';

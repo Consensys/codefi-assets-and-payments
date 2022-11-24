@@ -1,4 +1,4 @@
-import { Frequency } from '@codefi-assets-and-payments/day-counter/dist/types/Frequency';
+import { Frequency } from '@consensys/day-counter/dist/types/Frequency';
 
 /**
  * [Craft expected date label ]

@@ -1,5 +1,5 @@
 import { OperationService } from './OperationService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { Repository, SelectQueryBuilder } from 'typeorm'
 import {
@@ -21,8 +21,8 @@ import {
   EntityStatus,
   PeriodGranularity,
   OperationType,
-} from '@codefi-assets-and-payments/ts-types'
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/ts-types'
+import { ValidationException } from '@consensys/error-handler'
 
 describe('OperationService', () => {
   let service: OperationService

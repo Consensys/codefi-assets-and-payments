@@ -18,12 +18,12 @@ import { InviteUserByEmailRequest } from '../../src/requests/InviteUserByEmailRe
 import { UserCreatedResponse } from '../../src/responses/UserCreatedResponse'
 import { ClientGetAllResponse } from '../../src/responses/ClientGetAllResponse'
 import { CreateUserRequest } from '../../src/requests/CreateUserRequest'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   Commands,
   IClientCreateCommand,
   IUserCreateCommand,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { UpdateUserRequest } from '../../src/requests/UpdateUserRequest'
 import { UserUpdatedResponse } from '../../src/responses/UserUpdatedResponse'
 import { AxiosResponse, RequestMethod, runRequest } from './httpRequest'

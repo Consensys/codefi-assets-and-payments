@@ -29,8 +29,8 @@ import { setToLowerCase } from 'src/utils/case';
 import { OfferService } from './offer.service';
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { validateSorting } from 'src/utils/checks/v2Sorts';
 import { SortCriteria } from '../v2ApiCall/api.call.service/query';
 

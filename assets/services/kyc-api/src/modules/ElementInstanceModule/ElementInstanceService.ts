@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { prettify } from 'src/utils/commun';
 import { buildTopSectionsElementKeys, checkValidValue } from 'src/utils/helper';

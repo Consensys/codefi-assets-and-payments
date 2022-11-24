@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core'
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
 import { writeFileSync } from 'fs'
 import { INestApplication } from '@nestjs/common'

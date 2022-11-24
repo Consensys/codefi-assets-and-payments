@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common'
-import { IReceipt, ITransactionContext } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { IReceipt, ITransactionContext } from '@consensys/nestjs-orchestrate'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { OperationsService } from '../services/OperationsService'
 import { TokensService } from '../services/TokensService'
 import { EventsService } from '../services/EventsService'
 import { IBlockchainEventProcessor } from './IBlockchainEventProcessor'
-import { EntityStatus, TokenType, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenType, TokenOperationType } from '@consensys/ts-types'
 import config from '../config'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import { ChainService } from '../services/ChainService'
 
 @Injectable()

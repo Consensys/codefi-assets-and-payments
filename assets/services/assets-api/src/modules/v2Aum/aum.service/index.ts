@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { keys as TokenKeys, Token } from 'src/types/token';
 import { TokenRetrievalService } from 'src/modules/v2Token/token.service/retrieveToken';
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import {
   getNavForShareClass,

@@ -1,10 +1,7 @@
 import { UserPersonalInfo } from '../services/PersonalInformation'
 import { UserEntity } from '../data/entities/UserEntity'
 import { OnFidoKycObject } from '../controllers/OnFidoKycWebhookRequest'
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events/dist'
+import { KYCResult, KYCScope } from '@consensys/messaging-events/dist'
 import ReportResult from '../services/onfido/ReportResult'
 import CheckResult from '../services/onfido/CheckResult'
 import {

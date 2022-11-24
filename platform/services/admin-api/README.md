@@ -9,7 +9,7 @@
     - [Environment Variables](#environment-variables)
       - [Container](#container)
       - [Kafka](#kafka)
-      - [@codefi-assets-and-payments/auth](#codefi-assets-and-paymentsauth)
+      - [@consensys/auth](#codefi-assets-and-paymentsauth)
       - [Auth0 Actions](#auth0-actions)
       - [Initial Configuration](#initial-configuration)
       - [Auth0 Tenant](#auth0-tenant)
@@ -68,8 +68,8 @@ In order to verify the creation works, you can run [integration tests](#integrat
 | KAFKA_BROKER | The host of the Kafka broker. |
 | EXPORT_DOCS | Whether to export an Open API spec file to disk for generation of a docs site. |
 
-#### @codefi-assets-and-payments/auth
-Following environment variables used by @codefi-assets-and-payments/auth.
+#### @consensys/auth
+Following environment variables used by @consensys/auth.
 | Env | Description |
 | ---  | --- |
 | M2M_TOKEN_REDIS_HOST | Redis host to be used for storing M2M tokens. |

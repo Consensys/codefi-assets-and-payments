@@ -1,9 +1,9 @@
 require('dotenv').config()
 import { authRegistrationHookPost, deleteUserAuth0 } from './utils/requests'
 import { Test } from '@nestjs/testing'
-import { KafkaConsumerModule, KafkaConsumer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaConsumerModule, KafkaConsumer } from '@consensys/nestjs-messaging'
 import { TestKafkaConsumer } from './utils/TestKafkaConsumer'
-import { Events, IUserCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
+import { Events, IUserCreatedEvent } from '@consensys/messaging-events'
 import { AuthHookRegisterRequest } from '../src/requests/AuthHookRegisterRequest'
 import { createTokenWithPermissions } from './utils/jwt'
 import { generateRandomText } from './utils/randomGenerator'

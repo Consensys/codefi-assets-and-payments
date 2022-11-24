@@ -3,20 +3,20 @@ import {
   ITenantOperationEvent,
   MessageDataOperation,
   TenantOperationEvent,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import {
   ChainRegistry,
   OrchestrateUtils,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { TenantService } from '../services/TenantService'
 import { v4 as uuidv4 } from 'uuid'
 import config from '../config'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import { getGroupId } from '../utils/kafka'
 import { TenantEntity } from '../data/entities/TenantEntity'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 
 @Injectable()
 export class TenantOperationEventConsumer

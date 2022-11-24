@@ -1,6 +1,6 @@
 import { EventsService } from './EventsService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import createMockInstance from 'jest-create-mock-instance'
 import cfg from '../config'
 import config from '../config'
@@ -25,12 +25,12 @@ import {
   TransactionConfigBuilder,
   ITransferTokenCommand,
   TransferTokenCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { TokenType } from '@consensys/ts-types'
 import {
   BurnTokenCommandBuilder,
   IBurnTokenCommand,
-} from '@codefi-assets-and-payments/messaging-events/dist/messages/commands/BurnTokenCommand'
+} from '@consensys/messaging-events/dist/messages/commands/BurnTokenCommand'
 
 describe('EventsService', () => {
   let service: EventsService

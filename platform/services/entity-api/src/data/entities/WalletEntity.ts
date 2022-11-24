@@ -1,4 +1,4 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types'
+import { WalletType } from '@consensys/ts-types'
 import { Column, Entity, ManyToOne, PrimaryColumn, RelationId } from 'typeorm'
 import { EntityAutoFields } from './EntityAutoFields'
 import { EntityEntity } from './EntityEntity'

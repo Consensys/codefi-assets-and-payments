@@ -3,9 +3,9 @@ import {
   TenantCreateRequest,
   TenantResponse,
   WalletType as EntityApiWalletType,
-} from '@codefi-assets-and-payments/ts-types';
+} from '@consensys/ts-types';
 import { Injectable } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { UserEnum } from '../../../old/constants/enum';
 import {
   ClientApplication,

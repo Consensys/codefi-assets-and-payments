@@ -1,4 +1,4 @@
-import { PeriodGranularity } from '@codefi-assets-and-payments/ts-types'
+import { PeriodGranularity } from '@consensys/ts-types'
 import { getDateRangeByPeriod } from './dateUtils'
 
 describe('dateUtils', () => {

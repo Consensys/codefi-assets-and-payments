@@ -20,10 +20,7 @@ import { UserService } from '../services/UserService'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { inviteUserByEmailSchema } from '../validation/inviteUserByEmailSchema'
 import { UserCreatedResponse } from '../responses/UserCreatedResponse'
-import {
-  AppToHttpFilter,
-  UnauthorizedException,
-} from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter, UnauthorizedException } from '@consensys/error-handler'
 import {
   ApiTags,
   ApiOAuth2,
@@ -31,7 +28,7 @@ import {
   ApiOperation,
   ApiParam,
 } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { CreateUserRequest } from '../requests/CreateUserRequest'
 import { createUserSchema } from '../validation/CreateUserSchema'
 import { UpdateUserRequest } from '../requests/UpdateUserRequest'
@@ -43,10 +40,10 @@ import {
   superTenantId,
   extractTenantIdFromToken,
   extractEntityIdFromToken,
-  Protected,
-} from '@codefi-assets-and-payments/auth'
+  Protected
+} from '@consensys/auth'
 import { Request } from 'express'
-import { superEntityId } from '@codefi-assets-and-payments/auth/dist/utils/authUtils'
+import { superEntityId } from '@consensys/auth/dist/utils/authUtils'
 
 @ApiTags('Users')
 @ApiBearerAuth('access-token')

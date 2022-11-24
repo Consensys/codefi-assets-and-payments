@@ -1,4 +1,4 @@
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
 import { Column, Entity, ManyToOne, PrimaryColumn, RelationId } from 'typeorm'
 import { EntityAutoFields } from './EntityAutoFields'
 import { EntityEntity } from './EntityEntity'

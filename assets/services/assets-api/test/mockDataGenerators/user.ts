@@ -1,6 +1,6 @@
 import { User, UserNature, keys as UserKeys, UserType } from 'src/types/user';
 import { WalletType } from 'src/types/wallet';
-import { WalletType as EntityApiWalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType as EntityApiWalletType } from '@consensys/ts-types';
 
 export const generateUser = ({
   overrideUser,

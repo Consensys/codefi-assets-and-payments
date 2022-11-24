@@ -1,4 +1,4 @@
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types';
+import { ProductsEnum } from '@consensys/ts-types';
 import { IS_DEV_DOMAIN_NAME } from 'src/utils/domain';
 
 export const DEV_DOMAIN_NAME = 'dev';

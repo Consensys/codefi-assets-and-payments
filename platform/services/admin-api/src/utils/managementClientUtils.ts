@@ -1,5 +1,5 @@
 import { Client, Connection, PagingOptions, ResourceServer } from 'auth0'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import cfg from '../config'
 import { ManagementClientExtended } from '../types/Auth0ManagementClientExtended'
 import { getAllResultPaginated } from './paginationUtils'

@@ -1,4 +1,4 @@
-import { Role } from '@codefi-assets-and-payments/ts-types';
+import { Role } from '@consensys/ts-types';
 import { UserType } from 'src/types/user';
 
 const BASE_ROLES = [Role.CODEFI_WALLET_OWNER];

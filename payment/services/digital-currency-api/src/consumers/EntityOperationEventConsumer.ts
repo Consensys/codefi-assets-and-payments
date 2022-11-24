@@ -2,15 +2,15 @@ import {
   Events,
   IEntityOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import Web3 from 'web3'
 import { LegalEntityService } from '../services/LegalEntityService'
 import { TenantService } from '../services/TenantService'
-import { ProcessingMessageException } from '@codefi-assets-and-payments/error-handler'
+import { ProcessingMessageException } from '@consensys/error-handler'
 import { getGroupId } from '../utils/kafka'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 
 @Injectable()
 export class EntityOperationEventConsumer

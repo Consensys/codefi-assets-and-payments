@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/nestjs-contracts
+# @consensys/nestjs-contracts
 
 
 ## Env vars

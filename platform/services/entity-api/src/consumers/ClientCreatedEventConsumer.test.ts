@@ -1,6 +1,6 @@
-import { IClientCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
+import { IClientCreatedEvent } from '@consensys/messaging-events'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ClientService } from '../services/ClientService'
 import { entityIdMock, tenantIdMock } from '../../test/mocks'
 import { ClientCreatedEventConsumer } from './ClientCreatedEventConsumer'

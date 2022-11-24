@@ -1,11 +1,11 @@
-import { Commands, SetTokenURICommandBuilder } from '@codefi-assets-and-payments/messaging-events'
+import { Commands, SetTokenURICommandBuilder } from '@consensys/messaging-events'
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import {
   erc721TokenIdMock,
   tokensERC721SetTokenURIRequestMock,
   uriMock,
 } from '../test/mocks'
-import { EntityStatus, TokenOperationType, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenOperationType, TokenType } from '@consensys/ts-types'
 import { setTokenURIPut } from './utils/requests'
 import {
   handlesMultipleCommandsWithSameIdempotencyKeys,

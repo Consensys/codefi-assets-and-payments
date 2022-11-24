@@ -20,7 +20,7 @@
  *      [notary]        -----------
  *
  */
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { TokenState } from 'src/types/states';
 

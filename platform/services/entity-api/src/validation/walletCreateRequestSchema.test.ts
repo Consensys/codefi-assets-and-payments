@@ -1,5 +1,5 @@
-import { ErrorCode } from '@codefi-assets-and-payments/error-handler'
-import { WalletType } from '@codefi-assets-and-payments/ts-types'
+import { ErrorCode } from '@consensys/error-handler'
+import { WalletType } from '@consensys/ts-types'
 import { walletMock } from '../../test/mocks'
 import { JoiValidationPipe } from './JoiValidationPipe'
 import { walletCreateRequestSchema } from './walletCreateRequestSchema'

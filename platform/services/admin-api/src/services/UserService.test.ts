@@ -1,5 +1,5 @@
 import { UserService } from './UserService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { Auth0Service } from './Auth0Service'
 import { EventsService } from './EventsService'
@@ -24,7 +24,7 @@ import {
 } from '../../test/mocks'
 import { ConfigConstants } from '../config/ConfigConstants'
 import { Auth0Exception } from '../errors/Auth0Exception'
-import { ConfigurationException } from '@codefi-assets-and-payments/error-handler'
+import { ConfigurationException } from '@consensys/error-handler'
 import * as pagination from '../utils/paginationUtils'
 
 describe('UserService', () => {

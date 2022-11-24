@@ -1,5 +1,5 @@
 import { RoleService } from './RoleService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Auth0Service } from './Auth0Service'
 import { createMockInstance } from 'jest-create-mock-instance'
 import {

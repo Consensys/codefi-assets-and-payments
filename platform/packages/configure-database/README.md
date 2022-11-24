@@ -19,7 +19,7 @@ The actions performed by the script are idempotent
 
 ### Installing the script to your repo
 
-`npm i @codefi-assets-and-payments/configure-database`
+`npm i @consensys/configure-database`
 
 This will add a script to `node_modules/.bin` called `configure-database` (see the package.json of this repo).
 

@@ -4,10 +4,10 @@ import {
   TenantIdMiddleware,
   CodefiLoggerModule,
   ApmModule,
-} from '@codefi-assets-and-payments/observability';
+} from '@consensys/observability';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 
-import { AuthGuard } from '@codefi-assets-and-payments/auth';
+import { AuthGuard } from '@consensys/auth';
 
 // V2 modules
 import { V2HealthCheckModule } from './HealthCheck/healthCheck.module';

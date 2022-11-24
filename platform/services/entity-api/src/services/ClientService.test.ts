@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import {
@@ -10,7 +10,7 @@ import {
   tenantIdMock,
 } from '../../test/mocks'
 import { AdminApiService } from './AdminApiService'
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
 import { ClientEntity } from '../data/entities/ClientEntity'
 import { ClientService } from './ClientService'
 import { EntityEntity } from '../data/entities/EntityEntity'

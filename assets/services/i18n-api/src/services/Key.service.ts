@@ -1,5 +1,5 @@
 import { Injectable, OnModuleInit } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import fs from 'fs'
 import { Keys } from '../data/models/Keys'
 

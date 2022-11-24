@@ -9,8 +9,8 @@ import { CreateM2MClientsStage } from './CreateM2MClientsStage'
 import { ClientService } from '../../services/ClientService'
 import createMockInstance from 'jest-create-mock-instance'
 import { ClientResponse } from '../../responses/ClientResponse'
-import { superTenantId } from '@codefi-assets-and-payments/auth'
-import { superEntityId } from '@codefi-assets-and-payments/auth/dist/utils/authUtils'
+import { superTenantId } from '@consensys/auth'
+import { superEntityId } from '@consensys/auth/dist/utils/authUtils'
 
 describe('CreateM2MClientStage', () => {
   let managementClientMock: jest.Mocked<ManagementClientExtended>

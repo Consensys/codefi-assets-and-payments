@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
 import ErrorService from 'src/utils/errorService';
 
@@ -56,7 +56,7 @@ import { ApiKycCallService } from 'src/modules/v2ApiCall/api.call.service/kyc';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 import { getTenantRolesForUserType, rolesMatch } from 'src/utils/tenantRoles';
 import { generateCode } from 'src/utils/codeGenerator';
-import { EntityCreateRequest } from '@codefi-assets-and-payments/ts-types';
+import { EntityCreateRequest } from '@consensys/ts-types';
 
 const domainName = config().domainName;
 const defaultTenantId: string = config().defaultInitializationTenantId;

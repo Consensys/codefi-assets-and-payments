@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiAdminCallService } from '../../v2ApiCall/api.call.service/admin';
 import { ApiEntityCallService } from '../../v2ApiCall/api.call.service/entity';
 import { keys as UserKeys, User } from '../../../types/user';

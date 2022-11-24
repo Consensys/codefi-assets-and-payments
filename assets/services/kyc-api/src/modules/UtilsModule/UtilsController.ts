@@ -1,5 +1,5 @@
 import { Controller, Param, Delete } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiTags, ApiOperation, ApiParam } from '@nestjs/swagger';
 import { ElementService } from 'src/modules/ElementModule/ElementService';
 import { TemplateService } from 'src/modules/TemplateModule/TemplateService';

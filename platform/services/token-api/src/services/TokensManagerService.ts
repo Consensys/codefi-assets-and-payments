@@ -1,6 +1,6 @@
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
-import { ITransactionConfig } from '@codefi-assets-and-payments/messaging-events'
-import { IRawTransaction } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ValidationException } from '@consensys/error-handler'
+import { ITransactionConfig } from '@consensys/messaging-events'
+import { IRawTransaction } from '@consensys/nestjs-orchestrate'
 import {
   EntityStatus,
   ExecArgument,
@@ -9,14 +9,14 @@ import {
   TokensRegisterRequest,
   TokenOperationType,
   NewTokenResponse,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { Injectable, NotFoundException } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { TokenEntity } from 'src/data/entities/TokenEntity'
 import { ERC20Service } from './ERC20Service'
 import { ERC721Service } from './ERC721Service'
 import { TokensService } from './TokensService'
-import { IHeaders, RawTransaction } from '@codefi-assets-and-payments/tokens'
+import { IHeaders, RawTransaction } from '@consensys/tokens'
 import { TokenBaseService, TokenConstructorParams } from './TokenBaseService'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { OperationsService } from './OperationsService'

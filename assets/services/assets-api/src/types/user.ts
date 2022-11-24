@@ -15,7 +15,7 @@ import {
   keys as ClientKeys,
   ClientApplicationExample,
 } from './clientApplication';
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types';
+import { ProductsEnum } from '@consensys/ts-types';
 import { Auth0User } from './authentication';
 import { IsString, IsNotEmpty, IsOptional, IsBoolean } from 'class-validator';
 import { checkValidEnumValue, getEnumValues } from 'src/utils/enumUtils';

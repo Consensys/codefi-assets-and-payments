@@ -5,7 +5,7 @@ import * as docsOverrides from './utils/docs-override.json'
 import { writeFileSync } from 'fs'
 import config from './config'
 import { INestApplication } from '@nestjs/common'
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 
 let context: INestApplication = null
 export const ApplicationContext = async (): Promise<INestApplication> => {

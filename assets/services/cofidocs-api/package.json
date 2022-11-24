@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/cofidocs-api",
+  "name": "@consensys/cofidocs-api",
   "private": true,
   "version": "1.1.6",
   "description": "APIs built with NodeJS, Express, TypeScript & AWS S3 for File Storage",
@@ -20,7 +20,7 @@
   },
   "license": "Apache",
   "dependencies": {
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/observability": "workspace:*",
     "aws-sdk": "^2.490.0",
     "body-parser": "^1.18.2",
     "dotenv": "^6.1.0",

@@ -5,7 +5,7 @@ import { Repository } from 'typeorm'
 import { TransitionInstance } from '../models/TransitionInstanceEntity'
 import { TransitionInstanceDto } from '../models/dto/TransitionInstanceDto'
 import { checkTenantId, requireTenantId } from '../utils/tenant'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 @Injectable()
 export class TransitionInstancesService {

@@ -1,4 +1,4 @@
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 
 import { TokenRegisteredEventSchema } from '../../schemas/TokenRegisteredEventSchema';
 import { AbstractMessage } from '../AbstractMessage';

@@ -1,15 +1,15 @@
 import {
   apiMetrics,
   createLogger,
-} from '@codefi-assets-and-payments/observability'
+} from '@consensys/observability'
 import { ApplicationContext } from './context'
 import config from './config'
 import { PersistentConfigurationService } from './services/PersistentConfigurationService'
 import {
   KafkaProducer,
   KafkaPreview,
-} from '@codefi-assets-and-payments/nestjs-messaging'
-import { Commands, Events } from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/nestjs-messaging'
+import { Commands, Events } from '@consensys/messaging-events'
 import { AsyncOperationResultConsumer } from './consumers/AsyncOperationResultConsumer'
 import { EntityOperationEventConsumer } from './consumers/EntityOperationEventConsumer'
 import { WalletOperationEventConsumer } from './consumers/WalletOperationEventConsumer'
@@ -18,7 +18,7 @@ import { INestApplication, Type } from '@nestjs/common'
 import {
   ConfigurationException,
   KafkaException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 
 const logger = createLogger('server')
 

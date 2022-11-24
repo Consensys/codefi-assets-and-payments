@@ -1,10 +1,10 @@
-import { KafkaSubscriber } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaSubscriber } from '@consensys/nestjs-messaging'
 import { KafkaMessage } from 'kafkajs'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Events } from '@codefi-assets-and-payments/messaging-events'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { Events } from '@consensys/messaging-events'
 import { KYCService } from '../services/KYCService'
-import { IUserPersonalInfoUpdated } from '@codefi-assets-and-payments/messaging-events'
+import { IUserPersonalInfoUpdated } from '@consensys/messaging-events'
 import { UserId } from '../data/entities/types'
 
 @Injectable()

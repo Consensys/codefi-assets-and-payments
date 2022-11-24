@@ -19,7 +19,7 @@ import { walletTypeMap } from './walletTypeMap';
 import {
   WalletCreateRequest,
   WalletType as EntityApiWalletType,
-} from '@codefi-assets-and-payments/ts-types';
+} from '@consensys/ts-types';
 
 @Injectable()
 export class WalletService {

@@ -37,8 +37,8 @@ import { IsBoolean, IsOptional } from 'class-validator';
 import { Transform } from 'class-transformer';
 import { checkUserType } from 'src/utils/checks/userType';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 export class ListAllTemplatesQueryInput {
   @ApiProperty()

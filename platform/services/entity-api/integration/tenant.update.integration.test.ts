@@ -1,4 +1,4 @@
-import { decodeToken, extractTenantIdFromToken } from '@codefi-assets-and-payments/auth'
+import { decodeToken, extractTenantIdFromToken } from '@consensys/auth'
 import {
   Commands,
   Events,
@@ -6,8 +6,8 @@ import {
   ITenantOperationEvent,
   IWalletOperationEvent,
   TenantUpdateCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { KafkaConsumer, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/messaging-events'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
 import { TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { EntityStoreEntity } from '../src/data/entities/EntityStoreEntity'
@@ -21,7 +21,7 @@ import { getTokenWithTenantId1EntityId1 } from './utils/jwtTokens'
 import { createTenant, fetchTenant, updateTenant } from './utils/requests'
 import { subscribeToMessage, testModule } from './utils/testCommonUtils'
 import { TestKafkaSubscriber } from './utils/TestKafkaSubscriber'
-import { TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
+import { TenantCreateRequest } from '@consensys/ts-types'
 require('dotenv').config()
 
 jest.setTimeout(60000)

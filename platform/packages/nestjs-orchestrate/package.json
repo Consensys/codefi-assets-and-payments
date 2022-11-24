@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/nestjs-orchestrate",
+  "name": "@consensys/nestjs-orchestrate",
   "version": "8.1.0",
   "description": "A package to use Orchestrate easily integrated into a NestJS project",
   "files": [
@@ -38,9 +38,9 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/error-handler": "*",
-    "@codefi-assets-and-payments/ethers": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/error-handler": "workspace:*",
+    "@consensys/ethers": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@nestjs/axios": "^0.0.8",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
@@ -51,6 +51,13 @@
     "jsonwebtoken": "^8.5.1",
     "pegasys-orchestrate": "6.1.1",
     "reflect-metadata": "^0.1.13"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ]
   },
   "lint-staged": {
     "**/*.{js,ts}": [

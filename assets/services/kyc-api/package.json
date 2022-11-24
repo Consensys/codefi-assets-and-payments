@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/kyc-api",
+  "name": "@consensys/kyc-api",
   "private": true,
   "version": "1.29.4",
   "description": "Repository of KYC API used in the Digital Assets Platform",
@@ -29,7 +29,7 @@
     "test": "jest src"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/observability": "workspace:*",
     "@nestjs/common": "^8.4.7",
     "@nestjs/core": "^8.4.7",
     "@nestjs/platform-express": "^8.4.7",
@@ -47,9 +47,9 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^7.0.0",
-    "sequelize": "6.16.1",
-    "sequelize-cli": "~6.4.1",
-    "sequelize-typescript": "~2.1.0",
+    "sequelize": "^6.26.0",
+    "sequelize-cli": "^6.5.2",
+    "sequelize-typescript": "~2.1.5",
     "swagger-ui-express": "^4.1.2",
     "uuid": "^8.3.2"
   },
@@ -109,6 +109,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/db/migrations/**",

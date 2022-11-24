@@ -28,7 +28,7 @@ import {
 import { EntityType } from 'src/types/entity';
 import execRetry from 'src/utils/retry';
 import { KycApiTenantDeletionResponse } from 'src/modules/v2ApiCall/DTO/kyc-api-tenant-deletion-response.dto';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import axios, { AxiosInstance } from 'axios';
 
 const KYC_HOST: string = process.env.KYC_API;

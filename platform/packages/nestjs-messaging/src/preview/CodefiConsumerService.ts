@@ -1,4 +1,4 @@
-import { ApmService, createLogger } from '@codefi-assets-and-payments/observability';
+import { ApmService, createLogger } from '@consensys/observability';
 import { Injectable, OnApplicationShutdown, Optional } from '@nestjs/common';
 import { CodefiConsumer } from './CodefiConsumer';
 import { IConsumerListener, CodefiConsumersOptions } from './types';

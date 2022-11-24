@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/contracts",
+  "name": "@consensys/contracts",
   "version": "6.9.1",
   "description": "Package used to compile Custom Smart Contracts into bytecode",
   "main": "src",

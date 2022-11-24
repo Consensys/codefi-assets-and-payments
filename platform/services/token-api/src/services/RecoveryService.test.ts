@@ -1,7 +1,7 @@
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
-import { ChainRegistry } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { M2mTokenService } from '@consensys/auth'
+import { ChainRegistry } from '@consensys/nestjs-orchestrate'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository, SelectQueryBuilder } from 'typeorm'
 import { RecoveryService } from './RecoveryService'
 import {
@@ -22,10 +22,10 @@ import {
   tokenEntityMock,
 } from '../../test/mocks'
 import config from '../../src/config'
-import { EntityStatus, TokenOperationType, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenOperationType, TokenType } from '@consensys/ts-types'
 import { EventSignature } from '../EventSignature'
 import { IChain } from 'pegasys-orchestrate'
-import CodefiERC721 from '@codefi-assets-and-payments/contracts/build/contracts/CodefiERC721.json'
+import CodefiERC721 from '@consensys/contracts/build/contracts/CodefiERC721.json'
 import { EventsService } from './EventsService'
 
 jest.mock('ethers')

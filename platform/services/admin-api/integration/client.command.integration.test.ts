@@ -9,10 +9,10 @@ import {
   KafkaConsumerModule,
   KafkaProducer,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/nestjs-messaging'
 import { TestKafkaConsumer } from './utils/TestKafkaConsumer'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
-import { Commands, Events, IClientCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
+import { LoggerModule } from '@consensys/observability'
+import { Commands, Events, IClientCreatedEvent } from '@consensys/messaging-events'
 import { clientCreateCommandMock } from '../test/mocks'
 import { v4 as uuidv4 } from 'uuid'
 import { ClientModule } from '../src/modules/ClientModule'

@@ -1,5 +1,5 @@
 import { TenantController } from './TenantController'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   tenantIdMock,
@@ -9,10 +9,10 @@ import {
   entityIdMock,
 } from '../../test/mocks'
 import { TenantService } from '../services/TenantService'
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
+import { UnauthorizedException } from '@consensys/error-handler'
 import { MAX_PAGINATED_LIMIT } from '../validation/paginatedQueryRequestProperties'
-import { TenantQueryRequest } from '@codefi-assets-and-payments/ts-types'
+import { TenantQueryRequest } from '@consensys/ts-types'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import { FindOperator } from 'typeorm'
 

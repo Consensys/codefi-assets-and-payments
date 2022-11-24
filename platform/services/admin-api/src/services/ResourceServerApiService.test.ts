@@ -7,7 +7,7 @@ import {
 } from '../../test/mocks'
 import { Auth0Service } from './Auth0Service'
 import { ResourceServerApiService } from './ResourceServerApiService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Auth0Exception } from '../errors/Auth0Exception'
 import { ConfigConstants } from '../config/ConfigConstants'
 

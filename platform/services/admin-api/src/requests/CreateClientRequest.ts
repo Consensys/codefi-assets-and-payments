@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { ProductsEnum } from '@consensys/ts-types'
 
 export class CreateClientRequest {
   @ApiProperty({ required: true, description: 'Name of this client' })

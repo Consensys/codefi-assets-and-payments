@@ -9,8 +9,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { EntityEntity } from '../src/data/entities/EntityEntity'
 import { WalletEntity } from '../src/data/entities/WalletEntity'
 import { tenantMock } from '../test/mocks'
-import { decodeToken, extractTenantIdFromToken } from '@codefi-assets-and-payments/auth'
-import { EntityCreateRequest, TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
+import { decodeToken, extractTenantIdFromToken } from '@consensys/auth'
+import { EntityCreateRequest, TenantCreateRequest } from '@consensys/ts-types'
 import { MAX_PAGINATED_LIMIT } from '../src/validation/paginatedQueryRequestProperties'
 require('dotenv').config()
 

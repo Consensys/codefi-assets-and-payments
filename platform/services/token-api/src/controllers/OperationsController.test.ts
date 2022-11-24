@@ -7,8 +7,8 @@ import {
 import { OperationsController } from './OperationsController'
 import { OperationsService } from '../services/OperationsService'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { TokenOperationQueryRequest } from '@codefi-assets-and-payments/ts-types'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { TokenOperationQueryRequest } from '@consensys/ts-types'
 
 describe('OperationsController', () => {
   let controller: OperationsController

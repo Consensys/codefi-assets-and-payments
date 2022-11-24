@@ -18,8 +18,8 @@ import { LegalService } from './legal.service';
 import { Request, Response } from 'express';
 import { uploadedFile } from 'src/utils/uploadedFile';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 @Controller('v2/legal')
 @UseFilters(new AppToHttpFilter()) // Used to preserve error codes coming from packages (Ex: 401 from auth package). Otherwise, coming from packages are turned into 500.

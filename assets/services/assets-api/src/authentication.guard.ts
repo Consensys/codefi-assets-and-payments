@@ -1,7 +1,7 @@
 import { Request } from 'express';
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import ErrorService from 'src/utils/errorService';
 import { keys as UserKeys, User, UserType } from './types/user';
@@ -12,7 +12,7 @@ import {
   extractEntityIdFromRequest,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth';
+} from '@consensys/auth';
 import config from './config';
 import { ApiEntityCallService } from './modules/v2ApiCall/api.call.service/entity';
 

@@ -1,7 +1,7 @@
 import { ExecTokenCommandSchema } from '../../schemas/ExecTokenCommandSchema';
 import { Builder, IBuilder } from 'builder-pattern';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
-import { ExecArgument } from '@codefi-assets-and-payments/ts-types';
+import { ExecArgument } from '@consensys/ts-types';
 
 export class ExecTokenCommand extends TokenCommand {
   public messageName = 'exec_token';

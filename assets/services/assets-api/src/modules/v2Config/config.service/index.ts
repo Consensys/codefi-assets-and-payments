@@ -16,7 +16,7 @@ import {
   TENANT_FLAG,
 } from 'src/types/config';
 import { CreateConfigOutput } from 'src/modules/v2Utils/utils.dto';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { UserType } from 'src/types/user';
 import { AssetType } from 'src/types/asset/template';
 

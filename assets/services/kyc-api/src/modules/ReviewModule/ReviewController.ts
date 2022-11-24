@@ -8,7 +8,7 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiBody, ApiQuery, ApiTags } from '@nestjs/swagger';
 
 import { JoiValidationPipe } from 'src/validation/JoiValidationPipe';

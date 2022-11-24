@@ -1,5 +1,5 @@
 import createMockInstance from "jest-create-mock-instance";
-import { NestJSPinoLogger } from "@codefi-assets-and-payments/observability";
+import { NestJSPinoLogger } from "@consensys/observability";
 import { Repository } from "typeorm";
 import { ItemService } from "./ItemService";
 import { Item } from "../data/entities/ItemEntity";

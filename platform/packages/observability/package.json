@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/observability",
+  "name": "@consensys/observability",
   "version": "2.2.0",
   "description": "",
   "main": "dist/index.js",

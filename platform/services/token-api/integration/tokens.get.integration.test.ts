@@ -1,5 +1,5 @@
 import { getTokens } from './utils/requests'
-import { TokenQueryRequest, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { TokenQueryRequest, TokenType } from '@consensys/ts-types'
 import { TestScenario } from './utils/scenario'
 import { TokenEntity } from 'src/data/entities/TokenEntity'
 import { MAX_PAGINATED_LIMIT } from '../src/validation/ApiRequestsSchema'

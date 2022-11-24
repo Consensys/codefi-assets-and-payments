@@ -2,7 +2,7 @@ import createMockInstance from 'jest-create-mock-instance'
 
 import { requestWithTenantIdAndEntityId, uuidMock } from '../../test/mocks'
 import { LegalEntityController } from './LegalEntityController'
-import { LegalEntityResponse } from '@codefi-assets-and-payments/ts-types'
+import { LegalEntityResponse } from '@consensys/ts-types'
 import { LegalEntityService } from '../services/LegalEntityService'
 import { LegalEntityEntity } from '../data/entities/LegalEntityEntity'
 

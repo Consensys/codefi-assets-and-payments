@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import web3Utils from 'web3-utils';
 
 import ErrorService from 'src/utils/errorService';
@@ -54,7 +54,7 @@ import { ListAllNetworksOutput } from 'src/modules/v2Network/network.dto';
 import { craftOrchestrateTenantId } from 'src/utils/orchestrate';
 import { keys as UserKeys, User } from 'src/types/user';
 import { IAccount, IFaucet } from 'pegasys-orchestrate';
-import { OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate';
+import { OrchestrateUtils } from '@consensys/nestjs-orchestrate';
 import { keys as ConfigKeys, Config } from 'src/types/config';
 import { ApiEntityCallService } from './entity';
 import config from 'src/config';

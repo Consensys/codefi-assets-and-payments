@@ -13,7 +13,7 @@ import {
 import createMockInstance from 'jest-create-mock-instance'
 import { ClientService } from './ClientService'
 import { Auth0Service } from './Auth0Service'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Auth0Exception } from '../errors/Auth0Exception'
 import { ConfigConstants } from '../config/ConfigConstants'
 import { EventsService } from './EventsService'

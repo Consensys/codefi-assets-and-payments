@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import OnFidoClient from './onfido/OnFidoClient'
 import UserDataAccess from '../repositories/UserDataAccess'
 import { UserPersonalInfo } from './PersonalInformation'

@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { WalletService } from './WalletService'
 import {
   authHeadersMock,
@@ -13,18 +13,18 @@ import {
   walletMock,
   walletUpdateMock,
 } from '../../test/mocks'
-import { OrchestrateAccountsService } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { OrchestrateAccountsService } from '@consensys/nestjs-orchestrate'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { Repository, UpdateResult } from 'typeorm'
-import { WalletType } from '@codefi-assets-and-payments/ts-types'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { Events, MessageDataOperation } from '@codefi-assets-and-payments/messaging-events'
+import { WalletType } from '@consensys/ts-types'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
+import { Events, MessageDataOperation } from '@consensys/messaging-events'
 import {
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+} from '@consensys/error-handler'
+import { M2mTokenService } from '@consensys/auth'
 import { StoreService } from './StoreService'
 
 describe('WalletService', () => {

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { sleep } from '../../src/utils/sleep'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 
 @Injectable()
 export class TestKafkaSubscriber<T> implements KafkaPreview.IConsumerListener {

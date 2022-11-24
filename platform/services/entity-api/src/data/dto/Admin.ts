@@ -1,4 +1,4 @@
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 
 export class Admin {
   email: string

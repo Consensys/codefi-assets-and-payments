@@ -1,7 +1,7 @@
 import { ConfigStageRequest, IConfigStage } from '../types/ConfigStage'
 import { ManagementClientExtended } from '../../types/Auth0ManagementClientExtended'
 import { ConfigConstants } from '../ConfigConstants'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Client, ClientGrant } from 'auth0'
 import { ClientResponse } from '../../responses/ClientResponse'
 import { ClientService } from '../../services/ClientService'
@@ -10,8 +10,8 @@ import {
   getClientGrants,
   getAllClients,
 } from '../../utils/managementClientUtils'
-import { superTenantId } from '@codefi-assets-and-payments/auth'
-import { superEntityId } from '@codefi-assets-and-payments/auth/dist/utils/authUtils'
+import { superTenantId } from '@consensys/auth'
+import { superEntityId } from '@consensys/auth/dist/utils/authUtils'
 
 @Injectable()
 export class CreateM2MClientsStage implements IConfigStage {

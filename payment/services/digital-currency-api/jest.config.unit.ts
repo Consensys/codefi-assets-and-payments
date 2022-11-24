@@ -21,6 +21,11 @@ export default async (): Promise<Config.InitialOptions> => {
     transform: {
       '^.+\\.(t|j)s$': 'ts-jest',
     },
+    transformIgnorePatterns: [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     collectCoverageFrom: [
       'src/*/**/*.{ts,js}',
       '!src/**/{server,sleep,jwtUtils}.{ts,js}',

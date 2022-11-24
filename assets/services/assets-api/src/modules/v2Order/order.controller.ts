@@ -34,8 +34,8 @@ import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/m
 import { checkUserType } from 'src/utils/checks/userType';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
 import { EntityService } from 'src/modules/v2Entity/entity.service';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { WorkflowName } from 'src/types/workflow/workflowTemplate';
 import { Field, SortCriteria } from '../v2ApiCall/api.call.service/query';
 import { validateSorting } from 'src/utils/checks/v2Sorts';

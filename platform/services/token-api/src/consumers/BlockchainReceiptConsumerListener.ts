@@ -2,10 +2,10 @@ import {
   IConsumerListener,
   IReceipt,
   ITransactionContext,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/nestjs-orchestrate'
+import { EntityStatus } from '@consensys/ts-types'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { EventsService } from '../services/EventsService'
 import { OperationsService } from '../services/OperationsService'

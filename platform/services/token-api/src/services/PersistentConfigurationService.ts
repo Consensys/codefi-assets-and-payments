@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
-import { ContractRegistry } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
-import { OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ContractRegistry } from '@consensys/nestjs-orchestrate'
+import { M2mTokenService } from '@consensys/auth'
+import { OrchestrateUtils } from '@consensys/nestjs-orchestrate'
 
 @Injectable()
 export class PersistentConfigurationService {
@@ -50,7 +50,7 @@ export class PersistentConfigurationService {
 
   private async registerContract(contractName: string, authToken: string) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const contractJson = require(`@codefi-assets-and-payments/contracts/build/contracts/${contractName}.json`)
+    const contractJson = require(`@consensys/contracts/build/contracts/${contractName}.json`)
     if (!contractJson) {
       return
     }

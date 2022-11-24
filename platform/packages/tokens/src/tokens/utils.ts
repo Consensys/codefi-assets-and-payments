@@ -1,4 +1,4 @@
-import { ApmService } from '@codefi-assets-and-payments/observability'
+import { ApmService } from '@consensys/observability'
 
 export const labelsWithApm = (
   labels: Record<string, any>,

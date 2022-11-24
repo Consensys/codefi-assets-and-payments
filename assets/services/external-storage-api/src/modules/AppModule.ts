@@ -8,7 +8,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import config from "../config";
 import { Item } from "../data/entities/ItemEntity";
 import { ScheduleModule } from "@nestjs/schedule";
-import { CodefiLoggerModule } from "@codefi-assets-and-payments/observability";
+import { CodefiLoggerModule } from "@consensys/observability";
 
 const imports = [
   CodefiLoggerModule.forRoot(),

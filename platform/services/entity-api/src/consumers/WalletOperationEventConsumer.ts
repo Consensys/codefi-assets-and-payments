@@ -1,9 +1,9 @@
-import { Events, IWalletOperationEvent } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { Events, IWalletOperationEvent } from '@consensys/messaging-events'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Injectable } from '@nestjs/common'
 import { RecoveryService } from '../services/RecoveryService'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { getGroupId } from '../utils/kafka'
 
 @Injectable()

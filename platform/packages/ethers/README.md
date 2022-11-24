@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/ethers
+# @consensys/ethers
 
 A package to unify all ethers configuration, providers and http(s) proxy.
 

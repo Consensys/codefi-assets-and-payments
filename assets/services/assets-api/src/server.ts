@@ -1,5 +1,5 @@
 import { ApplicationContext } from 'src/context';
-import { apiMetrics } from '@codefi-assets-and-payments/observability';
+import { apiMetrics } from '@consensys/observability';
 import { urlencoded, json } from 'express';
 
 async function startServer() {

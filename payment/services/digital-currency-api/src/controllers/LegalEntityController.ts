@@ -1,4 +1,4 @@
-import { LegalEntityResponse } from '@codefi-assets-and-payments/ts-types'
+import { LegalEntityResponse } from '@consensys/ts-types'
 import { Controller, Get, Param, Put, Query, Req } from '@nestjs/common'
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
 import { LegalEntityService } from '../services/LegalEntityService'
@@ -8,7 +8,7 @@ import {
   extractTenantIdFromToken,
   extractTokenFromRequest,
   Protected,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 
 @ApiTags('Legal Entity')
 @Controller('legal-entities')

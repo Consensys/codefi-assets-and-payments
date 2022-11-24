@@ -1,9 +1,9 @@
 import { Kafka, Producer, RecordMetadata } from 'kafkajs';
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events';
+import { MicroserviceMessage } from '@consensys/messaging-events';
 import { Inject, Injectable, Optional } from '@nestjs/common';
 import { KAFKA_CLIENT_PROVIDER } from './KafkaClientModule';
 import { SCHEMA_REGISTRY_PROVIDER } from './SchemaRegistryModule';
-import { ApmService, createLogger } from '@codefi-assets-and-payments/observability';
+import { ApmService, createLogger } from '@consensys/observability';
 import cfg from './config';
 
 @Injectable()

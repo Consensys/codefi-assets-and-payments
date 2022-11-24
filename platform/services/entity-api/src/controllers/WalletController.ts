@@ -15,16 +15,16 @@ import {
   DefaultValuePipe,
 } from '@nestjs/common'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Request } from 'express'
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { Protected } from '@consensys/auth'
 import { WalletService } from '../services/WalletService'
 import { DeleteResult, FindManyOptions, Raw } from 'typeorm'
 import { walletCreateRequestSchema } from '../validation/walletCreateRequestSchema'
 import { walletUpdateRequestSchema } from '../validation/walletUpdateRequestSchema'
 import { EntityService } from '../services/EntityService'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { errorApiResponse } from '../responses/error-api-response'
@@ -34,7 +34,7 @@ import {
   WalletCreateRequest,
   WalletUpdateRequest,
   WalletQueryRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { walletQueryRequestSchema } from '../validation/walletQueryRequestSchema'
 import { checkEntityMatchesRequest } from '../utils/controller'
 

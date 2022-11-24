@@ -1,5 +1,5 @@
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { MicroserviceMessage } from '@consensys/messaging-events'
+import { EntityStatus } from '@consensys/ts-types'
 import { operationIdMock } from '../../test/mocks'
 import { sleep } from '../../src/utils/sleep'
 import { TestScenario } from './scenario'

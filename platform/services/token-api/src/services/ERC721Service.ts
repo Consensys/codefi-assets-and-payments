@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { ERC721Token, IHeaders, RawTransaction } from '@codefi-assets-and-payments/tokens'
-import { TokensDeployRequest, TokenType } from '@codefi-assets-and-payments/ts-types'
-import { IRawTransaction } from '@codefi-assets-and-payments/nestjs-orchestrate/dist/transactions/IRawTransaction'
-import { ITransactionConfig } from '@codefi-assets-and-payments/messaging-events'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { ERC721Token, IHeaders, RawTransaction } from '@consensys/tokens'
+import { TokensDeployRequest, TokenType } from '@consensys/ts-types'
+import { IRawTransaction } from '@consensys/nestjs-orchestrate/dist/transactions/IRawTransaction'
+import { ITransactionConfig } from '@consensys/messaging-events'
 import { TokenBaseService, TokenConstructorParams } from './TokenBaseService'
 
 @Injectable()

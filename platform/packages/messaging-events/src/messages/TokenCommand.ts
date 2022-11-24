@@ -1,4 +1,4 @@
-import { ITransactionConfig } from '@codefi-assets-and-payments/ts-types';
+import { ITransactionConfig } from '@consensys/ts-types';
 import { Builder, IBuilder } from 'builder-pattern';
 import { AbstractMessage } from './AbstractMessage';
 

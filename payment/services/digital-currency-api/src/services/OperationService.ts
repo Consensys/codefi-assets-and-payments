@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { Repository } from 'typeorm'
 import { OperationEntity } from '../data/entities/OperationEntity'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { InjectRepository } from '@nestjs/typeorm'
 import { v4 as uuidv4 } from 'uuid'
 import {
@@ -14,13 +14,13 @@ import {
   EntityStatus,
   PeriodGranularity,
   OperationType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import BigNumber from 'bignumber.js'
 import { getDateRangeByPeriod } from '../utils/dateUtils'
 import {
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { Counted } from './types'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 

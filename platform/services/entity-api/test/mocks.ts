@@ -1,5 +1,5 @@
-import { OrchestrateUtils } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { ClientType, WalletType } from '@codefi-assets-and-payments/ts-types'
+import { OrchestrateUtils } from '@consensys/nestjs-orchestrate'
+import { ClientType, WalletType } from '@consensys/ts-types'
 import { v4 as uuidv4 } from 'uuid'
 
 export const tenantIdMock = 'tenantId1'

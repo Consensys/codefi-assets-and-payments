@@ -1,4 +1,4 @@
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 import { startServer } from './server'
 
 // when changing the process title, also change:

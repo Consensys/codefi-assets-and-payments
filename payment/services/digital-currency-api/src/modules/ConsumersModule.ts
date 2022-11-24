@@ -9,8 +9,8 @@ import { WalletOperationEventConsumer } from '../consumers/WalletOperationEventC
 import { LegalEntityEntity } from '../data/entities/LegalEntityEntity'
 import { TenantOperationEventConsumer } from '../consumers/TenantOperationEventConsumer'
 import { EntityOperationEventConsumer } from '../consumers/EntityOperationEventConsumer'
-import { ChainRegistryModule } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+import { ChainRegistryModule } from '@consensys/nestjs-orchestrate'
+import { M2mTokenModule } from '@consensys/auth'
 
 @Module({
   imports: [

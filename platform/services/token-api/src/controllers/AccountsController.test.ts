@@ -7,12 +7,12 @@ import {
 } from '../../test/mocks'
 import { AccountsController } from './AccountsController'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   craftRequestWithAuthHeaders,
   extractTokenFromRequest,
-} from '@codefi-assets-and-payments/auth'
-import { OrchestrateAccountsService } from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/auth'
+import { OrchestrateAccountsService } from '@consensys/nestjs-orchestrate'
 
 describe('AccountsController', () => {
   let controller: AccountsController

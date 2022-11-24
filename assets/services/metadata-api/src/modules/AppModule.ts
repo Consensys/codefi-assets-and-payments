@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import {
   LoggerModule,
   nestjsLoggerModuleConfig,
-} from '@codefi-assets-and-payments/observability';
+} from '@consensys/observability';
 
 import * as ormconfig from 'src/ormconfig';
 import { HealthCheckModule } from './HealthCheckModule';

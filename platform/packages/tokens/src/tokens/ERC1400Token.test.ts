@@ -1,4 +1,4 @@
-import { ContractManager } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ContractManager } from '@consensys/nestjs-orchestrate'
 import { createMockInstance } from 'jest-create-mock-instance'
 import { uuidMock } from '../../test/mock'
 import { ERC1400Token } from './ERC1400Token'

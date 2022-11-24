@@ -1,7 +1,7 @@
 import { DeployTokenCommandSchema } from '../../schemas/DeployTokenCommandSchema';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
 import { Builder, IBuilder } from 'builder-pattern';
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 
 export class DeployTokenCommand extends TokenCommand {
   public messageName = 'deploy_token';

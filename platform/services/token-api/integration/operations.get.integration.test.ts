@@ -1,7 +1,7 @@
 import { TestScenario } from './utils/scenario'
 import { TokenEntity } from 'src/data/entities/TokenEntity'
 import { MAX_PAGINATED_LIMIT } from '../src/validation/ApiRequestsSchema'
-import { TokenOperationQueryRequest, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { TokenOperationQueryRequest, TokenType } from '@consensys/ts-types'
 import { getOperations } from './utils/requests'
 
 require('dotenv').config()

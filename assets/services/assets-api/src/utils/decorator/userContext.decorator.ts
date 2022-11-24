@@ -1,4 +1,4 @@
-import { extractTokenFromRequest } from '@codefi-assets-and-payments/auth';
+import { extractTokenFromRequest } from '@consensys/auth';
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 import { keys as UserContextKeys } from 'src/types/userContext';
 

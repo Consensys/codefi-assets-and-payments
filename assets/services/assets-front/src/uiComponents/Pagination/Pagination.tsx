@@ -1,3 +1,4 @@
+/* eslint react/jsx-key: 0 */
 import React from 'react';
 import CSS from 'csstype';
 

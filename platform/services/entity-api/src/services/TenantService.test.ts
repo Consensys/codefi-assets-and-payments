@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository, UpdateResult } from 'typeorm'
 import {
   DEFAULT_INITIAL_ENTITY_NAME,
@@ -18,14 +18,14 @@ import {
   tenantUpdateMock,
 } from '../../test/mocks'
 import { AdminApiService } from './AdminApiService'
-import { EntityStatus, TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { EntityStatus, TenantCreateRequest } from '@consensys/ts-types'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   Commands,
   Events,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/messaging-events'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { EntityService } from './EntityService'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { StoreService } from './StoreService'

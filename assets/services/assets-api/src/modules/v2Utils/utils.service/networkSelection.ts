@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { TenantService } from './tenant';
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
 import { keys as ConfigKeys, Config, TENANT_FLAG } from 'src/types/config';

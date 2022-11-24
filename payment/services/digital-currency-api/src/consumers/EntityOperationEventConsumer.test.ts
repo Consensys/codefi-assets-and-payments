@@ -1,5 +1,5 @@
 import { EntityOperationEventConsumer } from './EntityOperationEventConsumer'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   entityOperationEventMock,
   legalEntityMock,
@@ -9,7 +9,7 @@ import {
 } from '../../test/mocks'
 import createMockInstance from 'jest-create-mock-instance'
 import { LegalEntityService } from '../services/LegalEntityService'
-import { MessageDataOperation } from '@codefi-assets-and-payments/messaging-events'
+import { MessageDataOperation } from '@consensys/messaging-events'
 import { TenantService } from '../services/TenantService'
 
 describe('EntityOperationEventConsumer', () => {

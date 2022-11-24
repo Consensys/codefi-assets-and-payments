@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import axios, { AxiosInstance } from 'axios';
 import FormData from 'form-data';
 

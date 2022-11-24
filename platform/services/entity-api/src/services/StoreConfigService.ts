@@ -1,7 +1,7 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types'
+import { WalletType } from '@consensys/ts-types'
 import { Injectable } from '@nestjs/common'
 import fs from 'fs'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 
 @Injectable()

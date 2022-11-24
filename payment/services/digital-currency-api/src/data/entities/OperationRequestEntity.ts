@@ -1,7 +1,7 @@
 import {
   OperationRequestState,
   OperationRequestType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { Column, Entity, PrimaryColumn } from 'typeorm'
 
 @Entity()

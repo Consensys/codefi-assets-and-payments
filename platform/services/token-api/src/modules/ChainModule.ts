@@ -1,7 +1,7 @@
 import {
   ChainRegistryModule,
   OrchestrateContractManagerModule,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Module } from '@nestjs/common'
 import { ChainService } from '../services/ChainService'
 

@@ -12,13 +12,13 @@ import { EntityEnum, keys as UserKeys, User, UserType } from 'src/types/user';
 import { RetrieveIdentityOutput } from '../utils.dto';
 import { UserCreationService } from 'src/modules/v2User/user.service/createUser';
 import { CreateUserOutput } from 'src/modules/v2User/user.dto';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import {
   decodeToken,
   extractEntityIdFromRequest,
   extractTenantIdFromRequest,
   extractTokenFromRequest,
-} from '@codefi-assets-and-payments/auth';
+} from '@consensys/auth';
 import { ApiAdminCallService } from 'src/modules/v2ApiCall/api.call.service/admin';
 import { Auth0User } from 'src/types/authentication';
 import { getTenantRolesForUserType } from 'src/utils/tenantRoles';

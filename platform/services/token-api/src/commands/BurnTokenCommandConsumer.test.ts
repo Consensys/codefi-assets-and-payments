@@ -1,8 +1,8 @@
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
-import { BurnTokenCommandBuilder } from '@codefi-assets-and-payments/messaging-events'
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+import { M2mTokenService } from '@consensys/auth'
+import { BurnTokenCommandBuilder } from '@consensys/messaging-events'
+import { TokenType } from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import {
   amountMock,

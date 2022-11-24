@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import { InjectRepository } from '@nestjs/typeorm'
 import { DeleteResult, FindManyOptions, Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { AdminApiService } from './AdminApiService'
 import {
   EntityCreateRequest,
@@ -10,7 +10,7 @@ import {
   ProductType,
   TenantCreateRequest,
   TenantUpdateRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { DataFieldsOnly } from '../utils/types'
 import {
   MessageDataOperation,
@@ -18,9 +18,9 @@ import {
   Events,
   Commands,
   EntityDeleteCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/messaging-events'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { EntityService } from './EntityService'
 import { StoreService } from './StoreService'

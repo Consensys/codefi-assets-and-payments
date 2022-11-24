@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability'
+import { CodefiLoggerModule } from '@consensys/observability'
 
 import * as ormconfig from 'src/ormconfig'
 import { HealthCheckModule } from './HealthCheckModule'

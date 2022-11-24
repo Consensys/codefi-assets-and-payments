@@ -47,7 +47,7 @@ import { EntityService } from 'src/modules/v2Entity/entity.service';
 import { AssetType } from 'src/types/asset/template';
 import { Project } from 'src/types/project';
 import { Config } from 'src/types/config';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import {
   Field,
   FieldComparator,

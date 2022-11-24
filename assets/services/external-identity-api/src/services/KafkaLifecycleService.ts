@@ -8,9 +8,9 @@ import {
   KafkaProducer,
   KafkaConsumer,
   KafkaSubscriber,
-} from '@codefi-assets-and-payments/nestjs-messaging'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { MicroserviceMessage } from '@consensys/messaging-events'
 import { ConfigType } from '../config'
 
 export const ALL_KAFKA_EVENTS = 'AllKafkaEvents'

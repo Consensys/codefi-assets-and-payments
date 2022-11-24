@@ -1,4 +1,4 @@
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
 import Joi from 'joi'
 import { paginatedQueryRequestProperties } from './paginatedQueryRequestProperties'
 

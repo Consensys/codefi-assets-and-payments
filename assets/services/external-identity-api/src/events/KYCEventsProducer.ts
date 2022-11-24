@@ -1,12 +1,9 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
 import { ValidationErrors } from '../services/onfido/InvalidPersonalInfoError'
-import {
-  IExternalKYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events'
-import { Events } from '@codefi-assets-and-payments/messaging-events'
+import { IExternalKYCResult, KYCScope } from '@consensys/messaging-events'
+import { Events } from '@consensys/messaging-events'
 import ReportResult from '../services/onfido/ReportResult'
 import CheckResult from '../services/onfido/CheckResult'
 import { UserId } from '../data/entities/types'

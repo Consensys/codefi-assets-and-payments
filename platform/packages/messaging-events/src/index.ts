@@ -274,7 +274,7 @@ import {
   ITransactionConfig,
   ProtocolType,
   TransactionType,
-} from '@codefi-assets-and-payments/ts-types';
+} from '@consensys/ts-types';
 
 export {
   Commands,

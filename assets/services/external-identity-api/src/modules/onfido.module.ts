@@ -15,9 +15,9 @@ import KafkaLifecycleService, {
   ALL_KAFKA_CONSUMERS,
   ALL_KAFKA_EVENTS,
 } from '../services/KafkaLifecycleService'
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events/src/messages/MicroserviceMessage'
-import { KafkaSubscriber } from '@codefi-assets-and-payments/nestjs-messaging'
-import { Events } from '@codefi-assets-and-payments/messaging-events'
+import { MicroserviceMessage } from '@consensys/messaging-events/src/messages/MicroserviceMessage'
+import { KafkaSubscriber } from '@consensys/nestjs-messaging'
+import { Events } from '@consensys/messaging-events'
 import KYCResultsService from '../services/KYCResultsService'
 import ReportResultDataAccess from '../repositories/ReportResultDataAccess'
 import { ReportResultEntity } from '../data/entities/ReportResultEntity'

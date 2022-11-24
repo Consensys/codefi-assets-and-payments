@@ -40,7 +40,7 @@ import {
   endProtectionAgainstRaceCondition,
   protectAgainstRaceCondition,
 } from 'src/utils/race';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 
 const TYPE_WORKFLOW_NAME = WorkflowName.KYC;

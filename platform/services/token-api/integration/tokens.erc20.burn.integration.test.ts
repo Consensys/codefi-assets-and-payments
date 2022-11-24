@@ -1,6 +1,6 @@
 import { burnTokenPut } from './utils/requests'
-import { BurnTokenCommandBuilder, Commands } from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, TokenOperationType, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { BurnTokenCommandBuilder, Commands } from '@consensys/messaging-events'
+import { EntityStatus, TokenOperationType, TokenType } from '@consensys/ts-types'
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import {
   handlesMultipleCommandsWithSameIdempotencyKeys,

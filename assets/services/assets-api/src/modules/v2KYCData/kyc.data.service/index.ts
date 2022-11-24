@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { EntityType, entityTypeToKycType } from 'src/types/entity';
 import ErrorService from 'src/utils/errorService';

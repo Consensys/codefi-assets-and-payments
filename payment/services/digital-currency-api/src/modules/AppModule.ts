@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
 import { HealthCheckModule } from './HealthCheckModule'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
+import { LoggerModule } from '@consensys/observability'
 import { APP_GUARD } from '@nestjs/core'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import config from '../config'
@@ -8,7 +8,7 @@ import {
   ApmClientModule,
   initApm,
   nestjsLoggerModuleConfig,
-} from '@codefi-assets-and-payments/observability'
+} from '@consensys/observability'
 import { LegalEntityModule } from './LegalEntityModule'
 import { PersistentConfigurationModule } from './PersistentConfigurationModule'
 import { DigitalCurrencyModule } from './DigitalCurrencyModule'
@@ -16,9 +16,9 @@ import {
   KafkaConsumerModule,
   KafkaPreview,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/nestjs-messaging'
 import { ConsumersModule } from './ConsumersModule'
-import { AuthGuard } from '@codefi-assets-and-payments/auth'
+import { AuthGuard } from '@consensys/auth'
 
 const apm = initApm()
 

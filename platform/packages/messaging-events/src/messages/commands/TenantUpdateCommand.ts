@@ -1,4 +1,4 @@
-import { ProductType } from '@codefi-assets-and-payments/ts-types';
+import { ProductType } from '@consensys/ts-types';
 import { Builder, IBuilder } from 'builder-pattern';
 import { TenantUpdateCommandSchema } from '../../schemas/TenantUpdateCommandSchema';
 import { AbstractMessage } from '../AbstractMessage';

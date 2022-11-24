@@ -6,8 +6,8 @@ import { IRawTransaction } from './IRawTransaction'
 import { RawTransactionManager } from './RawTransactionManager'
 import { IChain, IHeaders, ISendRawRequest } from 'pegasys-orchestrate'
 import { ChainRegistry } from '../chains/ChainRegistry'
-import { BadRequestException } from '@codefi-assets-and-payments/error-handler'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { BadRequestException } from '@consensys/error-handler'
+import { createLogger } from '@consensys/observability'
 
 export type EthereumArgument =
   | string

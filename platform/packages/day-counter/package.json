@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/day-counter",
+  "name": "@consensys/day-counter",
   "version": "0.1.5",
   "description": "Codefi Package for Day Counter",
   "license": "Apache",
@@ -47,6 +47,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!**/*Module.ts"

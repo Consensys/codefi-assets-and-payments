@@ -11,15 +11,15 @@ import {
   Param,
   Put,
 } from '@nestjs/common'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { EntityNotFoundException } from '@consensys/error-handler'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { createClientSchema } from '../validation/CreateClientSchema'
 import { CreateClientRequest } from '../requests/CreateClientRequest'
 import { ClientService } from '../services/ClientService'
 import { ClientResponse } from '../responses/ClientResponse'
 import { Permissions } from '../guards/PermissionsDecorator'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import {
   ApiTags,
   ApiOAuth2,
@@ -31,7 +31,7 @@ import {
 import { ClientGetAllResponse } from '../responses/ClientGetAllResponse'
 import { UpdateClientRequest } from '../requests/UpdateClientRequest'
 import { ErrorName } from '../enums/ErrorName'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { Protected } from '@consensys/auth'
 @ApiTags('Clients')
 @ApiBearerAuth('access-token')
 @Controller('client')

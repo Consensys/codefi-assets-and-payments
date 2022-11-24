@@ -9,7 +9,7 @@ import {
   testModule,
   waitForEntity,
 } from './utils/testCommonUtils'
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
 import { ClientEntity } from '../src/data/entities/ClientEntity'
 import {
   clientIdMock,
@@ -19,10 +19,10 @@ import {
 } from '../test/mocks'
 import { EntityEntity } from '../src/data/entities/EntityEntity'
 import { WalletEntity } from '../src/data/entities/WalletEntity'
-import { IClientCreateCommand } from '@codefi-assets-and-payments/messaging-events/dist/messages/commands/ClientCreateCommand'
+import { IClientCreateCommand } from '@consensys/messaging-events/dist/messages/commands/ClientCreateCommand'
 import { TestKafkaSubscriber } from './utils/TestKafkaSubscriber'
-import { Commands, Events } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaConsumer, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { Commands, Events } from '@consensys/messaging-events'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
 
 require('dotenv').config()
 

@@ -1,6 +1,6 @@
-import { IWalletDeleteCommand } from '@codefi-assets-and-payments/messaging-events'
+import { IWalletDeleteCommand } from '@consensys/messaging-events'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { entityIdMock, tenantIdMock, walletAddressMock } from '../../test/mocks'
 import { WalletService } from '../services/WalletService'
 import { WalletDeleteCommandConsumer } from './WalletDeleteCommandConsumer'

@@ -1,7 +1,7 @@
 import {
   OperationRequestState,
   OperationRequestType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import Joi from '@hapi/joi'
 // bytesLength * 2 because 1 string char = 2 bytes
 const bytesHexRegex = (bytesLength: number) =>

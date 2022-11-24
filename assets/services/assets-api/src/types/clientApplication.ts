@@ -1,4 +1,4 @@
-import { EntityStatus, TenantResponse } from '@codefi-assets-and-payments/ts-types';
+import { EntityStatus, TenantResponse } from '@consensys/ts-types';
 
 export const DEFAULT_TENANT_ID = 'codefi';
 export const DEFAULT_COMPANY_NAME = 'Codefi';

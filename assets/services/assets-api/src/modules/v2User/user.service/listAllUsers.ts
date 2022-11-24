@@ -20,7 +20,7 @@ import {
   checkLinkStateValidForUserType,
   checkIfLinkedToAssetClassOrToken,
 } from 'src/utils/checks/links';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { EntityService } from 'src/modules/v2Entity/entity.service';
 import { WorkflowInstanceService } from 'src/modules/v2WorkflowInstance/workflow.instance.service';
 import { ConfigService } from 'src/modules/v2Config/config.service';

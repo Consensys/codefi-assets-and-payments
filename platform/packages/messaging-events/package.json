@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/messaging-events",
+  "name": "@consensys/messaging-events",
   "version": "15.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   ],
   "license": "Apache",
   "dependencies": {
-    "@codefi-assets-and-payments/ts-types": "*",
+    "@consensys/ts-types": "workspace:*",
     "builder-pattern": "^1.2.4",
     "dotenv": "^8.2.0"
   },

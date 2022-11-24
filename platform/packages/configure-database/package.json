@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/configure-database",
+  "name": "@consensys/configure-database",
   "version": "0.0.3",
   "description": "Codefi database configuration script",
   "license": "Apache",
@@ -47,6 +47,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!**/*Module.ts"
@@ -78,7 +83,5 @@
     "@types/pg": "^7.14.4",
     "pg": "^8.3.0"
   },
-  "bin": {
-    "configure-database": "./cli.js"
-  }
+  "bin": "./cli.js"
 }

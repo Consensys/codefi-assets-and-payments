@@ -92,8 +92,7 @@ export default class Board extends Component<BoardProps, BoardState> {
     }
     if (
       props.initial &&
-      props.initial === {} &&
-      props.initial !== state.columns
+      props?.initial !== state.columns
     ) {
       return {
         columns: props.initial,

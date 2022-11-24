@@ -1,5 +1,5 @@
 import { Controller, Param, Delete } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ApiTags, ApiOperation } from '@nestjs/swagger'
 import { TransactionsService } from '../services/TransactionsService'
 import { TransitionInstancesService } from '../services/TransitionInstancesService'

@@ -4,7 +4,7 @@ import {
   Injectable,
   OnModuleInit,
 } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
 import { InjectRepository } from '@nestjs/typeorm';

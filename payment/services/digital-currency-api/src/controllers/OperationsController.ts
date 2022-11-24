@@ -11,7 +11,7 @@ import {
   BalanceHistoryResponse,
   PeriodGranularity,
   OperationResponseGet,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { OperationService } from '../services/OperationService'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { Request } from 'express'
@@ -21,8 +21,8 @@ import {
   extractTenantIdFromToken,
   extractTokenFromRequest,
   Protected,
-} from '@codefi-assets-and-payments/auth'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/auth'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { BaseExceptionResponse } from '../data/BaseExceptionResponse'
 

@@ -7,15 +7,15 @@ import {
   IUserCreateCommand,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
-import { EntityCreateCommandBuilder } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaConsumer, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/messaging-events'
+import { EntityCreateCommandBuilder } from '@consensys/messaging-events'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   EntityCreateRequest,
   EntityStatus,
   TenantCreateRequest,
   WalletType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
@@ -44,7 +44,7 @@ import {
   decodeToken,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import { TestKafkaSubscriber } from './utils/TestKafkaSubscriber'
 import { ethereumAddressRegEx } from '../src/utils/utils'
 import { EntityStoreEntity } from '../src/data/entities/EntityStoreEntity'

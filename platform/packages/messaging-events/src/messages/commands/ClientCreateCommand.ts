@@ -1,4 +1,4 @@
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types';
+import { ProductsEnum } from '@consensys/ts-types';
 import { ClientCreateCommandSchema } from '../../schemas/ClientCreateCommandSchema';
 import { AbstractMessage } from '../AbstractMessage';
 

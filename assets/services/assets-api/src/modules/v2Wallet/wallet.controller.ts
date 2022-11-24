@@ -41,8 +41,8 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { ApiEntityCallService } from '../v2ApiCall/api.call.service/entity';
 import { Wallet } from 'src/types/wallet';
 

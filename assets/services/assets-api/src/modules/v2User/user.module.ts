@@ -29,7 +29,7 @@ import { V2EmailModule } from 'src/modules/v2Email/email.module';
 import { V2EntityModule } from 'src/modules/v2Entity/entity.module';
 import { V2ConfigModule } from 'src/modules/v2Config/config.module';
 import { WorkflowInstanceService } from '../v2WorkflowInstance/workflow.instance.service';
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth';
+import { M2mTokenModule } from '@consensys/auth';
 
 @Module({
   controllers: [UserController],

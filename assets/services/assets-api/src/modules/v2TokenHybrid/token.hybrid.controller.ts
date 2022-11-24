@@ -91,8 +91,8 @@ import {
 } from '@nestjs/swagger';
 
 import { ApiMetadataCallService } from '../v2ApiCall/api.call.service/metadata';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 @ApiTags('Hybrid tokens')
 @ApiBearerAuth('access-token')

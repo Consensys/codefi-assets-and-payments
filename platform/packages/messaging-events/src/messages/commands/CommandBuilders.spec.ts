@@ -5,10 +5,7 @@ import {
   IDeployTokenCommand,
 } from './DeployTokenCommand';
 import { IMintTokenCommand, MintTokenCommandBuilder } from './MintTokenCommand';
-import {
-  ITransactionConfig,
-  TokenType,
-} from '@codefi-assets-and-payments/ts-types';
+import { ITransactionConfig, TokenType } from '@consensys/ts-types';
 
 describe('DeployTokenCommandBuilder', () => {
   it('Get builder from DeployTokenCommand', async () => {

@@ -3,7 +3,7 @@ import { WebHookService } from '../services/WebHookService'
 import createMockInstance from 'jest-create-mock-instance'
 import { authRegisterRequestMock } from '../../test/mocks'
 import { AuthHookRegisterRequest } from '../requests/AuthHookRegisterRequest'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 describe('WebHookController', () => {
   let controller: WebHookController

@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import Web3 from 'web3'
 import { ethers as Ethers } from 'ethers'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import {
   ChainRegistry,
   ContractRegistry,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import config from '../config'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { stringToHex } from '../utils/bignumberUtils'
 import { DigitalCurrencyService } from './DigitalCurrencyService'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 
 @Injectable()
 export class HolderService {

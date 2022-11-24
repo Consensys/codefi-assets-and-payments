@@ -1,7 +1,7 @@
 import { AbstractMessage } from '../AbstractMessage';
 import { RegisterAccountCommandSchema } from '../../schemas/RegisterAccountCommandSchema';
 import { Builder, IBuilder } from 'builder-pattern';
-import { ITransactionConfig } from '@codefi-assets-and-payments/ts-types';
+import { ITransactionConfig } from '@consensys/ts-types';
 
 export class RegisterAccountCommand extends AbstractMessage<IRegisterAccountCommand> {
   public messageName = 'register_account';

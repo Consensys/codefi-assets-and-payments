@@ -8,8 +8,8 @@ import {
   AUTH0_DEV_BASE_URL,
   ORCHESTRATE_URL,
 } from './configs'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { Events, IUserCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
+import { Events, IUserCreatedEvent } from '@consensys/messaging-events'
 import { DeleteResult } from 'typeorm'
 import {
   TenantResponse,
@@ -29,7 +29,7 @@ import {
   WalletQueryRequest,
   EntityClientQueryRequest,
   EntityClientCreateRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 
 export interface AxiosResponse<T = any> {
   data: T

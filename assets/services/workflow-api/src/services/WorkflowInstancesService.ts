@@ -11,7 +11,7 @@ import {
 } from '../models/dto/WorkflowInstanceDto'
 import { TransitionInstance } from 'src/models/TransitionInstanceEntity'
 import { NOT_STARTED } from '../constants/states'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { checkTenantId, requireTenantId } from '../utils/tenant'
 import { WorkflowTemplate } from 'src/models/WorkflowTemplateEntity'
 import { FindAllOptions, Paginate } from '../constants/query'

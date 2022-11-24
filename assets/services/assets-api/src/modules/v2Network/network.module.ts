@@ -19,7 +19,7 @@ import { LinkService } from 'src/modules/v2Link/link.service';
 import { WalletService } from 'src/modules/v2Wallet/wallet.service';
 import { EthHelperService } from 'src/modules/v2Eth/eth.service';
 import { PartitionService } from 'src/modules/v2Partition/partition.service';
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth';
+import { M2mTokenModule } from '@consensys/auth';
 import { V2UserModule } from 'src/modules/v2User/user.module';
 
 @Module({

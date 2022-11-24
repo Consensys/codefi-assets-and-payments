@@ -1,5 +1,5 @@
-import { Commands, ExecTokenCommandBuilder } from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, TokenOperationType, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { Commands, ExecTokenCommandBuilder } from '@consensys/messaging-events'
+import { EntityStatus, TokenOperationType, TokenType } from '@consensys/ts-types'
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import { execTokenPost } from './utils/requests'
 import { amountMock2 } from '../test/mocks'

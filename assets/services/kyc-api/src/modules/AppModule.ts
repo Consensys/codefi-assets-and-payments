@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule, SequelizeModuleOptions } from '@nestjs/sequelize';
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability';
+import { CodefiLoggerModule } from '@consensys/observability';
 import { HealthCheckModule } from 'src/modules/HealthCheckModule';
 import { ElementModule } from 'src/modules/ElementModule';
 import { TemplateModule } from 'src/modules/TemplateModule';

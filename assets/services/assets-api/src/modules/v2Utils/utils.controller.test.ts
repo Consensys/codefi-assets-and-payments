@@ -20,7 +20,7 @@ import { IUserContext } from 'src/types/userContext';
 import { UserType } from 'src/types/user';
 import { maskClientApplication, TenantType } from 'src/types/clientApplication';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { TokenDeletionService } from '../v2Token/token.service/deleteToken';
 import { LinkService } from '../v2Link/link.service';
 import { KYCTemplateService } from '../v2KYCTemplate/kyc.template.service';

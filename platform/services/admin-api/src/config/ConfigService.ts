@@ -1,6 +1,6 @@
 import { Auth0Service } from '../services/Auth0Service'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import cfg from '../config'
 import { FileSystemInstance } from '../services/instances/FileSystemInstance'
 import { ClientService } from '../services/ClientService'

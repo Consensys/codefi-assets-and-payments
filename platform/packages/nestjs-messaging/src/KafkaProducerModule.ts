@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { KafkaProducer } from './KafkaProducer';
 import { SchemaRegistryModule } from './SchemaRegistryModule';
 import { KafkaClientModule } from './KafkaClientModule';
-import { ApmModule, nestjsLoggerModuleConfig } from '@codefi-assets-and-payments/observability';
-import { LoggerModule } from '@codefi-assets-and-payments/observability';
+import { ApmModule, nestjsLoggerModuleConfig } from '@consensys/observability';
+import { LoggerModule } from '@consensys/observability';
 
 @Module({
   imports: [

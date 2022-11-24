@@ -1,4 +1,4 @@
-import { ApmModule } from '@codefi-assets-and-payments/observability';
+import { ApmModule } from '@consensys/observability';
 import { Module } from '@nestjs/common';
 import { CodefiConsumerService } from './CodefiConsumerService';
 

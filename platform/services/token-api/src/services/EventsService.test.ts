@@ -1,8 +1,8 @@
 import { EventsService } from './EventsService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import createMockInstance from 'jest-create-mock-instance'
-import { Events, ITokenTransferEvent } from '@codefi-assets-and-payments/messaging-events'
+import { Events, ITokenTransferEvent } from '@consensys/messaging-events'
 import cfg from '../config'
 import config from '../config'
 import {

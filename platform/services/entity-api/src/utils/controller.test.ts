@@ -1,4 +1,4 @@
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
 import {
   entityIdMock,
   entityIdMock2,

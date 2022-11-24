@@ -1,17 +1,17 @@
-import { ProcessingMessageException } from '@codefi-assets-and-payments/error-handler'
+import { ProcessingMessageException } from '@consensys/error-handler'
 import {
   Events,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EthereumAddressEntity } from '../data/entities/EthereumAddressEntity'
 import Web3 from 'web3'
 import { EthereumAddressService } from '../services/EthereumAddressService'
 import { LegalEntityService } from '../services/LegalEntityService'
 import { getGroupId } from '../utils/kafka'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import { QueryFailedError } from 'typeorm'
 
 @Injectable()

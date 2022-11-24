@@ -1,5 +1,5 @@
 import { Entity, PrimaryColumn, Column } from 'typeorm'
-import { EntityStatus, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenType } from '@consensys/ts-types'
 
 @Entity()
 export class TokenEntity {

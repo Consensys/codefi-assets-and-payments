@@ -43,8 +43,8 @@ import { Link } from 'src/types/workflow/workflowInstances/link';
 import { FunctionName } from 'src/types/smartContract';
 import { checkUserType } from 'src/utils/checks/userType';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 @Controller('v2/workflows/kyc/project-related')
 @UseFilters(new AppToHttpFilter()) // Used to preserve error codes coming from packages (Ex: 401 from auth package). Otherwise, coming from packages are turned into 500.

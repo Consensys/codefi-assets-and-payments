@@ -26,8 +26,8 @@ import ErrorService from 'src/utils/errorService';
 import { keys as UserKeys } from 'src/types/user';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
 import { ApiOAuth2, ApiOperation } from '@nestjs/swagger';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { ApiAdminCallService } from '../v2ApiCall/api.call.service/admin';
 import {
   Auth0User,

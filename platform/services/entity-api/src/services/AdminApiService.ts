@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   Commands,
   IClientCreateCommand,
   IUserCreateCommand,
-} from '@codefi-assets-and-payments/messaging-events'
-import { AdminRequest, ClientType, ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { AdminRequest, ClientType, ProductsEnum } from '@consensys/ts-types'
 
 @Injectable()
 export class AdminApiService {

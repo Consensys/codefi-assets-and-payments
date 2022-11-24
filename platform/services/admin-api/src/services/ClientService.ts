@@ -3,12 +3,12 @@ import { Auth0Service } from './Auth0Service'
 import { Client, Connection, ManagementClient } from 'auth0'
 import { ClientResponse } from '../responses/ClientResponse'
 import { Auth0Exception } from '../errors/Auth0Exception'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ConfigConstants } from '../config/ConfigConstants'
 import {
   EntityNotFoundException,
   ConfigurationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { EventsService } from './EventsService'
 import { ErrorName } from '../enums/ErrorName'
 import { CreateClientRequest } from '../requests/CreateClientRequest'

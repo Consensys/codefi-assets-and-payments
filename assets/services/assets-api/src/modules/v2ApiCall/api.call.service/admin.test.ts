@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiAdminCallService, AppType } from './admin';
 import { ApiCallHelperService } from '.';
 
@@ -23,8 +23,8 @@ import {
   keys as GrantKeys,
 } from 'src/types/grant';
 import { ConfigService } from 'src/modules/v2Config/config.service';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types';
+import { M2mTokenService } from '@consensys/auth';
+import { ProductsEnum } from '@consensys/ts-types';
 import config from 'src/config';
 import { DEV_DOMAIN_NAME } from 'src/types/authentication';
 import { ApiEntityCallService } from './entity';

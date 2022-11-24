@@ -10,7 +10,7 @@ import { EventsModule } from './EventsModule'
 import { LegalEntityModule } from './LegalEntityModule'
 import { OperationsModule } from './OperationsModule'
 import { OperationsRequestController } from '../controllers/OperationRequestController'
-import { KafkaProducerModule } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducerModule } from '@consensys/nestjs-messaging'
 
 @Module({
   imports: [

@@ -1,16 +1,16 @@
 {
-  "name": "@codefi-assets-and-payments/smart-contract-api",
+  "name": "@consensys/smart-contract-api",
   "version": "2.40.4",
   "private": true,
   "license": "Apache",
   "scripts": {
-    "build:DVPHoldableLockable": "npx sol-merger \"./contracts/DVPHoldableLockable.sol\" ./artifacts",
-    "build:ERC1400TokensValidator": "npx sol-merger \"./contracts/ERC1400TokensValidator.sol\" ./artifacts",
-    "build:ERC1400": "npx sol-merger \"./contracts/ERC1400.sol\" ./artifacts",
-    "build:ERC1400HoldableCertificateToken": "npx sol-merger \"./contracts/ERC1400HoldableCertificateToken.sol\" ./artifacts",
-    "build:ERC20Token": "npx sol-merger \"./contracts/ERC20Token.sol\" ./artifacts",
-    "build:ERC721Token": "npx sol-merger \"./contracts/ERC721Token.sol\" ./artifacts",
-    "build:MultiSigWallet": "npx sol-merger \"./contracts/MultiSigWallet.sol\" ./artifacts",
+    "build:DVPHoldableLockable": "sol-merger \"./contracts/DVPHoldableLockable.sol\" ./artifacts",
+    "build:ERC1400TokensValidator": "sol-merger \"./contracts/ERC1400TokensValidator.sol\" ./artifacts",
+    "build:ERC1400": "sol-merger \"./contracts/ERC1400.sol\" ./artifacts",
+    "build:ERC1400HoldableCertificateToken": "sol-merger \"./contracts/ERC1400HoldableCertificateToken.sol\" ./artifacts",
+    "build:ERC20Token": "sol-merger \"./contracts/ERC20Token.sol\" ./artifacts",
+    "build:ERC721Token": "sol-merger \"./contracts/ERC721Token.sol\" ./artifacts",
+    "build:MultiSigWallet": "sol-merger \"./contracts/MultiSigWallet.sol\" ./artifacts",
     "build:ts": "tsc -p tsconfig.build.json",
     "build": "yarn run cleanBuiltContracts && yarn run build:ERC1400 && yarn run build:ERC1400HoldableCertificateToken && yarn run build:MultiSigWallet && yarn run build:ERC20Token && yarn run build:ERC721Token && yarn run build:ERC1400TokensValidator && yarn run build:DVPHoldableLockable && yarn run build:ts",
     "cleanBuiltContracts": "rm -rf artifacts",
@@ -33,8 +33,8 @@
     "docker:down": "docker-compose down"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/auth": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/auth": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@ethereumjs/tx": "^3.5.2",
     "axios": "^0.27.2",
     "bip39": "^2.5.0",
@@ -85,7 +85,8 @@
     "npm": ">= 8"
   },
   "resolutions": {
-    "web3": "1.7.4"
+    "web3": "1.7.4",
+    "erc1820": "0.0.2"
   },
   "jest": {
     "moduleNameMapper": {
@@ -103,6 +104,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/scripts/**/*"
@@ -115,5 +121,8 @@
       "pre-commit": "eslint --fix",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "installConfig": {
+    "hoistingLimits": "none"
   }
 }
