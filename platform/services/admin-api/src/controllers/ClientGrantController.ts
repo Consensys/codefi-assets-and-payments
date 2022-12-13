@@ -24,6 +24,7 @@ import {
   ApiParam,
 } from '@nestjs/swagger'
 import { ApiTags, ApiOAuth2 } from '@nestjs/swagger'
+import { Protected } from '@codefi-assets-and-payments/auth'
 
 @ApiTags('Grants')
 @ApiBearerAuth('access-token')
@@ -42,6 +43,7 @@ export class ClientGrantController {
   @Permissions('write:grant')
   @ApiOAuth2(['write:grant'])
   @ApiOperation({ summary: 'Create a client grant' })
+  @Protected(true, [])
   async clientGrant(
     @Body() request: ClientGrantRequest,
   ): Promise<ClientGrantResponse> {
@@ -61,6 +63,7 @@ export class ClientGrantController {
   @ApiOperation({ summary: 'Get a client grant' })
   @ApiQuery({ name: 'clientId', description: 'OAuth client ID' })
   @ApiQuery({ name: 'audience', description: 'Oauth audience' })
+  @Protected(true, [])
   async getClientGrants(
     @Query('clientId') clientId?: string,
     @Query('audience') audience?: string,
@@ -79,6 +82,7 @@ export class ClientGrantController {
   @ApiOAuth2(['delete:grant'])
   @ApiOperation({ summary: 'Delete a client grant' })
   @ApiParam({ name: 'id', description: 'Client grant to delete' })
+  @Protected(true, [])
   async deleteClientGrantById(@Param('id') clientGrantId: string) {
     this.logger.info(`deleteClientGrant. param.id: %o`, clientGrantId)
     const response = await this.clientGrantService.deleteClientGrantById(

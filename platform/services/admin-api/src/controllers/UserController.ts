@@ -20,7 +20,10 @@ import { UserService } from '../services/UserService'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { inviteUserByEmailSchema } from '../validation/inviteUserByEmailSchema'
 import { UserCreatedResponse } from '../responses/UserCreatedResponse'
-import { AppToHttpFilter, UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import {
+  AppToHttpFilter,
+  UnauthorizedException,
+} from '@codefi-assets-and-payments/error-handler'
 import {
   ApiTags,
   ApiOAuth2,
@@ -40,6 +43,7 @@ import {
   superTenantId,
   extractTenantIdFromToken,
   extractEntityIdFromToken,
+  Protected,
 } from '@codefi-assets-and-payments/auth'
 import { Request } from 'express'
 import { superEntityId } from '@codefi-assets-and-payments/auth/dist/utils/authUtils'
@@ -62,6 +66,7 @@ export class UserController {
   @Permissions('write:invite')
   @ApiOAuth2(['write:invite'])
   @ApiOperation({ summary: 'Invite a user by email' })
+  @Protected(true, [])
   async inviteUser(
     @Body() request: InviteUserByEmailRequest,
   ): Promise<UserCreatedResponse> {
@@ -79,6 +84,7 @@ export class UserController {
   @ApiOAuth2(['delete:user'])
   @ApiOperation({ summary: 'Delete a user by id' })
   @ApiParam({ name: 'id', description: 'User Id' })
+  @Protected(true, [])
   async deleteUser(@Param('id') userId: string) {
     this.logger.info(`deleteUser. param.id: %o`, userId)
     await this.userService.deleteUserById(userId)
@@ -89,6 +95,7 @@ export class UserController {
   @ApiOAuth2(['read:user'])
   @ApiOperation({ summary: 'Get a user by id' })
   @ApiParam({ name: 'id', description: 'User Id' })
+  @Protected(true, [])
   async getUserById(@Param('id') userId: string): Promise<UserCreatedResponse> {
     this.logger.info(`getUserById. param.id: %o`, userId)
     const response = await this.userService.getUserById(userId)
@@ -100,6 +107,7 @@ export class UserController {
   @ApiOAuth2(['read:user'])
   @ApiOperation({ summary: 'Get a user by email' })
   @ApiParam({ name: 'email', description: 'User email' })
+  @Protected(true, [])
   async getUsersByEmail(
     @Param('email') email: string,
   ): Promise<UserCreatedResponse[]> {
@@ -120,6 +128,7 @@ export class UserController {
     name: 'entityId',
     description: 'Unique identifier for the entity',
   })
+  @Protected(true, [])
   async getUsersByEntity(
     @Req() request: Request,
     @Param('tenantId') tenantId: string,
@@ -149,6 +158,7 @@ export class UserController {
   @Permissions('write:user')
   @ApiOAuth2(['write:user'])
   @ApiOperation({ summary: 'Create a user' })
+  @Protected(true, [])
   async createUser(
     @Body() request: CreateUserRequest,
   ): Promise<UserCreatedResponse> {
@@ -163,6 +173,7 @@ export class UserController {
   @ApiOAuth2(['write:user'])
   @ApiOperation({ summary: 'Update a user' })
   @ApiParam({ name: 'id', description: 'User Id' })
+  @Protected(true, [])
   async updateUser(
     @Body() request: UpdateUserRequest,
     @Param('id') id: string,

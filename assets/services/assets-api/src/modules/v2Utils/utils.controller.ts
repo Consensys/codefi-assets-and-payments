@@ -2494,7 +2494,7 @@ export class UtilsController {
 
   @Get('/identity')
   @HttpCode(200)
-  @Protected(false, [])
+  @Protected(true, [])
   // This endpoint is not protected because this was a requirement in the DEPRECATED WAY to retrieve
   // identity. As soon as the NEW WAY of retrieving identity will be adopted everywhere, we'll be
   // able to enable protection.
