@@ -19,14 +19,14 @@ import {
   OperationRequestSchema,
 } from '../validation/ApiRequestsSchema'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import {
   AsyncActionResponse,
   OperationRequestRequest,
   OperationRequestResolve,
   OperationRequestResponse,
   OperationRequestResponseGet,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import config from '../config'
 import { BaseExceptionResponse } from '../data/BaseExceptionResponse'
 import {
@@ -35,7 +35,7 @@ import {
   extractTenantIdFromToken,
   extractTokenFromRequest,
   Protected,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 
 @Controller(`operations-request`)
 @ApiTags('Operations Request')

@@ -1,9 +1,9 @@
 import AxiosRetry from 'axios-retry';
 import { Injectable } from '@nestjs/common';
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler';
+import { UnauthorizedException } from '@consensys/error-handler';
 
 import cfg from '../config';
-import { createLogger } from '@codefi-assets-and-payments/observability';
+import { createLogger } from '@consensys/observability';
 import { HttpService } from '@nestjs/axios';
 
 @Injectable()

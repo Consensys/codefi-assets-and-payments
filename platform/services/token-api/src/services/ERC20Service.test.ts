@@ -1,6 +1,6 @@
-import { ERC20Token } from '@codefi-assets-and-payments/tokens'
+import { ERC20Token } from '@consensys/tokens'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   tenantIdMock,
   tokensDeployRequestMock,
@@ -24,9 +24,9 @@ import { ERC20Service } from './ERC20Service'
 import {
   ITransactionConfig,
   TransactionConfigBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { unpadHex } from '../utils/bignumberUtils'
-import { craftAuthTokenWithTenantId } from '@codefi-assets-and-payments/auth'
+import { craftAuthTokenWithTenantId } from '@consensys/auth'
 
 const authTokenMock: string = craftAuthTokenWithTenantId(
   tenantIdMock,

@@ -1,6 +1,6 @@
 import express from 'express';
 import { IChain } from 'pegasys-orchestrate';
-import { extractTenantIdFromToken, decodeTokenFromRequest } from '@codefi-assets-and-payments/auth';
+import { extractTenantIdFromToken, decodeTokenFromRequest } from '@consensys/auth';
 import extractErrorMessage from '../utils/errorMessage';
 import orchestrateInstance from '../orchestrate';
 import { logger } from '../logging/logger';

@@ -1,4 +1,4 @@
-import { M2mTokenModule, M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenModule, M2mTokenService } from '@consensys/auth'
 import { Test } from '@nestjs/testing'
 import { ConfigConstants } from '../../src/config/ConfigConstants'
 import { ManagementClientExtended } from '../../src/types/Auth0ManagementClientExtended'

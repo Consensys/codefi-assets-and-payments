@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
 import { APP_GUARD } from '@nestjs/core'
-import { AuthGuard } from '@codefi-assets-and-payments/auth'
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability'
+import { AuthGuard } from '@consensys/auth'
+import { CodefiLoggerModule } from '@consensys/observability'
 import { MailingModule } from './MailingModule'
 import { HealthCheckModule } from './HealthCheckModule'
 

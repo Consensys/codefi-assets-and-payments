@@ -1,4 +1,4 @@
-import { apiMetricMiddlewares } from '@codefi-assets-and-payments/observability'
+import { apiMetricMiddlewares } from '@consensys/observability'
 
 import { ApplicationContext } from './context'
 import config from './config'

@@ -1,5 +1,5 @@
 import { Controller, Get, HttpCode, Query } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ApiTags } from '@nestjs/swagger'
 
 import { KeyService } from '../services/Key.service'

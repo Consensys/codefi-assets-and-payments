@@ -4,8 +4,8 @@ import ErrorService from 'src/utils/errorService';
 
 import { HooksService } from './hooks.service';
 import { TriggerHookBodyInput } from './hook.dto';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 @Controller('v2/hooks')
 @UseFilters(new AppToHttpFilter()) // Used to preserve error codes coming from packages (Ex: 401 from auth package). Otherwise, coming from packages are turned into 500.

@@ -4,12 +4,12 @@ import {
   ContractRegistryModule,
   OrchestrateAccountsModule,
   OrchestrateAccountsService,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { OperationEntity } from '../../src/data/entities/OperationEntity'
 import { TokenEntity } from '../../src/data/entities/TokenEntity'
 import { Repository } from 'typeorm'
 import { sleep } from '../../src/utils/sleep'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 import { TestKafkaConsumer } from './TestKafkaConsumer'
 import { getRepositoryToken, TypeOrmModule } from '@nestjs/typeorm'
 import { TokensManagerModule } from '../../src/modules/TokensManagerModule'
@@ -17,13 +17,13 @@ import {
   KafkaConsumer,
   KafkaConsumerModule,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/nestjs-messaging'
 import { PersistentConfigurationModule } from '../../src/modules/PersistentConfigurationModule'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
+import { LoggerModule } from '@consensys/observability'
 import config from '../../src/config'
 import { Test, TestingModule } from '@nestjs/testing'
-import { M2mTokenModule, UserTokenModule, UserTokenService } from '@codefi-assets-and-payments/auth'
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events'
+import { M2mTokenModule, UserTokenModule, UserTokenService } from '@consensys/auth'
+import { MicroserviceMessage } from '@consensys/messaging-events'
 import { v4 as uuidv4 } from 'uuid'
 import { createUserAuthToken } from './requests'
 import { INTEGRATION_TEST_USER_PASSWORD } from './configs'

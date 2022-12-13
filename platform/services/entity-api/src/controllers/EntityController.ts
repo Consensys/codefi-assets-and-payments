@@ -15,7 +15,7 @@ import {
   ParseBoolPipe,
 } from '@nestjs/common'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Request } from 'express'
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
 import {
@@ -23,12 +23,12 @@ import {
   extractTokenFromRequest,
   decodeToken,
   extractTenantIdFromRequestAndHeader,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import { EntityService } from '../services/EntityService'
 import { DeleteResult, FindManyOptions, In, Raw } from 'typeorm'
 import { entityCreateRequestSchema } from '../validation/entityCreateRequestSchema'
 import { entityUpdateRequestSchema } from '../validation/entityUpdateRequestSchema'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { errorApiResponse } from '../responses/error-api-response'
@@ -38,7 +38,7 @@ import {
   EntityCreateRequest,
   EntityUpdateRequest,
   EntityQueryRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { entityQueryRequestSchema } from '../validation/entityQueryRequestSchema'
 import {
   buildMetadataQuery,

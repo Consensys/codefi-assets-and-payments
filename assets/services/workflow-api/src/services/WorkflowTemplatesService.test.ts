@@ -1,6 +1,6 @@
 import createMockInstance from 'jest-create-mock-instance'
 import { Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import { WorkflowTemplatesService } from './WorkflowTemplatesService'
 import {

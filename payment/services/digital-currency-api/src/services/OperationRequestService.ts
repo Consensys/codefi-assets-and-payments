@@ -1,6 +1,6 @@
 import { InjectRepository } from '@nestjs/typeorm'
 import { OperationRequestEntity } from '../data/entities/OperationRequestEntity'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Injectable } from '@nestjs/common'
 import { Repository, UpdateResult } from 'typeorm'
 import { OperationEntity } from '../data/entities/OperationEntity'
@@ -11,15 +11,15 @@ import {
   BadRequestException,
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { v4 as uuidv4 } from 'uuid'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   EntityStatus,
   AquisitionRedeemRequest,
   OperationRequestState,
   OperationRequestType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { hexToString } from '../utils/bignumberUtils'
 import { LegalEntityService } from './LegalEntityService'
 import { LegalEntityEntity } from '../data/entities/LegalEntityEntity'

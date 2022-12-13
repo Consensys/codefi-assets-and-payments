@@ -1,4 +1,4 @@
-import { ERC721Token } from '@codefi-assets-and-payments/tokens'
+import { ERC721Token } from '@consensys/tokens'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   tenantIdMock,
@@ -14,8 +14,8 @@ import {
   createMockLogger,
 } from '../../test/mocks'
 import { ERC721Service } from './ERC721Service'
-import { TransactionConfigBuilder } from '@codefi-assets-and-payments/messaging-events'
-import { TokenOperationType } from '@codefi-assets-and-payments/ts-types'
+import { TransactionConfigBuilder } from '@consensys/messaging-events'
+import { TokenOperationType } from '@consensys/ts-types'
 
 describe('ERC721Service', () => {
   let service: ERC721Service

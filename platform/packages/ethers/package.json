@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/ethers",
+  "name": "@consensys/ethers",
   "version": "1.0.0",
   "description": "A package to unify all ethers configuration",
   "license": "Apache",
@@ -47,6 +47,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!**/*Module.ts"

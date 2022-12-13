@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { ClientService } from '../services/ClientService'
 import { InfuraController } from './InfuraController'

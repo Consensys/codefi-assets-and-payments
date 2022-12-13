@@ -1,5 +1,5 @@
 import { DigitalCurrencyService } from './DigitalCurrencyService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { Repository } from 'typeorm'
 import { LegalEntityService } from './LegalEntityService'
@@ -22,7 +22,7 @@ import { DigitalCurrencyEntity } from '../data/entities/DigitalCurrencyEntity'
 import {
   EntityStatus,
   OperationType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { EthereumAddressService } from './EthereumAddressService'
 
 describe('DigitalCurrencyService', () => {

@@ -4,7 +4,7 @@ import { SmartContract } from 'src/types/smartContract';
 import { Token, keys as TokenKeys } from 'src/types/token';
 import { WalletType } from 'src/types/wallet';
 import { OrderType } from 'src/types/workflow/workflowInstances';
-import { WalletType as EntityApiWalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType as EntityApiWalletType } from '@consensys/ts-types';
 
 export const generateToken = ({
   overrideToken,

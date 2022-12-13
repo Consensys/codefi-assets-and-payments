@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { CreateRoleRequest } from '../requests/CreateRoleRequest'
 import { RoleResponse } from '../responses/RoleResponse'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Auth0Service } from './Auth0Service'
 import { Auth0Exception } from '../errors/Auth0Exception'
 import { RolePermissionRequest } from '../requests/RolePermissionRequest'

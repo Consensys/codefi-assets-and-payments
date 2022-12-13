@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/ts-types",
+  "name": "@consensys/ts-types",
   "version": "3.0.0",
   "description": "Codefi Package to store Typescript type definitions",
   "license": "Apache",

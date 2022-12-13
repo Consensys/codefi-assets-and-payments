@@ -1,11 +1,11 @@
-import { Commands, TransferTokenCommandBuilder } from '@codefi-assets-and-payments/messaging-events'
+import { Commands, TransferTokenCommandBuilder } from '@consensys/messaging-events'
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import {
   erc721TokenIdMock,
   erc721TokenIdUniqueMock,
   tokensERC721TransferRequestMock,
 } from '../test/mocks'
-import { EntityStatus, TokenOperationType, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenOperationType, TokenType } from '@consensys/ts-types'
 import { transferTokenPut } from './utils/requests'
 import {
   handlesMultipleCommandsWithSameIdempotencyKeys,

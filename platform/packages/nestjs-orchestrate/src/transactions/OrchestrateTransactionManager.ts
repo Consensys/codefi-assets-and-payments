@@ -23,7 +23,7 @@ import {
   UnauthorizedException,
   EntityNotFoundException,
   BadRequestException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 
 const unauthorizedClientRequestCodes = [401]
 const invalidClientRequestCodes = [400, 404, 422]

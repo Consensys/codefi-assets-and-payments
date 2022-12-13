@@ -1,4 +1,4 @@
-import { ApmService, ApmTransactionStarted } from '@codefi-assets-and-payments/observability';
+import { ApmService, ApmTransactionStarted } from '@consensys/observability';
 import * as KafkaJS from 'kafkajs';
 import { Consumer } from './Consumer';
 import { ResponseMessage } from './ResponseMessage';

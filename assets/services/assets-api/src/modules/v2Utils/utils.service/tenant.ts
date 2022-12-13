@@ -42,7 +42,7 @@ import {
   ApiMetadataCallService,
 } from 'src/modules/v2ApiCall/api.call.service/metadata';
 import { ApiKycUtilsService } from 'src/modules/v2ApiCall/api.call.service/kyc';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import config from 'src/config';
 import { ASSETS_API_REQUIRED_SCOPES } from 'src/types/grant';
 import { keys as KycTemplateKeys } from 'src/types/kyc/template';

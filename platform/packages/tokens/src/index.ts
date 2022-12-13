@@ -1,4 +1,4 @@
-import { TransactionType, IHeaders } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { TransactionType, IHeaders } from '@consensys/nestjs-orchestrate'
 import { ERC20Token } from './tokens/ERC20Token'
 import { ERC721Token } from './tokens/ERC721Token'
 import { ERC1400Token } from './tokens/ERC1400Token'

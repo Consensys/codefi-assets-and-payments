@@ -9,13 +9,13 @@ import {
   initApm,
   nestjsLoggerModuleConfig,
   LoggerModule
-} from '@codefi-assets-and-payments/observability'
-import { AuthGuard } from '@codefi-assets-and-payments/auth'
+} from '@consensys/observability'
+import { AuthGuard } from '@consensys/auth'
 import {
   KafkaConsumerModule,
   KafkaPreview,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/nestjs-messaging'
 import { UserCreatedEventConsumer } from '../consumers/UserCreatedEventConsumer'
 import { EntityCreateCommandConsumer } from '../consumers/EntityCreateCommandConsumer'
 import { EntityUpdateCommandConsumer } from '../consumers/EntityUpdateCommandConsumer'

@@ -26,7 +26,7 @@ import { ApiWorkflowWorkflowInstanceService } from 'src/modules/v2ApiCall/api.ca
 import { Project } from 'src/types/project';
 import { Config } from 'src/types/config';
 import { ApiMailingCallService } from 'src/modules/v2ApiCall/api.call.service/mailing';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 
 @Injectable()

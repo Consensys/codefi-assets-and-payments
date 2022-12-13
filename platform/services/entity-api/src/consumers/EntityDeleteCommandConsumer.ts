@@ -1,7 +1,7 @@
-import { Commands, IEntityDeleteCommand } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { Commands, IEntityDeleteCommand } from '@consensys/messaging-events'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EntityService } from '../services/EntityService'
 import { getGroupId } from '../utils/kafka'
 

@@ -1,5 +1,5 @@
 // import winston from 'winston';
-import { createLogger } from '@codefi-assets-and-payments/observability'; // Codefi logger
+import { createLogger } from '@consensys/observability'; // Codefi logger
 
 // Get configured logger instance
 const logger = createLogger('oldWinstonLogger');

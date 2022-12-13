@@ -1,14 +1,14 @@
-import { UserTokenModule } from '@codefi-assets-and-payments/auth'
-import { MicroserviceMessage } from '@codefi-assets-and-payments/messaging-events'
+import { UserTokenModule } from '@consensys/auth'
+import { MicroserviceMessage } from '@consensys/messaging-events'
 import {
   KafkaConsumer,
   KafkaConsumerModule,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/nestjs-messaging'
+import { EntityStatus } from '@consensys/ts-types'
 import { Test, TestingModule } from '@nestjs/testing'
 import { getRepositoryToken, TypeOrmModule } from '@nestjs/typeorm'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
+import { LoggerModule } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import { v4 as uuidv4 } from 'uuid'
 import { UserCreatedEventConsumer } from '../../src/consumers/UserCreatedEventConsumer'

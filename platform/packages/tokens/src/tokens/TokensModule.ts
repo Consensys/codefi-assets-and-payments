@@ -1,8 +1,8 @@
 import {
   ContractRegistryModule,
   OrchestrateContractManagerModule,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { ApmModule } from '@codefi-assets-and-payments/observability'
+} from '@consensys/nestjs-orchestrate'
+import { ApmModule } from '@consensys/observability'
 import { Module } from '@nestjs/common'
 import { ERC1400Token } from './ERC1400Token'
 import { ERC721Token } from './ERC721Token'

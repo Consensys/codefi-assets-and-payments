@@ -79,8 +79,8 @@ import {
 } from '@nestjs/swagger';
 import { checkValidEnumValue, getEnumValues } from 'src/utils/enumUtils';
 import { LinkState } from 'src/types/workflow/workflowInstances/link';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 
 // CAUTION!!!

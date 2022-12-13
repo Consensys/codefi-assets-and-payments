@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/tokens",
+  "name": "@consensys/tokens",
   "version": "2.1.0",
   "description": "A package to manage and interact with Ethereum tokens using Orchestrate",
   "main": "dist/index.js",
@@ -19,8 +19,8 @@
   },
   "license": "Apache",
   "dependencies": {
-    "@codefi-assets-and-payments/nestjs-orchestrate": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/nestjs-orchestrate": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "bignumber.js": "^9.0.0",
@@ -60,6 +60,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!src/*.ts",

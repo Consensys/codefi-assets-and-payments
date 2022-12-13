@@ -1,14 +1,14 @@
 import { TenantOperationEventConsumer } from './TenantOperationEventConsumer'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { TenantService } from '../services/TenantService'
-import { ChainRegistry } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ChainRegistry } from '@consensys/nestjs-orchestrate'
 import {
   registeredChainsMock,
   tenantOperationEventMock,
 } from '../../test/mocks'
-import { MessageDataOperation } from '@codefi-assets-and-payments/messaging-events'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { MessageDataOperation } from '@consensys/messaging-events'
+import { M2mTokenService } from '@consensys/auth'
 
 describe('TenantOperationEventConsumer', () => {
   let logger: jest.Mocked<NestJSPinoLogger>

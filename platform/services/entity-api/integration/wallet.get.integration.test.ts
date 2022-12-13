@@ -12,12 +12,12 @@ import {
   TenantCreateRequest,
   WalletCreateRequest,
   WalletType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import {
   decodeToken,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import crypto from 'crypto'
 import { MAX_PAGINATED_LIMIT } from '../src/validation/paginatedQueryRequestProperties'
 import { toChecksumAddress } from 'web3-utils'

@@ -12,7 +12,7 @@ import {
 import { ApiOAuth2, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
 import { Request } from 'express'
 import { DigitalCurrencyService } from '../services/DigitalCurrencyService'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { UseFilters } from '@nestjs/common'
 import {
   CreateDigitalCurrencyRequest,
@@ -22,7 +22,7 @@ import {
   TransferDigitalCurrencyRequest,
   EntityStatus,
   BurnDigitalCurrencyRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import {
   BurnCurrencySchema,
@@ -37,7 +37,7 @@ import {
   extractTenantIdFromToken,
   extractTokenFromRequest,
   Protected,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 
 @Controller('digital-currencies')
 @ApiTags('Digital Currencies')

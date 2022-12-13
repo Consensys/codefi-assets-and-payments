@@ -1,6 +1,6 @@
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import {
   authHeadersMock,

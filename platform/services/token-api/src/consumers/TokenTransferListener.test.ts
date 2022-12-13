@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EventsService } from '../services/EventsService'
 import {
   orchestrateTransferReceiptMock as receiptMock,
@@ -15,9 +15,9 @@ import {
 import { TokensService } from '../services/TokensService'
 import { OperationsService } from '../services/OperationsService'
 import { TokenTransferListener } from './TokenTransferListener'
-import { EntityStatus, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenOperationType } from '@consensys/ts-types'
 import { ChainService } from '../services/ChainService'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 
 describe('TokensTransferListener', () => {
   let loggerMock: jest.Mocked<NestJSPinoLogger>

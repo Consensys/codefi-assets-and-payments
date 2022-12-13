@@ -42,8 +42,8 @@ import { USER_ID_LENGTH } from 'src/types/user';
 import { ApiKycCallService } from 'src/modules/v2ApiCall/api.call.service/kyc';
 import { checkUserType, checkUserTypeIsOneOf } from 'src/utils/checks/userType';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { ApiEntityCallService } from '../v2ApiCall/api.call.service/entity';
 
 @Controller('v2/essentials/kyc/template')

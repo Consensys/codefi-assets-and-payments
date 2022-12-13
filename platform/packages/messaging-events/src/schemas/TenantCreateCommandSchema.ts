@@ -1,4 +1,4 @@
-import { ProductType } from '@codefi-assets-and-payments/ts-types';
+import { ProductType } from '@consensys/ts-types';
 import AdminSchema from './AdminSchema';
 import BaseMessageSchema from './BaseMessageSchema';
 import StoreMappingSchema from './StoreMappingSchema';

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 import { LegalEntityToOnboard } from './types'
 import { LegalEntityService } from './LegalEntityService'
@@ -7,11 +7,11 @@ import {
   ChainRegistry,
   OrchestrateAccountsService,
   OrchestrateUtils,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { sleep } from '../utils/utils'
 import Web3 from 'web3'
 import { QueryFailedError } from 'typeorm'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 
 @Injectable()
 export class PersistentConfigurationService {

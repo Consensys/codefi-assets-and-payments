@@ -5,7 +5,7 @@ import {
 } from './../../test/utils'
 import { ManagementClientExtended } from 'src/types/Auth0ManagementClientExtended'
 import { ConfigService } from './ConfigService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { FileSystemInstance } from '../services/instances/FileSystemInstance'
 import { Auth0Service } from '../services/Auth0Service'
 import { ClientService } from '../services/ClientService'

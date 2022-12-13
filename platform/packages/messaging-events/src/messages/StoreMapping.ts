@@ -1,4 +1,4 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType } from '@consensys/ts-types';
 
 export interface IStoreMapping {
   storeId: string;

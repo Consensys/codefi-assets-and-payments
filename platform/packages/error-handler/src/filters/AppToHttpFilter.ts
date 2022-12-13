@@ -1,7 +1,7 @@
 import { Catch, ExceptionFilter, ArgumentsHost } from '@nestjs/common'
 import { Request, Response } from 'express'
 import { ErrorCode } from '../enums/ErrorCodeEnum'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 
 /**
  * This filter is meant to transform application errors or exceptions

@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/entity-api",
+  "name": "@consensys/entity-api",
   "private": true,
   "version": "22.7.1",
   "description": "Entity Api",
@@ -74,14 +74,14 @@
     "typeorm:revert": "npm run typeorm migration:revert"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/auth": "*",
-    "@codefi-assets-and-payments/configure-database": "*",
-    "@codefi-assets-and-payments/error-handler": "*",
-    "@codefi-assets-and-payments/messaging-events": "*",
-    "@codefi-assets-and-payments/nestjs-messaging": "*",
-    "@codefi-assets-and-payments/nestjs-orchestrate": "*",
-    "@codefi-assets-and-payments/observability": "*",
-    "@codefi-assets-and-payments/ts-types": "*",
+    "@consensys/auth": "workspace:*",
+    "@consensys/configure-database": "workspace:*",
+    "@consensys/error-handler": "workspace:*",
+    "@consensys/messaging-events": "workspace:*",
+    "@consensys/nestjs-messaging": "workspace:*",
+    "@consensys/nestjs-orchestrate": "workspace:*",
+    "@consensys/observability": "workspace:*",
+    "@consensys/ts-types": "workspace:*",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
@@ -156,6 +156,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/**/{server,sleep}.{ts,js}",

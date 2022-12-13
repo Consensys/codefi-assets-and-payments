@@ -7,7 +7,7 @@ import {
   WalletType,
   TransferDigitalCurrencyRequest,
   OperationType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { LegalEntityEntity } from '../src/data/entities/LegalEntityEntity'
 import { DECODED_TOKEN_HEADER } from '../src/utils/jwtUtils'
 import config from '../src/config'
@@ -21,13 +21,13 @@ import {
   ITokenTransferEvent,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { DigitalCurrencyEntity } from '../src/data/entities/DigitalCurrencyEntity'
 import { OperationEntity } from '../src/data/entities/OperationEntity'
 import { Counted } from '../src/services/types'
 import { EthereumAddressEntity } from '../src/data/entities/EthereumAddressEntity'
 import { TenantEntity } from '../src/data/entities/TenantEntity'
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
 
 export const addressMock = '0x5d2FD0EFb594179D3B772640f8dA975871e460d2'
 export const addressMock2 = '0x5d2FD0EFb594179D3B772640f8dA975871e460d3'

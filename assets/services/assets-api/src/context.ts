@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'; // Codefi logger
+import { nestjsLogger } from '@consensys/observability'; // Codefi logger
 import { AppModule } from 'src/modules/app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { INestApplication, ValidationPipe } from '@nestjs/common';

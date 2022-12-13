@@ -1,14 +1,14 @@
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
-import { ITransactionConfig } from '@codefi-assets-and-payments/messaging-events'
-import { IHeaders } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { IRawTransaction } from '@codefi-assets-and-payments/nestjs-orchestrate/dist/transactions/IRawTransaction'
+import { ValidationException } from '@consensys/error-handler'
+import { ITransactionConfig } from '@consensys/messaging-events'
+import { IHeaders } from '@consensys/nestjs-orchestrate'
+import { IRawTransaction } from '@consensys/nestjs-orchestrate/dist/transactions/IRawTransaction'
 import {
   ExecArgument,
   TokensDeployRequest,
   TokenType,
   TokenOperationType,
-} from '@codefi-assets-and-payments/ts-types'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+} from '@consensys/ts-types'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 export type TokenConstructorParams = {
   name: string

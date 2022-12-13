@@ -1,6 +1,6 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types'
+import { WalletType } from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import { addressMock, updateResultMock, uuidMock } from '../../test/mocks'
 import { EthereumAddressEntity } from '../data/entities/EthereumAddressEntity'

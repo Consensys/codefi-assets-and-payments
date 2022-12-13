@@ -1,4 +1,4 @@
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { Controller, Get, UseFilters } from '@nestjs/common'
 import { ApiTags } from '@nestjs/swagger'
 import {

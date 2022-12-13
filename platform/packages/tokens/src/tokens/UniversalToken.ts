@@ -4,7 +4,7 @@ import {
   ContractManager,
   TransactionConfig,
   IHeaders,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Injectable } from '@nestjs/common'
 
 export enum CertificateValidation {

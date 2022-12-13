@@ -1,7 +1,7 @@
 import { CreateApiRequest } from '../../src/requests/ResourceServerApiRequest'
 import { ManagementClient } from 'auth0'
 import { Test } from '@nestjs/testing'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
+import { LoggerModule } from '@consensys/observability'
 import cfg from '../../src/config'
 import { Auth0Module } from '../../src/modules/Auth0Module'
 import { Auth0Service } from '../../src/services/Auth0Service'

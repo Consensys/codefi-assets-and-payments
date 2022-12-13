@@ -1,11 +1,11 @@
 import createMockInstance from 'jest-create-mock-instance';
 import { ApiAdminCallService } from '../../v2ApiCall/api.call.service/admin';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { TenantRoleMigrationService } from './tenantRoleMigration';
 import { ClientApplication, keys } from '../../../types/clientApplication';
 import { UserType } from 'src/types/user';
 import { Auth0User } from 'src/types/authentication';
-import { Role } from '@codefi-assets-and-payments/ts-types';
+import { Role } from '@consensys/ts-types';
 import { generateUser } from 'test/mockDataGenerators';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 

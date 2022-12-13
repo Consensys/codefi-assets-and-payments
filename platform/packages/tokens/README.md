@@ -1,6 +1,6 @@
-# @codefi-assets-and-payments/tokens
+# @consensys/tokens
 
-A package to manage and interact with Ethereum Smart Contracts using @codefi-assets-and-payments/nestjs-orchestrate. This interface is callable via Kafka messages and API calls.
+A package to manage and interact with Ethereum Smart Contracts using @consensys/nestjs-orchestrate. This interface is callable via Kafka messages and API calls.
 
 ## Prerequisites
 

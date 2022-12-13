@@ -10,7 +10,7 @@ import {
   Query,
 } from '@nestjs/common'
 import { ApiTags, ApiQuery, ApiBody, ApiParam } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import { TransactionsService } from '../services/TransactionsService'
 import { TransactionDto } from '../models/dto/TransactionDto'

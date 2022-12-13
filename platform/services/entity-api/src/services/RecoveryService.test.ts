@@ -3,10 +3,10 @@ import {
   ITenantOperationEvent,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
-import { ProductType, WalletType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { ProductType, WalletType } from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { TenantEntity } from '../data/entities/TenantEntity'
 import { WalletEntity } from '../data/entities/WalletEntity'
@@ -18,7 +18,7 @@ import {
   walletAddressMock,
 } from '../../test/mocks'
 import { RecoveryService } from './RecoveryService'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 
 describe('RecoveryService', () => {

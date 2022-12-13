@@ -4,8 +4,8 @@ import { LegalEntityModule } from './LegalEntityModule'
 import {
   ChainRegistryModule,
   OrchestrateAccountsModule,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+} from '@consensys/nestjs-orchestrate'
+import { M2mTokenModule } from '@consensys/auth'
 
 @Module({
   imports: [

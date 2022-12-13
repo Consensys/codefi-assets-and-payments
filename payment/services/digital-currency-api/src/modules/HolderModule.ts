@@ -1,8 +1,8 @@
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+import { M2mTokenModule } from '@consensys/auth'
 import {
   ChainRegistryModule,
   ContractRegistryModule,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { Module } from '@nestjs/common'
 import { HolderController } from '../controllers/HolderController'
 import { HolderService } from '../services/HolderService'

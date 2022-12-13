@@ -5,7 +5,7 @@ import { In, Repository } from 'typeorm'
 import { Transaction } from '../models/TransactionEntity'
 import { TransactionDto } from '../models/dto/TransactionDto'
 import { checkTenantId, requireTenantId } from '../utils/tenant'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 @Injectable()
 export class TransactionsService {

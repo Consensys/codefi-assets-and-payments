@@ -1,9 +1,9 @@
-import { Commands, IUserCreateCommand } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { Commands, IUserCreateCommand } from '@consensys/messaging-events'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { UserService } from '../services/UserService'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { ProductsEnum } from '@consensys/ts-types'
 import { InviteUserByEmailRequest } from '../requests/InviteUserByEmailRequest'
 import { getGroupId } from '../utils/kafka'
 

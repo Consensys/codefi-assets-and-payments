@@ -1,4 +1,4 @@
-import { ContractManager } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { ContractManager } from '@consensys/nestjs-orchestrate'
 
 import { ERC20Token } from './ERC20Token'
 import { createMockInstance } from 'jest-create-mock-instance'
@@ -18,7 +18,7 @@ import {
   labelsMock,
   apmTraceParentMock,
 } from '../../test/mock'
-import { ApmService } from '@codefi-assets-and-payments/observability'
+import { ApmService } from '@consensys/observability'
 
 describe('ERC20Token', () => {
   let token: ERC20Token

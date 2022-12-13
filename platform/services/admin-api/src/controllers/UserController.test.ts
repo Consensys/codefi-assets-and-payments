@@ -15,9 +15,9 @@ import {
   updateUserRequestMock,
   userCreatedResponseMock,
 } from '../../test/mocks'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { craftRequestWithAuthHeaders, superTenantId } from '@codefi-assets-and-payments/auth'
-import { superEntityId } from '@codefi-assets-and-payments/auth/dist/utils/authUtils'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { craftRequestWithAuthHeaders, superTenantId } from '@consensys/auth'
+import { superEntityId } from '@consensys/auth/dist/utils/authUtils'
 
 describe('UserController', () => {
   let userServiceMock: jest.Mocked<UserService>

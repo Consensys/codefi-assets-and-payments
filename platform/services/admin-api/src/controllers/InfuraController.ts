@@ -1,11 +1,11 @@
 import { Controller, UseFilters, Get, Query } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ClientService } from '../services/ClientService'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiQuery } from '@nestjs/swagger'
 import { ClientGetAllResponse } from '../responses/ClientGetAllResponse'
 import { ConfigConstants } from '../config/ConfigConstants'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { Protected } from '@consensys/auth'
 
 @ApiTags('Infura')
 @ApiBearerAuth('access-token')

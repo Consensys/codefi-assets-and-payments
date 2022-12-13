@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/error-handler",
+  "name": "@consensys/error-handler",
   "version": "1.0.0",
   "description": "This package is a simple wrapper of common exceptions of NestJS and a central place to our filters",
   "main": "dist/index.js",
@@ -35,7 +35,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/observability": "workspace:*",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "reflect-metadata": "^0.1.13"

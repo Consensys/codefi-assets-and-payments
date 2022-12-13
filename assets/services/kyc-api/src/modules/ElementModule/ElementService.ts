@@ -4,7 +4,7 @@ import { Op } from 'sequelize';
 
 import { ElementModel } from './ElementModel';
 import { ElementRequest } from './ElementRequest';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { DEFAULT_TENANT_ID } from '../../utils/constants/constants';
 

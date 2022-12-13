@@ -1,5 +1,5 @@
 import { WalletController } from './WalletController'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   tenantIdMock,
@@ -10,12 +10,12 @@ import {
   walletUpdateMock,
 } from '../../test/mocks'
 import { WalletService } from '../services/WalletService'
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import { EntityService } from '../services/EntityService'
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import { UnauthorizedException } from '@consensys/error-handler'
 import { MAX_PAGINATED_LIMIT } from '../validation/paginatedQueryRequestProperties'
-import { WalletQueryRequest, WalletType } from '@codefi-assets-and-payments/ts-types'
+import { WalletQueryRequest, WalletType } from '@consensys/ts-types'
 import { FindOperator } from 'typeorm'
 
 const differentEntityIdMock = `different-${entityIdMock}`

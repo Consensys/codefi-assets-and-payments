@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   addressMock,
   amountMock,
@@ -33,10 +33,10 @@ import { NotFoundException } from '@nestjs/common'
 import {
   ITransactionConfig,
   TransactionConfigBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, TokenType, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { EntityStatus, TokenType, TokenOperationType } from '@consensys/ts-types'
 import { TokensService } from './TokensService'
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
+import { ValidationException } from '@consensys/error-handler'
 import { OperationsService } from './OperationsService'
 import { OperationEntity } from '../data/entities/OperationEntity'
 

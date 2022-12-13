@@ -1,6 +1,6 @@
 import { Builder, IBuilder } from 'builder-pattern';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 import { BurnTokenCommandSchema } from '../../schemas/BurnTokenCommandSchema';
 
 export class BurnTokenCommand extends TokenCommand {

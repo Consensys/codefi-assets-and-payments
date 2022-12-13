@@ -1,7 +1,4 @@
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events'
+import { KYCResult, KYCScope } from '@consensys/messaging-events'
 import { OnfidoCheckId, OnfidoReportId } from '../../data/entities/types'
 
 export default interface ReportResult {

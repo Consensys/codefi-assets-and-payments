@@ -8,15 +8,12 @@ import {
   Applicant,
   Region,
 } from '@onfido/api'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import moment from 'moment'
 import { UserPersonalInfo } from '../PersonalInformation'
 import { ValidationErrors } from './InvalidPersonalInfoError'
 import ReportResult from './ReportResult'
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events'
+import { KYCResult, KYCScope } from '@consensys/messaging-events'
 import { OnfidoKycResult } from './OnfidoKYCResult'
 import ReportName from './ReportName'
 import {

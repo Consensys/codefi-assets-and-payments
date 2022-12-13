@@ -11,7 +11,7 @@ import {
 } from 'src/modules/v2ApiCall/api.call.service/workflow';
 import { keys as WorkflowInstanceKeys } from 'src/types/workflow/workflowInstances';
 import { WorkflowInstanceEnum } from 'src/old/constants/enum';
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'; // Codefi logger
+import { nestjsLogger } from '@consensys/observability'; // Codefi logger
 
 const workflowTemplateService = new ApiWorkflowWorkflowTemplateService(
   new ApiCallHelperService(),

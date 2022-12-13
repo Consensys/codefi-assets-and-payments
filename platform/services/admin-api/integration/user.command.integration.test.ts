@@ -8,16 +8,16 @@ import {
   KafkaConsumerModule,
   KafkaProducer,
   KafkaProducerModule,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/nestjs-messaging'
 import { TestKafkaConsumer } from './utils/TestKafkaConsumer'
-import { LoggerModule } from '@codefi-assets-and-payments/observability'
+import { LoggerModule } from '@consensys/observability'
 import { UserModule } from '../src/modules/UserModule'
 import {
   Commands,
   Events,
   IUserCreateCommand,
   IUserCreatedEvent,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import {
   entityIdMock,
   tenantIdMock,

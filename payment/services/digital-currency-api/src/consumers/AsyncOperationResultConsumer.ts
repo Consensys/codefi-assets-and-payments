@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { getGroupId } from '../utils/kafka'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { EntityStatus } from '@consensys/ts-types'
 import { DigitalCurrencyEntity } from '../data/entities/DigitalCurrencyEntity'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { OperationService } from '../services/OperationService'
@@ -9,12 +9,12 @@ import { DigitalCurrencyService } from '../services/DigitalCurrencyService'
 import {
   Events,
   IAsyncOperationResultEvent,
-} from '@codefi-assets-and-payments/messaging-events'
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/messaging-events'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import {
   EntityNotFoundException,
   ProcessingMessageException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 
 @Injectable()
 export class AsyncOperationResultConsumer

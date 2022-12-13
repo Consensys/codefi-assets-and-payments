@@ -7,7 +7,7 @@ import {
   Delete,
   Query,
 } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiTags, ApiOperation, ApiBody } from '@nestjs/swagger';
 import { ConfigsService } from 'src/services/ConfigsService';
 import { ConfigsDto } from 'src/model/dto/ConfigsDto';

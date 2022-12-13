@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   Injectable,
   OnModuleInit,

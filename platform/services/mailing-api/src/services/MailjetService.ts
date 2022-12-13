@@ -1,6 +1,6 @@
 import { HttpException, Injectable } from '@nestjs/common'
 import { connect, Email } from 'node-mailjet'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 
 @Injectable()

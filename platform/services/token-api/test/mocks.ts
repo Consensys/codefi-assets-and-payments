@@ -11,24 +11,24 @@ import {
   TokensTransferRequest,
   TokenType,
   TokenOperationType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import {
   ITransactionContext,
   OrchestrateUtils,
   TransactionConfig,
   TransactionType,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { IRawTransaction } from '@codefi-assets-and-payments/nestjs-orchestrate/dist/transactions/IRawTransaction'
+} from '@consensys/nestjs-orchestrate'
+import { IRawTransaction } from '@consensys/nestjs-orchestrate/dist/transactions/IRawTransaction'
 import {
   IDeployTokenCommand,
   IReceipt,
   ITransactionConfig,
   TransactionConfigBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { v4 as uuidv4 } from 'uuid'
 import { EventSignature } from '../src/EventSignature'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 export const operationIdMock = '6f8c23b3-d8bd-4916-91f4-958695ddc356'
 export const idempotencyKeyMock = 'afffac5c-3fe5-4d4f-819b-1ec4ae8bcd91'

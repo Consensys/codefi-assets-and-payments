@@ -1,7 +1,7 @@
 import { ConfigStageRequest, IConfigStage } from '../types/ConfigStage'
 import { ConfigConstants } from '../ConfigConstants'
 import cfg from '../../config'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ManagementClientExtended } from '../../types/Auth0ManagementClientExtended'
 import {
   getAllApis,
@@ -10,7 +10,7 @@ import {
   createConnection,
 } from '../../utils/managementClientUtils'
 import { FileSystemInstance } from '../../services/instances/FileSystemInstance'
-import { ConfigurationException, ErrorName } from '@codefi-assets-and-payments/error-handler'
+import { ConfigurationException, ErrorName } from '@consensys/error-handler'
 import { ClientService } from '../../services/ClientService'
 import { Client } from 'auth0'
 import { Injectable } from '@nestjs/common'

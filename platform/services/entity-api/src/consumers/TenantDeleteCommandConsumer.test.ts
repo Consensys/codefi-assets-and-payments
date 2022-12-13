@@ -1,6 +1,6 @@
-import { ITenantDeleteCommand } from '@codefi-assets-and-payments/messaging-events'
+import { ITenantDeleteCommand } from '@consensys/messaging-events'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { tenantIdMock } from '../../test/mocks'
 import { TenantService } from '../services/TenantService'
 import { TenantDeleteCommandConsumer } from './TenantDeleteCommandConsumer'

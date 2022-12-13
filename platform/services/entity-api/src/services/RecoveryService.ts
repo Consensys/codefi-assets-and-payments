@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import { FindConditions, Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { InjectRepository } from '@nestjs/typeorm'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { TenantEntity } from '../data/entities/TenantEntity'
@@ -10,8 +10,8 @@ import {
   ITenantOperationEvent,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/messaging-events'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 
 interface EventType {
@@ -129,7 +129,8 @@ export class RecoveryService {
     }
 
     const newEntity = await createHelper(event)
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     await repo.insert(newEntity)
 
     this.logger.info(`Inserted ${entityTypeName}: ${entityName}`)
@@ -155,7 +156,8 @@ export class RecoveryService {
       ...(await createHelper(event)),
       updatedAt: new Date(),
     }
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     await repo.update(entityId, updatedEntity)
 
     this.logger.info(`Updated ${entityTypeName}: ${entityName}`)

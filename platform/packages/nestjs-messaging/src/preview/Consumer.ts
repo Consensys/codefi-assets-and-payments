@@ -3,10 +3,10 @@ import * as KafkaJS from 'kafkajs';
 import { KafkaClient } from './KafkaClient';
 import { IConsumerOptions, IResponse } from './types';
 import { SchemaRegistry } from '@kafkajs/confluent-schema-registry';
-import { createLogger } from '@codefi-assets-and-payments/observability';
+import { createLogger } from '@consensys/observability';
 import cfg from '../config';
 import { ResponseMessage } from './ResponseMessage';
-import { PinoLogger } from '@codefi-assets-and-payments/observability'
+import { PinoLogger } from '@consensys/observability'
 import { sleep } from '../utils/utils';
 
 const DEFAULT_MAX_RECONNECT_ATTEMPTS = 20;

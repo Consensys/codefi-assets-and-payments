@@ -66,6 +66,7 @@ function loadConfig() {
         // Location of migration should be inside src folder
         // to be compiled into dist/ folder.
         migrationsDir: 'src/migration',
+        entitiesDir: 'data/entities',
       },
     } as TypeOrmModuleOptions,
     kafka: {

@@ -4,10 +4,10 @@ import { ContractManager } from './ContractManager'
 import { OrchestrateTransactionManager } from './OrchestrateTransactionManager'
 import { OrchestrateConsumer } from '../events/OrchestrateConsumer'
 import { RawTransactionManager } from './RawTransactionManager'
-import { EthersWrapper } from '@codefi-assets-and-payments/ethers'
+import { EthersWrapper } from '@consensys/ethers'
 import { ContractRegistryModule } from '../contracts/ContractRegistryModule'
 import { ChainRegistryModule } from '../chains/ChainRegistryModule'
-import { ApmModule } from '@codefi-assets-and-payments/observability'
+import { ApmModule } from '@consensys/observability'
 
 @Module({
   imports: [

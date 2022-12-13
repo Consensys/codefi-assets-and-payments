@@ -18,7 +18,7 @@ import {
   roleMock,
 } from '../../../test/mocks'
 import cfg from '../../config'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 describe('CreateActionsStage', () => {
   let managementClientMock: jest.Mocked<ManagementClientExtended>

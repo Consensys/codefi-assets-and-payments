@@ -42,7 +42,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * (CA-6375) use apiMetricMiddlewares instead of apiMetrics ([6923ad5](https://gitlab.com/ConsenSys/codefi/products/assets/api-mailing/commit/6923ad54f83c30210f802312df42df7fb2befe9a))
-* **deps:** update dependency @codefi-assets-and-payments/observability to v0.0.34 ([2741902](https://gitlab.com/ConsenSys/codefi/products/assets/api-mailing/commit/27419025402a2e488223727709430de309d2b4ce))
+* **deps:** update dependency @consensys/observability to v0.0.34 ([2741902](https://gitlab.com/ConsenSys/codefi/products/assets/api-mailing/commit/27419025402a2e488223727709430de309d2b4ce))
 
 ## [2.7.0](https://gitlab.com/ConsenSys/codefi/products/assets/api-mailing/compare/v2.6.1...v2.7.0) (2021-09-09)
 

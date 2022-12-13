@@ -1,11 +1,11 @@
 import { Controller, HttpCode, Post, Req, UseFilters } from '@nestjs/common'
 import { ApiOAuth2, ApiOperation, ApiTags } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected, extractTokenFromRequest } from '@codefi-assets-and-payments/auth'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { Protected, extractTokenFromRequest } from '@consensys/auth'
 import { Request } from 'express'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 
-import { OrchestrateAccountsService } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { OrchestrateAccountsService } from '@consensys/nestjs-orchestrate'
 
 @ApiTags('Accounts')
 @Controller('accounts')

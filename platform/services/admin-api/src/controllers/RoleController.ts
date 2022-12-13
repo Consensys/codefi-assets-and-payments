@@ -23,8 +23,8 @@ import { Permissions } from '../guards/PermissionsDecorator'
 import { RoleResponse } from '../responses/RoleResponse'
 import { RolePermissionRequest } from '../requests/RolePermissionRequest'
 import { RolePermissionResponse } from '../responses/RolePermissionResponse'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { Protected } from '@consensys/auth'
 
 @ApiTags('Roles')
 @ApiBearerAuth('access-token')

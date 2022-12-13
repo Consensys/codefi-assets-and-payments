@@ -2,7 +2,7 @@ import { KafkaConsumer, KafkaSubscriber } from '.';
 import { Kafka } from 'kafkajs';
 import { SchemaRegistry } from '@kafkajs/confluent-schema-registry';
 import createMockInstance from 'jest-create-mock-instance';
-import { ApmService } from '@codefi-assets-and-payments/observability';
+import { ApmService } from '@consensys/observability';
 
 describe('KafkaConsumer', () => {
   let clientMock: Kafka;

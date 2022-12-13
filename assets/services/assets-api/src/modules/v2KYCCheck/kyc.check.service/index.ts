@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 import ErrorService from 'src/utils/errorService';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { keys as UserKeys, User, UserNature } from 'src/types/user';
 import { keys as TokenKeys, Token } from 'src/types/token';

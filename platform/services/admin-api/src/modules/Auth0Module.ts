@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
 import { Auth0Service } from '../services/Auth0Service'
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+import { M2mTokenModule } from '@consensys/auth'
 
 @Module({
   imports: [M2mTokenModule],

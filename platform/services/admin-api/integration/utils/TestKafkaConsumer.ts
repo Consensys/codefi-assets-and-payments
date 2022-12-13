@@ -1,4 +1,4 @@
-import { KafkaPreview } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaPreview } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
 import { sleep } from '../../src/utils/sleep'
 

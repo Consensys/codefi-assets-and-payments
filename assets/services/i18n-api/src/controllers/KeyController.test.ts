@@ -1,5 +1,5 @@
 import { KeyController } from './KeyController'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { KeyService } from '../services/Key.service'
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import ErrorService from 'src/utils/errorService';
 import { ApiWorkflowWorkflowInstanceService } from 'src/modules/v2ApiCall/api.call.service/workflow';

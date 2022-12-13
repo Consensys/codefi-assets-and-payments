@@ -1,6 +1,6 @@
 import multer from 'multer';
 import { Request, Response } from 'express';
-import { createLogger } from '@codefi-assets-and-payments/observability';
+import { createLogger } from '@consensys/observability';
 
 const logger = createLogger('util:uploader');
 

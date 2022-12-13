@@ -6,10 +6,10 @@ import {
   UseFilters,
   UsePipes,
 } from '@nestjs/common'
-import { Protected } from '@codefi-assets-and-payments/auth'
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { Protected } from '@consensys/auth'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { sendSchema } from '../validation/sendSchema'

@@ -1,4 +1,4 @@
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 import config from './config'
 
 import { startServer, startRecoveryMode } from './server'

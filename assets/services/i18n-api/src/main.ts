@@ -1,7 +1,4 @@
-import {
-  createLogger,
-  initApm,
-} from '@codefi-assets-and-payments/observability'
+import { createLogger, initApm } from '@consensys/observability'
 
 import { startServer } from './server'
 

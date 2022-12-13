@@ -22,6 +22,8 @@ module.exports = {
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    "react/jsx-key": "warn",
+    
   },
   settings: {
     react: {

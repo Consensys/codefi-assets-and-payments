@@ -1,7 +1,7 @@
 import {
   TransferDigitalCurrencyRequest,
   EntityStatus,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   addressMock2,

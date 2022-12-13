@@ -1,12 +1,9 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import Mocked = jest.Mocked
-import {
-  KafkaConsumer,
-  KafkaProducer,
-} from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
 import KafkaLifecycleService from './KafkaLifecycleService'
-import { AbstractMessage } from '@codefi-assets-and-payments/messaging-events/dist/messages/AbstractMessage'
+import { AbstractMessage } from '@consensys/messaging-events/dist/messages/AbstractMessage'
 
 export const eventSchema = {
   type: 'record',

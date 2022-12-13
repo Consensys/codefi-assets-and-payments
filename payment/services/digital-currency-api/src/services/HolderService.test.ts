@@ -1,5 +1,5 @@
 import { HolderService } from './HolderService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   addressMock,
@@ -8,13 +8,13 @@ import {
   digitalCurrencyEntityMock,
   uuidMock,
 } from '../../test/mocks'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import {
   ChainRegistry,
   ContractRegistry,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import { DigitalCurrencyService } from './DigitalCurrencyService'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 
 jest.mock('ethers')
 

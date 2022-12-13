@@ -1,4 +1,4 @@
-import { expressLogger } from "@codefi-assets-and-payments/observability";
+import { expressLogger } from "@consensys/observability";
 
 import fs from "fs";
 import express from "express";

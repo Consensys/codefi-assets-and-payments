@@ -16,7 +16,7 @@ import {
   OperationRequestResponse,
   OperationRequestState,
   OperationRequestType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 
 describe('OperationRequestController', () => {
   let operationRequestService: jest.Mocked<OperationRequestService>

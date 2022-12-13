@@ -7,7 +7,7 @@ import { TokenModule } from './TokenModule'
 import { OperationsModule } from './OperationsModule'
 import { TokenTransferListener } from '../consumers/TokenTransferListener'
 import { ChainModule } from './ChainModule'
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+import { M2mTokenModule } from '@consensys/auth'
 
 @Module({
   imports: [

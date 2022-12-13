@@ -1,4 +1,4 @@
-import { Contract, Metadata, Products } from '@codefi-assets-and-payments/ts-types';
+import { Contract, Metadata, Products } from '@consensys/ts-types';
 
 export enum keys {
   TENANT_ID = 'tenantId',

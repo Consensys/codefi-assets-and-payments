@@ -1,4 +1,4 @@
-import { TransactionConfig, TransactionType } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { TransactionConfig, TransactionType } from '@consensys/nestjs-orchestrate'
 
 export const idemPotencyKeyMock = 'mock'
 export const authTokenMock = 'eyJodHRwczovL2FwaS5jb2RlZmkubmV0...'

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Auth0Service } from './Auth0Service'
 import { ConfigConstants } from '../config/ConfigConstants'
 import {
@@ -13,7 +13,7 @@ import {
   ConfigurationException,
   EntityNotFoundException,
   KafkaException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { Auth0Exception } from '../errors/Auth0Exception'
 import cfg from '../config'
 import { ErrorName } from '../enums/ErrorName'

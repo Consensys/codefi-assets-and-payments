@@ -13,7 +13,7 @@ import {
   validFirstUpdatedTransitionInstanceResponse,
   validDeleteResponse,
 } from '../../test/mocks'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 describe('TransitionInstancesService', () => {
   let repositoryMock: jest.Mocked<Repository<any>>

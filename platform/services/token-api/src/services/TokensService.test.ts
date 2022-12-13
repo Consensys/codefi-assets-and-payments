@@ -1,6 +1,6 @@
-import { EntityStatus, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenType } from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import {
   tenantIdMock,

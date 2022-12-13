@@ -1,7 +1,7 @@
 import { MintTokenCommandSchema } from '../../schemas/MintTokenCommandSchema';
 import { Builder, IBuilder } from 'builder-pattern';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 
 export class MintTokenCommand extends TokenCommand {
   public messageName = 'mint_token';

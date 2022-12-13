@@ -7,7 +7,7 @@ import {
 } from 'pegasys-orchestrate'
 import cfg from '../config'
 import { Injectable } from '@nestjs/common'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 
 @Injectable()
 export class ChainRegistry {

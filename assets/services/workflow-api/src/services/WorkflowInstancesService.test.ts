@@ -23,7 +23,7 @@ import {
   validDeleteResponse,
 } from '../../test/mocks'
 import { WorkflowTemplatesService } from './WorkflowTemplatesService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Field, LIMIT, SortCriteria } from '../constants/query'
 
 describe('WorkflowInstancesService', () => {

@@ -1,4 +1,4 @@
-import { createLogger, PinoLogger } from '@codefi-assets-and-payments/observability';
+import { createLogger, PinoLogger } from '@consensys/observability';
 
 // Get configured logger instance
 export const logger: PinoLogger = createLogger('smart-contract-api');

@@ -1,8 +1,8 @@
-import { IEntityWallet } from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, WalletType } from '@codefi-assets-and-payments/ts-types'
+import { IEntityWallet } from '@consensys/messaging-events'
+import { EntityStatus, WalletType } from '@consensys/ts-types'
 import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { Repository } from 'typeorm'
 import { LegalEntityEntity } from '../data/entities/LegalEntityEntity'
 

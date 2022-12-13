@@ -1,6 +1,6 @@
 import { OnFidoController } from './OnFidoController'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import KYCResultsService from '../services/KYCResultsService'
 import OnFidoKycWebhookRequest, {
   CheckActionType,

@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/auth",
+  "name": "@consensys/auth",
   "version": "2.0.1",
   "description": "Auth Codefi Package",
   "license": "Apache",
@@ -42,8 +42,8 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/error-handler": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/error-handler": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@nestjs/axios": "^0.0.8",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
@@ -78,6 +78,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!**/*Module.ts"

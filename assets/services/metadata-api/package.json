@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/metadata-api",
+  "name": "@consensys/metadata-api",
   "private": true,
   "version": "2.1.0",
   "description": "Repository of Metadata API used in the Digital Assets Platform",
@@ -35,10 +35,9 @@
     "docker:down": "docker-compose down"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/observability": "*",
-    "@codefi-assets-and-payments/ts-types": "*",
+    "@consensys/observability": "workspace:*",
+    "@consensys/ts-types": "workspace:*",
     "@godaddy/terminus": "^4.9.0",
-    "joi": "^17.6.0",
     "@nestjs/common": "^8.4.7",
     "@nestjs/config": "^2.1.0",
     "@nestjs/core": "^8.4.7",
@@ -51,13 +50,14 @@
     "class-transformer": "0.4.0",
     "class-validator": "^0.13.2",
     "dotenv": "^16.0.1",
+    "joi": "^17.6.0",
     "lodash": "^4.17.21",
     "multer": "1.4.4-lts.1",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5",
     "swagger-ui-express": "^4.4.0",
     "typeorm": "0.2.38",
-    "pg": "^8.7.3",
-    "reflect-metadata": "^0.1.13",
     "uuid": "^8.3.2",
     "web3-utils": "^1.7.4",
     "xss": "^1.0.10"
@@ -81,9 +81,9 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "jest": "^27.3.1",
     "jest-create-mock-instance": "^1.1.0",
+    "lint-staged": "^13.0.3",
     "mock-express-request": "^0.2.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
@@ -125,6 +125,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/**/{server,sleep,jwtUtils}.{ts,js}",

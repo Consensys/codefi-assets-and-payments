@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/messaging-events
+# @consensys/messaging-events
 
 A framework agnostic package to store events AVRO schemas and interfaces
 

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
 import { PersistentConfigurationService } from '../services/PersistentConfigurationService'
-import { ContractRegistryModule } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
+import { ContractRegistryModule } from '@consensys/nestjs-orchestrate'
+import { M2mTokenModule } from '@consensys/auth'
 
 @Module({
   imports: [ContractRegistryModule, M2mTokenModule],

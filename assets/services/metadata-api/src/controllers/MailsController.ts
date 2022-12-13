@@ -10,7 +10,7 @@ import {
   ClassSerializerInterceptor,
   HttpCode,
 } from '@nestjs/common';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { ApiTags, ApiOperation, ApiBody } from '@nestjs/swagger';
 import { MailsService } from 'src/services/MailsService';
 import {

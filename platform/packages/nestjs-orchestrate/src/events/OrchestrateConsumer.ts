@@ -6,7 +6,7 @@ import {
   ApmService,
   ApmTransactionStarted,
   createLogger
-} from '@codefi-assets-and-payments/observability'
+} from '@consensys/observability'
 
 @Injectable()
 export class OrchestrateConsumer {

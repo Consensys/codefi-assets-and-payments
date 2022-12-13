@@ -1,6 +1,6 @@
-import { IWalletCreateCommand } from '@codefi-assets-and-payments/messaging-events'
+import { IWalletCreateCommand } from '@consensys/messaging-events'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   walletMock,
   subjectMock,

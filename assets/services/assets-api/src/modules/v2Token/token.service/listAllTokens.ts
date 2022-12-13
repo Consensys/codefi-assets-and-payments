@@ -21,7 +21,7 @@ import {
   WorkflowType,
 } from 'src/types/workflow/workflowInstances';
 import { BalanceService } from 'src/modules/v2Balance/balance.service';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { LinkService } from 'src/modules/v2Link/link.service';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
 import { ConfigService } from 'src/modules/v2Config/config.service';

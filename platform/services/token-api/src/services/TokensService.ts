@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { FindManyOptions, Repository } from 'typeorm'
 import { InjectRepository } from '@nestjs/typeorm'
 import { v4 as uuidv4 } from 'uuid'
@@ -7,8 +7,8 @@ import { TokenEntity } from '../data/entities/TokenEntity'
 import {
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
-import { TokenType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/error-handler'
+import { TokenType } from '@consensys/ts-types'
 
 @Injectable()
 export class TokensService {

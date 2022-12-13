@@ -1,9 +1,9 @@
-# @codefi-assets-and-payments/nestjs-messaging
+# @consensys/nestjs-messaging
 
 This is a package that exposes NestJS modules and classes ready to interact with Kafka using [Kafka.js](https://kafka.js.org/).
 It serializes messages values using [AVRO](https://avro.apache.org/) and for uses [Confluent Schema Registry](https://www.confluent.io/confluent-schema-registry/) to track the currently saved messages schemas.
 
-It should be used with `@codefi-assets-and-payments/messaging-events`
+It should be used with `@consensys/messaging-events`
 
 ## How to use
 
@@ -30,7 +30,7 @@ async function bootstrap() {
 ```
 
 
-`Events.someEvent` can be anything that implements `MicroserviceEvent` from `@codefi-assets-and-payments/messaging-events`
+`Events.someEvent` can be anything that implements `MicroserviceEvent` from `@consensys/messaging-events`
 
 ##### Register subscribers 
 

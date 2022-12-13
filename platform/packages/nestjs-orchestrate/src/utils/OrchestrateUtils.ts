@@ -12,7 +12,7 @@ import jwt from 'jsonwebtoken'
 import {
   BadRequestException,
   UnauthorizedException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 
 export class OrchestrateUtils {
   private client: OrchestrateClient

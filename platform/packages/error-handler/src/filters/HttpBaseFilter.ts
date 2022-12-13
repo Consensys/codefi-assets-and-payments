@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common'
 import { Request, Response } from 'express'
 import { Error } from '../types/error'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   private logger = createLogger('HttpExceptionFilter')

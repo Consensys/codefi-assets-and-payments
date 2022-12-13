@@ -1,8 +1,8 @@
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import { chainNameMock, tokensMintRequestMock } from '../test/mocks'
-import { EntityStatus, TokenType } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus, TokenType } from '@consensys/ts-types'
 import { mintTokenPut, registerTokenPost } from './utils/requests'
-import { Commands, RegisterTokenCommandBuilder } from '@codefi-assets-and-payments/messaging-events'
+import { Commands, RegisterTokenCommandBuilder } from '@consensys/messaging-events'
 import {
   handlesMultipleCommandsWithSameIdempotencyKeys,
   handlesMultipleCommandsWithSameOperationIds,

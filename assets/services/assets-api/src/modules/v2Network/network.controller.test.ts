@@ -1,7 +1,7 @@
 import { NetworkController } from './network.controller';
 import { NetworkService } from './network.service';
 import createMockInstance from 'jest-create-mock-instance';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
+import { M2mTokenService } from '@consensys/auth';
 
 // Mock Redis client
 jest.mock('ioredis');

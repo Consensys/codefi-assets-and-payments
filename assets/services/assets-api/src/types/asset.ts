@@ -1,5 +1,5 @@
-import { Frequency } from '@codefi-assets-and-payments/day-counter/dist/types/Frequency';
-import { dayConvention } from '@codefi-assets-and-payments/day-counter/dist/types/DayCounterConventions';
+import { Frequency } from '@consensys/day-counter/dist/types/Frequency';
+import { dayConvention } from '@consensys/day-counter/dist/types/DayCounterConventions';
 import {
   AssetCycleTemplate,
   PaymentOption,

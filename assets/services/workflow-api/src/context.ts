@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './modules/AppModule'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
-import { nestjsLogger } from '@codefi-assets-and-payments/observability'
+import { nestjsLogger } from '@consensys/observability'
 import { json, urlencoded } from 'express'
 
 let context = null

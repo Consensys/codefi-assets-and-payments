@@ -9,7 +9,7 @@ import {
   Get,
   Query,
 } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import { clientGrantSchema } from '../validation/ClientGrantSchema'
 import { ClientGrantResponse } from '../responses/ClientGrantResponse'
@@ -24,7 +24,7 @@ import {
   ApiParam,
 } from '@nestjs/swagger'
 import { ApiTags, ApiOAuth2 } from '@nestjs/swagger'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { Protected } from '@consensys/auth'
 
 @ApiTags('Grants')
 @ApiBearerAuth('access-token')

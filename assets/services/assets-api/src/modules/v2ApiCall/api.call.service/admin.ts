@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { ProductsEnum } from '@consensys/ts-types';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import ErrorService from 'src/utils/errorService';
 
@@ -27,7 +27,7 @@ import {
   filterClientApplicationForProduct,
   IS_DEV_DOMAIN_NAME,
 } from 'src/utils/domain';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
+import { M2mTokenService } from '@consensys/auth';
 import config from 'src/config';
 import { Grant } from 'src/types/grant';
 import { ApiEntityCallService } from './entity';

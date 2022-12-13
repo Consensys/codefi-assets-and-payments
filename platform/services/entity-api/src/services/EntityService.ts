@@ -3,7 +3,7 @@ import { DataFieldsOnly } from '../utils/types'
 import { EntityEntity } from '../data/entities/EntityEntity'
 import { InjectRepository } from '@nestjs/typeorm'
 import { DeleteResult, FindManyOptions, Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   EntityCreateRequest,
   EntityStatus,
@@ -11,23 +11,23 @@ import {
   WalletCreateRequest,
   WalletType,
   WalletUpdateRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { AdminApiService } from './AdminApiService'
 import { v4 as uuidv4 } from 'uuid'
 import { WalletService } from './WalletService'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   Commands,
   Events,
   MessageDataOperation,
   WalletDeleteCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { IEntityOperationEvent } from '@codefi-assets-and-payments/messaging-events/dist/messages/events/EntityOperationEvent'
+} from '@consensys/messaging-events'
+import { IEntityOperationEvent } from '@consensys/messaging-events/dist/messages/events/EntityOperationEvent'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import {
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 import { getChecksumAddress } from '../utils/utils'
 import { StoreService } from './StoreService'

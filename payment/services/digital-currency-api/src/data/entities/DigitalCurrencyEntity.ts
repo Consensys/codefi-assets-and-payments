@@ -1,4 +1,4 @@
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 import { Column, Entity, PrimaryColumn } from 'typeorm'
 @Entity()
 export class DigitalCurrencyEntity {

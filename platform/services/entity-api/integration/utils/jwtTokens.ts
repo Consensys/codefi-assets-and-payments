@@ -1,4 +1,4 @@
-import { UserTokenService } from '@codefi-assets-and-payments/auth'
+import { UserTokenService } from '@consensys/auth'
 import { TestingModule } from '@nestjs/testing'
 import {
   DEV_CODEFI_API_AUDIENCE,

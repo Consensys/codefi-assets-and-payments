@@ -7,7 +7,7 @@ import {
 import jwt from 'jsonwebtoken'
 import { TestingModule } from '@nestjs/testing'
 import { DEV_CODEFI_API_AUDIENCE } from './configs'
-import { OrchestrateAccountsService } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { OrchestrateAccountsService } from '@consensys/nestjs-orchestrate'
 import {
   generateAccount,
   testModule,
@@ -28,7 +28,7 @@ import { OperationEntity } from '../../src/data/entities/OperationEntity'
 import { Repository } from 'typeorm'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { TokenEntity } from '../../src/data/entities/TokenEntity'
-import { KafkaConsumer, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
 import { TestKafkaConsumer } from './TestKafkaConsumer'
 import {
   Commands,
@@ -37,8 +37,8 @@ import {
   TransactionConfigBuilder,
   IAsyncOperationResultEvent,
   MicroserviceMessage,
-} from '@codefi-assets-and-payments/messaging-events'
-import { EntityStatus, NewTokenResponse, TokenType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { EntityStatus, NewTokenResponse, TokenType } from '@consensys/ts-types'
 import config from '../../src/config'
 
 const CONSUMER_NAME_ASYNC = 'async'

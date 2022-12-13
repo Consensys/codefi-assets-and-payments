@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { LinkService } from 'src/modules/v2Link/link.service';
 import { User, UserExample } from 'src/types/user';
 import { KycCheckService } from 'src/modules/v2KYCCheck/kyc.check.service';

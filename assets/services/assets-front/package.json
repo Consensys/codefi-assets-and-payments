@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/assets-front",
+  "name": "@consensys/assets-front",
   "version": "1.110.5",
   "license": "Apache",
   "private": true,
@@ -7,7 +7,7 @@
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "start:secure": "node runLocalEnv.js",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint './**/*.{ts,tsx}' --cache",
     "lint:fix": "eslint --cache --fix",
@@ -129,6 +129,11 @@
     "coverageReporters": [
       "json",
       "html"
+    ],
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
     ]
   }
 }

@@ -6,8 +6,8 @@ import {
 } from 'pegasys-orchestrate'
 import cfg from '../config'
 import { Injectable } from '@nestjs/common'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { EntityNotFoundException } from '@consensys/error-handler'
+import { createLogger } from '@consensys/observability'
 
 @Injectable()
 export class ContractRegistry {

@@ -2,7 +2,7 @@ import {
   decodeToken,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import {
   Commands,
   Events,
@@ -10,13 +10,13 @@ import {
   ITenantOperationEvent,
   IWalletOperationEvent,
   WalletCreateCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { KafkaProducer, KafkaConsumer } from '@codefi-assets-and-payments/nestjs-messaging'
+} from '@consensys/messaging-events'
+import { KafkaProducer, KafkaConsumer } from '@consensys/nestjs-messaging'
 import {
   TenantCreateRequest,
   WalletCreateRequest,
   WalletType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
@@ -41,7 +41,7 @@ import {
 } from './utils/requests'
 import { subscribeToMessage, testModule } from './utils/testCommonUtils'
 import { TestKafkaSubscriber } from './utils/TestKafkaSubscriber'
-import { OrchestrateAccountsService } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { OrchestrateAccountsService } from '@consensys/nestjs-orchestrate'
 import { toChecksumAddress } from 'web3-utils'
 import { TenantStoreEntity } from '../src/data/entities/TenantStoreEntity'
 import { EntityStoreEntity } from '../src/data/entities/EntityStoreEntity'

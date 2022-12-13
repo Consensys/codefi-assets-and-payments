@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   tenantIdMock,
@@ -7,11 +7,11 @@ import {
   tenantIdMock2,
   entityClientCreateRequestMock,
 } from '../../test/mocks'
-import { craftRequestWithAuthHeaders } from '@codefi-assets-and-payments/auth'
+import { craftRequestWithAuthHeaders } from '@consensys/auth'
 import { TenantClientController } from './TenantClientController'
 import { ClientService } from '../services/ClientService'
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
+import { UnauthorizedException } from '@consensys/error-handler'
 import { ClientEntity } from '../data/entities/ClientEntity'
 
 describe('TenantClientController', () => {

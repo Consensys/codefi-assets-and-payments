@@ -8,7 +8,7 @@ import { testModule } from './utils/testCommonUtils'
 import { v4 as uuidv4 } from 'uuid'
 import { EntityEntity } from '../src/data/entities/EntityEntity'
 import { WalletEntity } from '../src/data/entities/WalletEntity'
-import { TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
+import { TenantCreateRequest } from '@consensys/ts-types'
 import { MAX_PAGINATED_LIMIT } from '../src/validation/paginatedQueryRequestProperties'
 require('dotenv').config()
 

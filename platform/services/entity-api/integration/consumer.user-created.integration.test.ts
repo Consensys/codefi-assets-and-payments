@@ -1,6 +1,6 @@
-import { Events, IUserCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { EntityStatus, TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
+import { Events, IUserCreatedEvent } from '@consensys/messaging-events'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
+import { EntityStatus, TenantCreateRequest } from '@consensys/ts-types'
 import { TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
@@ -25,7 +25,7 @@ import {
   decodeToken,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import { sleep } from '../src/utils/utils'
 require('dotenv').config()
 

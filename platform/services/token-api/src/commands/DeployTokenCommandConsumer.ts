@@ -1,8 +1,8 @@
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
-import { Commands, IDeployTokenCommand } from '@codefi-assets-and-payments/messaging-events'
+import { M2mTokenService } from '@consensys/auth'
+import { Commands, IDeployTokenCommand } from '@consensys/messaging-events'
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { NewTokenResponse } from '@codefi-assets-and-payments/ts-types'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { NewTokenResponse } from '@consensys/ts-types'
 
 import { EventsService } from '../services/EventsService'
 import { TokensManagerService } from '../services/TokensManagerService'

@@ -9,7 +9,7 @@ import { OnfidoModule } from './onfido.module'
 import { UserEntity } from '../data/entities/UserEntity'
 import { KafkaModule } from './kafka.module'
 import { ScheduleModule } from '@nestjs/schedule'
-import { CodefiLoggerModule } from '@codefi-assets-and-payments/observability'
+import { CodefiLoggerModule } from '@consensys/observability'
 import { ReportResultEntity } from '../data/entities/ReportResultEntity'
 
 @Module({

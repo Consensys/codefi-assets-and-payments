@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { FileSystemInstance } from '../../services/instances/FileSystemInstance'
 import { ClientService } from '../../services/ClientService'
 import { ManagementClientExtended } from '../../types/Auth0ManagementClientExtended'

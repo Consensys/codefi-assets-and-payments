@@ -1,3 +1,4 @@
+/* eslint react/jsx-key: 0 */
 import React from 'react';
 import { TableInstance } from 'react-table';
 import { Dropdown, DropdownItem } from './Dropdown/Dropdown';

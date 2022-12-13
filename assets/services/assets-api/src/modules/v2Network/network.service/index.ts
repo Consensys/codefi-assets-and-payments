@@ -17,7 +17,7 @@ import ErrorService from 'src/utils/errorService';
 import { ApiSCCallService } from 'src/modules/v2ApiCall/api.call.service/sc';
 import { ApiNetworkCallService } from 'src/modules/v2ApiCall/api.call.service/network';
 import { DEFAULT_TENANT_ID } from 'src/types/clientApplication';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
+import { M2mTokenService } from '@consensys/auth';
 import { IHeaders, IFaucet } from 'pegasys-orchestrate';
 
 @Injectable()

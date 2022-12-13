@@ -17,7 +17,7 @@ import {
   FinalizedNetwork,
   FinalizedNetworkExample,
 } from 'src/types/network';
-import { Metadata, Products, NetworkType } from '@codefi-assets-and-payments/ts-types';
+import { Metadata, Products, NetworkType } from '@consensys/ts-types';
 
 export class DeleteNetworkParamInput {
   @ApiProperty({

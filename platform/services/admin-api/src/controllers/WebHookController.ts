@@ -9,8 +9,8 @@ import {
   ApiBearerAuth,
   ApiOperation,
 } from '@nestjs/swagger'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { Protected } from '@consensys/auth'
 
 @ApiTags('Hooks')
 @ApiBearerAuth('access-token')

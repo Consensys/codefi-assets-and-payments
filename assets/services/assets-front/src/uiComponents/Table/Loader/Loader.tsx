@@ -35,12 +35,12 @@ const Loader: React.FC<ILoaderProps> = ({
         >
           <mask
             id="mask0"
-            mask-type="alpha"
             maskUnits="userSpaceOnUse"
             x="0"
             y="0"
             width="64"
             height="64"
+            style={{ maskType: "alpha" }}
           >
             <path
               fill={color || '#1A5AFE'}

@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import createMockInstance from 'jest-create-mock-instance';
 import { UserListingService } from './listAllUsers';
 import { LinkService } from 'src/modules/v2Link/link.service';
@@ -19,7 +19,7 @@ import {
   generateUser,
 } from 'test/mockDataGenerators';
 import { ApiEntityCallService } from 'src/modules/v2ApiCall/api.call.service/entity';
-import { WalletType as EntityApiWalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType as EntityApiWalletType } from '@consensys/ts-types';
 
 describe('listAllUsers', () => {
   let LinkServiceMock: jest.Mocked<LinkService>;

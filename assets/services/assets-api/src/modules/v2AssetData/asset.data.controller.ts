@@ -32,8 +32,8 @@ import {
 } from './asset.data.dto';
 import { UserContext } from 'src/utils/decorator/userContext.decorator';
 import { AssetDataService } from './asset.data.service';
-import { Protected } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { AssetElementInstance } from 'src/types/asset/elementInstance';
 
 @Controller('v2/essentials/asset/data')

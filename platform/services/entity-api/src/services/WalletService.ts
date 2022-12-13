@@ -1,31 +1,31 @@
 import { Injectable } from '@nestjs/common'
 import { WalletEntity } from '../data/entities/WalletEntity'
 import { DeleteResult, FindManyOptions, Repository } from 'typeorm'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   OrchestrateAccountsService,
   OrchestrateUtils,
-} from '@codefi-assets-and-payments/nestjs-orchestrate'
+} from '@consensys/nestjs-orchestrate'
 import {
   WalletCreateRequest,
   WalletType,
   WalletUpdateRequest,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { DataFieldsOnly } from '../utils/types'
 import { InjectRepository } from '@nestjs/typeorm'
 import { EntityEntity } from '../data/entities/EntityEntity'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   Events,
   IWalletOperationEvent,
   MessageDataOperation,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import {
   EntityNotFoundException,
   ValidationException,
-} from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { M2mTokenService } from '@consensys/auth'
 import config from '../config'
 import { getChecksumAddress } from '../utils/utils'
 import { StoreService } from './StoreService'

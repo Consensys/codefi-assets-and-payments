@@ -18,7 +18,7 @@ import { ApiKycUtilsService } from 'src/modules/v2ApiCall/api.call.service/kyc';
 import { ApiCallHelperService } from 'src/modules/v2ApiCall/api.call.service';
 import { NetworkService } from 'src/modules/v2Network/network.service';
 import { ApiNetworkCallService } from 'src/modules/v2ApiCall/api.call.service/network';
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth';
+import { M2mTokenModule } from '@consensys/auth';
 import { V2UsecaseModule } from '../v2Usecase/usecase.module';
 import { TenantRoleMigrationService } from './utils.service/tenantRoleMigration';
 import { EntityMigrationService } from './utils.service/entityMigration';

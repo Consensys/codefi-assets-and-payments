@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { AuthHookRegisterRequest } from '../requests/AuthHookRegisterRequest'
-import { IUserCreatedEvent } from '@codefi-assets-and-payments/messaging-events'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { IUserCreatedEvent } from '@consensys/messaging-events'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { EventsService } from './EventsService'
 
 @Injectable()

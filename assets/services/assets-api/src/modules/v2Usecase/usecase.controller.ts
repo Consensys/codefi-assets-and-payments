@@ -10,7 +10,7 @@ import {
   Body,
 } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { AppToHttpFilter } from '@consensys/error-handler';
 
 import ErrorService from 'src/utils/errorService';
 import { keys as UserContextKeys, IUserContext } from 'src/types/userContext';

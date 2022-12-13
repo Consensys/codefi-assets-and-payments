@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import {
   userCreateCommandMock,
@@ -10,7 +10,7 @@ import {
 } from '../../test/mocks'
 import { UserCreateCommandConsumer } from './UserCreateCommandConsumer'
 import { UserService } from '../services/UserService'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { ProductsEnum } from '@consensys/ts-types'
 
 describe('userCreateCommandConsumer', () => {
   let consumer: UserCreateCommandConsumer

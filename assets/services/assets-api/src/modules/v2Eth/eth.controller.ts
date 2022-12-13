@@ -1,4 +1,4 @@
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import { Controller, UseFilters } from '@nestjs/common';
 
 @Controller('v2/essentials/eth')

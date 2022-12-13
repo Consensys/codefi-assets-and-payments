@@ -2,7 +2,7 @@ import {
   decodeToken,
   extractEntityIdFromToken,
   extractTenantIdFromToken,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import {
   Commands,
   Events,
@@ -10,9 +10,9 @@ import {
   ITenantOperationEvent,
   IWalletOperationEvent,
   WalletDeleteCommandBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
-import { KafkaConsumer, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { TenantCreateRequest } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/messaging-events'
+import { KafkaConsumer, KafkaProducer } from '@consensys/nestjs-messaging'
+import { TenantCreateRequest } from '@consensys/ts-types'
 import { TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'

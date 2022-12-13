@@ -3,7 +3,7 @@ import {
   FindNavOptions,
   NavService,
 } from 'src/modules/v2Nav/nav.service/index';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { EntityService } from 'src/modules/v2Entity/entity.service';
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
 import {

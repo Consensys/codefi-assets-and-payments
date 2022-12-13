@@ -1,7 +1,7 @@
 import { forwardRef, Inject, Injectable } from '@nestjs/common';
 
 import ErrorService from 'src/utils/errorService';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 
 import { ApiMetadataCallService } from 'src/modules/v2ApiCall/api.call.service/metadata';
 

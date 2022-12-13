@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { FindManyOptions, Repository } from 'typeorm'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { InjectRepository } from '@nestjs/typeorm'
 import { v4 as uuidv4 } from 'uuid'
-import { EntityStatus, TokenOperationType } from '@codefi-assets-and-payments/ts-types'
-import { IReceipt } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { EntityStatus, TokenOperationType } from '@consensys/ts-types'
+import { IReceipt } from '@consensys/nestjs-orchestrate'
 
 @Injectable()
 export class OperationsService {

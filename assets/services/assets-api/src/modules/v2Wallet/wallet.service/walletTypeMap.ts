@@ -1,4 +1,4 @@
-import { WalletType as EntityApiWalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType as EntityApiWalletType } from '@consensys/ts-types';
 import { EthServiceType } from 'src/types/ethService';
 import { WalletType } from '../../../types/wallet';
 

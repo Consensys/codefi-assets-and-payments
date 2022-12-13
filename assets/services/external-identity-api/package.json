@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/external-identity-api",
+  "name": "@consensys/external-identity-api",
   "private": true,
   "version": "0.1.19",
   "description": "Nest TypeScript starter repository",
@@ -30,9 +30,9 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/messaging-events": "*",
-    "@codefi-assets-and-payments/nestjs-messaging": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/messaging-events": "workspace:*",
+    "@consensys/nestjs-messaging": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@godaddy/terminus": "^4.11.1",
     "@nestjs/common": "^8.4.7",
     "@nestjs/core": "^8.4.7",
@@ -49,6 +49,7 @@
     "install": "^0.13.0",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
+    "kafkajs": "^1.16.0",
     "moment": "^2.26.0",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
@@ -105,6 +106,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/**/{server,sleep,jwtUtils}.{ts,js}",

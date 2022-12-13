@@ -4,7 +4,7 @@
 
 import { keys as TokenKeys, Token, TokenUnit } from 'src/types/token';
 import ErrorService from 'src/utils/errorService';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { Injectable } from '@nestjs/common';
 
 import {

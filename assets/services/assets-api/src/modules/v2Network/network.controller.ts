@@ -39,10 +39,10 @@ import {
 } from '@nestjs/swagger';
 
 import { extractAuthTokenFromRequest } from 'src/utils/jwtUtils';
-import { Protected, M2mTokenService } from '@codefi-assets-and-payments/auth';
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler';
+import { Protected, M2mTokenService } from '@consensys/auth';
+import { AppToHttpFilter } from '@consensys/error-handler';
 import config from '../../config';
-import { IHeaders } from '@codefi-assets-and-payments/nestjs-orchestrate';
+import { IHeaders } from '@consensys/nestjs-orchestrate';
 
 const M2M_TOKEN_CLIENT_ID = config().m2mToken.client.id;
 const M2M_TOKEN_CLIENT_SECRET = config().m2mToken.client.secret;

@@ -1,5 +1,5 @@
 {
-  "name": "@codefi-assets-and-payments/nestjs-messaging",
+  "name": "@consensys/nestjs-messaging",
   "version": "8.1.0",
   "description": "",
   "main": "dist/index.js",
@@ -38,8 +38,8 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/messaging-events": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/messaging-events": "workspace:*",
+    "@consensys/observability": "workspace:*",
     "@kafkajs/confluent-schema-registry": "^1.0.4",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
@@ -60,6 +60,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,js}",
       "!**/*Module.ts",

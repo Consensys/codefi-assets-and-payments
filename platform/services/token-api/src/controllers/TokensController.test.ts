@@ -22,11 +22,11 @@ import { TokensController } from './TokensController'
 import { TokensManagerService } from '../services/TokensManagerService'
 import { TokensService } from '../services/TokensService'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   ITransactionConfig,
   TransactionConfigBuilder,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { JoiValidationPipe } from '../validation/JoiValidationPipe'
 import {
   TokensMintSchema,
@@ -42,13 +42,13 @@ import {
   TokenQueryRequest,
   TokenType,
   SetTokenURIRequest,
-} from '@codefi-assets-and-payments/ts-types'
-import { ErrorCode } from '@codefi-assets-and-payments/error-handler'
+} from '@consensys/ts-types'
+import { ErrorCode } from '@consensys/error-handler'
 import {
   craftRequestWithAuthHeaders,
   craftAuthTokenWithTenantId,
-} from '@codefi-assets-and-payments/auth'
-import { TokenOperationType } from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/auth'
+import { TokenOperationType } from '@consensys/ts-types'
 
 describe('TokensController', () => {
   let controller: TokensController

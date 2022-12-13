@@ -1,4 +1,4 @@
-import { WalletType } from '@codefi-assets-and-payments/ts-types';
+import { WalletType } from '@consensys/ts-types';
 import { WalletOperationEventSchema } from '../../schemas/WalletOperationEventSchema';
 import { AbstractMessage } from '../AbstractMessage';
 import { MessageDataOperation } from '../MessageOperation';

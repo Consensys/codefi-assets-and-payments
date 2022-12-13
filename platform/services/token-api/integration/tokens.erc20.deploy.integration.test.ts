@@ -3,10 +3,10 @@ import {
   DeployTokenCommandBuilder,
   Events,
   ITokenDeployedEvent,
-} from '@codefi-assets-and-payments/messaging-events'
+} from '@consensys/messaging-events'
 import { AUTOMATIC, TestScenario } from './utils/scenario'
 import { tokensDeployRequestMock } from '../test/mocks'
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { EntityStatus } from '@consensys/ts-types'
 import { deployTokenPost } from './utils/requests'
 import {
   handlesMultipleCommandsWithSameIdempotencyKeys,

@@ -6,7 +6,7 @@ import {
   validCreateRoleRequest,
   validRolePermissionRequest,
 } from '../../test/mocks'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 
 describe('RoleController', () => {
   let controller: RoleController

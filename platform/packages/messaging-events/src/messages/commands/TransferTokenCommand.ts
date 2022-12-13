@@ -1,7 +1,7 @@
 import { Builder, IBuilder } from 'builder-pattern';
 import { ITokenCommand, TokenCommand } from '../TokenCommand';
 import { TransferTokenCommandSchema } from '../../schemas/TransferTokenCommandSchema';
-import { TokenType } from '@codefi-assets-and-payments/ts-types';
+import { TokenType } from '@consensys/ts-types';
 
 export class TransferTokenCommand extends TokenCommand {
   public messageName = 'transfer_token';

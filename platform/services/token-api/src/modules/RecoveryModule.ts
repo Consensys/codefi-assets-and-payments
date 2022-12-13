@@ -1,5 +1,5 @@
-import { M2mTokenModule } from '@codefi-assets-and-payments/auth'
-import { ChainRegistryModule } from '@codefi-assets-and-payments/nestjs-orchestrate'
+import { M2mTokenModule } from '@consensys/auth'
+import { ChainRegistryModule } from '@consensys/nestjs-orchestrate'
 import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { OperationEntity } from '../data/entities/OperationEntity'

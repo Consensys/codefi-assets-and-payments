@@ -15,7 +15,7 @@ import cfg from '../config';
 import { createMockLogger } from '../test/mock';
 import { HttpService } from '@nestjs/axios';
 
-jest.mock('@codefi-assets-and-payments/observability', () => ({
+jest.mock('@consensys/observability', () => ({
   createLogger: () => createMockLogger(),
 }));
 

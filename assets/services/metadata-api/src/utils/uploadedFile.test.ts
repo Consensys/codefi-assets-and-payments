@@ -8,7 +8,7 @@ import FormData from 'form-data';
 jest.mock('multer');
 import multer from 'multer';
 //jest.mock('multer');
-jest.mock('@codefi-assets-and-payments/observability', () => ({
+jest.mock('@consensys/observability', () => ({
   createLogger: () => ({
     info: jest.fn(),
     error: jest.fn(),

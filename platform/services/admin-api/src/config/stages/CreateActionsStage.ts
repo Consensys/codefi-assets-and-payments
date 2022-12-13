@@ -8,7 +8,7 @@ import {
 } from '../../types/Auth0ManagementClientExtended'
 import { ConfigConstants } from '../ConfigConstants'
 import cfg from '../../config'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { sleep } from '../../utils/sleep'
 import codefiScopes from '../permissions/codefi.json'
 import orchestrateScopes from '../permissions/orchestrate.json'

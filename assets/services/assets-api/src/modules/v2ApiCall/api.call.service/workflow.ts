@@ -36,7 +36,7 @@ import {
   FACTOR,
   MAX_RETRY,
 } from 'src/modules/v2ApiCall/api.call.service/constants';
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability';
+import { NestJSPinoLogger } from '@consensys/observability';
 import { WorkflowApiTenantDeletionResponse } from 'src/modules/v2ApiCall/DTO/workflow-api-tenant-deletion-response.dto';
 
 const API_NAME = 'Workflow-API';

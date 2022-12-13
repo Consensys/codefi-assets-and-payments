@@ -1,12 +1,12 @@
 import { ApplicationContext } from './context'
-import { KafkaPreview, KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { Commands, Events } from '@codefi-assets-and-payments/messaging-events'
+import { KafkaPreview, KafkaProducer } from '@consensys/nestjs-messaging'
+import { Commands, Events } from '@consensys/messaging-events'
 import { Auth0ExceptionsFilter } from './filters/Auth0ExceptionsFilter'
 import cfg from './config'
 import { ConfigService } from './config/ConfigService'
 import { UserCreateCommandConsumer } from './commands/UserCreateCommandConsumer'
 import { ClientCreateCommandConsumer } from './commands/ClientCreateCommandConsumer'
-import { createLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
 import { INestApplication, Type } from '@nestjs/common'
 
 const logger = createLogger('server')

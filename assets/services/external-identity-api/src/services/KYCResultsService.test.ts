@@ -1,5 +1,5 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import OnFidoClient from './onfido/OnFidoClient'
 import UserDataAccess from '../repositories/UserDataAccess'
 import {
@@ -14,10 +14,7 @@ import {
   userId,
 } from '../utils/test-data'
 import KYCResultsService from './KYCResultsService'
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events/dist'
+import { KYCResult, KYCScope } from '@consensys/messaging-events/dist'
 import KYCEventsProducer from '../events/KYCEventsProducer'
 import Mocked = jest.Mocked
 import ReportResultDataAccess from '../repositories/ReportResultDataAccess'

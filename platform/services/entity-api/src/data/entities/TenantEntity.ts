@@ -1,4 +1,4 @@
-import { ProductType } from '@codefi-assets-and-payments/ts-types'
+import { ProductType } from '@consensys/ts-types'
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm'
 import { Admin } from '../dto/Admin'
 import { ClientEntity } from './ClientEntity'

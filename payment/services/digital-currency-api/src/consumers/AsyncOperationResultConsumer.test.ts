@@ -1,4 +1,4 @@
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { DigitalCurrencyService } from '../services/DigitalCurrencyService'
 import { OperationService } from '../services/OperationService'
@@ -9,8 +9,8 @@ import {
 } from '../../test/mocks'
 import { AsyncOperationResultConsumer } from './AsyncOperationResultConsumer'
 
-import { EntityStatus } from '@codefi-assets-and-payments/ts-types'
-import { EntityNotFoundException } from '@codefi-assets-and-payments/error-handler'
+import { EntityStatus } from '@consensys/ts-types'
+import { EntityNotFoundException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 
 describe('AsyncOperationResultConsumer', () => {

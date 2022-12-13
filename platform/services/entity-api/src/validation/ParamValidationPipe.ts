@@ -1,6 +1,6 @@
 import Joi from 'joi'
 import { PipeTransform } from '@nestjs/common'
-import { ValidationException } from '@codefi-assets-and-payments/error-handler'
+import { ValidationException } from '@consensys/error-handler'
 import { LocalErrorName } from '../LocalErrorNameEnum'
 
 export class ParamValidationPipe implements PipeTransform {

@@ -1,7 +1,7 @@
 import { Auth0Service } from './Auth0Service'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { M2mTokenService } from '@codefi-assets-and-payments/auth'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { M2mTokenService } from '@consensys/auth'
 import cfg from '../../src/config'
 import {
   audienceMock,

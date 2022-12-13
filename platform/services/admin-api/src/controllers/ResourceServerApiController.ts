@@ -7,7 +7,7 @@ import {
   Get,
   Param,
 } from '@nestjs/common'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import { ResourceServerApiService } from '../services/ResourceServerApiService'
 import { CreateApiRequest, Scope } from '../requests/ResourceServerApiRequest'
 import { CreateApiResponse } from '../responses/ResourceServerApiResponse'
@@ -21,7 +21,7 @@ import {
   ApiOperation,
   ApiParam,
 } from '@nestjs/swagger'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { Protected } from '@consensys/auth'
 
 @ApiTags('APIs')
 @ApiBearerAuth('access-token')

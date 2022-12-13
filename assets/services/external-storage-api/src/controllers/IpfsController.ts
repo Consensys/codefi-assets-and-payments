@@ -16,7 +16,7 @@ import {
   UseInterceptors,
 } from "@nestjs/common";
 import { Request, Response } from "express";
-import { NestJSPinoLogger } from "@codefi-assets-and-payments/observability";
+import { NestJSPinoLogger } from "@consensys/observability";
 import { ApiConsumes, ApiTags } from "@nestjs/swagger";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Readable } from "stream";

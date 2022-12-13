@@ -1,7 +1,7 @@
 import { NetworkInitializedEventSchema } from '../../schemas/NetworkInitializedEventSchema';
 import { AbstractMessage } from '../AbstractMessage';
 import { IRegisterNetworkCommand } from '../commands/RegisterNetworkCommand';
-import { Contract, NetworkType } from '@codefi-assets-and-payments/ts-types';
+import { Contract, NetworkType } from '@consensys/ts-types';
 
 export class NetworkInitializedEvent extends AbstractMessage<INetworkInitializedEvent> {
   protected messageName = 'network_finalized';

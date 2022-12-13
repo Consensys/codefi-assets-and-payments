@@ -1,6 +1,6 @@
 import OnFidoClient from './OnFidoClient'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   applicantId,
   checkId,
@@ -10,10 +10,7 @@ import {
 // import InvalidPersonalInfoError from './InvalidPersonalInfoError'
 import ReportName from './ReportName'
 import { OnfidoKycResult } from './OnfidoKYCResult'
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events/dist'
+import { KYCResult, KYCScope } from '@consensys/messaging-events/dist'
 import { BadRequestException } from '@nestjs/common'
 
 const validationError = {

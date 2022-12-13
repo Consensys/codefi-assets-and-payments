@@ -1,11 +1,11 @@
-import { EthersWrapper } from '@codefi-assets-and-payments/ethers'
+import { EthersWrapper } from '@consensys/ethers'
 import { IHeaders } from 'pegasys-orchestrate'
 import { ContractRegistry } from '../contracts/ContractRegistry'
 import { EthereumArgument } from './ContractManager'
 import { IRawTransaction } from './IRawTransaction'
 import { TransactionConfig } from './TransactionConfig'
-import { createLogger } from '@codefi-assets-and-payments/observability'
-import { PinoLogger } from '@codefi-assets-and-payments/observability'
+import { createLogger } from '@consensys/observability'
+import { PinoLogger } from '@consensys/observability'
 
 export abstract class TransactionManager {
   protected readonly ethersWrapper: EthersWrapper

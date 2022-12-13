@@ -1,15 +1,15 @@
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import { Injectable } from '@nestjs/common'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import config from '../config'
 import {
-  Events,
   IAsyncOperationResultEvent,
-  IReceipt,
+  Events,
   ITokenDeployedEvent,
-} from '@codefi-assets-and-payments/messaging-events'
-import {} from '@codefi-assets-and-payments/ts-types'
-import { ITokenTransferEvent } from '@codefi-assets-and-payments/messaging-events/dist/messages/events/TokenTransferEvent'
+  ITokenTransferEvent,
+  IReceipt,
+} from '@consensys/messaging-events'
+import {} from 'kafkajs'
 
 @Injectable()
 export class EventsService {

@@ -1,5 +1,5 @@
-import { ContractManager } from '@codefi-assets-and-payments/nestjs-orchestrate'
-import { ApmService } from '@codefi-assets-and-payments/observability'
+import { ContractManager } from '@consensys/nestjs-orchestrate'
+import { ApmService } from '@consensys/observability'
 import { createMockInstance } from 'jest-create-mock-instance'
 import {
   idemPotencyKeyMock,

@@ -9,7 +9,7 @@ import {
   fetchEntityClients,
 } from './utils/requests'
 import { testModule } from './utils/testCommonUtils'
-import { ClientType, EntityStatus } from '@codefi-assets-and-payments/ts-types'
+import { ClientType, EntityStatus } from '@consensys/ts-types'
 import { ClientEntity } from '../src/data/entities/ClientEntity'
 import {
   clientIdMock,

@@ -6,7 +6,7 @@ import { ApiCallHelperService } from '.';
 
 import execRetry from 'src/utils/retry';
 import axios, { AxiosInstance } from 'axios';
-import { M2mTokenService } from '@codefi-assets-and-payments/auth';
+import { M2mTokenService } from '@consensys/auth';
 
 import config from 'src/config';
 

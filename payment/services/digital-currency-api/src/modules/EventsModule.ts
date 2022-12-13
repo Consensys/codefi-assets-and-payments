@@ -1,4 +1,4 @@
-import { KafkaProducerModule } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducerModule } from '@consensys/nestjs-messaging'
 import { Module } from '@nestjs/common'
 import { EventsService } from '../services/EventsService'
 

@@ -1,12 +1,12 @@
 {
-  "name": "@codefi-assets-and-payments/admin-api",
+  "name": "@consensys/admin-api",
   "private": true,
   "version": "22.7.0",
   "description": "The aim of this project is to automate the configuration of Codefi's IAM services",
   "license": "Apache",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build && copyfiles -u 2 src/config/*.js src/config/actions/*.js src/config/scripts/*.js dist/config",
+    "build": "nest build && copyfiles -u 2 src/config/actions/*.js src/config/scripts/*.js dist/config",
     "docs": "speccy serve ./api-spec.json",
     "lint-docs": "speccy lint --json-schema ./api-spec.json",
     "prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -38,11 +38,12 @@
     "database:configure": "configure-database"
   },
   "dependencies": {
-    "@codefi-assets-and-payments/auth": "*",
-    "@codefi-assets-and-payments/error-handler": "*",
-    "@codefi-assets-and-payments/messaging-events": "*",
-    "@codefi-assets-and-payments/nestjs-messaging": "*",
-    "@codefi-assets-and-payments/observability": "*",
+    "@consensys/auth": "workspace:*",
+    "@consensys/error-handler": "workspace:*",
+    "@consensys/messaging-events": "workspace:*",
+    "@consensys/nestjs-messaging": "workspace:*",
+    "@consensys/observability": "workspace:*",
+    "@consensys/ts-types": "workspace:*",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
@@ -112,6 +113,11 @@
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/coverage",
+      "/node_modules/"
+    ],
     "collectCoverageFrom": [
       "src/*/**/*.{ts,js}",
       "!src/**/{server,sleep,adminToken,RequestInterceptor}.{ts,js}",

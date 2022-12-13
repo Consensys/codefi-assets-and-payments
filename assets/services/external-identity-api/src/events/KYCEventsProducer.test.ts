@@ -1,13 +1,10 @@
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { NestJSPinoLogger } from '@consensys/observability'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import KYCEventsProducer from './KYCEventsProducer'
 import { checkResult, reportResult, userId } from '../utils/test-data'
-import { Events } from '@codefi-assets-and-payments/messaging-events'
-import {
-  KYCResult,
-  KYCScope,
-} from '@codefi-assets-and-payments/messaging-events/dist'
+import { Events } from '@consensys/messaging-events'
+import { KYCResult, KYCScope } from '@consensys/messaging-events/dist'
 import Mocked = jest.Mocked
 
 describe('KYCEventsProducer', () => {

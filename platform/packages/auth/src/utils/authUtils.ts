@@ -5,7 +5,7 @@ import cfg from '../config';
 import {
   UnauthorizedException,
   ConfigurationException,
-} from '@codefi-assets-and-payments/error-handler';
+} from '@consensys/error-handler';
 
 export const tenantIdHeader = 'x-tenant-id';
 export const entityIdHeader = 'x-entity-id';

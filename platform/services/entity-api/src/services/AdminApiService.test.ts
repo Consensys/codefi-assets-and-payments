@@ -1,8 +1,8 @@
-import { Commands } from '@codefi-assets-and-payments/messaging-events'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
-import { ProductsEnum } from '@codefi-assets-and-payments/ts-types'
+import { Commands } from '@consensys/messaging-events'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
+import { ProductsEnum } from '@consensys/ts-types'
 import createMockInstance from 'jest-create-mock-instance'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import {
   clientNameMock,
   clientTypeMock,

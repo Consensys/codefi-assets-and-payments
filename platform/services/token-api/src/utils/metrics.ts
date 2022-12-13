@@ -1,4 +1,4 @@
-import { Counter } from '@codefi-assets-and-payments/observability'
+import { Counter } from '@consensys/observability'
 
 export const transactionCounter = new Counter({
   name: 'transaction',

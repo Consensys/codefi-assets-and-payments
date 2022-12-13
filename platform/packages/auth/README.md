@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/authentication
+# @consensys/authentication
 
 A package to manage authentication of Codefi services
 

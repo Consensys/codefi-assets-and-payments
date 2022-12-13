@@ -3,7 +3,7 @@ import { DataFieldsOnly } from "../utils/types";
 import { Item } from "../data/entities/ItemEntity";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { NestJSPinoLogger } from "@codefi-assets-and-payments/observability";
+import { NestJSPinoLogger } from "@consensys/observability";
 
 @Injectable()
 export class ItemService {

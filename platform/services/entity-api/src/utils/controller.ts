@@ -3,9 +3,9 @@ import {
   extractEntityIdFromToken,
   extractPermissionsFromToken,
   extractTenantIdFromRequestAndHeader,
-} from '@codefi-assets-and-payments/auth'
+} from '@consensys/auth'
 import { Request } from 'express'
-import { UnauthorizedException } from '@codefi-assets-and-payments/error-handler'
+import { UnauthorizedException } from '@consensys/error-handler'
 import { LocalErrorName } from '..//LocalErrorNameEnum'
 
 const ACTION_READ = ['retrieve', 'retrieved']

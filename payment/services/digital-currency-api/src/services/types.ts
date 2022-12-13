@@ -1,4 +1,4 @@
-import { IEntityWallet } from '@codefi-assets-and-payments/messaging-events'
+import { IEntityWallet } from '@consensys/messaging-events'
 
 export class Counted<T> {
   result: T[]

@@ -1,4 +1,4 @@
-import { AppToHttpFilter } from '@codefi-assets-and-payments/error-handler'
+import { AppToHttpFilter } from '@consensys/error-handler'
 import {
   Controller,
   Get,
@@ -15,8 +15,8 @@ import {
   ApiTags,
 } from '@nestjs/swagger'
 import { HolderService } from '../services/HolderService'
-import { HolderResponseGet } from '@codefi-assets-and-payments/ts-types'
-import { Protected } from '@codefi-assets-and-payments/auth'
+import { HolderResponseGet } from '@consensys/ts-types'
+import { Protected } from '@consensys/auth'
 import { HolderBalanceResponse } from '../responses/HolderBalanceResponse'
 
 @Controller('holders')

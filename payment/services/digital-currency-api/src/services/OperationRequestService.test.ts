@@ -1,5 +1,5 @@
 import { OperationRequestService } from './OperationRequestService'
-import { NestJSPinoLogger } from '@codefi-assets-and-payments/observability'
+import { NestJSPinoLogger } from '@consensys/observability'
 import createMockInstance from 'jest-create-mock-instance'
 import { Repository, UpdateResult } from 'typeorm'
 import { DigitalCurrencyEntity } from '../data/entities/DigitalCurrencyEntity'
@@ -17,13 +17,13 @@ import {
 import { DigitalCurrencyService } from './DigitalCurrencyService'
 import { OperationEntity } from '../data/entities/OperationEntity'
 import { v4 as uuidv4 } from 'uuid'
-import { KafkaProducer } from '@codefi-assets-and-payments/nestjs-messaging'
+import { KafkaProducer } from '@consensys/nestjs-messaging'
 import {
   AquisitionRedeemRequest,
   OperationRequestAction,
   OperationRequestState,
   OperationRequestType,
-} from '@codefi-assets-and-payments/ts-types'
+} from '@consensys/ts-types'
 import { LegalEntityService } from './LegalEntityService'
 import { Counted } from './types'
 

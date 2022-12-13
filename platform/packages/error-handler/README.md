@@ -1,4 +1,4 @@
-# @codefi-assets-and-payments/error-handler
+# @consensys/error-handler
 
 This package aims to unify and align the approach of Error & Logging across Codefi groups and Customer & Success. It also has wrapper of common exceptions of NestJS and a central place to our filters.
 To know more about Error Management please access: [Logging & Error Confluence Page](https://consensysteam.atlassian.net/wiki/spaces/PRDC/pages/695436747/Monitoring+Logging+and+Alerting)
@@ -6,7 +6,7 @@ To know more about Error Management please access: [Logging & Error Confluence P
 ## Install
 
 ```bash
-npm install --save @codefi-assets-and-payments/error-handler
+npm install --save @consensys/error-handler
 ```
 
 ## BaseExceptions
@@ -38,7 +38,7 @@ Thanks to `AppToHttpFilter`, we can annotate our controllers with `@UseFilters(n
 
 ```Javascript
 // Exception
-import { BaseException, ErrorCode } from '@codefi-assets-and-payments/error-handler'
+import { BaseException, ErrorCode } from '@consensys/error-handler'
 
 export class ExampleException extends BaseException {
   constructor(message: string, payload: object) {
