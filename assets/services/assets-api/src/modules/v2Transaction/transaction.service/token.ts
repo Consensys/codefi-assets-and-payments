@@ -3667,8 +3667,8 @@ export class TokenTxHelperService {
 
       const holdId: string = web3Utils.soliditySha3(
         investor[UserKeys.USER_ID],
-        new Date().toString(),
-      ); // 'investorId' and 'date' are used as "salts" here
+        uuidv4(),
+      ); // 'investorId' and 'uuidv4' are used as "salts" here
 
       const nav: NAV =
         await this.navService.retrieveAppropriateNAVForAssetClass(
@@ -4081,8 +4081,8 @@ export class TokenTxHelperService {
 
       const holdId: string = web3Utils.soliditySha3(
         investor[UserKeys.USER_ID],
-        new Date().toString(),
-      ); // 'investorId' and 'date' are used as "salts" here
+        uuidv4(),
+      ); // 'investorId' and 'uuidv4' are used as "salts" here
 
       const nav: NAV =
         await this.navService.retrieveAppropriateNAVForAssetClass(

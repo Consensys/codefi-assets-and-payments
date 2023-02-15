@@ -18,6 +18,7 @@
  *
  */
 import web3Utils from 'web3-utils';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   TokenIdentifierEnum,
@@ -3090,8 +3091,8 @@ export class WorkFlowsSecondaryTradeService {
 
       const holdId: string = web3Utils.soliditySha3(
         sender[UserKeys.USER_ID],
-        new Date().toString(),
-      ); // 'senderId' and 'date' are used as "salts" here
+        uuidv4(),
+      ); // 'senderId' and 'uuidv4' are used as "salts" here
       const htlc: HTLC = newEncryptedHTLC(issuerId); // issuer will be the only one capable to decrypt the HTLC secret
 
       const extensionAddress: string =
@@ -3621,8 +3622,8 @@ export class WorkFlowsSecondaryTradeService {
 
       const paymentHoldId: string = web3Utils.soliditySha3(
         recipient[UserKeys.USER_ID],
-        new Date().toString(),
-      ); // 'senderId' and 'date' are used as "salts" here
+        uuidv4(),
+      ); // 'senderId' and 'uuidv4' are used as "salts" here
 
       const dvpAddress: string = await this.apiSCCallService.retrieveDVPAddress(
         callerId,
