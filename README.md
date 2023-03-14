@@ -282,5 +282,5 @@ npm run deps
 
 ## Swagger
 
-Each service has a configured swagger instance that will run along with it.
+Each service has a configured swagger instance that will run along with it .
 To be able to create an oauth token through Swagger, you should replace `<YOUR_OAUTH_TOKEN_URL>` in the service `src/docs-override.json` file
