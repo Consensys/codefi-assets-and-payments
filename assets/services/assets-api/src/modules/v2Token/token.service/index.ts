@@ -51,6 +51,7 @@ import {
   DocumentKeys,
   GeneralDataKeys,
 } from 'src/types/asset';
+import {addNumbersByConvertingIntoBigNumber} from "src/utils/number";
 
 const funderAddress: string = process.env.FUNDER_ADDRESS;
 
@@ -427,8 +428,9 @@ export class TokenHelperService {
           ? assetClassesOnChainData.reduce(
               (supply: number, assetClassData: AssetClassOnChainData) => {
                 return (
-                  supply +
-                  assetClassData[TokenKeys.ASSET_CLASSES_ON_CHAIN_TOTAL_SUPPLY]
+                  addNumbersByConvertingIntoBigNumber(supply, assetClassData[
+                    TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
+                    ])
                 );
               },
               0,
