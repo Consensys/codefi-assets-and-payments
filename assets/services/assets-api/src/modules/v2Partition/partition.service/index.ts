@@ -283,7 +283,7 @@ export class PartitionService {
         ].reduce((supply: number, currentAssetState: AssetStateOnChainData) => {
           return (
             addNumbersByConvertingIntoBigNumber(supply, currentAssetState[
-              TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
+                TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
               ])
           );
         }, 0);

@@ -429,7 +429,7 @@ export class TokenHelperService {
               (supply: number, assetClassData: AssetClassOnChainData) => {
                 return (
                   addNumbersByConvertingIntoBigNumber(supply, assetClassData[
-                    TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
+                      TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
                     ])
                 );
               },

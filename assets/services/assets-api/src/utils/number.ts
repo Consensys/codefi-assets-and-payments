@@ -114,7 +114,7 @@ export const addNumbersByConvertingIntoBigNumber = (number1, number2): number =>
   } catch (error) {
     ErrorService.logAndThrowFunctionError(
         error,
-        'adding Numbers by converting to BigNumber first',
+        `Failed to add numbers ${number1} and ${number2} by converting to BigNumber first`,
         'addNumbersByConvertingIntoBigNumber',
         false,
         500,
