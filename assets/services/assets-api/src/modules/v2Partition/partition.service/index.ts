@@ -13,6 +13,7 @@ import {
 } from 'src/types/token';
 import { hexaToASCII, ASCIIToHexa } from 'src/utils/hex';
 import { checkSolidityBytes32 } from 'src/utils/solidity';
+import {addNumbersByConvertingIntoBigNumber} from "src/utils/number";
 
 @Injectable()
 export class PartitionService {
@@ -281,10 +282,9 @@ export class PartitionService {
           partitionClass
         ].reduce((supply: number, currentAssetState: AssetStateOnChainData) => {
           return (
-            supply +
-            currentAssetState[
-              TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
-            ]
+            addNumbersByConvertingIntoBigNumber(supply, currentAssetState[
+                TokenKeys.ASSET_CLASSES_ON_CHAIN_STATES_TOTAL_SUPPLY
+              ])
           );
         }, 0);
         const assetClassOnChainData: AssetClassOnChainData = {
