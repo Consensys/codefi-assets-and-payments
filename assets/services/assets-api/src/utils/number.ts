@@ -6,7 +6,7 @@ export const MAX_SUPPORTED_INTEGER = 1000000000000000;
 export const MIN_SUPPORTED_INTEGER = 0;
 
 /**
- * Function if integer is not to big in order to avoid 'overflow' in database
+ * Function if integer is not too big in order to avoid 'overflow' in database
  */
 export const checkIntegerFormat = (
   quantity: number,
@@ -93,5 +93,32 @@ export const addDecimalsAndConvertToHex = (number, decimals): string => {
       500,
     );
     throw new Error(`addDecimalsAndConvertToHex --> ${error.message}`);
+  }
+};
+
+/**
+ * [Add Numbers By Converting Into BigNumber]
+ *
+ * The purpose of this function is to add numbers after converting
+ * them to BigNumber and then return the Number
+ *
+ * This function is used everytime we add two numbers.
+ *
+ */
+export const addNumbersByConvertingIntoBigNumber = (number1, number2): number => {
+  try {
+    const number1Bn = new BigNumber(number1);
+    const number2Bn = new BigNumber(number2);
+    const sumBn = number1Bn.plus(number2Bn);
+    return parseFloat(sumBn.toString());
+  } catch (error) {
+    ErrorService.logAndThrowFunctionError(
+      error,
+      `Failed to add numbers ${number1} and ${number2} by converting to BigNumber first`,
+      'addNumbersByConvertingIntoBigNumber',
+      false,
+      500,
+    );
+    throw new Error(`addNumbersByConvertingIntoBigNumber --> ${error.message}`);
   }
 };
